@@ -229,86 +229,185 @@
             <field name="parent" ref="us"/>
             <field name="sequence" eval="20"/>
             <field name="balance_sheet" eval="True"/>
+            <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="liabilities">
             <field name="name">Liabilities</field>
             <field name="parent" ref="liabilities_and_shareholders_equity"/>
             <field name="sequence" eval="10"/>
-            <field name="balance_sheet" eval="False"/>
+            <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="liabilities_current">
-            <field name="name">Current</field>
+            <field name="name">Current liabilities</field>
             <field name="parent" ref="liabilities"/>
             <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="payables">
+            <field name="name">Operating payables</field>
+            <field name="parent" ref="liabilities_current"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="accounts_payable">
             <field name="name">Accounts payable</field>
-            <field name="parent" ref="liabilities_current"/>
+            <field name="parent" ref="payables"/>
             <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="customer_credits">
+            <field name="name">Customer credits</field>
+            <field name="parent" ref="payables"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="short_term_borrowings">
+            <field name="name">Short-term borrowings</field>
+            <field name="parent" ref="payables"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_operating_payables">
+            <field name="name">Other operating payables</field>
+            <field name="parent" ref="payables"/>
+            <field name="sequence" eval="50"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="liabilities_current_accrued_and_deferred">
+            <field name="name">Accrued and deferred liabilities</field>
+            <field name="parent" ref="liabilities_current"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="unearned_revenues_and_credits">
+            <field name="name">Unearned revenues and credits</field>
+            <field name="parent" ref="liabilities_current_accrued_and_deferred"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accrued_liabilities">
+            <field name="name">Accrued liabilities</field>
+            <field name="parent" ref="liabilities_current_accrued_and_deferred"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="sales_tax_collected">
+            <field name="name">Sales tax collected</field>
+            <field name="parent" ref="accrued_liabilities"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accrued_use_tax">
+            <field name="name">Accrued use tax</field>
+            <field name="parent" ref="accrued_liabilities"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_accrued_expenses">
+            <field name="name">Other accrued expenses</field>
+            <field name="parent" ref="accrued_liabilities"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="employee_related_liabilities">
+            <field name="name">Employee-related liabilities</field>
+            <field name="parent" ref="liabilities_current_accrued_and_deferred"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accrued_payroll_expenses">
+            <field name="name">Accrued payroll expenses</field>
+            <field name="parent" ref="employee_related_liabilities"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="payroll_withholdings">
+            <field name="name">Payroll withholdings</field>
+            <field name="parent" ref="employee_related_liabilities"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accrued_payroll_taxes">
+            <field name="name">Accrued payroll taxes</field>
+            <field name="parent" ref="employee_related_liabilities"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="employer_pension_contributions">
+            <field name="name">Employer 401k/pension contributions</field>
+            <field name="parent" ref="employee_related_liabilities"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accrued_retirement_plan_expenses">
+            <field name="name">Accrued retirement plan expenses</field>
+            <field name="parent" ref="employee_related_liabilities"/>
+            <field name="sequence" eval="50"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="liabilities_current_additional">
+            <field name="name">Additional short-term liabilities and payables</field>
+            <field name="parent" ref="liabilities_current"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="notes_payable">
             <field name="name">Notes payable</field>
-            <field name="parent" ref="liabilities_current"/>
-            <field name="sequence" eval="20"/>
+            <field name="parent" ref="liabilities_current_additional"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="dividends_payable">
             <field name="name">Dividends payable</field>
-            <field name="parent" ref="liabilities_current"/>
-            <field name="sequence" eval="30"/>
-        </record>
-        <record model="account.account.type.template" id="liabilities_advances_and_deposits">
-            <field name="name">Advances and deposits</field>
-            <field name="parent" ref="liabilities_current"/>
-            <field name="sequence" eval="40"/>
-        </record>
-        <record model="account.account.type.template" id="tax_agency_collections_or_withholdings">
-            <field name="name">Tax agency collections or withholdings</field>
-            <field name="parent" ref="liabilities_current"/>
-            <field name="sequence" eval="50"/>
+            <field name="parent" ref="liabilities_current_additional"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="current_of_long_term_debt">
             <field name="name">Current portion of long-term debts</field>
-            <field name="parent" ref="liabilities_current"/>
-            <field name="sequence" eval="60"/>
+            <field name="parent" ref="liabilities_current_additional"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="short_term_accrued_expenses">
-            <field name="name">Short-term accrued expenses</field>
-            <field name="parent" ref="liabilities_current"/>
-            <field name="sequence" eval="70"/>
+        <record model="account.account.type.template" id="other_short_term_liabilities">
+            <field name="name">Other short-term liabilities and payables</field>
+            <field name="parent" ref="liabilities_current_additional"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="liabilities_long_term">
-            <field name="name">Long-term</field>
+        <record model="account.account.type.template" id="liabilities_non_current">
+            <field name="name">Non-current liabilities</field>
             <field name="parent" ref="liabilities"/>
             <field name="sequence" eval="20"/>
         </record>
         <record model="account.account.type.template" id="long_term_loans_notes_bonds">
             <field name="name">Long-term loans, notes, and bonds payable</field>
-            <field name="parent" ref="liabilities_long_term"/>
+            <field name="parent" ref="liabilities_non_current"/>
             <field name="sequence" eval="10"/>
         </record>
         <record model="account.account.type.template" id="lease_obligations">
             <field name="name">Lease obligations</field>
-            <field name="parent" ref="liabilities_long_term"/>
+            <field name="parent" ref="liabilities_non_current"/>
             <field name="sequence" eval="20"/>
         </record>
         <record model="account.account.type.template" id="long_term_accrued_expenses">
             <field name="name">Long-term accrued expenses</field>
-            <field name="parent" ref="liabilities_long_term"/>
+            <field name="parent" ref="liabilities_non_current"/>
             <field name="sequence" eval="30"/>
         </record>
         <record model="account.account.type.template" id="contingent_obligations">
             <field name="name">Contingent obligations</field>
-            <field name="parent" ref="liabilities_long_term"/>
+            <field name="parent" ref="liabilities_non_current"/>
             <field name="sequence" eval="40"/>
         </record>
         <record model="account.account.type.template" id="manditorily_redeemable_shares">
             <field name="name">Manditorily redeemable shares</field>
-            <field name="parent" ref="liabilities_long_term"/>
+            <field name="parent" ref="liabilities_non_current"/>
             <field name="sequence" eval="50"/>
         </record>
-        <record model="account.account.type.template" id="liabilities_long_term_other">
+        <record model="account.account.type.template" id="liabilities_non_current_other">
             <field name="name">Other long-term liabilities</field>
-            <field name="parent" ref="liabilities_long_term"/>
+            <field name="parent" ref="liabilities_non_current"/>
             <field name="sequence" eval="60"/>
         </record>
         <record model="account.account.type.template" id="equity">
