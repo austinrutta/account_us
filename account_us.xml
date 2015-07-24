@@ -1,0 +1,1062 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tryton>
+    <data>
+
+<!-- Account Types -->
+
+        <record model="account.account.type.template" id="us">
+            <field name="name">Chart of Account Types (US)</field>
+            <field name="sequence" eval="10"/>
+        </record>
+        <record model="account.account.type.template" id="assets">
+            <field name="name">Assets</field>
+            <field name="parent" ref="us"/>
+            <field name="sequence" eval="10"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="capital_issued_unsubscribed">
+            <field name="name">Issued capital, unsubscribed</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="assets"/>
+        </record>
+        <record model="account.account.type.template" id="assets_current">
+            <field name="name">Current assets</field>
+            <field name="parent" ref="assets"/>
+            <field name="sequence" eval="20"/>
+        </record>
+        <record model="account.account.type.template" id="inventories">
+            <field name="name">Inventories</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="assets_current"/>
+        </record>
+        <record model="account.account.type.template" id="raw_materials">
+            <field name="name">Raw materials and other supplies</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="inventories"/>
+        </record>
+        <record model="account.account.type.template" id="in_process">
+            <field name="name">In process</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="inventories"/>
+        </record>
+        <record model="account.account.type.template" id="intermediate_and_finished_goods">
+            <field name="name">Intermediate and finished goods</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="inventories"/>
+        </record>
+        <record model="account.account.type.template" id="merchandise">
+            <field name="name">Merchandise</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="inventories"/>
+        </record>
+        <record model="account.account.type.template" id="assets_advances_and_deposits">
+            <field name="name">Advances and deposits</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="assets_current"/>
+        </record>
+        <record model="account.account.type.template" id="receivables">
+            <field name="name">Operating receivables</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="assets_current"/>
+        </record>
+        <record model="account.account.type.template" id="trade_or_accounts_receivables">
+            <field name="name">Trade or accounts receivables</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="receivables"/>
+        </record>
+        <record model="account.account.type.template" id="notes_receivables">
+            <field name="name">Notes receivables</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="receivables"/>
+        </record>
+        <record model="account.account.type.template" id="affiliates_receivables">
+            <field name="name">Affiliate companies</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="receivables"/>
+        </record>
+        <record model="account.account.type.template" id="loans_receivables">
+            <field name="name">Loans receivables</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="receivables"/>
+        </record>
+        <record model="account.account.type.template" id="subscriptions_receivables">
+            <field name="name">Stock subscriptions receivables</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="receivables"/>
+        </record>
+        <record model="account.account.type.template" id="other_receivables">
+            <field name="name">Other receivables</field>
+            <field name="sequence" eval="60"/>
+            <field name="parent" ref="receivables"/>
+        </record>
+        <record model="account.account.type.template" id="investments_short_term">
+            <field name="name">Short-term investments</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="assets_current"/>
+        </record>
+        <record model="account.account.type.template" id="cash">
+            <field name="name">Cash and cash equivalents</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="assets_current"/>
+        </record>
+        <record model="account.account.type.template" id="prepaid_expenses">
+            <field name="name">Prepaid expenses</field>
+            <field name="sequence" eval="60"/>
+            <field name="parent" ref="assets_current"/>
+        </record>
+        <record model="account.account.type.template" id="assets_long_term">
+            <field name="name">Long-term assets</field>
+            <field name="parent" ref="assets"/>
+            <field name="sequence" eval="30"/>
+        </record>
+        <record model="account.account.type.template" id="assets_intangible">
+            <field name="name">Intangible assets</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="assets_long_term"/>
+        </record>
+        <record model="account.account.type.template" id="assets_organizational_expenses">
+            <field name="name">Organizational expenses</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="assets_intangible"/>
+        </record>
+        <record model="account.account.type.template" id="assets_research_and_development_costs">
+            <field name="name">Research and development costs</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="assets_intangible"/>
+        </record>
+        <record model="account.account.type.template" id="assets_patents_licences_trademarks">
+            <field name="name">Patents, licenses, trademarks, processes, software, or similar rights and assets</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="assets_intangible"/>
+        </record>
+        <record model="account.account.type.template" id="goodwill">
+            <field name="name">Goodwill</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="assets_intangible"/>
+        </record>
+        <record model="account.account.type.template" id="assets_intangible_other">
+            <field name="name">Other</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="assets_intangible"/>
+        </record>
+        <record model="account.account.type.template" id="assets_intangible_in_process">
+            <field name="name">Intangible assets in process</field>
+            <field name="sequence" eval="60"/>
+            <field name="parent" ref="assets_intangible"/>
+        </record>
+        <record model="account.account.type.template" id="assets_fixed">
+            <field name="name">Fixed assets</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="assets_long_term"/>
+        </record>
+        <record model="account.account.type.template" id="land">
+            <field name="name">Land</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="assets_fixed"/>
+        </record>
+        <record model="account.account.type.template" id="construction">
+            <field name="name">Construction</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="assets_fixed"/>
+        </record>
+        <record model="account.account.type.template" id="plant_machinery_equipment">
+            <field name="name">Plant, machinery, and equipment</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="assets_fixed"/>
+        </record>
+        <record model="account.account.type.template" id="assets_fixed_other">
+            <field name="name">Other</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="assets_fixed"/>
+        </record>
+        <record model="account.account.type.template" id="assets_fixed_in_process">
+            <field name="name">Fixed assets in process</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="assets_fixed"/>
+        </record>
+        <record model="account.account.type.template" id="investments_long_term">
+            <field name="name">Long-term investments</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="assets_long_term"/>
+        </record>
+        <record model="account.account.type.template" id="debit_and_equity_securities">
+            <field name="name">Debit and equity securities</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="investments_long_term"/>
+        </record>
+        <record model="account.account.type.template" id="tangible_assets_not_used_in_operations">
+            <field name="name">Tangible assets not used in operations</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="investments_long_term"/>
+        </record>
+        <record model="account.account.type.template" id="investments_in_special_funds">
+            <field name="name">Investments held in special funds</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="investments_long_term"/>
+        </record>
+        <record model="account.account.type.template" id="receivables_long_term">
+            <field name="name">Long-term receivables</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="investments_long_term"/>
+        </record>
+        <record model="account.account.type.template" id="loans">
+            <field name="name">Loans</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="investments_long_term"/>
+        </record>
+        <record model="account.account.type.template" id="investments_other">
+            <field name="name">Other</field>
+            <field name="sequence" eval="60"/>
+            <field name="parent" ref="investments_long_term"/>
+        </record>
+        <record model="account.account.type.template" id="prepaid_expenses_long_term">
+            <field name="name">Long-term prepaid expenses</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="assets_long_term"/>
+        </record>
+        <record model="account.account.type.template" id="restricted_cash">
+            <field name="name">Restricted cash</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="assets_long_term"/>
+        </record>
+        <record model="account.account.type.template" id="deferred_taxes">
+            <field name="name">Deferred taxes</field>
+            <field name="sequence" eval="60"/>
+            <field name="parent" ref="assets_long_term"/>
+        </record>
+        <record model="account.account.type.template" id="liabilities_and_shareholders_equity">
+            <field name="name">Liabilities and shareholders’ equity</field>
+            <field name="parent" ref="us"/>
+            <field name="sequence" eval="20"/>
+            <field name="balance_sheet" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="liabilities">
+            <field name="name">Liabilities</field>
+            <field name="parent" ref="liabilities_and_shareholders_equity"/>
+            <field name="sequence" eval="10"/>
+            <field name="balance_sheet" eval="False"/>
+        </record>
+        <record model="account.account.type.template" id="liabilities_current">
+            <field name="name">Current</field>
+            <field name="parent" ref="liabilities"/>
+            <field name="sequence" eval="10"/>
+        </record>
+        <record model="account.account.type.template" id="accounts_payable">
+            <field name="name">Accounts payable</field>
+            <field name="parent" ref="liabilities_current"/>
+            <field name="sequence" eval="10"/>
+        </record>
+        <record model="account.account.type.template" id="notes_payable">
+            <field name="name">Notes payable</field>
+            <field name="parent" ref="liabilities_current"/>
+            <field name="sequence" eval="20"/>
+        </record>
+        <record model="account.account.type.template" id="dividends_payable">
+            <field name="name">Dividends payable</field>
+            <field name="parent" ref="liabilities_current"/>
+            <field name="sequence" eval="30"/>
+        </record>
+        <record model="account.account.type.template" id="liabilities_advances_and_deposits">
+            <field name="name">Advances and deposits</field>
+            <field name="parent" ref="liabilities_current"/>
+            <field name="sequence" eval="40"/>
+        </record>
+        <record model="account.account.type.template" id="tax_agency_collections_or_withholdings">
+            <field name="name">Tax agency collections or withholdings</field>
+            <field name="parent" ref="liabilities_current"/>
+            <field name="sequence" eval="50"/>
+        </record>
+        <record model="account.account.type.template" id="current_of_long_term_debt">
+            <field name="name">Current portion of long-term debts</field>
+            <field name="parent" ref="liabilities_current"/>
+            <field name="sequence" eval="60"/>
+        </record>
+        <record model="account.account.type.template" id="short_term_accrued_expenses">
+            <field name="name">Short-term accrued expenses</field>
+            <field name="parent" ref="liabilities_current"/>
+            <field name="sequence" eval="70"/>
+        </record>
+        <record model="account.account.type.template" id="liabilities_long_term">
+            <field name="name">Long-term</field>
+            <field name="parent" ref="liabilities"/>
+            <field name="sequence" eval="20"/>
+        </record>
+        <record model="account.account.type.template" id="long_term_loans_notes_bonds">
+            <field name="name">Long-term loans, notes, and bonds payable</field>
+            <field name="parent" ref="liabilities_long_term"/>
+            <field name="sequence" eval="10"/>
+        </record>
+        <record model="account.account.type.template" id="lease_obligations">
+            <field name="name">Lease obligations</field>
+            <field name="parent" ref="liabilities_long_term"/>
+            <field name="sequence" eval="20"/>
+        </record>
+        <record model="account.account.type.template" id="long_term_accrued_expenses">
+            <field name="name">Long-term accrued expenses</field>
+            <field name="parent" ref="liabilities_long_term"/>
+            <field name="sequence" eval="30"/>
+        </record>
+        <record model="account.account.type.template" id="contingent_obligations">
+            <field name="name">Contingent obligations</field>
+            <field name="parent" ref="liabilities_long_term"/>
+            <field name="sequence" eval="40"/>
+        </record>
+        <record model="account.account.type.template" id="manditorily_redeemable_shares">
+            <field name="name">Manditorily redeemable shares</field>
+            <field name="parent" ref="liabilities_long_term"/>
+            <field name="sequence" eval="50"/>
+        </record>
+        <record model="account.account.type.template" id="liabilities_long_term_other">
+            <field name="name">Other long-term liabilities</field>
+            <field name="parent" ref="liabilities_long_term"/>
+            <field name="sequence" eval="60"/>
+        </record>
+        <record model="account.account.type.template" id="equity">
+            <field name="name">Equity</field>
+            <field name="parent" ref="liabilities_and_shareholders_equity"/>
+            <field name="sequence" eval="20"/>
+            <field name="balance_sheet" eval="False"/>
+        </record>
+        <record model="account.account.type.template" id="paid_in_capital">
+            <field name="name">Paid-in capital</field>
+            <field name="parent" ref="equity"/>
+            <field name="sequence" eval="10"/>
+        </record>
+        <record model="account.account.type.template" id="subscribed_stock">
+            <field name="name">Subscribed stock</field>
+            <field name="parent" ref="paid_in_capital"/>
+            <field name="sequence" eval="10"/>
+        </record>
+        <record model="account.account.type.template" id="share_capital">
+            <field name="name">Share capital</field>
+            <field name="parent" ref="paid_in_capital"/>
+            <field name="sequence" eval="20"/>
+        </record>
+        <record model="account.account.type.template" id="common_stock">
+            <field name="name">Common stock</field>
+            <field name="parent" ref="share_capital"/>
+            <field name="sequence" eval="10"/>
+        </record>
+        <record model="account.account.type.template" id="preferred_stock">
+            <field name="name">Preferred stock</field>
+            <field name="parent" ref="share_capital"/>
+            <field name="sequence" eval="20"/>
+        </record>
+        <record model="account.account.type.template" id="additional_paid_in_capital">
+            <field name="name">Additional paid-in capital</field>
+            <field name="parent" ref="share_capital"/>
+            <field name="sequence" eval="40"/>
+        </record>
+        <record model="account.account.type.template" id="income">
+            <field name="name">Income</field>
+            <field name="parent" ref="equity"/>
+            <field name="sequence" eval="20"/>
+            <field name="income_statement" eval="True"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="revenue">
+            <field name="name">Revenue</field>
+            <field name="parent" ref="income"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="expense">
+            <field name="name">Expense</field>
+            <field name="parent" ref="income"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="off_balance">
+            <field name="name">Off-balance-sheet items</field>
+            <field name="parent" ref="us"/>
+            <field name="sequence" eval="60"/>
+        </record>
+
+<!-- Accounts -->
+
+        <record model="account.account.template" id="root">
+            <field name="name">Chart of Accounts (US)</field>
+            <field name="kind">view</field>
+            <field name="type" ref="us"/>
+        </record>
+        <record model="account.account.template" id="0">
+            <field name="name">Off-balance-sheet commitments</field>
+            <field name="code">0</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="root"/>
+        </record>
+        <record model="account.account.template" id="1">
+            <field name="name">Assets</field>
+            <field name="code">1</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="root"/>
+        </record>
+        <record model="account.account.template" id="10">
+            <field name="name">Cash and cash equivalents</field>
+            <field name="code">10</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="1"/>
+        </record>
+        <record model="account.account.template" id="100">
+            <field name="name">Petty cash</field>
+            <field name="code">100</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="10"/>
+        </record>
+        <record model="account.account.template" id="101">
+            <field name="name">Cash in bank</field>
+            <field name="code">101</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="10"/>
+        </record>
+        <record model="account.account.template" id="1010">
+            <field name="name">Master bank account</field>
+            <field name="code">1010</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="101"/>
+        </record>
+        <record model="account.account.template" id="1011">
+            <field name="name">Payroll checking account</field>
+            <field name="code">1011</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="101"/>
+        </record>
+        <record model="account.account.template" id="102">
+            <field name="name">Cash equivalents</field>
+            <field name="code">102</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="10"/>
+        </record>
+        <record model="account.account.template" id="103">
+            <field name="name">Restricted cash and investments</field>
+            <field name="code">103</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="10"/>
+        </record>
+        <record model="account.account.template" id="109">
+            <field name="name">Undeposited funds</field>
+            <field name="code">109</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="10"/>
+        </record>
+        <record model="account.account.template" id="11">
+            <field name="name">Short-term investments</field>
+            <field name="code">11</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="1"/>
+        </record>
+        <record model="account.account.template" id="110">
+            <field name="name">Marketable securities</field>
+            <field name="code">110</field>
+            <field name="type" ref="investments_short_term"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="11"/>
+        </record>
+        <record model="account.account.template" id="12">
+            <field name="name">Receivables</field>
+            <field name="code">12</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="1"/>
+        </record>
+        <record model="account.account.template" id="120">
+            <field name="name">Accounts receivable</field>
+            <field name="code">120</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="12"/>
+        </record>
+        <record model="account.account.template" id="1200">
+            <field name="name">Accounts receivable, trade</field>
+            <field name="code">1200</field>
+            <field name="type" ref="trade_or_accounts_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="120"/>
+        </record>
+        <record model="account.account.template" id="1201">
+            <field name="name">Interest receivable, trade</field>
+            <field name="code">1201</field>
+            <field name="type" ref="trade_or_accounts_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="120"/>
+        </record>
+        <record model="account.account.template" id="1209">
+            <field name="name">Allowance for doubtful accounts (-)</field>
+            <field name="code">1209</field>
+            <field name="type" ref="trade_or_accounts_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="120"/>
+        </record>
+        <record model="account.account.template" id="121">
+            <field name="name">Notes receivable</field>
+            <field name="code">121</field>
+            <field name="type" ref="notes_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="12"/>
+        </record>
+        <record model="account.account.template" id="122">
+            <field name="name">Loans receivable</field>
+            <field name="code">122</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="12"/>
+        </record>
+        <record model="account.account.template" id="1220">
+            <field name="name">Loans receivable from officers or directors</field>
+            <field name="code">1220</field>
+            <field name="type" ref="loans_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="122"/>
+        </record>
+        <record model="account.account.template" id="1221">
+            <field name="name">Loans receivable from employees</field>
+            <field name="code">1221</field>
+            <field name="type" ref="loans_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="122"/>
+        </record>
+        <record model="account.account.template" id="126">
+            <field name="name">Subscriptions receivable</field>
+            <field name="code">126</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="12"/>
+        </record>
+        <record model="account.account.template" id="1260">
+            <field name="name">Subscriptions receivable from officers and directors for issuance of capital stock</field>
+            <field name="code">1260</field>
+            <field name="type" ref="subscriptions_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="126"/>
+        </record>
+        <record model="account.account.template" id="1261">
+            <field name="name">Subscriptions receivable from shareholders or affiliates for issuance of capital stock</field>
+            <field name="code">1261</field>
+            <field name="type" ref="subscriptions_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="126"/>
+        </record>
+        <record model="account.account.template" id="127">
+            <field name="name">Other receivables</field>
+            <field name="code">127</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="12"/>
+        </record>
+        <record model="account.account.template" id="128">
+            <field name="name">Unapplied payments</field>
+            <field name="code">128</field>
+            <field name="type" ref="other_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="False"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="12"/>
+        </record>
+        <record model="account.account.template" id="13">
+            <field name="name">Inventory</field>
+            <field name="code">13</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="1"/>
+        </record>
+        <record model="account.account.template" id="130">
+            <field name="name">Raw materials and supplies</field>
+            <field name="code">130</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="131">
+            <field name="name">Work in process</field>
+            <field name="code">131</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="132">
+            <field name="name">Finished goods and merchandise</field>
+            <field name="code">132</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="133">
+            <field name="name">Additional items</field>
+            <field name="code">133</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="134">
+            <field name="name">Valuation allowance</field>
+            <field name="code">134</field>
+            <field name="type" ref="inventories"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="135">
+            <field name="name">LIFO reserve</field>
+            <field name="code">135</field>
+            <field name="type" ref="inventories"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="136">
+            <field name="name">Inventory purchases</field>
+            <field name="code">136</field>
+            <field name="type" ref="inventories"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="14">
+            <field name="name">Accrued and deferred items</field>
+            <field name="code">14</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="1"/>
+        </record>
+        <record model="account.account.template" id="140">
+            <field name="name">Prepaid expenses</field>
+            <field name="code">140</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="14"/>
+        </record>
+        <record model="account.account.template" id="1400">
+            <field name="name">Prepaid insurance expense</field>
+            <field name="code">1400</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="140"/>
+        </record>
+        <record model="account.account.template" id="1401">
+            <field name="name">Prepaid rent expense</field>
+            <field name="code">1401</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="140"/>
+        </record>
+        <record model="account.account.template" id="1402">
+            <field name="name">Prepaid outreach expenses</field>
+            <field name="code">1402</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="140"/>
+        </record>
+        <record model="account.account.template" id="14020">
+            <field name="name">Prepaid travel and accomodations expense</field>
+            <field name="code">14020</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1402"/>
+        </record>
+        <record model="account.account.template" id="14021">
+            <field name="name">Prepaid conference registrations and meals expense</field>
+            <field name="code">14021</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1402"/>
+        </record>
+        <record model="account.account.template" id="14022">
+            <field name="name">Prepaid trade show expense</field>
+            <field name="code">14022</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1402"/>
+        </record>
+        <record model="account.account.template" id="1403">
+            <field name="name">Employee advances</field>
+            <field name="code">1403</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="140"/>
+        </record>
+        <record model="account.account.template" id="1404">
+            <field name="name">Prepaid interest expense</field>
+            <field name="code">1404</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="140"/>
+        </record>
+        <record model="account.account.template" id="1409">
+            <field name="name">Prepaid other expense</field>
+            <field name="code">1409</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="140"/>
+        </record>
+        <record model="account.account.template" id="141">
+            <field name="name">Returnable deposits</field>
+            <field name="code">141</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="14"/>
+        </record>
+        <record model="account.account.template" id="142">
+            <field name="name">Accrued revenue</field>
+            <field name="code">142</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="14"/>
+        </record>
+        <record model="account.account.template" id="143">
+            <field name="name">Deferred costs</field>
+            <field name="code">143</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="14"/>
+        </record>
+        <record model="account.account.template" id="144">
+            <field name="name">Other accrued and deferred items</field>
+            <field name="code">144</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="14"/>
+        </record>
+        <record model="account.account.template" id="145">
+            <field name="name">Other current assets</field>
+            <field name="code">145</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="14"/>
+        </record>
+        <record model="account.account.template" id="2">
+            <field name="name">Liabilities</field>
+            <field name="code">2</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="root"/>
+        </record>
+        <record model="account.account.template" id="20">
+            <field name="name">Payables</field>
+            <field name="code">20</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="2"/>
+        </record>
+        <record model="account.account.template" id="200">
+            <field name="name">Accounts payable</field>
+            <field name="code">200</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="20"/>
+        </record>
+        <record model="account.account.template" id="2000">
+            <field name="name">Accounts payable, merchandise</field>
+            <field name="code">2000</field>
+            <field name="type" ref="accounts_payable"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="200"/>
+        </record>
+        <record model="account.account.template" id="2001">
+            <field name="name">Accounts payable, operating</field>
+            <field name="code">2001</field>
+            <field name="type" ref="accounts_payable"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="200"/>
+        </record>
+        <record model="account.account.template" id="201">
+            <field name="name">Notes payable</field>
+            <field name="code">201</field>
+            <field name="type" ref="notes_payable"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="20"/>
+        </record>
+        <record model="account.account.template" id="3">
+            <field name="name">Shareholders’ equity</field>
+            <field name="code">3</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="root"/>
+        </record>
+        <record model="account.account.template" id="30">
+            <field name="name">Contributed capital</field>
+            <field name="code">30</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="3"/>
+        </record>
+        <record model="account.account.template" id="300">
+            <field name="name">Common stock</field>
+            <field name="code">300</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="30"/>
+        </record>
+        <record model="account.account.template" id="3000">
+            <field name="name">Common stock</field>
+            <field name="code">3000</field>
+            <field name="type" ref="common_stock"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="300"/>
+        </record>
+        <record model="account.account.template" id="3001">
+            <field name="name">Paid-in capital in excess of par on common stock</field>
+            <field name="code">3001</field>
+            <field name="type" ref="additional_paid_in_capital"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="300"/>
+        </record>
+        <record model="account.account.template" id="301">
+            <field name="name">Preferred stock</field>
+            <field name="code">301</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="30"/>
+        </record>
+        <record model="account.account.template" id="3010">
+            <field name="name">Preferred stock</field>
+            <field name="code">3010</field>
+            <field name="type" ref="preferred_stock"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="301"/>
+        </record>
+        <record model="account.account.template" id="3011">
+            <field name="name">Paid-in capital in excess of par on preferred stock</field>
+            <field name="code">3011</field>
+            <field name="type" ref="additional_paid_in_capital"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="301"/>
+        </record>
+        <record model="account.account.template" id="31">
+            <field name="name">Retained earnings</field>
+            <field name="code">31</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="3"/>
+        </record>
+        <record model="account.account.template" id="310">
+            <field name="name">Appropriated retained earnings</field>
+            <field name="code">310</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="31"/>
+        </record>
+        <record model="account.account.template" id="311">
+            <field name="name">Unappropriated retained earnings</field>
+            <field name="code">311</field>
+            <field name="type" ref="income"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="31"/>
+        </record>
+        <record model="account.account.template" id="312">
+            <field name="name">Suspense account</field>
+            <field name="code">312</field>
+            <field name="type" ref="income"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="31"/>
+        </record>
+        <record model="account.account.template" id="32">
+            <field name="name">Accumulated other comprehensive income net of tax</field>
+            <field name="code">32</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="3"/>
+        </record>
+        <record model="account.account.template" id="33">
+            <field name="name">Other equity</field>
+            <field name="code">33</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="3"/>
+        </record>
+        <record model="account.account.template" id="330">
+            <field name="name">Stock subscriptions</field>
+            <field name="code">330</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="account.account.template" id="3300">
+            <field name="name">Subscribed stock, common</field>
+            <field name="code">3300</field>
+            <field name="type" ref="subscribed_stock"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="330"/>
+        </record>
+        <record model="account.account.template" id="3301">
+            <field name="name">Subscribed stock, preferred</field>
+            <field name="code">3301</field>
+            <field name="type" ref="subscribed_stock"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="330"/>
+        </record>
+        <record model="account.account.template" id="4">
+            <field name="name">Revenues</field>
+            <field name="code">4</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="root"/>
+        </record>
+        <record model="account.account.template" id="40">
+            <field name="name">Goods</field>
+            <field name="code">40</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="4"/>
+        </record>
+        <record model="account.account.template" id="41">
+            <field name="name">Services</field>
+            <field name="code">41</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="4"/>
+        </record>
+        <record model="account.account.template" id="410">
+            <field name="name">Software subscription revenue</field>
+            <field name="code">410</field>
+            <field name="type" ref="revenue"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="41"/>
+        </record>
+        <record model="account.account.template" id="5">
+            <field name="name">Expenses</field>
+            <field name="code">5</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="root"/>
+        </record>
+        <record model="account.account.template" id="50">
+            <field name="name">Cost of revenues</field>
+            <field name="code">50</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5"/>
+        </record>
+        <record model="account.account.template" id="500">
+            <field name="name">Cost of goods sold</field>
+            <field name="code">500</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="50"/>
+        </record>
+        <record model="account.account.template" id="501">
+            <field name="name">Cost of services rendered</field>
+            <field name="code">501</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="50"/>
+        </record>
+        <record model="account.account.template" id="51">
+            <field name="name">Research and development expenses</field>
+            <field name="code">51</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5"/>
+        </record>
+        <record model="account.account.template" id="52">
+            <field name="name">Selling and distribution expenses</field>
+            <field name="code">52</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5"/>
+        </record>
+        <record model="account.account.template" id="520">
+            <field name="name">Salespersons</field>
+            <field name="code">520</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="52"/>
+        </record>
+        <record model="account.account.template" id="5200">
+            <field name="name">Salaries expense, sales</field>
+            <field name="code">5200</field>
+            <field name="type" ref="expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="520"/>
+        </record>
+        <record model="account.account.template" id="5201">
+            <field name="name">Commissions</field>
+            <field name="code">5201</field>
+            <field name="type" ref="expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="520"/>
+        </record>
+        <record model="account.account.template" id="5202">
+            <field name="name">Bonuses</field>
+            <field name="code">5202</field>
+            <field name="type" ref="expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="520"/>
+        </record>
+        <record model="account.account.template" id="53">
+            <field name="name">General and administrative expenses</field>
+            <field name="code">53</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5"/>
+        </record>
+        <record model="account.account.template" id="539">
+            <field name="name">Other general and administrative expenses</field>
+            <field name="code">539</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="53"/>
+        </record>
+        <record model="account.account.template" id="5390">
+            <field name="name">Operating taxes</field>
+            <field name="code">5390</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="539"/>
+        </record>
+        <record model="account.account.template" id="53902">
+            <field name="name">Business licenses and fees</field>
+            <field name="code">53902</field>
+            <field name="type" ref="expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5390"/>
+        </record>
+        <record model="account.account.template" id="6">
+            <field name="name">Peripheral operations</field>
+            <field name="code">6</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="root"/>
+        </record>
+        <record model="account.account.template" id="7">
+            <field name="name">Income tax</field>
+            <field name="code">7</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="root"/>
+        </record>
+        <record model="account.account.template" id="8">
+            <field name="name">Below-the-line items</field>
+            <field name="code">8</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="root"/>
+        </record>
+        <record model="account.account.template" id="9">
+            <field name="name">Other comprehensive income</field>
+            <field name="code">9</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="root"/>
+        </record>
+
+    </data>
+</tryton>
