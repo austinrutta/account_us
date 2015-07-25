@@ -224,7 +224,7 @@
             <field name="sequence" eval="60"/>
             <field name="parent" ref="assets_non_current"/>
         </record>
-        <record model="account.account.type.template" id="liabilities_and_shareholders_equity">
+        <record model="account.account.type.template" id="liabilities_and_equity">
             <field name="name">Liabilities and shareholders’ equity</field>
             <field name="parent" ref="us"/>
             <field name="sequence" eval="20"/>
@@ -233,7 +233,7 @@
         </record>
         <record model="account.account.type.template" id="liabilities">
             <field name="name">Liabilities</field>
-            <field name="parent" ref="liabilities_and_shareholders_equity"/>
+            <field name="parent" ref="liabilities_and_equity"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
@@ -255,14 +255,20 @@
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="customer_credits">
-            <field name="name">Customer credits</field>
+        <record model="account.account.type.template" id="short_term_borrowings">
+            <field name="name">Short-term borrowings</field>
             <field name="parent" ref="payables"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="short_term_borrowings">
-            <field name="name">Short-term borrowings</field>
+        <record model="account.account.type.template" id="lines_of_credit">
+            <field name="name">Lines of credit</field>
+            <field name="parent" ref="payables"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accounts_payable_to_related_parties">
+            <field name="name">Accounts payable to related parties</field>
             <field name="parent" ref="payables"/>
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
@@ -285,10 +291,16 @@
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="customer_credits">
+            <field name="name">Customer credits</field>
+            <field name="parent" ref="liabilities_current_accrued_and_deferred"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="accrued_expenses">
             <field name="name">Accrued expenses</field>
             <field name="parent" ref="liabilities_current_accrued_and_deferred"/>
-            <field name="sequence" eval="20"/>
+            <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="sales_tax_collected">
@@ -312,7 +324,7 @@
         <record model="account.account.type.template" id="employee_related_liabilities">
             <field name="name">Employee-related liabilities</field>
             <field name="parent" ref="liabilities_current_accrued_and_deferred"/>
-            <field name="sequence" eval="30"/>
+            <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="accrued_payroll">
@@ -461,7 +473,7 @@
         </record>
         <record model="account.account.type.template" id="equity">
             <field name="name">Equity</field>
-            <field name="parent" ref="liabilities_and_shareholders_equity"/>
+            <field name="parent" ref="liabilities_and_equity"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
@@ -1044,7 +1056,7 @@
             <field name="parent" ref="20"/>
         </record>
         <record model="account.account.template" id="2000">
-            <field name="name">Accounts payable, merchandise</field>
+            <field name="name">Accounts payable</field>
             <field name="code">2000</field>
             <field name="type" ref="accounts_payables"/>
             <field name="deferral" eval="True"/>
@@ -1054,9 +1066,26 @@
             <field name="parent" ref="200"/>
         </record>
         <record model="account.account.template" id="2001">
-            <field name="name">Accounts payable, operating</field>
+            <field name="name">Short-term borrowings</field>
             <field name="code">2001</field>
-            <field name="type" ref="accounts_payables"/>
+            <field name="type" ref="short_term_borrowings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="200"/>
+        </record>
+        <record model="account.account.template" id="2002">
+            <field name="name">Lines of credit</field>
+            <field name="code">2002</field>
+            <field name="type" ref="lines_of_credit"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="200"/>
+        </record>
+        <record model="account.account.template" id="2003">
+            <field name="name">Accounts payable to related parties</field>
+            <field name="code">2003</field>
+            <field name="type" ref="accounts_payable_to_related_parties"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
@@ -1074,7 +1103,7 @@
             <field name="parent" ref="20"/>
         </record>
         <record model="account.account.template" id="3">
-            <field name="name">Shareholders’ equity</field>
+            <field name="name">Equity</field>
             <field name="code">3</field>
             <field name="kind">view</field>
             <field name="parent" ref="root"/>
@@ -1134,6 +1163,7 @@
         <record model="account.account.template" id="31">
             <field name="name">Retained earnings</field>
             <field name="code">31</field>
+            <field name="type" ref="retained_earnings"/>
             <field name="kind">view</field>
             <field name="parent" ref="3"/>
         </record>
