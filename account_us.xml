@@ -1092,6 +1092,38 @@
             <field name="kind">view</field>
             <field name="parent" ref="2"/>
         </record>
+        <record model="account.account.template" id="212">
+            <field name="name">Accrued expenses</field>
+            <field name="code">212</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="21"/>
+        </record>
+        <record model="account.account.template" id="2120">
+            <field name="name">Sales tax collected</field>
+            <field name="code">2120</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="212"/>
+        </record>
+        <record model="account.account.template" id="212052">
+            <field name="name">Sales tax payable, Utah (UT)</field>
+            <field name="code">212052</field>
+            <field name="type" ref="sales_tax_collected"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2120"/>
+        </record>
+        <record model="account.account.template" id="2121">
+            <field name="name">Accrued use tax</field>
+            <field name="code">2121</field>
+            <field name="type" ref="accrued_use_tax"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="212"/>
+        </record>
         <record model="account.account.template" id="22">
             <field name="name">Additional short-term liabilities</field>
             <field name="code">22</field>
@@ -1184,14 +1216,6 @@
             <field name="name">Unappropriated retained earnings</field>
             <field name="code">311</field>
             <field name="type" ref="unappropriated_retained_earnings"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="31"/>
-        </record>
-        <record model="account.account.template" id="312">
-            <field name="name">Suspense account</field>
-            <field name="code">312</field>
-            <field name="type" ref="retained_earnings"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="31"/>
