@@ -1052,55 +1052,61 @@
         <record model="account.account.template" id="200">
             <field name="name">Accounts payable</field>
             <field name="code">200</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="20"/>
-        </record>
-        <record model="account.account.template" id="2000">
-            <field name="name">Accounts payable</field>
-            <field name="code">2000</field>
             <field name="type" ref="accounts_payables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
-            <field name="parent" ref="200"/>
+            <field name="parent" ref="20"/>
         </record>
-        <record model="account.account.template" id="2001">
+        <record model="account.account.template" id="201">
             <field name="name">Short-term borrowings</field>
-            <field name="code">2001</field>
+            <field name="code">201</field>
             <field name="type" ref="short_term_borrowings"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
-            <field name="parent" ref="200"/>
+            <field name="parent" ref="20"/>
         </record>
-        <record model="account.account.template" id="2002">
+        <record model="account.account.template" id="202">
             <field name="name">Lines of credit</field>
-            <field name="code">2002</field>
+            <field name="code">202</field>
             <field name="type" ref="lines_of_credit"/>
             <field name="kind">view</field>
-            <field name="parent" ref="200"/>
+            <field name="parent" ref="20"/>
         </record>
-        <record model="account.account.template" id="2003">
+        <record model="account.account.template" id="203">
             <field name="name">Accounts payable to related parties</field>
-            <field name="code">2003</field>
+            <field name="code">203</field>
             <field name="type" ref="accounts_payable_to_related_parties"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
-            <field name="parent" ref="200"/>
+            <field name="parent" ref="20"/>
         </record>
-        <record model="account.account.template" id="201">
+        <record model="account.account.template" id="21">
+            <field name="name">Accrued and deferred liabilities</field>
+            <field name="code">21</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="2"/>
+        </record>
+        <record model="account.account.template" id="22">
+            <field name="name">Additional short-term liabilities</field>
+            <field name="code">22</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="2"/>
+        </record>
+        <record model="account.account.template" id="220">
             <field name="name">Notes payable</field>
-            <field name="code">201</field>
+            <field name="code">220</field>
             <field name="type" ref="notes_payables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
-            <field name="parent" ref="20"/>
+            <field name="parent" ref="22"/>
         </record>
         <record model="account.account.template" id="3">
             <field name="name">Equity</field>
