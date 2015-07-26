@@ -1274,14 +1274,6 @@
             <field name="kind">view</field>
             <field name="parent" ref="4"/>
         </record>
-        <record model="account.account.template" id="410">
-            <field name="name">Software subscription revenue</field>
-            <field name="code">410</field>
-            <field name="type" ref="revenue"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">revenue</field>
-            <field name="parent" ref="41"/>
-        </record>
         <record model="account.account.template" id="5">
             <field name="name">Expenses</field>
             <field name="code">5</field>
