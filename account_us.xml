@@ -229,34 +229,49 @@
             <field name="sequence" eval="30"/>
             <field name="parent" ref="non_current_assets"/>
         </record>
-        <record model="account.account.type.template" id="assets_organizational_expenses">
-            <field name="name">Organizational expenses</field>
+        <record model="account.account.type.template" id="marketing_related_intangibles">
+            <field name="name">Marketing-related intangibles</field>
             <field name="sequence" eval="10"/>
             <field name="parent" ref="intangible_assets"/>
         </record>
-        <record model="account.account.type.template" id="assets_research_and_development_costs">
-            <field name="name">Research and development costs</field>
+        <record model="account.account.type.template" id="customer_related_intangibles">
+            <field name="name">Customer-related intangibles</field>
             <field name="sequence" eval="20"/>
             <field name="parent" ref="intangible_assets"/>
         </record>
-        <record model="account.account.type.template" id="assets_patents_licences_trademarks">
-            <field name="name">Patents, licenses, trademarks, processes, software, or similar rights and assets</field>
+        <record model="account.account.type.template" id="artistic_related_intangibles">
+            <field name="name">Artistic-related intangibles</field>
             <field name="sequence" eval="30"/>
+            <field name="parent" ref="intangible_assets"/>
+        </record>
+        <record model="account.account.type.template" id="contract_based_intangibles">
+            <field name="name">Contract-based intangibles</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="intangible_assets"/>
+        </record>
+        <record model="account.account.type.template" id="technology_based_intangibles">
+            <field name="name">Technology-based intangibles</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="intangible_assets"/>
+        </record>
+        <record model="account.account.type.template" id="research_and_development">
+            <field name="name">Research and development</field>
+            <field name="sequence" eval="60"/>
             <field name="parent" ref="intangible_assets"/>
         </record>
         <record model="account.account.type.template" id="goodwill">
             <field name="name">Goodwill</field>
-            <field name="sequence" eval="40"/>
+            <field name="sequence" eval="70"/>
             <field name="parent" ref="intangible_assets"/>
         </record>
-        <record model="account.account.type.template" id="intangible_assets_other">
-            <field name="name">Other</field>
-            <field name="sequence" eval="50"/>
+        <record model="account.account.type.template" id="other_intangible_assets">
+            <field name="name">Other intangible assets</field>
+            <field name="sequence" eval="80"/>
             <field name="parent" ref="intangible_assets"/>
         </record>
-        <record model="account.account.type.template" id="intangible_assets_in_process">
-            <field name="name">Intangible assets in process</field>
-            <field name="sequence" eval="60"/>
+        <record model="account.account.type.template" id="amortization_of_intangible_assets">
+            <field name="name">Amortization of intangible assets</field>
+            <field name="sequence" eval="90"/>
             <field name="parent" ref="intangible_assets"/>
         </record>
         <record model="account.account.type.template" id="other_assets">
