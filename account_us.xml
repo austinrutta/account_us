@@ -274,11 +274,6 @@
             <field name="sequence" eval="80"/>
             <field name="parent" ref="intangible_assets"/>
         </record>
-        <record model="account.account.type.template" id="amortization_of_intangible_assets">
-            <field name="name">Amortization of intangible assets</field>
-            <field name="sequence" eval="90"/>
-            <field name="parent" ref="intangible_assets"/>
-        </record>
         <record model="account.account.type.template" id="other_assets">
             <field name="name">Other assets</field>
             <field name="sequence" eval="40"/>
@@ -1293,6 +1288,94 @@
             <field name="code">17</field>
             <field name="kind">view</field>
             <field name="parent" ref="1"/>
+        </record>
+        <record model="account.account.template" id="170">
+            <field name="name">Marketing-related intangible assets</field>
+            <field name="code">170</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="17"/>
+        </record>
+        <record model="account.account.template" id="1700">
+            <field name="name">Trademarks, trade names</field>
+            <field name="code">1700</field>
+            <field name="type" ref="marketing_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="170"/>
+        </record>
+        <record model="account.account.template" id="1701">
+            <field name="name">Service marks, collective marks, certification marks</field>
+            <field name="code">1701</field>
+            <field name="type" ref="marketing_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="170"/>
+        </record>
+        <record model="account.account.template" id="1702">
+            <field name="name">Trade dress</field>
+            <field name="code">1702</field>
+            <field name="type" ref="marketing_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="170"/>
+        </record>
+        <record model="account.account.template" id="1703">
+            <field name="name">Internet domain names</field>
+            <field name="code">1703</field>
+            <field name="type" ref="marketing_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="170"/>
+        </record>
+        <record model="account.account.template" id="1709">
+            <field name="name">Amortization of marketing-related intangible assets (-)</field>
+            <field name="code">1709</field>
+            <field name="type" ref="marketing_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="170"/>
+        </record>
+        <record model="account.account.template" id="171">
+            <field name="name">Customer-related intangible assets</field>
+            <field name="code">171</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="17"/>
+        </record>
+        <record model="account.account.template" id="172">
+            <field name="name">Artistic-related intangible assets</field>
+            <field name="code">172</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="17"/>
+        </record>
+        <record model="account.account.template" id="173">
+            <field name="name">Contract-based intangible assets</field>
+            <field name="code">173</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="17"/>
+        </record>
+        <record model="account.account.template" id="174">
+            <field name="name">Technology-based intangible assets</field>
+            <field name="code">174</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="17"/>
+        </record>
+        <record model="account.account.template" id="175">
+            <field name="name">Research and development costs</field>
+            <field name="code">175</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="17"/>
+        </record>
+        <record model="account.account.template" id="176">
+            <field name="name">Goodwill</field>
+            <field name="code">176</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="17"/>
+        </record>
+        <record model="account.account.template" id="177">
+            <field name="name">Other intangible assets</field>
+            <field name="code">177</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="17"/>
         </record>
         <record model="account.account.template" id="19">
             <field name="name">Other assets</field>
