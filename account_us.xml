@@ -214,7 +214,7 @@
             <field name="sequence" eval="40"/>
             <field name="parent" ref="tangible_assets"/>
         </record>
-        <record model="account.account.type.template" id="furniture_fixtures">
+        <record model="account.account.type.template" id="furniture_fixtures_office">
             <field name="name">Furniture, fixtures, and office equipment</field>
             <field name="sequence" eval="50"/>
             <field name="parent" ref="tangible_assets"/>
@@ -1283,6 +1283,277 @@
             <field name="kind">view</field>
             <field name="parent" ref="1"/>
         </record>
+        <record model="account.account.template" id="160">
+            <field name="name">Land and improvements</field>
+            <field name="code">160</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="16"/>
+        </record>
+        <record model="account.account.template" id="1600">
+            <field name="name">Land</field>
+            <field name="code">1600</field>
+            <field name="type" ref="land"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="160"/>
+        </record>
+        <record model="account.account.template" id="1601">
+            <field name="name">Acquisition costs of land</field>
+            <field name="code">1601</field>
+            <field name="type" ref="land"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="160"/>
+        </record>
+        <record model="account.account.template" id="1609">
+            <field name="name">Amortization and value of land and land improvements (-)</field>
+            <field name="code">1609</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="160"/>
+        </record>
+        <record model="account.account.template" id="16090">
+            <field name="name">Amortization of acquisition costs of land (-)</field>
+            <field name="code">16090</field>
+            <field name="type" ref="land"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1609"/>
+        </record>
+        <record model="account.account.template" id="16091">
+            <field name="name">Impairment of land (-)</field>
+            <field name="code">16091</field>
+            <field name="type" ref="land"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1609"/>
+        </record>
+        <record model="account.account.template" id="161">
+            <field name="name">Buildings and improvements</field>
+            <field name="code">161</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="16"/>
+        </record>
+        <record model="account.account.template" id="1610">
+            <field name="name">Administrative structures</field>
+            <field name="code">1610</field>
+            <field name="type" ref="buildings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="161"/>
+        </record>
+        <record model="account.account.template" id="1611">
+            <field name="name">Industrial buildings</field>
+            <field name="code">1611</field>
+            <field name="type" ref="buildings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="161"/>
+        </record>
+        <record model="account.account.template" id="1612">
+            <field name="name">Leasehold improvements</field>
+            <field name="code">1612</field>
+            <field name="type" ref="buildings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="161"/>
+        </record>
+        <record model="account.account.template" id="1619">
+            <field name="name">Depreciation of buildings and improvements (-)</field>
+            <field name="code">1619</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="161"/>
+        </record>
+        <record model="account.account.template" id="16190">
+            <field name="name">Depreciation of administrative structures (-)</field>
+            <field name="code">16190</field>
+            <field name="type" ref="buildings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1619"/>
+        </record>
+        <record model="account.account.template" id="16191">
+            <field name="name">Depreciation of industrial buildings (-)</field>
+            <field name="code">16191</field>
+            <field name="type" ref="buildings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1619"/>
+        </record>
+        <record model="account.account.template" id="16192">
+            <field name="name">Depreciation of leasehold improvements (-)</field>
+            <field name="code">16192</field>
+            <field name="type" ref="buildings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1619"/>
+        </record>
+        <record model="account.account.template" id="162">
+            <field name="name">Production machinery and equipment</field>
+            <field name="code">162</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="16"/>
+        </record>
+        <record model="account.account.template" id="1620">
+            <field name="name">Machinery and tools</field>
+            <field name="code">1620</field>
+            <field name="type" ref="production_machinery_and_equipment"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="162"/>
+        </record>
+        <record model="account.account.template" id="1621">
+            <field name="name">Information technology assets</field>
+            <field name="code">1621</field>
+            <field name="type" ref="production_machinery_and_equipment"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="162"/>
+        </record>
+        <record model="account.account.template" id="1629">
+            <field name="name">Depreciation on production machinery and equipment (-)</field>
+            <field name="code">1629</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="162"/>
+        </record>
+        <record model="account.account.template" id="16290">
+            <field name="name">Depreciation of machinery and tools (-)</field>
+            <field name="code">16290</field>
+            <field name="type" ref="production_machinery_and_equipment"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1629"/>
+        </record>
+        <record model="account.account.template" id="16291">
+            <field name="name">Depreciation of information technology assets (-)</field>
+            <field name="code">16291</field>
+            <field name="type" ref="production_machinery_and_equipment"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1629"/>
+        </record>
+        <record model="account.account.template" id="163">
+            <field name="name">Transportation equipment</field>
+            <field name="code">163</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="16"/>
+        </record>
+        <record model="account.account.template" id="1630">
+            <field name="name">Vehicles</field>
+            <field name="code">1630</field>
+            <field name="type" ref="transportation_equipment"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="163"/>
+        </record>
+        <record model="account.account.template" id="1631">
+            <field name="name">Delivery equipment</field>
+            <field name="code">1631</field>
+            <field name="type" ref="transportation_equipment"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="163"/>
+        </record>
+        <record model="account.account.template" id="1639">
+            <field name="name">Depreciation of transportation equipment (-)</field>
+            <field name="code">1639</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="163"/>
+        </record>
+        <record model="account.account.template" id="16390">
+            <field name="name">Depreciation of vehicles (-)</field>
+            <field name="code">16390</field>
+            <field name="type" ref="transportation_equipment"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1639"/>
+        </record>
+        <record model="account.account.template" id="16391">
+            <field name="name">Depreciation of delivery equipment (-)</field>
+            <field name="code">16391</field>
+            <field name="type" ref="transportation_equipment"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1639"/>
+        </record>
+        <record model="account.account.template" id="164">
+            <field name="name">Furniture, fixtures, and office equipment</field>
+            <field name="code">164</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="16"/>
+        </record>
+        <record model="account.account.template" id="1640">
+            <field name="name">Furniture and fixtures</field>
+            <field name="code">1640</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="164"/>
+        </record>
+        <record model="account.account.template" id="16400">
+            <field name="name">Furniture and fixtures for administrative structures</field>
+            <field name="code">16400</field>
+            <field name="type" ref="furniture_fixtures_office"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1640"/>
+        </record>
+        <record model="account.account.template" id="16401">
+            <field name="name">Furniture and fixtures for industrial buildings</field>
+            <field name="code">16401</field>
+            <field name="type" ref="furniture_fixtures_office"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1640"/>
+        </record>
+        <record model="account.account.template" id="1641">
+            <field name="name">Office equipment</field>
+            <field name="code">1641</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="164"/>
+        </record>
+        <record model="account.account.template" id="16410">
+            <field name="name">Office equipment for administrative structures</field>
+            <field name="code">16410</field>
+            <field name="type" ref="furniture_fixtures_office"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1641"/>
+        </record>
+        <record model="account.account.template" id="16411">
+            <field name="name">Office equipment for industrial buildings</field>
+            <field name="code">16411</field>
+            <field name="type" ref="furniture_fixtures_office"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1641"/>
+        </record>
+        <record model="account.account.template" id="1649">
+            <field name="name">Depreciation of furniture, fixtures, and office equipment (-)</field>
+            <field name="code">1649</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="164"/>
+        </record>
+        <record model="account.account.template" id="16490">
+            <field name="name">Depreciation of furniture and fixtures (-)</field>
+            <field name="code">16490</field>
+            <field name="type" ref="furniture_fixtures_office"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1649"/>
+        </record>
+        <record model="account.account.template" id="16491">
+            <field name="name">Depreciation of office equipment (-)</field>
+            <field name="code">16491</field>
+            <field name="type" ref="furniture_fixtures_office"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1649"/>
+        </record>
+        <record model="account.account.template" id="169">
+            <field name="name">Other tangible assets</field>
+            <field name="code">169</field>
+            <field name="type" ref="other_tangible_assets"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="16"/>
+        </record>
         <record model="account.account.template" id="17">
             <field name="name">Intangible assets</field>
             <field name="code">17</field>
@@ -1518,7 +1789,7 @@
             <field name="parent" ref="174"/>
         </record>
         <record model="account.account.template" id="1742">
-            <field name="name">Acquired computer software</field>
+            <field name="name">Internal-use software</field>
             <field name="code">1742</field>
             <field name="kind">view</field>
             <field name="parent" ref="174"/>
@@ -1551,11 +1822,43 @@
             <field name="kind">view</field>
             <field name="parent" ref="17"/>
         </record>
+        <record model="account.account.template" id="1750">
+            <field name="name">Capitalized research and development costs</field>
+            <field name="code">1750</field>
+            <field name="type" ref="research_and_development"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="175"/>
+        </record>
+        <record model="account.account.template" id="1751">
+            <field name="name">Amortization of research and development costs</field>
+            <field name="code">1751</field>
+            <field name="type" ref="research_and_development"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="175"/>
+        </record>
         <record model="account.account.template" id="176">
             <field name="name">Goodwill</field>
             <field name="code">176</field>
             <field name="kind">view</field>
             <field name="parent" ref="17"/>
+        </record>
+        <record model="account.account.template" id="1760">
+            <field name="name">Goodwill</field>
+            <field name="code">1760</field>
+            <field name="type" ref="goodwill"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="176"/>
+        </record>
+        <record model="account.account.template" id="1761">
+            <field name="name">Goodwill impairment (-)</field>
+            <field name="code">1761</field>
+            <field name="type" ref="goodwill"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="176"/>
         </record>
         <record model="account.account.template" id="177">
             <field name="name">Other intangible assets</field>
@@ -1568,6 +1871,44 @@
             <field name="code">19</field>
             <field name="kind">view</field>
             <field name="parent" ref="1"/>
+        </record>
+        <record model="account.account.template" id="190">
+            <field name="name">Prepaid and other accrued assets</field>
+            <field name="code">190</field>
+            <field name="type" ref="non_current_prepaid_expenses"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="19"/>
+        </record>
+        <record model="account.account.template" id="191">
+            <field name="name">Assets held for disposal</field>
+            <field name="code">191</field>
+            <field name="type" ref="assets_held_for_disposal"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="19"/>
+        </record>
+        <record model="account.account.template" id="192">
+            <field name="name">Non-current restricted cash and other investments</field>
+            <field name="code">192</field>
+            <field name="type" ref="non_current_restricted_cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="19"/>
+        </record>
+        <record model="account.account.template" id="193">
+            <field name="name">Deferred tax assets</field>
+            <field name="code">193</field>
+            <field name="type" ref="deferred_tax_assets"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="19"/>
+        </record>
+        <record model="account.account.template" id="199">
+            <field name="name">Other non-current assets</field>
+            <field name="code">199</field>
+            <field name="type" ref="other_non_current_assets"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="19"/>
         </record>
         <record model="account.account.template" id="2">
             <field name="name">Liabilities</field>
