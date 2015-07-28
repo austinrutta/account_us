@@ -134,8 +134,8 @@
             <field name="sequence" eval="20"/>
             <field name="parent" ref="accrued_and_deferred_assets"/>
         </record>
-        <record model="account.account.type.template" id="accrued_revenue">
-            <field name="name">Accrued revenue</field>
+        <record model="account.account.type.template" id="accrued_revenues">
+            <field name="name">Accrued revenues</field>
             <field name="sequence" eval="30"/>
             <field name="parent" ref="accrued_and_deferred_assets"/>
         </record>
