@@ -1327,6 +1327,14 @@
             <field name="kind">other</field>
             <field name="parent" ref="170"/>
         </record>
+        <record model="account.account.template" id="1704">
+            <field name="name">Non-competition agreements</field>
+            <field name="code">1704</field>
+            <field name="type" ref="marketing_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="170"/>
+        </record>
         <record model="account.account.template" id="1709">
             <field name="name">Amortization of marketing-related intangible assets (-)</field>
             <field name="code">1709</field>
@@ -1341,11 +1349,83 @@
             <field name="kind">view</field>
             <field name="parent" ref="17"/>
         </record>
+        <record model="account.account.template" id="1710">
+            <field name="name">Customer lists</field>
+            <field name="code">1710</field>
+            <field name="type" ref="customer_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="171"/>
+        </record>
+        <record model="account.account.template" id="1711">
+            <field name="name">Customer contracts and related customer relationships</field>
+            <field name="code">1711</field>
+            <field name="type" ref="customer_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="171"/>
+        </record>
+        <record model="account.account.template" id="1712">
+            <field name="name">Non-contractual customer relationships</field>
+            <field name="code">1712</field>
+            <field name="type" ref="customer_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="171"/>
+        </record>
+        <record model="account.account.template" id="1719">
+            <field name="name">Amortization of customer-related intangible assets (-)</field>
+            <field name="code">1719</field>
+            <field name="type" ref="marketing_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="171"/>
+        </record>
         <record model="account.account.template" id="172">
             <field name="name">Artistic-related intangible assets</field>
             <field name="code">172</field>
             <field name="kind">view</field>
             <field name="parent" ref="17"/>
+        </record>
+        <record model="account.account.template" id="1720">
+            <field name="name">Pictures, photos</field>
+            <field name="code">1720</field>
+            <field name="type" ref="artistic_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="172"/>
+        </record>
+        <record model="account.account.template" id="1721">
+            <field name="name">Books, magazines, newspapers, or other literary works</field>
+            <field name="code">1721</field>
+            <field name="type" ref="artistic_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="172"/>
+        </record>
+        <record model="account.account.template" id="1722">
+            <field name="name">Video and audiovisual material</field>
+            <field name="code">1722</field>
+            <field name="type" ref="artistic_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="172"/>
+        </record>
+        <record model="account.account.template" id="1723">
+            <field name="name">Musical works</field>
+            <field name="code">1723</field>
+            <field name="type" ref="artistic_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="172"/>
+        </record>
+        <record model="account.account.template" id="1729">
+            <field name="name">Amortization of artistic-related intangible assets (-)</field>
+            <field name="code">1729</field>
+            <field name="type" ref="artistic_related_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="172"/>
         </record>
         <record model="account.account.template" id="173">
             <field name="name">Contract-based intangible assets</field>
@@ -1353,11 +1433,117 @@
             <field name="kind">view</field>
             <field name="parent" ref="17"/>
         </record>
+        <record model="account.account.template" id="1730">
+            <field name="name">Licensing, royalty, or standstill agreements</field>
+            <field name="code">1730</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="173"/>
+        </record>
+        <record model="account.account.template" id="17300">
+            <field name="name">Software licenses</field>
+            <field name="code">17300</field>
+            <field name="type" ref="contract_based_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1730"/>
+        </record>
+        <record model="account.account.template" id="17301">
+            <field name="name">Digital font licenses</field>
+            <field name="code">17301</field>
+            <field name="type" ref="contract_based_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1730"/>
+        </record>
+        <record model="account.account.template" id="1731">
+            <field name="name">Advertising, management, service or supply contracts</field>
+            <field name="code">1731</field>
+            <field name="type" ref="contract_based_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="173"/>
+        </record>
+        <record model="account.account.template" id="1732">
+            <field name="name">Employment contracts</field>
+            <field name="code">1732</field>
+            <field name="type" ref="contract_based_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="173"/>
+        </record>
+        <record model="account.account.template" id="1733">
+            <field name="name">Lease agreements</field>
+            <field name="code">1733</field>
+            <field name="type" ref="contract_based_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="173"/>
+        </record>
+        <record model="account.account.template" id="1734">
+            <field name="name">Construction permits</field>
+            <field name="code">1734</field>
+            <field name="type" ref="contract_based_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="173"/>
+        </record>
+        <record model="account.account.template" id="1739">
+            <field name="name">Amortization of contract-based intangible assets (-)</field>
+            <field name="code">1739</field>
+            <field name="type" ref="contract_based_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="173"/>
+        </record>
         <record model="account.account.template" id="174">
             <field name="name">Technology-based intangible assets</field>
             <field name="code">174</field>
             <field name="kind">view</field>
             <field name="parent" ref="17"/>
+        </record>
+        <record model="account.account.template" id="1740">
+            <field name="name">Patented technology</field>
+            <field name="code">1740</field>
+            <field name="type" ref="technology_based_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="174"/>
+        </record>
+        <record model="account.account.template" id="1741">
+            <field name="name">Unpatented technology</field>
+            <field name="code">1741</field>
+            <field name="type" ref="technology_based_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="174"/>
+        </record>
+        <record model="account.account.template" id="1742">
+            <field name="name">Acquired computer software</field>
+            <field name="code">1742</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="174"/>
+        </record>
+        <record model="account.account.template" id="1743">
+            <field name="name">Website development costs</field>
+            <field name="code">1743</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="174"/>
+        </record>
+        <record model="account.account.template" id="1744">
+            <field name="name">Databases</field>
+            <field name="code">1744</field>
+            <field name="type" ref="technology_based_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="174"/>
+        </record>
+        <record model="account.account.template" id="1749">
+            <field name="name">Amortization of technology-based intangible assets (-)</field>
+            <field name="code">1749</field>
+            <field name="type" ref="technology_based_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="174"/>
         </record>
         <record model="account.account.template" id="175">
             <field name="name">Research and development costs</field>
