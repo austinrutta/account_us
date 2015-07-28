@@ -2031,18 +2031,9 @@
             <field name="kind">view</field>
             <field name="parent" ref="30"/>
         </record>
-        <record model="account.account.template" id="3000">
-            <field name="name">Common stock</field>
-            <field name="code">3000</field>
-            <field name="type" ref="common_stock"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="party_required" eval="True"/>
-            <field name="parent" ref="300"/>
-        </record>
-        <record model="account.account.template" id="3001">
+        <record model="account.account.template" id="3008">
             <field name="name">Paid-in capital in excess of par on common stock</field>
-            <field name="code">3001</field>
+            <field name="code">3008</field>
             <field name="type" ref="share_premium"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
@@ -2054,18 +2045,9 @@
             <field name="kind">view</field>
             <field name="parent" ref="30"/>
         </record>
-        <record model="account.account.template" id="3010">
-            <field name="name">Preferred stock</field>
-            <field name="code">3010</field>
-            <field name="type" ref="preferred_stock"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="party_required" eval="True"/>
-            <field name="parent" ref="301"/>
-        </record>
-        <record model="account.account.template" id="3011">
+        <record model="account.account.template" id="3018">
             <field name="name">Paid-in capital in excess of par on preferred stock</field>
-            <field name="code">3011</field>
+            <field name="code">3018</field>
             <field name="type" ref="share_premium"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
