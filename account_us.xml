@@ -750,7 +750,7 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="exchange_rate_differences_on_foreign_operations">
+        <record model="account.account.type.template" id="foreign_currency_translation">
             <field name="name">Exchange rate differences on foreign operations</field>
             <field name="parent" ref="accumulated_other_comprehensive_income"/>
             <field name="sequence" eval="30"/>
@@ -2081,6 +2081,38 @@
             <field name="kind">view</field>
             <field name="parent" ref="3"/>
         </record>
+        <record model="account.account.template" id="320">
+            <field name="name">Available-for-sale securities gain (or loss)</field>
+            <field name="code">320</field>
+            <field name="type" ref="available_for_sale_securities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="32"/>
+        </record>
+        <record model="account.account.template" id="321">
+            <field name="name">Cash-flow hedges gain (or loss)</field>
+            <field name="code">321</field>
+            <field name="type" ref="cash_flow_hedges"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="32"/>
+        </record>
+        <record model="account.account.template" id="322">
+            <field name="name">Foreign currency translation gain (or loss)</field>
+            <field name="code">322</field>
+            <field name="type" ref="foreign_currency_translation"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="32"/>
+        </record>
+        <record model="account.account.template" id="323">
+            <field name="name">Defined benefit plan income (or loss)</field>
+            <field name="code">323</field>
+            <field name="type" ref="defined_benefit_plan_income"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="32"/>
+        </record>
         <record model="account.account.template" id="33">
             <field name="name">Other equity</field>
             <field name="code">33</field>
@@ -2110,6 +2142,60 @@
             <field name="kind">other</field>
             <field name="party_required" eval="True"/>
             <field name="parent" ref="330"/>
+        </record>
+        <record model="account.account.template" id="331">
+            <field name="name">Capital stock held by subsidiary</field>
+            <field name="code">331</field>
+            <field name="type" ref="capital_stock_held_by_subsidiary"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="account.account.template" id="332">
+            <field name="name">Treasury shares</field>
+            <field name="code">332</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="account.account.template" id="3320">
+            <field name="name">Treasury stock value</field>
+            <field name="code">3320</field>
+            <field name="type" ref="treasury_shares"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="332"/>
+        </record>
+        <record model="account.account.template" id="3321">
+            <field name="name">Treasury stock deferred employee stock ownership plan</field>
+            <field name="code">3321</field>
+            <field name="type" ref="treasury_shares"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="332"/>
+        </record>
+        <record model="account.account.template" id="333">
+            <field name="name">Deferred compensation equity</field>
+            <field name="code">333</field>
+            <field name="type" ref="deferred_compensation_equity"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="account.account.template" id="334">
+            <field name="name">Unearned employee stock ownership plan shares</field>
+            <field name="code">334</field>
+            <field name="type" ref="unearned_employee_stock_ownership_plan_shares"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="account.account.template" id="335">
+            <field name="name">Warrants and rights outstanding</field>
+            <field name="code">335</field>
+            <field name="type" ref="warrants_and_rights_outstanding"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="33"/>
         </record>
         <record model="account.account.template" id="4">
             <field name="name">Revenues</field>
