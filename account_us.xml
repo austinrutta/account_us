@@ -618,7 +618,7 @@
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="comprehensive_income">
-            <field name="name">Current comprehensive income</field>
+            <field name="name">Comprehensive income</field>
             <field name="parent" ref="current_earnings"/>
             <field name="sequence" eval="10"/>
             <field name="income_statement" eval="True"/>
