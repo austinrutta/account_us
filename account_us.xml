@@ -624,10 +624,40 @@
             <field name="income_statement" eval="True"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="income_before_taxes">
-            <field name="name">Income (loss) before income taxes</field>
+        <record model="account.account.type.template" id="income_for_the_year">
+            <field name="name">Income (loss) for the year</field>
             <field name="parent" ref="income"/>
             <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="income_tax_expense">
+            <field name="name">Income tax expense</field>
+            <field name="parent" ref="income_for_the_year"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="current_income_tax_expense">
+            <field name="name">Current income tax expense</field>
+            <field name="parent" ref="income_tax_expense"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="deferred_income_tax_expense">
+            <field name="name">Deferred income tax expense</field>
+            <field name="parent" ref="income_tax_expense"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_income_tax_expense">
+            <field name="name">Other income tax expense</field>
+            <field name="parent" ref="income_tax_expense"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="income_before_taxes">
+            <field name="name">Income (loss) before income taxes</field>
+            <field name="parent" ref="income_for_the_year"/>
+            <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="operating_income">
@@ -2321,16 +2351,112 @@
             <field name="parent" ref="root"/>
         </record>
         <record model="account.account.template" id="7">
-            <field name="name">Income tax</field>
+            <field name="name">Income tax expense</field>
             <field name="code">7</field>
             <field name="kind">view</field>
             <field name="parent" ref="root"/>
+        </record>
+        <record model="account.account.template" id="70">
+            <field name="name">Current income tax expense</field>
+            <field name="code">70</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="7"/>
+        </record>
+        <record model="account.account.template" id="700">
+            <field name="name">Current federal income tax expense</field>
+            <field name="code">700</field>
+            <field name="type" ref="current_income_tax_expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="70"/>
+        </record>
+        <record model="account.account.template" id="701">
+            <field name="name">Current state and local income tax expense</field>
+            <field name="code">701</field>
+            <field name="type" ref="current_income_tax_expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="70"/>
+        </record>
+        <record model="account.account.template" id="702">
+            <field name="name">Current foreign income tax expense</field>
+            <field name="code">702</field>
+            <field name="type" ref="current_income_tax_expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="70"/>
+        </record>
+        <record model="account.account.template" id="71">
+            <field name="name">Deferred income tax expense</field>
+            <field name="code">71</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="7"/>
+        </record>
+        <record model="account.account.template" id="710">
+            <field name="name">Deferred federal income tax expense</field>
+            <field name="code">710</field>
+            <field name="type" ref="deferred_income_tax_expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="71"/>
+        </record>
+        <record model="account.account.template" id="711">
+            <field name="name">Deferred state and local income tax expense</field>
+            <field name="code">711</field>
+            <field name="type" ref="deferred_income_tax_expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="71"/>
+        </record>
+        <record model="account.account.template" id="712">
+            <field name="name">Deferred foreign income tax expense</field>
+            <field name="code">712</field>
+            <field name="type" ref="deferred_income_tax_expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="71"/>
+        </record>
+        <record model="account.account.template" id="72">
+            <field name="name">Other income tax expense</field>
+            <field name="code">72</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="7"/>
+        </record>
+        <record model="account.account.template" id="73">
+            <field name="name">Other deferred income tax expense</field>
+            <field name="code">73</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="7"/>
+        </record>
+        <record model="account.account.template" id="74">
+            <field name="name">Tax adjustments, settlements, and unusual provisions</field>
+            <field name="code">74</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="7"/>
+        </record>
+        <record model="account.account.template" id="75">
+            <field name="name">Unrecognized tax benefits, income tax penalties and interest expense</field>
+            <field name="code">75</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="7"/>
         </record>
         <record model="account.account.template" id="8">
             <field name="name">Below-the-line items</field>
             <field name="code">8</field>
             <field name="kind">view</field>
             <field name="parent" ref="root"/>
+        </record>
+        <record model="account.account.template" id="80">
+            <field name="name">Discontinued operations</field>
+            <field name="code">80</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="8"/>
+        </record>
+        <record model="account.account.template" id="81">
+            <field name="name">Extraordinary items</field>
+            <field name="code">81</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="8"/>
         </record>
         <record model="account.account.template" id="9">
             <field name="name">Other comprehensive income</field>
