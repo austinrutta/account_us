@@ -762,12 +762,6 @@
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="products_and_merchandise">
-            <field name="name">Products and merchandise</field>
-            <field name="parent" ref="goods"/>
-            <field name="sequence" eval="10"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
         <record model="account.account.type.template" id="adjustments_on_sales_of_goods">
             <field name="name">Adjustments on sales of goods</field>
             <field name="parent" ref="goods"/>
@@ -778,12 +772,6 @@
             <field name="name">Services</field>
             <field name="parent" ref="revenues"/>
             <field name="sequence" eval="20"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="general_services">
-            <field name="name">General services</field>
-            <field name="parent" ref="services"/>
-            <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="adjustments_on_sales_of_services">
@@ -2323,9 +2311,99 @@
             <field name="kind">view</field>
             <field name="parent" ref="4"/>
         </record>
+        <record model="account.account.template" id="400">
+            <field name="name">Products</field>
+            <field name="code">400</field>
+            <field name="type" ref="goods"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="40"/>
+        </record>
+        <record model="account.account.template" id="401">
+            <field name="name">Merchandise</field>
+            <field name="code">401</field>
+            <field name="type" ref="goods"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="40"/>
+        </record>
+        <record model="account.account.template" id="409">
+            <field name="name">Adjustments on sales of goods (-)</field>
+            <field name="code">409</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="40"/>
+        </record>
+        <record model="account.account.template" id="4090">
+            <field name="name">Cash discounts on sales of goods (-)</field>
+            <field name="code">4090</field>
+            <field name="type" ref="adjustments_on_sales_of_goods"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="409"/>
+        </record>
+        <record model="account.account.template" id="4091">
+            <field name="name">Returns of previously sold goods (-)</field>
+            <field name="code">4091</field>
+            <field name="type" ref="adjustments_on_sales_of_goods"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="409"/>
+        </record>
+        <record model="account.account.template" id="4092">
+            <field name="name">Allowances on sales of goods (-)</field>
+            <field name="code">4092</field>
+            <field name="type" ref="adjustments_on_sales_of_goods"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="409"/>
+        </record>
         <record model="account.account.template" id="41">
             <field name="name">Services</field>
             <field name="code">41</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="4"/>
+        </record>
+        <record model="account.account.template" id="410">
+            <field name="name">General services</field>
+            <field name="code">410</field>
+            <field name="type" ref="services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="41"/>
+        </record>
+        <record model="account.account.template" id="419">
+            <field name="name">Adjustments on sales of services (-)</field>
+            <field name="code">419</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="41"/>
+        </record>
+        <record model="account.account.template" id="4190">
+            <field name="name">Cash discounts on sales of services (-)</field>
+            <field name="code">4190</field>
+            <field name="type" ref="adjustments_on_sales_of_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="419"/>
+        </record>
+        <record model="account.account.template" id="4191">
+            <field name="name">Allowances on sales of services (-)</field>
+            <field name="code">4191</field>
+            <field name="type" ref="adjustments_on_sales_of_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="419"/>
+        </record>
+        <record model="account.account.template" id="42">
+            <field name="name">Revenues from related parties</field>
+            <field name="code">42</field>
+            <field name="type" ref="revenues_from_related_parties"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="4"/>
+        </record>
+        <record model="account.account.template" id="43">
+            <field name="name">Other operating revenues</field>
+            <field name="code">43</field>
+            <field name="type" ref="other_operating_revenues"/>
             <field name="kind">view</field>
             <field name="parent" ref="4"/>
         </record>
