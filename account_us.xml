@@ -636,22 +636,28 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="irregular_items">
+            <field name="name">Irregular items</field>
+            <field name="parent" ref="net_income"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="discontinued_operations">
             <field name="name">Income (loss) from discontinued operations, net of tax</field>
-            <field name="parent" ref="net_income"/>
+            <field name="parent" ref="irregular_items"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="extraordinary_items">
             <field name="name">Income (loss) from extraordinary items, net of tax</field>
-            <field name="parent" ref="net_income"/>
+            <field name="parent" ref="irregular_items"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="income_from_continuing_operations">
             <field name="name">Income (loss) from continuing operations</field>
             <field name="parent" ref="net_income"/>
-            <field name="sequence" eval="30"/>
+            <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="income_tax_expense">
