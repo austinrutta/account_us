@@ -637,7 +637,7 @@
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="irregular_items">
-            <field name="name">Irregular items</field>
+            <field name="name">Irregular items, net of tax</field>
             <field name="parent" ref="net_income"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
@@ -702,22 +702,46 @@
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="interest_expense">
-            <field name="name">Interest expense</field>
+        <record model="account.account.type.template" id="finance_costs">
+            <field name="name">Finance costs</field>
             <field name="parent" ref="income_before_taxes"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="other_income">
-            <field name="name">Other income (expense)</field>
+        <record model="account.account.type.template" id="interest_income">
+            <field name="name">Interest income</field>
+            <field name="parent" ref="finance_costs"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="interest_expenses">
+            <field name="name">Interest expenses</field>
+            <field name="parent" ref="finance_costs"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="bank_charges">
+            <field name="name">Bank charges</field>
+            <field name="parent" ref="finance_costs"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_revenues_or_gains">
+            <field name="name">Other revenues or gains</field>
             <field name="parent" ref="income_before_taxes"/>
             <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_expenses_or_losses">
+            <field name="name">Other expenses or losses</field>
+            <field name="parent" ref="income_before_taxes"/>
+            <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="operating_income">
             <field name="name">Income (loss) from operations</field>
             <field name="parent" ref="income_before_taxes"/>
-            <field name="sequence" eval="30"/>
+            <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="gross_margin">
