@@ -2464,6 +2464,12 @@
             <field name="kind">view</field>
             <field name="parent" ref="root"/>
         </record>
+        <record model="account.account.template" id="91">
+            <field name="name">Unrealized gains on available-for-sale securities</field>
+            <field name="code">91</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="9"/>
+        </record>
 
     </data>
 </tryton>
