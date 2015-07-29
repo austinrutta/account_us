@@ -624,15 +624,15 @@
             <field name="income_statement" eval="True"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="income_for_the_year">
-            <field name="name">Income (loss) for the year</field>
+        <record model="account.account.type.template" id="net_income_for_the_year">
+            <field name="name">Net income (loss) for the year</field>
             <field name="parent" ref="income"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="income_tax_expense">
             <field name="name">Income tax expense</field>
-            <field name="parent" ref="income_for_the_year"/>
+            <field name="parent" ref="net_income_for_the_year"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
@@ -656,7 +656,7 @@
         </record>
         <record model="account.account.type.template" id="income_before_taxes">
             <field name="name">Income (loss) before income taxes</field>
-            <field name="parent" ref="income_for_the_year"/>
+            <field name="parent" ref="net_income_for_the_year"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
