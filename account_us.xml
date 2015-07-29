@@ -727,7 +727,7 @@
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="revenues">
-            <field name="name">Operating revenues</field>
+            <field name="name">Net revenues</field>
             <field name="parent" ref="gross_margin"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
