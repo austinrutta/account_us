@@ -2612,7 +2612,7 @@
             <field name="parent" ref="50"/>
         </record>
         <record model="account.account.template" id="51">
-            <field name="name">Personnel costs</field>
+            <field name="name">Personnel</field>
             <field name="code">51</field>
             <field name="kind">view</field>
             <field name="parent" ref="5"/>
