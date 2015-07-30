@@ -425,8 +425,8 @@
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="employer_pension_contributions">
-            <field name="name">Employer 401k/pension contributions</field>
+        <record model="account.account.type.template" id="employer_benefit_plan_contributions">
+            <field name="name">Employer benefit plan contributions</field>
             <field name="parent" ref="employee_related_liabilities"/>
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
@@ -630,6 +630,66 @@
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="net_unrealized_gain_on_available_for_sale_assets">
+            <field name="name">Net unrealized gain on available-for-sale assets</field>
+            <field name="parent" ref="other_comprehensive_income"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="gain_on_cash_flow_hedges">
+            <field name="name">Gain on cash flow hedges</field>
+            <field name="parent" ref="other_comprehensive_income"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="exchange_differences_on_translation_of_foreign_operations">
+            <field name="name">Exchange differences on translation of foreign operations</field>
+            <field name="parent" ref="other_comprehensive_income"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="defined_benefit_plan_income">
+            <field name="name">Defined benefit plan income</field>
+            <field name="parent" ref="other_comprehensive_income"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="asset_revaluations">
+            <field name="name">Asset revaluations</field>
+            <field name="parent" ref="other_comprehensive_income"/>
+            <field name="sequence" eval="50"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="revaluations_of_tangible_assets">
+            <field name="name">Revaluations of tangible assets</field>
+            <field name="parent" ref="asset_revaluations"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="revaluations_of_intangible_assets">
+            <field name="name">Revaluations of intangible assets</field>
+            <field name="parent" ref="asset_revaluations"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="revaluations_of_financial_assets">
+            <field name="name">Revaluations of financial assets</field>
+            <field name="parent" ref="asset_revaluations"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="revaluations_of_inventories">
+            <field name="name">Revaluations of inventories</field>
+            <field name="parent" ref="asset_revaluations"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="reclassification_adjustments">
+            <field name="name">Reclassification adjustments</field>
+            <field name="parent" ref="other_comprehensive_income"/>
+            <field name="sequence" eval="60"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="net_income">
             <field name="name">Net income (loss)</field>
             <field name="parent" ref="comprehensive_income"/>
@@ -703,7 +763,7 @@
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="finance_costs">
-            <field name="name">Finance costs</field>
+            <field name="name">Financial costs</field>
             <field name="parent" ref="income_before_taxes"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
@@ -726,22 +786,28 @@
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="other_revenues_or_gains">
-            <field name="name">Other revenues or gains</field>
+        <record model="account.account.type.template" id="non_operating_income">
+            <field name="name">Other non-operating income</field>
             <field name="parent" ref="income_before_taxes"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="other_revenues_or_gains">
+            <field name="name">Other revenues or gains</field>
+            <field name="parent" ref="non_operating_income"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="other_expenses_or_losses">
             <field name="name">Other expenses or losses</field>
-            <field name="parent" ref="income_before_taxes"/>
-            <field name="sequence" eval="30"/>
+            <field name="parent" ref="non_operating_income"/>
+            <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="operating_income">
-            <field name="name">Income (loss) from operations</field>
+            <field name="name">Operating income (loss)</field>
             <field name="parent" ref="income_before_taxes"/>
-            <field name="sequence" eval="40"/>
+            <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="gross_margin">
@@ -882,26 +948,26 @@
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="available_for_sale_securities">
-            <field name="name">Available for sale securities</field>
+        <record model="account.account.type.template" id="accumulated_net_unrealized_gain_on_available_for_sale_assets">
+            <field name="name">Accumulated net unrealized gain on available-for-sale assets</field>
             <field name="parent" ref="accumulated_other_comprehensive_income"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="cash_flow_hedges">
-            <field name="name">Cash flow hedges</field>
+        <record model="account.account.type.template" id="accumulated_gain_on_cash_flow_hedges">
+            <field name="name">Accumulated gain on cash flow hedges</field>
             <field name="parent" ref="accumulated_other_comprehensive_income"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="foreign_currency_translation">
-            <field name="name">Exchange rate differences on foreign operations</field>
+        <record model="account.account.type.template" id="accumulated_exchange_differences_on_translation_of_foreign_operations">
+            <field name="name">Accumulated exchange differences on translation of foreign operations</field>
             <field name="parent" ref="accumulated_other_comprehensive_income"/>
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="defined_benefit_plan_income">
-            <field name="name">Defined benefit plan income</field>
+        <record model="account.account.type.template" id="accumulated_defined_benefit_plan_income">
+            <field name="name">Accumulated defined benefit plan income</field>
             <field name="parent" ref="accumulated_other_comprehensive_income"/>
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
@@ -912,28 +978,34 @@
             <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="accumulated_asset_revaluations_intangibles">
-            <field name="name">Accumulated revaluations of intangible assets</field>
+        <record model="account.account.type.template" id="accumulated_revaluations_of_tangible_assets">
+            <field name="name">Accumulated revaluations of tangible assets</field>
             <field name="parent" ref="accumulated_asset_revaluations"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="accumulated_asset_revaluations_fixed">
-            <field name="name">Accumulated revaluations of fixed assets</field>
+        <record model="account.account.type.template" id="accumulated_revaluations_of_intangible_assets">
+            <field name="name">Accumulated revaluations of intangible assets</field>
             <field name="parent" ref="accumulated_asset_revaluations"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="accumulated_asset_revaluations_financial">
+        <record model="account.account.type.template" id="accumulated_revaluations_of_financial_assets">
             <field name="name">Accumulated revaluations of financial assets</field>
             <field name="parent" ref="accumulated_asset_revaluations"/>
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="accumulated_asset_revaluations_inventories">
+        <record model="account.account.type.template" id="accumulated_revaluations_of_inventories">
             <field name="name">Accumulated revaluations of inventories</field>
             <field name="parent" ref="accumulated_asset_revaluations"/>
             <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accumulated_reclassification_adjustments">
+            <field name="name">Accumulated reclassification adjustments</field>
+            <field name="parent" ref="accumulated_other_comprehensive_income"/>
+            <field name="sequence" eval="60"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="other_equity">
@@ -2226,33 +2298,79 @@
             <field name="parent" ref="3"/>
         </record>
         <record model="account.account.template" id="320">
-            <field name="name">Available-for-sale securities gain (or loss)</field>
+            <field name="name">Accumulated net unrealized gain on available-for-sale assets</field>
             <field name="code">320</field>
-            <field name="type" ref="available_for_sale_securities"/>
+            <field name="type" ref="accumulated_net_unrealized_gain_on_available_for_sale_assets"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="32"/>
         </record>
         <record model="account.account.template" id="321">
-            <field name="name">Cash-flow hedges gain (or loss)</field>
+            <field name="name">Accumulated gain on cash flow hedges</field>
             <field name="code">321</field>
-            <field name="type" ref="cash_flow_hedges"/>
+            <field name="type" ref="accumulated_gain_on_cash_flow_hedges"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="32"/>
         </record>
         <record model="account.account.template" id="322">
-            <field name="name">Foreign currency translation gain (or loss)</field>
+            <field name="name">Accumulated exchange differences on translation of foreign operations</field>
             <field name="code">322</field>
-            <field name="type" ref="foreign_currency_translation"/>
+            <field name="type" ref="accumulated_exchange_differences_on_translation_of_foreign_operations"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="32"/>
         </record>
         <record model="account.account.template" id="323">
-            <field name="name">Defined benefit plan income (or loss)</field>
+            <field name="name">Accumulated minimum pension liability adjustments</field>
             <field name="code">323</field>
-            <field name="type" ref="defined_benefit_plan_income"/>
+            <field name="type" ref="accumulated_defined_benefit_plan_income"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="32"/>
+        </record>
+        <record model="account.account.template" id="324">
+            <field name="name">Accumulated asset revaluations</field>
+            <field name="code">324</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="32"/>
+        </record>
+        <record model="account.account.template" id="3240">
+            <field name="name">Accumulated revaluations of tangible assets</field>
+            <field name="code">3240</field>
+            <field name="type" ref="accumulated_revaluations_of_tangible_assets"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="324"/>
+        </record>
+        <record model="account.account.template" id="3241">
+            <field name="name">Accumulated revaluations of intangible assets</field>
+            <field name="code">3241</field>
+            <field name="type" ref="accumulated_revaluations_of_intangible_assets"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="324"/>
+        </record>
+        <record model="account.account.template" id="3242">
+            <field name="name">Accumulated revaluations of financial assets</field>
+            <field name="code">3242</field>
+            <field name="type" ref="accumulated_revaluations_of_financial_assets"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="324"/>
+        </record>
+        <record model="account.account.template" id="3243">
+            <field name="name">Accumulated revaluations of inventories</field>
+            <field name="code">3243</field>
+            <field name="type" ref="accumulated_revaluations_of_inventories"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="324"/>
+        </record>
+        <record model="account.account.template" id="325">
+            <field name="name">Accumulated reclassification adjustments</field>
+            <field name="code">325</field>
+            <field name="type" ref="accumulated_reclassification_adjustments"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="32"/>
@@ -2635,6 +2753,12 @@
             <field name="kind">view</field>
             <field name="parent" ref="root"/>
         </record>
+        <record model="account.account.template" id="60">
+            <field name="name">Peripheral operations</field>
+            <field name="code">6</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="root"/>
+        </record>
         <record model="account.account.template" id="7">
             <field name="name">Income tax expense</field>
             <field name="code">7</field>
@@ -2749,9 +2873,79 @@
             <field name="kind">view</field>
             <field name="parent" ref="root"/>
         </record>
+        <record model="account.account.template" id="90">
+            <field name="name">Net unrealized gain on available-for-sale assets</field>
+            <field name="code">90</field>
+            <field name="type" ref="net_unrealized_gain_on_available_for_sale_assets"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="9"/>
+        </record>
         <record model="account.account.template" id="91">
-            <field name="name">Unrealized gains on available-for-sale securities</field>
+            <field name="name">Gain on cash flow hedges</field>
             <field name="code">91</field>
+            <field name="type" ref="gain_on_cash_flow_hedges"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="9"/>
+        </record>
+        <record model="account.account.template" id="92">
+            <field name="name">Exchange differences on translation of foreign operations</field>
+            <field name="code">92</field>
+            <field name="type" ref="exchange_differences_on_translation_of_foreign_operations"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="9"/>
+        </record>
+        <record model="account.account.template" id="93">
+            <field name="name">Minimum pension liability adjustments</field>
+            <field name="code">93</field>
+            <field name="type" ref="defined_benefit_plan_income"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="9"/>
+        </record>
+        <record model="account.account.template" id="94">
+            <field name="name">Asset revaluations</field>
+            <field name="code">94</field>
+            <field name="type" ref="asset_revaluations"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="9"/>
+        </record>
+        <record model="account.account.template" id="940">
+            <field name="name">Revaluations of tangible assets</field>
+            <field name="code">940</field>
+            <field name="type" ref="revaluations_of_tangible_assets"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="94"/>
+        </record>
+        <record model="account.account.template" id="941">
+            <field name="name">Revaluations of intangible assets</field>
+            <field name="code">941</field>
+            <field name="type" ref="revaluations_of_intangible_assets"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="94"/>
+        </record>
+        <record model="account.account.template" id="942">
+            <field name="name">Revaluations of financial assets</field>
+            <field name="code">942</field>
+            <field name="type" ref="revaluations_of_financial_assets"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="94"/>
+        </record>
+        <record model="account.account.template" id="943">
+            <field name="name">Revaluations of inventories</field>
+            <field name="code">943</field>
+            <field name="type" ref="revaluations_of_inventories"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="94"/>
+        </record>
+        <record model="account.account.template" id="95">
+            <field name="name">Reclassification adjustments</field>
+            <field name="code">95</field>
+            <field name="type" ref="reclassification_adjustments"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="9"/>
+        </record>
+        <record model="account.account.template" id="99">
+            <field name="name">Income tax relating to components of other comprehensive income</field>
+            <field name="code">99</field>
             <field name="kind">view</field>
             <field name="parent" ref="9"/>
         </record>
