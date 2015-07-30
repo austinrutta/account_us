@@ -2665,13 +2665,13 @@
             <field name="parent" ref="50"/>
         </record>
         <record model="account.account.template" id="5000">
-            <field name="name">Cost of produced goods sold</field>
+            <field name="name">Cost of goods manufactured and sold</field>
             <field name="code">5000</field>
             <field name="kind">view</field>
             <field name="parent" ref="500"/>
         </record>
         <record model="account.account.template" id="5001">
-            <field name="name">Cost of goods purchased for resale</field>
+            <field name="name">Cost of goods purchased and sold</field>
             <field name="code">5001</field>
             <field name="kind">view</field>
             <field name="parent" ref="500"/>
