@@ -762,27 +762,27 @@
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="finance_costs">
-            <field name="name">Financial costs</field>
+        <record model="account.account.type.template" id="financing_income">
+            <field name="name">Net financing income</field>
             <field name="parent" ref="income_before_taxes"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="interest_income">
             <field name="name">Interest income</field>
-            <field name="parent" ref="finance_costs"/>
+            <field name="parent" ref="financing_income"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="interest_expenses">
             <field name="name">Interest expenses</field>
-            <field name="parent" ref="finance_costs"/>
+            <field name="parent" ref="financing_income"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="bank_charges">
             <field name="name">Bank charges</field>
-            <field name="parent" ref="finance_costs"/>
+            <field name="parent" ref="financing_income"/>
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
@@ -792,14 +792,14 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="other_revenues_or_gains">
-            <field name="name">Other revenues or gains</field>
+        <record model="account.account.type.template" id="other_non_operating_revenues_and_gains">
+            <field name="name">Other non-operating revenues and gains</field>
             <field name="parent" ref="non_operating_income"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="other_expenses_or_losses">
-            <field name="name">Other expenses or losses</field>
+        <record model="account.account.type.template" id="other_non_operating_expenses_and_losses">
+            <field name="name">Other non-operating expenses and losses</field>
             <field name="parent" ref="non_operating_income"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
@@ -888,31 +888,31 @@
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="materials_and_equipment_for_research_and_development">
+        <record model="account.account.type.template" id="research_and_development_materials_and_equipment">
             <field name="name">Materials and equipment</field>
             <field name="parent" ref="research_and_development_expenses"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="personnel_costs_for_research_and_development">
+        <record model="account.account.type.template" id="research_and_development_personnel_costs">
             <field name="name">Personnel costs</field>
             <field name="parent" ref="research_and_development_expenses"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="contract_services_for_research_and_development">
+        <record model="account.account.type.template" id="research_and_development_contract_services">
             <field name="name">Contract services</field>
             <field name="parent" ref="research_and_development_expenses"/>
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="depreciation_and_amortization_of_research_and_development">
+        <record model="account.account.type.template" id="research_and_development_depreciation_and_amortization">
             <field name="name">Depreciation and amortization</field>
             <field name="parent" ref="research_and_development_expenses"/>
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="other_research_and_development_expenses">
+        <record model="account.account.type.template" id="research_and_development_other_expenses">
             <field name="name">Other research and development expenses</field>
             <field name="parent" ref="research_and_development_expenses"/>
             <field name="sequence" eval="50"/>
@@ -924,7 +924,7 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="personnel_costs_for_selling_and_distribution">
+        <record model="account.account.type.template" id="selling_and_distribution_personnel_costs">
             <field name="name">Personnel costs</field>
             <field name="parent" ref="selling_and_distribution_expenses"/>
             <field name="sequence" eval="10"/>
@@ -936,10 +936,16 @@
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="general_and_administrative_personnel_costs">
+            <field name="name">Personnel costs</field>
+            <field name="parent" ref="general_and_administrative_expenses"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="other_operating_expenses">
             <field name="name">Other operating expenses</field>
             <field name="parent" ref="general_and_administrative_expenses"/>
-            <field name="sequence" eval="10"/>
+            <field name="sequence" eval="90"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="accumulated_other_comprehensive_income">
@@ -2612,7 +2618,7 @@
             <field name="parent" ref="5"/>
         </record>
         <record model="account.account.template" id="510">
-            <field name="name">Wages and salaries</field>
+            <field name="name">Salaries and wages</field>
             <field name="code">510</field>
             <field name="kind">view</field>
             <field name="parent" ref="51"/>
@@ -2620,7 +2626,7 @@
         <record model="account.account.template" id="5100">
             <field name="name">Salaries expense, research and development</field>
             <field name="code">5100</field>
-            <field name="type" ref="personnel_costs_for_research_and_development"/>
+            <field name="type" ref="research_and_development_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="510"/>
@@ -2628,72 +2634,178 @@
         <record model="account.account.template" id="5101">
             <field name="name">Salaries expense, sales</field>
             <field name="code">5101</field>
-            <field name="type" ref="personnel_costs_for_selling_and_distribution"/>
+            <field name="type" ref="selling_and_distribution_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="510"/>
         </record>
         <record model="account.account.template" id="5102">
-            <field name="name">Sales commissions</field>
+            <field name="name">Salaries expense, officers</field>
             <field name="code">5102</field>
-            <field name="type" ref="personnel_costs_for_selling_and_distribution"/>
+            <field name="type" ref="general_and_administrative_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="510"/>
         </record>
         <record model="account.account.template" id="5103">
-            <field name="name">Sales commission adjustments</field>
+            <field name="name">Commissions</field>
             <field name="code">5103</field>
-            <field name="type" ref="personnel_costs_for_selling_and_distribution"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="510"/>
+        </record>
+        <record model="account.account.template" id="51030">
+            <field name="name">Sales commissions</field>
+            <field name="code">51030</field>
+            <field name="type" ref="selling_and_distribution_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
+            <field name="parent" ref="5103"/>
+        </record>
+        <record model="account.account.template" id="51031">
+            <field name="name">Sales commission adjustments</field>
+            <field name="code">51031</field>
+            <field name="type" ref="selling_and_distribution_personnel_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5103"/>
+        </record>
+        <record model="account.account.template" id="5104">
+            <field name="name">Bonuses</field>
+            <field name="code">5104</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="510"/>
+        </record>
+        <record model="account.account.template" id="5105">
+            <field name="name">Incentive pay</field>
+            <field name="code">5105</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="510"/>
+        </record>
+        <record model="account.account.template" id="5106">
+            <field name="name">Severance pay</field>
+            <field name="code">5106</field>
+            <field name="kind">view</field>
             <field name="parent" ref="510"/>
         </record>
         <record model="account.account.template" id="511">
-            <field name="name">Vacation pay</field>
+            <field name="name">Required payroll-related expenses</field>
             <field name="code">511</field>
             <field name="kind">view</field>
             <field name="parent" ref="51"/>
         </record>
+        <record model="account.account.template" id="5110">
+            <field name="name">Employer FICA</field>
+            <field name="code">5110</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="511"/>
+        </record>
+        <record model="account.account.template" id="51101">
+            <field name="name">Employer FICA, sales</field>
+            <field name="code">51101</field>
+            <field name="type" ref="selling_and_distribution_personnel_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5110"/>
+        </record>
+        <record model="account.account.template" id="5111">
+            <field name="name">Employer medicare</field>
+            <field name="code">5111</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="511"/>
+        </record>
+        <record model="account.account.template" id="5112">
+            <field name="name">Workers’ compensation insurance</field>
+            <field name="code">5112</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="511"/>
+        </record>
+        <record model="account.account.template" id="5113">
+            <field name="name">Unemployment insurance</field>
+            <field name="code">5113</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="511"/>
+        </record>
         <record model="account.account.template" id="512">
-            <field name="name">Sick pay</field>
+            <field name="name">Fringe benefits</field>
             <field name="code">512</field>
             <field name="kind">view</field>
             <field name="parent" ref="51"/>
         </record>
+        <record model="account.account.template" id="5120">
+            <field name="name">Paid leave</field>
+            <field name="code">5120</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="512"/>
+        </record>
+        <record model="account.account.template" id="51200">
+            <field name="name">Vacation pay</field>
+            <field name="code">51200</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5120"/>
+        </record>
+        <record model="account.account.template" id="51201">
+            <field name="name">Holiday pay</field>
+            <field name="code">51201</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5120"/>
+        </record>
+        <record model="account.account.template" id="51202">
+            <field name="name">Sick pay</field>
+            <field name="code">51202</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5120"/>
+        </record>
+        <record model="account.account.template" id="51203">
+            <field name="name">Other paid leave</field>
+            <field name="code">51203</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5120"/>
+        </record>
+        <record model="account.account.template" id="5121">
+            <field name="name">Group health insurance</field>
+            <field name="code">5121</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="512"/>
+        </record>
+        <record model="account.account.template" id="5122">
+            <field name="name">Life insurance</field>
+            <field name="code">5122</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="512"/>
+        </record>
+        <record model="account.account.template" id="5123">
+            <field name="name">Employer 401k contributions</field>
+            <field name="code">5123</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="512"/>
+        </record>
+        <record model="account.account.template" id="5124">
+            <field name="name">Employer IRA contributions</field>
+            <field name="code">5124</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="512"/>
+        </record>
+        <record model="account.account.template" id="5125">
+            <field name="name">Pensions and retirement</field>
+            <field name="code">5125</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="512"/>
+        </record>
+        <record model="account.account.template" id="5126">
+            <field name="name">Other employer-provided benefits</field>
+            <field name="code">5126</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="512"/>
+        </record>
         <record model="account.account.template" id="513">
-            <field name="name">FICA tax</field>
+            <field name="name">Employee recruitment</field>
             <field name="code">513</field>
             <field name="kind">view</field>
             <field name="parent" ref="51"/>
         </record>
         <record model="account.account.template" id="514">
-            <field name="name">Group health insurance</field>
+            <field name="name">Temporary help</field>
             <field name="code">514</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="51"/>
-        </record>
-        <record model="account.account.template" id="515">
-            <field name="name">Workers’ compensation insurance</field>
-            <field name="code">515</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="51"/>
-        </record>
-        <record model="account.account.template" id="516">
-            <field name="name">Disability income insurance</field>
-            <field name="code">516</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="51"/>
-        </record>
-        <record model="account.account.template" id="517">
-            <field name="name">Retirement</field>
-            <field name="code">517</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="51"/>
-        </record>
-        <record model="account.account.template" id="519">
-            <field name="name">Other personnel benefit expense</field>
-            <field name="code">519</field>
             <field name="kind">view</field>
             <field name="parent" ref="51"/>
         </record>
@@ -2754,10 +2866,10 @@
             <field name="parent" ref="root"/>
         </record>
         <record model="account.account.template" id="60">
-            <field name="name">Peripheral operations</field>
-            <field name="code">6</field>
+            <field name="name">Non-operational gains</field>
+            <field name="code">60</field>
             <field name="kind">view</field>
-            <field name="parent" ref="root"/>
+            <field name="parent" ref="6"/>
         </record>
         <record model="account.account.template" id="7">
             <field name="name">Income tax expense</field>
