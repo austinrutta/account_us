@@ -762,52 +762,124 @@
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="financing_income">
-            <field name="name">Net financing income</field>
+        <record model="account.account.type.template" id="non_operating_income">
+            <field name="name">Non-operating income (loss)</field>
             <field name="parent" ref="income_before_taxes"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="interest_income">
-            <field name="name">Interest income</field>
-            <field name="parent" ref="financing_income"/>
+        <record model="account.account.type.template" id="non_operating_gains">
+            <field name="name">Non-operating gains</field>
+            <field name="parent" ref="non_operating_income"/>
             <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="gains_on_financial_instruments">
+            <field name="name">Gains on valuation of financial instruments</field>
+            <field name="parent" ref="non_operating_gains"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="gains_on_foreign_currency_transactions">
+            <field name="name">Gains on foreign currency transactions</field>
+            <field name="parent" ref="non_operating_gains"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="gains_on_disposal_of_assets">
+            <field name="name">Gains on the disposal of assets</field>
+            <field name="parent" ref="non_operating_gains"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_non_operating_gains">
+            <field name="name">Other non-operating gains</field>
+            <field name="parent" ref="non_operating_gains"/>
+            <field name="sequence" eval="50"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="non_operating_losses">
+            <field name="name">Non-operating losses</field>
+            <field name="parent" ref="non_operating_income"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="losses_on_financial_instruments">
+            <field name="name">Losses on valuations of financial instruments</field>
+            <field name="parent" ref="non_operating_losses"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="losses_on_foreign_currency_transactions">
+            <field name="name">Losses on foreign currency transactions</field>
+            <field name="parent" ref="non_operating_losses"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="losses_on_disposal_of_assets">
+            <field name="name">Losses on the disposal of assets</field>
+            <field name="parent" ref="non_operating_losses"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="casualty_losses">
+            <field name="name">Casualty losses</field>
+            <field name="parent" ref="non_operating_losses"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_non_operating_losses">
+            <field name="name">Other non-operating losses</field>
+            <field name="parent" ref="non_operating_losses"/>
+            <field name="sequence" eval="50"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="non_operating_revenues">
+            <field name="name">Non-operating revenues</field>
+            <field name="parent" ref="non_operating_income"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="interest_revenues">
+            <field name="name">Interest revenues</field>
+            <field name="parent" ref="non_operating_revenues"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="dividend_revenues">
+            <field name="name">Dividend revenues</field>
+            <field name="parent" ref="non_operating_revenues"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="rent_revenues">
+            <field name="name">Rent revenues</field>
+            <field name="parent" ref="non_operating_revenues"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="non_operating_expenses">
+            <field name="name">Non-operating expenses</field>
+            <field name="parent" ref="non_operating_income"/>
+            <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="interest_expenses">
             <field name="name">Interest expenses</field>
-            <field name="parent" ref="financing_income"/>
-            <field name="sequence" eval="20"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="bank_charges">
-            <field name="name">Bank charges</field>
-            <field name="parent" ref="financing_income"/>
-            <field name="sequence" eval="30"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="non_operating_income">
-            <field name="name">Other non-operating income</field>
-            <field name="parent" ref="income_before_taxes"/>
-            <field name="sequence" eval="20"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="other_non_operating_revenues_and_gains">
-            <field name="name">Other non-operating revenues and gains</field>
-            <field name="parent" ref="non_operating_income"/>
+            <field name="parent" ref="non_operating_expenses"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="other_non_operating_expenses_and_losses">
-            <field name="name">Other non-operating expenses and losses</field>
-            <field name="parent" ref="non_operating_income"/>
+        <record model="account.account.type.template" id="grants_and_donations_given">
+            <field name="name">Grants and donations given</field>
+            <field name="parent" ref="non_operating_expenses"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="operating_income">
             <field name="name">Operating income (loss)</field>
             <field name="parent" ref="income_before_taxes"/>
-            <field name="sequence" eval="30"/>
+            <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="gross_margin">
