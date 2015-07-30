@@ -810,7 +810,7 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="expenses">
+        <record model="account.account.type.template" id="operating_expenses">
             <field name="name">Operating expenses</field>
             <field name="parent" ref="operating_income"/>
             <field name="sequence" eval="20"/>
@@ -818,20 +818,62 @@
         </record>
         <record model="account.account.type.template" id="research_and_development_expenses">
             <field name="name">Research and development expenses</field>
-            <field name="parent" ref="expenses"/>
+            <field name="parent" ref="operating_expenses"/>
             <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="materials_and_equipment_for_research_and_development">
+            <field name="name">Materials and equipment</field>
+            <field name="parent" ref="research_and_development_expenses"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="personnel_costs_for_research_and_development">
+            <field name="name">Personnel costs</field>
+            <field name="parent" ref="research_and_development_expenses"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="contract_services_for_research_and_development">
+            <field name="name">Contract services</field>
+            <field name="parent" ref="research_and_development_expenses"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="depreciation_and_amortization_of_research_and_development">
+            <field name="name">Depreciation and amortization</field>
+            <field name="parent" ref="research_and_development_expenses"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_research_and_development_expenses">
+            <field name="name">Other research and development expenses</field>
+            <field name="parent" ref="research_and_development_expenses"/>
+            <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="selling_and_distribution_expenses">
             <field name="name">Selling and distribution expenses</field>
-            <field name="parent" ref="expenses"/>
+            <field name="parent" ref="operating_expenses"/>
             <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="personnel_costs_for_selling_and_distribution">
+            <field name="name">Personnel costs</field>
+            <field name="parent" ref="selling_and_distribution_expenses"/>
+            <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="general_and_administrative_expenses">
             <field name="name">General and administrative expenses</field>
-            <field name="parent" ref="expenses"/>
+            <field name="parent" ref="operating_expenses"/>
             <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_operating_expenses">
+            <field name="name">Other operating expenses</field>
+            <field name="parent" ref="general_and_administrative_expenses"/>
+            <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="accumulated_other_comprehensive_income">
@@ -2422,8 +2464,21 @@
         <record model="account.account.template" id="500">
             <field name="name">Cost of goods sold</field>
             <field name="code">500</field>
+            <field name="type" ref="cost_of_goods_sold"/>
             <field name="kind">view</field>
             <field name="parent" ref="50"/>
+        </record>
+        <record model="account.account.template" id="5000">
+            <field name="name">Cost of produced goods sold</field>
+            <field name="code">5000</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="500"/>
+        </record>
+        <record model="account.account.template" id="5001">
+            <field name="name">Cost of goods purchased for resale</field>
+            <field name="code">5001</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="500"/>
         </record>
         <record model="account.account.template" id="501">
             <field name="name">Cost of services rendered</field>
@@ -2433,78 +2488,146 @@
             <field name="parent" ref="50"/>
         </record>
         <record model="account.account.template" id="51">
-            <field name="name">Research and development expenses</field>
+            <field name="name">Personnel</field>
             <field name="code">51</field>
-            <field name="type" ref="research_and_development_expenses"/>
             <field name="kind">view</field>
             <field name="parent" ref="5"/>
         </record>
-        <record model="account.account.template" id="52">
-            <field name="name">Selling and distribution expenses</field>
-            <field name="code">52</field>
-            <field name="type" ref="selling_and_distribution_expenses"/>
+        <record model="account.account.template" id="510">
+            <field name="name">Wages and salaries</field>
+            <field name="code">510</field>
             <field name="kind">view</field>
-            <field name="parent" ref="5"/>
+            <field name="parent" ref="51"/>
         </record>
-        <record model="account.account.template" id="520">
-            <field name="name">Salespersons</field>
-            <field name="code">520</field>
-            <field name="type" ref="selling_and_distribution_expenses"/>
-            <field name="kind">view</field>
-            <field name="parent" ref="52"/>
+        <record model="account.account.template" id="5100">
+            <field name="name">Salaries expense, research and development</field>
+            <field name="code">5100</field>
+            <field name="type" ref="personnel_costs_for_research_and_development"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="510"/>
         </record>
-        <record model="account.account.template" id="5200">
+        <record model="account.account.template" id="5101">
             <field name="name">Salaries expense, sales</field>
-            <field name="code">5200</field>
-            <field name="type" ref="selling_and_distribution_expenses"/>
+            <field name="code">5101</field>
+            <field name="type" ref="personnel_costs_for_selling_and_distribution"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="520"/>
+            <field name="parent" ref="510"/>
         </record>
-        <record model="account.account.template" id="5201">
-            <field name="name">Commissions</field>
-            <field name="code">5201</field>
-            <field name="type" ref="selling_and_distribution_expenses"/>
+        <record model="account.account.template" id="5102">
+            <field name="name">Sales commissions</field>
+            <field name="code">5102</field>
+            <field name="type" ref="personnel_costs_for_selling_and_distribution"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="520"/>
+            <field name="parent" ref="510"/>
         </record>
-        <record model="account.account.template" id="5202">
-            <field name="name">Bonuses</field>
-            <field name="code">5202</field>
-            <field name="type" ref="selling_and_distribution_expenses"/>
+        <record model="account.account.template" id="5103">
+            <field name="name">Sales commission adjustments</field>
+            <field name="code">5103</field>
+            <field name="type" ref="personnel_costs_for_selling_and_distribution"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="520"/>
+            <field name="parent" ref="510"/>
         </record>
-        <record model="account.account.template" id="53">
-            <field name="name">General and administrative expenses</field>
-            <field name="code">53</field>
-            <field name="type" ref="general_and_administrative_expenses"/>
+        <record model="account.account.template" id="511">
+            <field name="name">Vacation pay</field>
+            <field name="code">511</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="51"/>
+        </record>
+        <record model="account.account.template" id="512">
+            <field name="name">Sick pay</field>
+            <field name="code">512</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="51"/>
+        </record>
+        <record model="account.account.template" id="513">
+            <field name="name">FICA tax</field>
+            <field name="code">513</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="51"/>
+        </record>
+        <record model="account.account.template" id="514">
+            <field name="name">Group health insurance</field>
+            <field name="code">514</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="51"/>
+        </record>
+        <record model="account.account.template" id="515">
+            <field name="name">Workers’ compensation insurance</field>
+            <field name="code">515</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="51"/>
+        </record>
+        <record model="account.account.template" id="516">
+            <field name="name">Disability income insurance</field>
+            <field name="code">516</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="51"/>
+        </record>
+        <record model="account.account.template" id="517">
+            <field name="name">Retirement</field>
+            <field name="code">517</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="51"/>
+        </record>
+        <record model="account.account.template" id="519">
+            <field name="name">Other personnel benefit expense</field>
+            <field name="code">519</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="51"/>
+        </record>
+        <record model="account.account.template" id="58">
+            <field name="name">Utilities</field>
+            <field name="code">52</field>
             <field name="kind">view</field>
             <field name="parent" ref="5"/>
         </record>
-        <record model="account.account.template" id="539">
-            <field name="name">Other general and administrative expenses</field>
-            <field name="code">539</field>
-            <field name="type" ref="general_and_administrative_expenses"/>
+        <record model="account.account.template" id="59">
+            <field name="name">Other operating expenses</field>
+            <field name="code">59</field>
             <field name="kind">view</field>
-            <field name="parent" ref="53"/>
+            <field name="parent" ref="5"/>
         </record>
-        <record model="account.account.template" id="5390">
+        <record model="account.account.template" id="590">
             <field name="name">Operating taxes</field>
-            <field name="code">5390</field>
-            <field name="type" ref="general_and_administrative_expenses"/>
+            <field name="code">590</field>
             <field name="kind">view</field>
-            <field name="parent" ref="539"/>
+            <field name="parent" ref="59"/>
         </record>
-        <record model="account.account.template" id="53902">
-            <field name="name">Business licenses and fees</field>
-            <field name="code">53902</field>
-            <field name="type" ref="general_and_administrative_expenses"/>
+        <record model="account.account.template" id="5900">
+            <field name="name">Inventory and use taxes</field>
+            <field name="code">5900</field>
+            <field name="type" ref="other_operating_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5390"/>
+            <field name="parent" ref="590"/>
+        </record>
+        <record model="account.account.template" id="5901">
+            <field name="name">Real estate taxes</field>
+            <field name="code">5901</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="590"/>
+        </record>
+        <record model="account.account.template" id="5902">
+            <field name="name">Business licenses and fees</field>
+            <field name="code">5902</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="590"/>
+        </record>
+        <record model="account.account.template" id="5903">
+            <field name="name">Other operating taxes</field>
+            <field name="code">5903</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="590"/>
         </record>
         <record model="account.account.template" id="6">
             <field name="name">Peripheral operations</field>
