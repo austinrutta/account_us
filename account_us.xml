@@ -1095,14 +1095,14 @@
         </record>
         <record model="account.account.type.template" id="stock_subscriptions_receivables">
             <field name="name">Stock subscriptions receivables</field>
-            <field name="sequence" eval="10"/>
-            <field name="parent" ref="stock_subscriptions"/>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="other_equity"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="capital_stock_held_by_subsidiary">
             <field name="name">Capital stock held by subsidiary</field>
             <field name="parent" ref="other_equity"/>
-            <field name="sequence" eval="20"/>
+            <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="deferred_compensation_equity">
