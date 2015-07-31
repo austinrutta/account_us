@@ -2441,7 +2441,7 @@
             <field name="parent" ref="33"/>
         </record>
         <record model="account.account.template" id="3300">
-            <field name="name">Common stock subscriptions</field>
+            <field name="name">Common stock subscribed</field>
             <field name="code">3300</field>
             <field name="type" ref="stock_subscriptions"/>
             <field name="deferral" eval="True"/>
@@ -2450,7 +2450,7 @@
             <field name="parent" ref="330"/>
         </record>
         <record model="account.account.template" id="3301">
-            <field name="name">Preferred stock subscriptions</field>
+            <field name="name">Preferred stock subscribed</field>
             <field name="code">3301</field>
             <field name="type" ref="stock_subscriptions"/>
             <field name="deferral" eval="True"/>
@@ -2459,7 +2459,7 @@
             <field name="parent" ref="330"/>
         </record>
         <record model="account.account.template" id="331">
-            <field name="name">Subscriptions receivable</field>
+            <field name="name">Stock subscriptions receivable</field>
             <field name="code">331</field>
             <field name="kind">view</field>
             <field name="parent" ref="33"/>
