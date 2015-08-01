@@ -2954,6 +2954,12 @@
             <field name="kind">view</field>
             <field name="parent" ref="5126"/>
         </record>
+        <record model="account.account.template" id="51261">
+            <field name="name">Dependent care assistance</field>
+            <field name="code">51261</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5126"/>
+        </record>
         <record model="account.account.template" id="513">
             <field name="name">Employee recruitment</field>
             <field name="code">513</field>
