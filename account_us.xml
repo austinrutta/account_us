@@ -1216,7 +1216,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="10"/>
         </record>
