@@ -74,8 +74,8 @@
             <field name="sequence" eval="20"/>
             <field name="parent" ref="receivables"/>
         </record>
-        <record model="account.account.type.template" id="affiliates_receivables">
-            <field name="name">Accounts receivables from affiliates</field>
+        <record model="account.account.type.template" id="accounts_receivables_from_related_parties">
+            <field name="name">Accounts receivables from related parties</field>
             <field name="sequence" eval="30"/>
             <field name="parent" ref="receivables"/>
         </record>
@@ -1260,6 +1260,16 @@
             <field name="name">Interest receivable, trade</field>
             <field name="code">1201</field>
             <field name="type" ref="accounts_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="120"/>
+        </record>
+        <record model="account.account.template" id="1202">
+            <field name="name">Accounts receivable from related parties</field>
+            <field name="code">1202</field>
+            <field name="type" ref="accounts_receivables_from_related_parties"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
