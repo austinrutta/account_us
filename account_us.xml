@@ -254,6 +254,16 @@
             <field name="sequence" eval="50"/>
             <field name="parent" ref="intangible_assets"/>
         </record>
+        <record model="account.account.type.template" id="capitalized_software">
+            <field name="name">Capitalized software</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="technology_based_intangibles"/>
+        </record>
+        <record model="account.account.type.template" id="other_technology_based_intangibles">
+            <field name="name">Other technology-based intangibles</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="technology_based_intangibles"/>
+        </record>
         <record model="account.account.type.template" id="research_and_development">
             <field name="name">Research and development</field>
             <field name="sequence" eval="60"/>
@@ -2046,7 +2056,7 @@
         <record model="account.account.template" id="1740">
             <field name="name">Patented technology</field>
             <field name="code">1740</field>
-            <field name="type" ref="technology_based_intangibles"/>
+            <field name="type" ref="other_technology_based_intangibles"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="174"/>
@@ -2054,7 +2064,7 @@
         <record model="account.account.template" id="1741">
             <field name="name">Unpatented technology</field>
             <field name="code">1741</field>
-            <field name="type" ref="technology_based_intangibles"/>
+            <field name="type" ref="other_technology_based_intangibles"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="174"/>
@@ -2068,7 +2078,7 @@
         <record model="account.account.template" id="17420">
             <field name="name">Acquisition costs of software to be sold, leased, or marketed</field>
             <field name="code">17420</field>
-            <field name="type" ref="technology_based_intangibles"/>
+            <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="1742"/>
@@ -2076,7 +2086,7 @@
         <record model="account.account.template" id="17421">
             <field name="name">Production costs of software to be sold, leased, or marketed</field>
             <field name="code">17421</field>
-            <field name="type" ref="technology_based_intangibles"/>
+            <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="1742"/>
@@ -2090,7 +2100,7 @@
         <record model="account.account.template" id="17430">
             <field name="name">Acquision costs of internal-use software</field>
             <field name="code">17430</field>
-            <field name="type" ref="technology_based_intangibles"/>
+            <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="1743"/>
@@ -2098,7 +2108,7 @@
         <record model="account.account.template" id="17431">
             <field name="name">Payroll and payroll-related costs of internal-use computer software projects</field>
             <field name="code">17431</field>
-            <field name="type" ref="technology_based_intangibles"/>
+            <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="1743"/>
@@ -2106,7 +2116,7 @@
         <record model="account.account.template" id="17432">
             <field name="name">Capitalized interests costs incurred while developing internal-use computer software</field>
             <field name="code">17432</field>
-            <field name="type" ref="technology_based_intangibles"/>
+            <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="1743"/>
@@ -2114,7 +2124,7 @@
         <record model="account.account.template" id="1744">
             <field name="name">Databases</field>
             <field name="code">1744</field>
-            <field name="type" ref="technology_based_intangibles"/>
+            <field name="type" ref="other_technology_based_intangibles"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="174"/>
@@ -2122,10 +2132,24 @@
         <record model="account.account.template" id="1749">
             <field name="name">Amortization of technology-based intangible assets (-)</field>
             <field name="code">1749</field>
-            <field name="type" ref="technology_based_intangibles"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="174"/>
+        </record>
+        <record model="account.account.template" id="17490">
+            <field name="name">Amortization of capitalized software (-)</field>
+            <field name="code">17490</field>
+            <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="parent" ref="174"/>
+            <field name="parent" ref="1749"/>
+        </record>
+        <record model="account.account.template" id="17491">
+            <field name="name">Amortization of other technology-based intangible assets (-)</field>
+            <field name="code">17491</field>
+            <field name="type" ref="other_technology_based_intangibles"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1749"/>
         </record>
         <record model="account.account.template" id="175">
             <field name="name">Research and development costs</field>
