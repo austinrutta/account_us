@@ -2763,66 +2763,78 @@
             <field name="parent" ref="51"/>
         </record>
         <record model="account.account.template" id="5100">
-            <field name="name">Salaries expense, research and development</field>
+            <field name="name">Salaries</field>
             <field name="code">5100</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="510"/>
+        </record>
+        <record model="account.account.template" id="51000">
+            <field name="name">Salaries expense, research and development</field>
+            <field name="code">51000</field>
             <field name="type" ref="research_and_development_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="510"/>
+            <field name="parent" ref="5100"/>
         </record>
-        <record model="account.account.template" id="5101">
+        <record model="account.account.template" id="51001">
             <field name="name">Salaries expense, sales</field>
-            <field name="code">5101</field>
+            <field name="code">51001</field>
             <field name="type" ref="selling_and_distribution_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="510"/>
+            <field name="parent" ref="5100"/>
         </record>
-        <record model="account.account.template" id="5102">
+        <record model="account.account.template" id="51002">
             <field name="name">Salaries expense, officers</field>
-            <field name="code">5102</field>
+            <field name="code">51002</field>
             <field name="type" ref="general_and_administrative_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
+            <field name="parent" ref="5100"/>
+        </record>
+        <record model="account.account.template" id="5101">
+            <field name="name">Wages</field>
+            <field name="code">5101</field>
+            <field name="kind">view</field>
             <field name="parent" ref="510"/>
         </record>
-        <record model="account.account.template" id="5103">
+        <record model="account.account.template" id="5102">
             <field name="name">Commissions</field>
+            <field name="code">5102</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="510"/>
+        </record>
+        <record model="account.account.template" id="51020">
+            <field name="name">Sales commissions</field>
+            <field name="code">51020</field>
+            <field name="type" ref="selling_and_distribution_personnel_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5102"/>
+        </record>
+        <record model="account.account.template" id="51021">
+            <field name="name">Sales commission adjustments</field>
+            <field name="code">51021</field>
+            <field name="type" ref="selling_and_distribution_personnel_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5102"/>
+        </record>
+        <record model="account.account.template" id="5103">
+            <field name="name">Bonuses</field>
             <field name="code">5103</field>
             <field name="kind">view</field>
             <field name="parent" ref="510"/>
         </record>
-        <record model="account.account.template" id="51030">
-            <field name="name">Sales commissions</field>
-            <field name="code">51030</field>
-            <field name="type" ref="selling_and_distribution_personnel_costs"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5103"/>
-        </record>
-        <record model="account.account.template" id="51031">
-            <field name="name">Sales commission adjustments</field>
-            <field name="code">51031</field>
-            <field name="type" ref="selling_and_distribution_personnel_costs"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5103"/>
-        </record>
         <record model="account.account.template" id="5104">
-            <field name="name">Bonuses</field>
+            <field name="name">Incentive pay</field>
             <field name="code">5104</field>
             <field name="kind">view</field>
             <field name="parent" ref="510"/>
         </record>
         <record model="account.account.template" id="5105">
-            <field name="name">Incentive pay</field>
-            <field name="code">5105</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="510"/>
-        </record>
-        <record model="account.account.template" id="5106">
             <field name="name">Severance pay</field>
-            <field name="code">5106</field>
+            <field name="code">5105</field>
             <field name="kind">view</field>
             <field name="parent" ref="510"/>
         </record>
