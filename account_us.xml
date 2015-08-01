@@ -1247,7 +1247,7 @@
             <field name="parent" ref="12"/>
         </record>
         <record model="account.account.template" id="1200">
-            <field name="name">Accounts receivable, trade</field>
+            <field name="name">Accounts receivable</field>
             <field name="code">1200</field>
             <field name="type" ref="accounts_receivables"/>
             <field name="deferral" eval="True"/>
@@ -1257,7 +1257,7 @@
             <field name="parent" ref="120"/>
         </record>
         <record model="account.account.template" id="1201">
-            <field name="name">Interest receivable, trade</field>
+            <field name="name">Interest receivable</field>
             <field name="code">1201</field>
             <field name="type" ref="accounts_receivables"/>
             <field name="deferral" eval="True"/>
