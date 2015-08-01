@@ -2052,15 +2052,21 @@
             <field name="parent" ref="174"/>
         </record>
         <record model="account.account.template" id="1741">
-            <field name="name">Unpatented technology</field>
+            <field name="name">Software to be sold, leased, or marketed (ASC 985-20)</field>
             <field name="code">1741</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="174"/>
+        </record>
+        <record model="account.account.template" id="17410">
+            <field name="name">Costs of software to be sold, leased, or marketed</field>
+            <field name="code">17410</field>
             <field name="type" ref="technology_based_intangibles"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="parent" ref="174"/>
+            <field name="parent" ref="1741"/>
         </record>
         <record model="account.account.template" id="1742">
-            <field name="name">Internal-use computer software (ASC 350-40-30-1)</field>
+            <field name="name">Internal-use computer software (ASC 350-40)</field>
             <field name="code">1742</field>
             <field name="kind">view</field>
             <field name="parent" ref="174"/>
@@ -2090,7 +2096,7 @@
             <field name="parent" ref="1742"/>
         </record>
         <record model="account.account.template" id="1743">
-            <field name="name">Website development costs</field>
+            <field name="name">Website development costs (ASC 350-50)</field>
             <field name="code">1743</field>
             <field name="kind">view</field>
             <field name="parent" ref="174"/>
