@@ -1073,16 +1073,16 @@
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="general_and_administrative_travel_and_meetings_expenses">
-            <field name="name">Travel and meetings</field>
-            <field name="parent" ref="general_and_administrative_expenses"/>
-            <field name="sequence" eval="50"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
         <record model="account.account.type.template" id="general_and_administrative_depreciation_and_amortization">
             <field name="name">Depreciation and amortization</field>
             <field name="parent" ref="general_and_administrative_facilities_and_equipment_expenses"/>
             <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="general_and_administrative_travel_and_meetings_expenses">
+            <field name="name">Travel and meetings</field>
+            <field name="parent" ref="general_and_administrative_expenses"/>
+            <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="doubtful_accounts">
