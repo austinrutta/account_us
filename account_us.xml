@@ -2730,7 +2730,7 @@
             <field name="parent" ref="409"/>
         </record>
         <record model="account.account.template" id="4092">
-            <field name="name">Allowances on sales of goods (-)</field>
+            <field name="name">Allowance on sales of goods (-)</field>
             <field name="code">4092</field>
             <field name="type" ref="adjustments_on_sales_of_goods"/>
             <field name="deferral" eval="False"/>
@@ -2766,7 +2766,7 @@
             <field name="parent" ref="419"/>
         </record>
         <record model="account.account.template" id="4191">
-            <field name="name">Allowances on sales of services (-)</field>
+            <field name="name">Allowance on sales of services (-)</field>
             <field name="code">4191</field>
             <field name="type" ref="adjustments_on_sales_of_services"/>
             <field name="deferral" eval="False"/>
