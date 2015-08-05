@@ -3427,6 +3427,20 @@
             <field name="kind">view</field>
             <field name="parent" ref="54"/>
         </record>
+        <record model="account.account.template" id="5400">
+            <field name="name">Rent</field>
+            <field name="code">5400</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="540"/>
+        </record>
+        <record model="account.account.template" id="54000">
+            <field name="name">Rent expense—general and administrative</field>
+            <field name="code">54000</field>
+            <field name="type" ref="general_and_administrative_facilities_and_equipment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5400"/>
+        </record>
         <record model="account.account.template" id="541">
             <field name="name">Utilities</field>
             <field name="code">541</field>
