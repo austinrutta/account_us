@@ -1013,6 +1013,12 @@
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="selling_and_distribution_contract_services">
+            <field name="name">Contract services</field>
+            <field name="parent" ref="selling_and_distribution_expenses"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="general_and_administrative_expenses">
             <field name="name">General and administrative expenses</field>
             <field name="parent" ref="operating_expenses"/>
@@ -1023,6 +1029,24 @@
             <field name="name">Personnel costs</field>
             <field name="parent" ref="general_and_administrative_expenses"/>
             <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="general_and_administrative_contract_services">
+            <field name="name">Contract services</field>
+            <field name="parent" ref="general_and_administrative_expenses"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="non_personnel_expenses">
+            <field name="name">Nonpersonnel expenses</field>
+            <field name="parent" ref="general_and_administrative_expenses"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="doubtful_accounts">
+            <field name="name">Doubtful accounts</field>
+            <field name="parent" ref="general_and_administrative_expenses"/>
+            <field name="sequence" eval="80"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="other_operating_expenses">
@@ -3011,41 +3035,215 @@
             <field name="kind">view</field>
             <field name="parent" ref="51"/>
         </record>
+        <record model="account.account.template" id="52">
+            <field name="name">Contract services</field>
+            <field name="code">52</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5"/>
+        </record>
+        <record model="account.account.template" id="520">
+            <field name="name">Legal services</field>
+            <field name="code">520</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="52"/>
+        </record>
+        <record model="account.account.template" id="5200">
+            <field name="name">Attorney’s fees</field>
+            <field name="code">5200</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="520"/>
+        </record>
+        <record model="account.account.template" id="52000">
+            <field name="name">Attorney’s fees, research and development</field>
+            <field name="code">52000</field>
+            <field name="type" ref="research_and_development_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5200"/>
+        </record>
+        <record model="account.account.template" id="52001">
+            <field name="name">Attorney’s fees, sales</field>
+            <field name="code">52001</field>
+            <field name="type" ref="selling_and_distribution_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5200"/>
+        </record>
+        <record model="account.account.template" id="52002">
+            <field name="name">Attorney’s fees, general and administrative</field>
+            <field name="code">52002</field>
+            <field name="type" ref="general_and_administrative_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5200"/>
+        </record>
+        <record model="account.account.template" id="5201">
+            <field name="name">Litigation costs</field>
+            <field name="code">5201</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="520"/>
+        </record>
+        <record model="account.account.template" id="5202">
+            <field name="name">Legal documents</field>
+            <field name="code">5202</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="520"/>
+        </record>
+        <record model="account.account.template" id="52020">
+            <field name="name">Legal documents, research and development</field>
+            <field name="code">52020</field>
+            <field name="type" ref="research_and_development_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5202"/>
+        </record>
+        <record model="account.account.template" id="52021">
+            <field name="name">Legal documents, sales</field>
+            <field name="code">52021</field>
+            <field name="type" ref="selling_and_distribution_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5202"/>
+        </record>
+        <record model="account.account.template" id="52022">
+            <field name="name">Legal documents, general and administrative</field>
+            <field name="code">52022</field>
+            <field name="type" ref="general_and_administrative_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5202"/>
+        </record>
         <record model="account.account.template" id="53">
-            <field name="name">Advertising and promotion</field>
+            <field name="name">Nonpersonnel</field>
             <field name="code">53</field>
             <field name="kind">view</field>
             <field name="parent" ref="5"/>
         </record>
-        <record model="account.account.template" id="54">
+        <record model="account.account.template" id="530">
             <field name="name">Materials and supplies</field>
+            <field name="code">530</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="53"/>
+        </record>
+        <record model="account.account.template" id="531">
+            <field name="name">Telephone and telecommunications</field>
+            <field name="code">531</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="53"/>
+        </record>
+        <record model="account.account.template" id="532">
+            <field name="name">Postage and shipping</field>
+            <field name="code">532</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="53"/>
+        </record>
+        <record model="account.account.template" id="533">
+            <field name="name">Printing and copying</field>
+            <field name="code">533</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="53"/>
+        </record>
+        <record model="account.account.template" id="536">
+            <field name="name">Books, subscriptions, and references</field>
+            <field name="code">536</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="53"/>
+        </record>
+        <record model="account.account.template" id="5360">
+            <field name="name">Books</field>
+            <field name="code">5360</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="536"/>
+        </record>
+        <record model="account.account.template" id="5361">
+            <field name="name">Professional publications</field>
+            <field name="code">5361</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="536"/>
+        </record>
+        <record model="account.account.template" id="537">
+            <field name="name">In-house publications</field>
+            <field name="code">537</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="53"/>
+        </record>
+        <record model="account.account.template" id="54">
+            <field name="name">Facilities and equipment</field>
             <field name="code">54</field>
             <field name="kind">view</field>
             <field name="parent" ref="5"/>
         </record>
+        <record model="account.account.template" id="540">
+            <field name="name">Rent, parking, or other occupancy</field>
+            <field name="code">540</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="54"/>
+        </record>
+        <record model="account.account.template" id="541">
+            <field name="name">Utilities</field>
+            <field name="code">541</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="54"/>
+        </record>
+        <record model="account.account.template" id="544">
+            <field name="name">Real estate taxes</field>
+            <field name="code">544</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54"/>
+        </record>
+        <record model="account.account.template" id="547">
+            <field name="name">Equipment rental and maintenance</field>
+            <field name="code">547</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="54"/>
+        </record>
+        <record model="account.account.template" id="549">
+            <field name="name">Depreciation and amortization</field>
+            <field name="code">549</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="54"/>
+        </record>
         <record model="account.account.template" id="55">
-            <field name="name">Professional services and insurance</field>
+            <field name="name">Travel and meetings expenses</field>
             <field name="code">55</field>
             <field name="kind">view</field>
             <field name="parent" ref="5"/>
         </record>
-        <record model="account.account.template" id="56">
-            <field name="name">Travel and vehicle expenses</field>
-            <field name="code">56</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="5"/>
-        </record>
-        <record model="account.account.template" id="57">
-            <field name="name">Rent, leasing, utilities, repairs and maintenance</field>
-            <field name="code">57</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="5"/>
-        </record>
         <record model="account.account.template" id="58">
-            <field name="name">Depreciation and amortization expense</field>
+            <field name="name">Doubtful accounts, collections, and credit</field>
             <field name="code">58</field>
             <field name="kind">view</field>
             <field name="parent" ref="5"/>
+        </record>
+        <record model="account.account.template" id="580">
+            <field name="name">Bad debts expense</field>
+            <field name="code">580</field>
+            <field name="type" ref="doubtful_accounts"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="58"/>
+        </record>
+        <record model="account.account.template" id="581">
+            <field name="name">Collections expense</field>
+            <field name="code">581</field>
+            <field name="type" ref="doubtful_accounts"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="58"/>
+        </record>
+        <record model="account.account.template" id="582">
+            <field name="name">Credit reports and background checks</field>
+            <field name="code">582</field>
+            <field name="type" ref="doubtful_accounts"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="58"/>
         </record>
         <record model="account.account.template" id="59">
             <field name="name">Other operating expenses</field>
@@ -3054,83 +3252,63 @@
             <field name="parent" ref="5"/>
         </record>
         <record model="account.account.template" id="590">
-            <field name="name">Operating taxes</field>
+            <field name="name">Advertising and promotion</field>
             <field name="code">590</field>
             <field name="kind">view</field>
             <field name="parent" ref="59"/>
         </record>
-        <record model="account.account.template" id="5900">
-            <field name="name">Inventory and use taxes</field>
-            <field name="code">5900</field>
-            <field name="type" ref="other_operating_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="590"/>
-        </record>
-        <record model="account.account.template" id="5901">
-            <field name="name">Real estate taxes</field>
-            <field name="code">5901</field>
-            <field name="type" ref="other_operating_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="590"/>
-        </record>
-        <record model="account.account.template" id="5902">
-            <field name="name">Business licenses and fees</field>
-            <field name="code">5902</field>
-            <field name="type" ref="other_operating_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="590"/>
-        </record>
-        <record model="account.account.template" id="5903">
-            <field name="name">Other operating taxes</field>
-            <field name="code">5903</field>
-            <field name="type" ref="other_operating_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="590"/>
-        </record>
         <record model="account.account.template" id="591">
-            <field name="name">Postage and shipping expense</field>
+            <field name="name">Operating taxes</field>
             <field name="code">591</field>
             <field name="kind">view</field>
             <field name="parent" ref="59"/>
         </record>
+        <record model="account.account.template" id="5910">
+            <field name="name">Inventory and use taxes</field>
+            <field name="code">5910</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="591"/>
+        </record>
+        <record model="account.account.template" id="5912">
+            <field name="name">Business licenses and fees</field>
+            <field name="code">5912</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="591"/>
+        </record>
+        <record model="account.account.template" id="5913">
+            <field name="name">Other operating taxes</field>
+            <field name="code">5913</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="591"/>
+        </record>
         <record model="account.account.template" id="592">
-            <field name="name">Credit and collections expense</field>
+            <field name="name">Insurance, nonemployee related</field>
             <field name="code">592</field>
-            <field name="kind">view</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
             <field name="parent" ref="59"/>
         </record>
-        <record model="account.account.template" id="5920">
-            <field name="name">Bad debts expense</field>
-            <field name="code">5920</field>
-            <field name="type" ref="other_operating_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="592"/>
-        </record>
-        <record model="account.account.template" id="5921">
-            <field name="name">Collections expense</field>
-            <field name="code">5921</field>
-            <field name="type" ref="other_operating_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="592"/>
-        </record>
-        <record model="account.account.template" id="5922">
-            <field name="name">Credit reports and background checks</field>
-            <field name="code">5922</field>
-            <field name="type" ref="other_operating_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="592"/>
-        </record>
         <record model="account.account.template" id="593">
-            <field name="name">Dues and subscriptions expense</field>
+            <field name="name">Organizational membership dues</field>
             <field name="code">593</field>
-            <field name="kind">view</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="59"/>
+        </record>
+        <record model="account.account.template" id="597">
+            <field name="name">Fines, penalties, and judgments</field>
+            <field name="code">597</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
             <field name="parent" ref="59"/>
         </record>
         <record model="account.account.template" id="598">
@@ -3139,6 +3317,12 @@
             <field name="type" ref="other_operating_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
+            <field name="parent" ref="59"/>
+        </record>
+        <record model="account.account.template" id="599">
+            <field name="name">Other expenses</field>
+            <field name="code">599</field>
+            <field name="kind">view</field>
             <field name="parent" ref="59"/>
         </record>
         <record model="account.account.template" id="6">
