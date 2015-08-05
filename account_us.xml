@@ -3183,7 +3183,7 @@
             <field name="name">Artists</field>
             <field name="code">522</field>
             <field name="kind">view</field>
-            <field name="parent" ref="59"/>
+            <field name="parent" ref="52"/>
         </record>
         <record model="account.account.template" id="5220">
             <field name="name">Graphic design</field>
