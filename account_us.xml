@@ -3429,6 +3429,44 @@
             <field name="kind">view</field>
             <field name="parent" ref="54"/>
         </record>
+        <record model="account.account.template" id="5470">
+            <field name="name">Tradeshow and exhibits rentals</field>
+            <field name="code">5470</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="547"/>
+        </record>
+        <record model="account.account.template" id="54700">
+            <field name="name">Booth rental expense</field>
+            <field name="code">54700</field>
+            <field name="type" ref="other_promotional_materials_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5470"/>
+        </record>
+        <record model="account.account.template" id="54701">
+            <field name="name">Electricity rental expense</field>
+            <field name="code">54701</field>
+            <field name="type" ref="other_promotional_materials_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5470"/>
+        </record>
+        <record model="account.account.template" id="54702">
+            <field name="name">Internet rental expense</field>
+            <field name="code">54702</field>
+            <field name="type" ref="other_promotional_materials_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5470"/>
+        </record>
+        <record model="account.account.template" id="54709">
+            <field name="name">Other tradeshow and exhibits rental expense</field>
+            <field name="code">54709</field>
+            <field name="type" ref="other_promotional_materials_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5470"/>
+        </record>
         <record model="account.account.template" id="549">
             <field name="name">Depreciation and amortization</field>
             <field name="code">549</field>
@@ -3450,12 +3488,6 @@
         <record model="account.account.template" id="551">
             <field name="name">Conferences, conventions, meetings</field>
             <field name="code">551</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="55"/>
-        </record>
-        <record model="account.account.template" id="552">
-            <field name="name">Tradeshows and exhibits</field>
-            <field name="code">552</field>
             <field name="kind">view</field>
             <field name="parent" ref="55"/>
         </record>
