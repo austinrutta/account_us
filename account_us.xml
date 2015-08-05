@@ -3197,6 +3197,14 @@
             <field name="kind">view</field>
             <field name="parent" ref="530"/>
         </record>
+        <record model="account.account.template" id="5308">
+            <field name="name">Inventory and use tax</field>
+            <field name="code">5308</field>
+            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="530"/>
+        </record>
         <record model="account.account.template" id="53000">
             <field name="name">Check supplies expense</field>
             <field name="code">53000</field>
@@ -3408,16 +3416,8 @@
             <field name="parent" ref="544"/>
         </record>
         <record model="account.account.template" id="5441">
-            <field name="name">Inventory and use tax</field>
-            <field name="code">5441</field>
-            <field name="type" ref="general_and_administrative_facilities_and_equipment_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="544"/>
-        </record>
-        <record model="account.account.template" id="5442">
             <field name="name">Real estate property tax</field>
-            <field name="code">5442</field>
+            <field name="code">5441</field>
             <field name="type" ref="general_and_administrative_facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
