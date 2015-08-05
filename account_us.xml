@@ -1037,7 +1037,7 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="non_personnel_expenses">
+        <record model="account.account.type.template" id="general_and_administrative_non_personnel_expenses">
             <field name="name">Nonpersonnel expenses</field>
             <field name="parent" ref="general_and_administrative_expenses"/>
             <field name="sequence" eval="30"/>
@@ -3155,11 +3155,61 @@
             <field name="kind">view</field>
             <field name="parent" ref="53"/>
         </record>
+        <record model="account.account.template" id="5300">
+            <field name="name">Business and financial instrument costs</field>
+            <field name="code">5300</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="530"/>
+        </record>
+        <record model="account.account.template" id="53000">
+            <field name="name">Check supplies expense</field>
+            <field name="code">53000</field>
+            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5300"/>
+        </record>
         <record model="account.account.template" id="531">
             <field name="name">Telephone and telecommunications</field>
             <field name="code">531</field>
             <field name="kind">view</field>
             <field name="parent" ref="53"/>
+        </record>
+        <record model="account.account.template" id="5310">
+            <field name="name">Telephone</field>
+            <field name="code">5310</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="531"/>
+        </record>
+        <record model="account.account.template" id="53100">
+            <field name="name">Telephone expense</field>
+            <field name="code">53100</field>
+            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5310"/>
+        </record>
+        <record model="account.account.template" id="53101">
+            <field name="name">Fax expense</field>
+            <field name="code">53101</field>
+            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5310"/>
+        </record>
+        <record model="account.account.template" id="5311">
+            <field name="name">Internet</field>
+            <field name="code">5311</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="531"/>
+        </record>
+        <record model="account.account.template" id="53110">
+            <field name="name">Internet connection leasing costs, office</field>
+            <field name="code">53110</field>
+            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5311"/>
         </record>
         <record model="account.account.template" id="532">
             <field name="name">Postage and shipping</field>
@@ -3182,7 +3232,7 @@
         <record model="account.account.template" id="5360">
             <field name="name">Books</field>
             <field name="code">5360</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="536"/>
@@ -3190,7 +3240,7 @@
         <record model="account.account.template" id="5361">
             <field name="name">Professional publications</field>
             <field name="code">5361</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="536"/>
