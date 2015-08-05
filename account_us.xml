@@ -989,10 +989,16 @@
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="research_and_development_travel_and_meetings_expenses">
+            <field name="name">Travel and meetings</field>
+            <field name="parent" ref="research_and_development_expenses"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="research_and_development_depreciation_and_amortization">
             <field name="name">Depreciation and amortization</field>
             <field name="parent" ref="research_and_development_expenses"/>
-            <field name="sequence" eval="40"/>
+            <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="research_and_development_other_expenses">
@@ -1041,6 +1047,12 @@
             <field name="name">Contract services</field>
             <field name="parent" ref="selling_and_distribution_expenses"/>
             <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="selling_and_distribution_travel_and_tradeshow_expenses">
+            <field name="name">Travel and tradeshows</field>
+            <field name="parent" ref="selling_and_distribution_expenses"/>
+            <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="general_and_administrative_expenses">
@@ -3574,8 +3586,24 @@
             <field name="parent" ref="550"/>
         </record>
         <record model="account.account.template" id="55010">
-            <field name="name">Airfare costs—general and administrative</field>
+            <field name="name">Airfare costs—research and development</field>
             <field name="code">55010</field>
+            <field name="type" ref="research_and_development_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5501"/>
+        </record>
+        <record model="account.account.template" id="55011">
+            <field name="name">Airfare costs—sales</field>
+            <field name="code">55011</field>
+            <field name="type" ref="selling_and_distribution_travel_and_tradeshows_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5501"/>
+        </record>
+        <record model="account.account.template" id="55012">
+            <field name="name">Airfare costs—general and administrative</field>
+            <field name="code">55012</field>
             <field name="type" ref="general_and_administrative_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
