@@ -3430,7 +3430,7 @@
             <field name="parent" ref="54"/>
         </record>
         <record model="account.account.template" id="5470">
-            <field name="name">Tradeshow and exhibits rentals</field>
+            <field name="name">Tradeshow and exhibits equipment rentals</field>
             <field name="code">5470</field>
             <field name="kind">view</field>
             <field name="parent" ref="547"/>
@@ -3460,7 +3460,7 @@
             <field name="parent" ref="5470"/>
         </record>
         <record model="account.account.template" id="54709">
-            <field name="name">Other tradeshow and exhibits rental expense</field>
+            <field name="name">Other tradeshow and exhibits equipment rental expense</field>
             <field name="code">54709</field>
             <field name="type" ref="other_promotional_materials_expenses"/>
             <field name="deferral" eval="False"/>
