@@ -3351,6 +3351,36 @@
             <field name="kind">view</field>
             <field name="parent" ref="54"/>
         </record>
+        <record model="account.account.template" id="5410">
+            <field name="name">Electricity</field>
+            <field name="code">5410</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="541"/>
+        </record>
+        <record model="account.account.template" id="5411">
+            <field name="name">Gas</field>
+            <field name="code">5411</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="541"/>
+        </record>
+        <record model="account.account.template" id="5412">
+            <field name="name">Water</field>
+            <field name="code">5412</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="541"/>
+        </record>
+        <record model="account.account.template" id="5413">
+            <field name="name">Garbage collection</field>
+            <field name="code">5413</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="541"/>
+        </record>
+        <record model="account.account.template" id="5417">
+            <field name="name">Other utilities</field>
+            <field name="code">5417</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="541"/>
+        </record>
         <record model="account.account.template" id="544">
             <field name="name">Real estate taxes</field>
             <field name="code">544</field>
