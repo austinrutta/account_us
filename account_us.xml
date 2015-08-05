@@ -3174,7 +3174,7 @@
             <field name="parent" ref="52"/>
         </record>
         <record model="account.account.template" id="5210">
-            <field name="name">Accountant’s fees for financial accounting</field>
+            <field name="name">Accountant’s fees for financial accounting and reporting</field>
             <field name="code">5210</field>
             <field name="type" ref="general_and_administrative_contract_services"/>
             <field name="deferral" eval="False"/>
@@ -3182,7 +3182,7 @@
             <field name="parent" ref="521"/>
         </record>
         <record model="account.account.template" id="5211">
-            <field name="name">Accountant’s fees for tax accounting and preparation</field>
+            <field name="name">Accountant’s fees for tax accounting and return preparation</field>
             <field name="code">5211</field>
             <field name="type" ref="general_and_administrative_contract_services"/>
             <field name="deferral" eval="False"/>
