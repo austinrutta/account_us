@@ -3179,6 +3179,56 @@
             <field name="kind">expense</field>
             <field name="parent" ref="521"/>
         </record>
+        <record model="account.account.template" id="522">
+            <field name="name">Artists</field>
+            <field name="code">522</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="59"/>
+        </record>
+        <record model="account.account.template" id="5220">
+            <field name="name">Graphic design</field>
+            <field name="code">5220</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="522"/>
+        </record>
+        <record model="account.account.template" id="52200">
+            <field name="name">Custom graphic design expense, cost of sales</field>
+            <field name="code">52200</field>
+            <field name="type" ref="research_and_development_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5220"/>
+        </record>
+        <record model="account.account.template" id="52201">
+            <field name="name">Custom graphic design expense, advertising</field>
+            <field name="code">52201</field>
+            <field name="type" ref="producing_advertising_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5220"/>
+        </record>
+        <record model="account.account.template" id="5221">
+            <field name="name">Artwork, font, and other stock media costs</field>
+            <field name="code">5221</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="522"/>
+        </record>
+        <record model="account.account.template" id="52210">
+            <field name="name">Artwork, font, and other stock media costs, cost of sales</field>
+            <field name="code">52210</field>
+            <field name="type" ref="research_and_development_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5221"/>
+        </record>
+        <record model="account.account.template" id="52211">
+            <field name="name">Artwork, font, and other stock media costs, advertising</field>
+            <field name="code">52211</field>
+            <field name="type" ref="producing_advertising_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5221"/>
+        </record>
         <record model="account.account.template" id="529">
             <field name="name">Other professional fees</field>
             <field name="code">529</field>
@@ -3532,12 +3582,6 @@
             <field name="code">59</field>
             <field name="kind">view</field>
             <field name="parent" ref="5"/>
-        </record>
-        <record model="account.account.template" id="590">
-            <field name="name">Advertising and promotion</field>
-            <field name="code">590</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="59"/>
         </record>
         <record model="account.account.template" id="591">
             <field name="name">Other operating taxes</field>
