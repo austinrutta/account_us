@@ -1067,6 +1067,18 @@
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="general_and_administrative_facilities_and_equipment_expenses">
+            <field name="name">Facilities and equipment</field>
+            <field name="parent" ref="general_and_administrative_expenses"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="general_and_administrative_depreciation_and_amortization">
+            <field name="name">Depreciation and amortization</field>
+            <field name="parent" ref="general_and_administrative_expenses_facilities_and_equipment"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="doubtful_accounts">
             <field name="name">Doubtful accounts</field>
             <field name="parent" ref="general_and_administrative_expenses"/>
@@ -3382,12 +3394,34 @@
             <field name="parent" ref="541"/>
         </record>
         <record model="account.account.template" id="544">
-            <field name="name">Real estate taxes</field>
+            <field name="name">Property taxes</field>
             <field name="code">544</field>
-            <field name="type" ref="other_operating_expenses"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="54"/>
+        </record>
+        <record model="account.account.template" id="5440">
+            <field name="name">Personal property tax</field>
+            <field name="code">5440</field>
+            <field name="type" ref="general_and_administrative_facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="54"/>
+            <field name="parent" ref="544"/>
+        </record>
+        <record model="account.account.template" id="5441">
+            <field name="name">Inventory and use tax</field>
+            <field name="code">5441</field>
+            <field name="type" ref="general_and_administrative_facilities_and_equipment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="544"/>
+        </record>
+        <record model="account.account.template" id="5442">
+            <field name="name">Real estate property tax</field>
+            <field name="code">5442</field>
+            <field name="type" ref="general_and_administrative_facilities_and_equipment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="544"/>
         </record>
         <record model="account.account.template" id="547">
             <field name="name">Equipment rental and maintenance</field>
