@@ -3436,10 +3436,28 @@
             <field name="parent" ref="54"/>
         </record>
         <record model="account.account.template" id="55">
-            <field name="name">Travel and meetings expenses</field>
+            <field name="name">Travel and meetings</field>
             <field name="code">55</field>
             <field name="kind">view</field>
             <field name="parent" ref="5"/>
+        </record>
+        <record model="account.account.template" id="550">
+            <field name="name">Travel</field>
+            <field name="code">550</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="55"/>
+        </record>
+        <record model="account.account.template" id="551">
+            <field name="name">Conferences, conventions, meetings</field>
+            <field name="code">551</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="55"/>
+        </record>
+        <record model="account.account.template" id="552">
+            <field name="name">Tradeshows and exhibits</field>
+            <field name="code">552</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="55"/>
         </record>
         <record model="account.account.template" id="58">
             <field name="name">Doubtful accounts, collections, and credit</field>
