@@ -3232,18 +3232,46 @@
         <record model="account.account.template" id="5360">
             <field name="name">Books</field>
             <field name="code">5360</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="536"/>
+        </record>
+        <record model="account.account.template" id="53600">
+            <field name="name">Books for general and administrative purposes</field>
+            <field name="code">53600</field>
             <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="536"/>
+            <field name="parent" ref="5360"/>
+        </record>
+        <record model="account.account.template" id="53601">
+            <field name="name">Books used in research and development</field>
+            <field name="code">53601</field>
+            <field name="type" ref="research_and_development_materials_and_equipment"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5360"/>
         </record>
         <record model="account.account.template" id="5361">
             <field name="name">Professional publications</field>
             <field name="code">5361</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="536"/>
+        </record>
+        <record model="account.account.template" id="53610">
+            <field name="name">Professional publications for general and administrative purposes</field>
+            <field name="code">53610</field>
             <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="536"/>
+            <field name="parent" ref="5361"/>
+        </record>
+        <record model="account.account.template" id="53611">
+            <field name="name">Professional publications used in research and development</field>
+            <field name="code">53611</field>
+            <field name="type" ref="research_and_development_materials_and_equipment"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5361"/>
         </record>
         <record model="account.account.template" id="537">
             <field name="name">In-house publications</field>
