@@ -3245,7 +3245,7 @@
             <field name="name">Postage expense</field>
             <field name="code">5320</field>
             <field name="kind">view</field>
-            <field name="parent" ref="5320"/>
+            <field name="parent" ref="532"/>
         </record>
         <record model="account.account.template" id="53200">
             <field name="name">Postage expense, general and administrative</field>
