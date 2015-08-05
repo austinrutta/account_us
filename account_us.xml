@@ -3398,10 +3398,48 @@
         <record model="account.account.template" id="592">
             <field name="name">Insurance, nonemployee related</field>
             <field name="code">592</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="59"/>
+        </record>
+        <record model="account.account.template" id="5920">
+            <field name="name">General liability insurance expense</field>
+            <field name="code">5920</field>
             <field name="type" ref="other_operating_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="59"/>
+            <field name="parent" ref="592"/>
+        </record>
+        <record model="account.account.template" id="5921">
+            <field name="name">Fire insurance expense</field>
+            <field name="code">5921</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="592"/>
+        </record>
+        <record model="account.account.template" id="5922">
+            <field name="name">Theft insurance expense</field>
+            <field name="code">5922</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="592"/>
+        </record>
+        <record model="account.account.template" id="5923">
+            <field name="name">Professional liability insurance expense</field>
+            <field name="code">5923</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="592"/>
+        </record>
+        <record model="account.account.template" id="5924">
+            <field name="name">Credit insurance expense</field>
+            <field name="code">5924</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="592"/>
         </record>
         <record model="account.account.template" id="593">
             <field name="name">Organizational membership dues</field>
