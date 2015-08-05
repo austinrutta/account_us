@@ -1013,10 +1013,34 @@
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="selling_and_distribution_advertising_and_promotional_materials_expenses">
+            <field name="name">Advertising and promotional materials</field>
+            <field name="parent" ref="selling_and_distribution_expenses"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="producing_advertising_expenses">
+            <field name="name">Producing advertising</field>
+            <field name="parent" ref="selling_and_distribution_advertising_and_promotional_materials_expenses"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="communicating_advertising_expenses">
+            <field name="name">Communicating advertising</field>
+            <field name="parent" ref="selling_and_distribution_advertising_and_promotional_materials_expenses"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_promotional_materials_expenses">
+            <field name="name">Other promotional materials</field>
+            <field name="parent" ref="selling_and_distribution_advertising_and_promotional_materials_expenses"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="selling_and_distribution_contract_services">
             <field name="name">Contract services</field>
             <field name="parent" ref="selling_and_distribution_expenses"/>
-            <field name="sequence" eval="20"/>
+            <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="general_and_administrative_expenses">
@@ -3217,11 +3241,41 @@
             <field name="kind">view</field>
             <field name="parent" ref="53"/>
         </record>
+        <record model="account.account.template" id="5320">
+            <field name="name">Postage expense</field>
+            <field name="code">5320</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5320"/>
+        </record>
+        <record model="account.account.template" id="53200">
+            <field name="name">Postage expense, general and administrative</field>
+            <field name="code">53200</field>
+            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5320"/>
+        </record>
+        <record model="account.account.template" id="53201">
+            <field name="name">Advertisement mailing expense</field>
+            <field name="code">53201</field>
+            <field name="type" ref="communicating_advertising_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5320"/>
+        </record>
         <record model="account.account.template" id="533">
-            <field name="name">Printing and copying</field>
+            <field name="name">Printing and duplication</field>
             <field name="code">533</field>
             <field name="kind">view</field>
             <field name="parent" ref="53"/>
+        </record>
+        <record model="account.account.template" id="5331">
+            <field name="name">Printing and duplication expense, advertising</field>
+            <field name="code">5331</field>
+            <field name="type" ref="producing_advertising_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="533"/>
         </record>
         <record model="account.account.template" id="536">
             <field name="name">Books, subscriptions, and references</field>
