@@ -3156,7 +3156,7 @@
             <field name="parent" ref="52"/>
         </record>
         <record model="account.account.template" id="5210">
-            <field name="name">Accountant’s fees</field>
+            <field name="name">Accountant’s fees for financial accounting</field>
             <field name="code">5210</field>
             <field name="type" ref="general_and_administrative_contract_services"/>
             <field name="deferral" eval="False"/>
@@ -3164,7 +3164,7 @@
             <field name="parent" ref="521"/>
         </record>
         <record model="account.account.template" id="5211">
-            <field name="name">Tax preparation fees</field>
+            <field name="name">Accountant’s fees for tax accounting and preparation</field>
             <field name="code">5211</field>
             <field name="type" ref="general_and_administrative_contract_services"/>
             <field name="deferral" eval="False"/>
@@ -3178,6 +3178,12 @@
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="521"/>
+        </record>
+        <record model="account.account.template" id="529">
+            <field name="name">Other professional fees</field>
+            <field name="code">529</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="52"/>
         </record>
         <record model="account.account.template" id="53">
             <field name="name">Nonpersonnel</field>
@@ -3534,30 +3540,14 @@
             <field name="parent" ref="59"/>
         </record>
         <record model="account.account.template" id="591">
-            <field name="name">Operating taxes</field>
+            <field name="name">Other operating taxes</field>
             <field name="code">591</field>
             <field name="kind">view</field>
             <field name="parent" ref="59"/>
         </record>
-        <record model="account.account.template" id="5910">
-            <field name="name">Inventory and use taxes</field>
-            <field name="code">5910</field>
-            <field name="type" ref="other_operating_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="591"/>
-        </record>
         <record model="account.account.template" id="5912">
             <field name="name">Business licenses and fees</field>
             <field name="code">5912</field>
-            <field name="type" ref="other_operating_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="591"/>
-        </record>
-        <record model="account.account.template" id="5913">
-            <field name="name">Other operating taxes</field>
-            <field name="code">5913</field>
             <field name="type" ref="other_operating_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
@@ -3608,14 +3598,6 @@
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="592"/>
-        </record>
-        <record model="account.account.template" id="593">
-            <field name="name">Organizational membership dues</field>
-            <field name="code">593</field>
-            <field name="type" ref="other_operating_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="59"/>
         </record>
         <record model="account.account.template" id="597">
             <field name="name">Fines, penalties, and judgments</field>
