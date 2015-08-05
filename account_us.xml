@@ -3115,12 +3115,12 @@
         </record>
         <record model="account.account.template" id="521">
             <field name="name">Accounting</field>
-            <field name="code">520</field>
+            <field name="code">521</field>
             <field name="kind">view</field>
             <field name="parent" ref="52"/>
         </record>
         <record model="account.account.template" id="5210">
-            <field name="name">Accountant fees</field>
+            <field name="name">Accountant’s fees</field>
             <field name="code">5210</field>
             <field name="type" ref="general_and_administrative_contract_services"/>
             <field name="deferral" eval="False"/>
