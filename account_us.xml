@@ -1049,7 +1049,7 @@
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="selling_and_distribution_travel_and_tradeshow_expenses">
+        <record model="account.account.type.template" id="selling_and_distribution_travel_and_tradeshows_expenses">
             <field name="name">Travel and tradeshows</field>
             <field name="parent" ref="selling_and_distribution_expenses"/>
             <field name="sequence" eval="40"/>
