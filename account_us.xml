@@ -2,7 +2,7 @@
 <tryton>
     <data>
 
-<!-- Account Types -->
+<!-- Balance sheet account types -->
 
         <record model="account.account.type.template" id="us">
             <field name="name">Chart of Account Types (US)</field>
@@ -571,7 +571,7 @@
         <record model="account.account.type.template" id="share_capital">
             <field name="name">Share capital</field>
             <field name="parent" ref="contributed_capital"/>
-            <field name="sequence" eval="20"/>
+            <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="common_stock">
@@ -587,20 +587,38 @@
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="share_premium">
-            <field name="name">Share premium (Paid-in capital in excess of par)</field>
+            <field name="name">Share premium</field>
             <field name="parent" ref="contributed_capital"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="treasury_shares">
-            <field name="name">Treasury shares</field>
+        <record model="account.account.type.template" id="stock_subscriptions">
+            <field name="name">Stock subscribed</field>
             <field name="parent" ref="contributed_capital"/>
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="stock_subscriptions_receivables">
+            <field name="name">Stock subscriptions receivables</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="contributed_capital"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="earned_capital">
+            <field name="name">Earned capital</field>
+            <field name="parent" ref="equity"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="current_earnings">
+            <field name="name">Current earnings</field>
+            <field name="parent" ref="earned_capital"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="retained_earnings">
             <field name="name">Retained earnings</field>
-            <field name="parent" ref="equity"/>
+            <field name="parent" ref="earned_capital"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
@@ -616,12 +634,122 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="current_earnings">
-            <field name="name">Current earnings</field>
+        <record model="account.account.type.template" id="accumulated_other_comprehensive_income">
+            <field name="name">Accumulated other comprehensive income, net of tax</field>
+            <field name="parent" ref="earned_capital"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accumulated_net_unrealized_gain_on_available_for_sale_assets">
+            <field name="name">Accumulated net unrealized gain on available-for-sale assets</field>
+            <field name="parent" ref="accumulated_other_comprehensive_income"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accumulated_gain_on_cash_flow_hedges">
+            <field name="name">Accumulated gain on cash flow hedges</field>
+            <field name="parent" ref="accumulated_other_comprehensive_income"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accumulated_exchange_differences_on_translation_of_foreign_operations">
+            <field name="name">Accumulated exchange differences on translation of foreign operations</field>
+            <field name="parent" ref="accumulated_other_comprehensive_income"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accumulated_defined_benefit_plan_income">
+            <field name="name">Accumulated defined benefit plan income</field>
+            <field name="parent" ref="accumulated_other_comprehensive_income"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accumulated_asset_revaluations">
+            <field name="name">Accumulated asset revaluations</field>
+            <field name="parent" ref="accumulated_other_comprehensive_income"/>
+            <field name="sequence" eval="50"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accumulated_revaluations_of_tangible_assets">
+            <field name="name">Accumulated revaluations of tangible assets</field>
+            <field name="parent" ref="accumulated_asset_revaluations"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accumulated_revaluations_of_intangible_assets">
+            <field name="name">Accumulated revaluations of intangible assets</field>
+            <field name="parent" ref="accumulated_asset_revaluations"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accumulated_revaluations_of_financial_assets">
+            <field name="name">Accumulated revaluations of financial assets</field>
+            <field name="parent" ref="accumulated_asset_revaluations"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accumulated_revaluations_of_inventories">
+            <field name="name">Accumulated revaluations of inventories</field>
+            <field name="parent" ref="accumulated_asset_revaluations"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="accumulated_reclassification_adjustments">
+            <field name="name">Accumulated reclassification adjustments</field>
+            <field name="parent" ref="accumulated_other_comprehensive_income"/>
+            <field name="sequence" eval="60"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="treasury_shares">
+            <field name="name">Treasury shares</field>
             <field name="parent" ref="equity"/>
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="other_equity">
+            <field name="name">Other equity</field>
+            <field name="parent" ref="equity"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="capital_stock_held_by_subsidiary">
+            <field name="name">Capital stock held by subsidiary</field>
+            <field name="parent" ref="other_equity"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="deferred_compensation_equity">
+            <field name="name">Deferred compensation equity</field>
+            <field name="parent" ref="other_equity"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="unearned_employee_stock_ownership_plan_shares">
+            <field name="name">Unearned employee stock ownership plan shares</field>
+            <field name="parent" ref="other_equity"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="warrants_and_rights_outstanding">
+            <field name="name">Warrants and rights outstanding</field>
+            <field name="parent" ref="other_equity"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="equity_attributable_to_noncontrolling_interest">
+            <field name="name">Equity attributable to non-controlling interest</field>
+            <field name="parent" ref="equity"/>
+            <field name="sequence" eval="50"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="off_balance">
+            <field name="name">Off-balance-sheet items</field>
+            <field name="parent" ref="us"/>
+            <field name="sequence" eval="60"/>
+        </record>
+
+<!-- Comprehensive income statement account types -->
+
         <record model="account.account.type.template" id="comprehensive_income">
             <field name="name">Comprehensive income</field>
             <field name="parent" ref="current_earnings"/>
@@ -1114,125 +1242,6 @@
             <field name="parent" ref="general_and_administrative_expenses"/>
             <field name="sequence" eval="90"/>
             <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="accumulated_other_comprehensive_income">
-            <field name="name">Accumulated other comprehensive income, net of tax</field>
-            <field name="parent" ref="equity"/>
-            <field name="sequence" eval="40"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="accumulated_net_unrealized_gain_on_available_for_sale_assets">
-            <field name="name">Accumulated net unrealized gain on available-for-sale assets</field>
-            <field name="parent" ref="accumulated_other_comprehensive_income"/>
-            <field name="sequence" eval="10"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="accumulated_gain_on_cash_flow_hedges">
-            <field name="name">Accumulated gain on cash flow hedges</field>
-            <field name="parent" ref="accumulated_other_comprehensive_income"/>
-            <field name="sequence" eval="20"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="accumulated_exchange_differences_on_translation_of_foreign_operations">
-            <field name="name">Accumulated exchange differences on translation of foreign operations</field>
-            <field name="parent" ref="accumulated_other_comprehensive_income"/>
-            <field name="sequence" eval="30"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="accumulated_defined_benefit_plan_income">
-            <field name="name">Accumulated defined benefit plan income</field>
-            <field name="parent" ref="accumulated_other_comprehensive_income"/>
-            <field name="sequence" eval="40"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="accumulated_asset_revaluations">
-            <field name="name">Accumulated asset revaluations</field>
-            <field name="parent" ref="accumulated_other_comprehensive_income"/>
-            <field name="sequence" eval="50"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="accumulated_revaluations_of_tangible_assets">
-            <field name="name">Accumulated revaluations of tangible assets</field>
-            <field name="parent" ref="accumulated_asset_revaluations"/>
-            <field name="sequence" eval="10"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="accumulated_revaluations_of_intangible_assets">
-            <field name="name">Accumulated revaluations of intangible assets</field>
-            <field name="parent" ref="accumulated_asset_revaluations"/>
-            <field name="sequence" eval="20"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="accumulated_revaluations_of_financial_assets">
-            <field name="name">Accumulated revaluations of financial assets</field>
-            <field name="parent" ref="accumulated_asset_revaluations"/>
-            <field name="sequence" eval="30"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="accumulated_revaluations_of_inventories">
-            <field name="name">Accumulated revaluations of inventories</field>
-            <field name="parent" ref="accumulated_asset_revaluations"/>
-            <field name="sequence" eval="40"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="accumulated_reclassification_adjustments">
-            <field name="name">Accumulated reclassification adjustments</field>
-            <field name="parent" ref="accumulated_other_comprehensive_income"/>
-            <field name="sequence" eval="60"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="other_equity">
-            <field name="name">Other equity</field>
-            <field name="parent" ref="equity"/>
-            <field name="sequence" eval="50"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="stock_subscriptions">
-            <field name="name">Stock subscriptions</field>
-            <field name="parent" ref="other_equity"/>
-            <field name="sequence" eval="10"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="stock_subscriptions_receivables">
-            <field name="name">Stock subscriptions receivables</field>
-            <field name="sequence" eval="20"/>
-            <field name="parent" ref="other_equity"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="capital_stock_held_by_subsidiary">
-            <field name="name">Capital stock held by subsidiary</field>
-            <field name="parent" ref="other_equity"/>
-            <field name="sequence" eval="30"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="deferred_compensation_equity">
-            <field name="name">Deferred compensation equity</field>
-            <field name="parent" ref="other_equity"/>
-            <field name="sequence" eval="40"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="unearned_employee_stock_ownership_plan_shares">
-            <field name="name">Unearned employee stock ownership plan shares</field>
-            <field name="parent" ref="other_equity"/>
-            <field name="sequence" eval="50"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="warrants_and_rights_outstanding">
-            <field name="name">Warrants and rights outstanding</field>
-            <field name="parent" ref="other_equity"/>
-            <field name="sequence" eval="60"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="equity_attributable_to_noncontrolling_interest">
-            <field name="name">Equity attributable to non-controlling interest</field>
-            <field name="parent" ref="equity"/>
-            <field name="sequence" eval="60"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="off_balance">
-            <field name="name">Off-balance-sheet items</field>
-            <field name="parent" ref="us"/>
-            <field name="sequence" eval="60"/>
         </record>
 
 <!-- Accounts -->
@@ -2465,6 +2474,15 @@
             <field name="kind">view</field>
             <field name="parent" ref="30"/>
         </record>
+        <record model="account.account.template" id="3007">
+            <field name="name">Common stock subscribed</field>
+            <field name="code">3007</field>
+            <field name="type" ref="stock_subscriptions"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="300"/>
+        </record>
         <record model="account.account.template" id="3008">
             <field name="name">Paid-in capital in excess of par on common stock</field>
             <field name="code">3008</field>
@@ -2473,11 +2491,46 @@
             <field name="kind">other</field>
             <field name="parent" ref="300"/>
         </record>
+        <record model="account.account.template" id="3009">
+            <field name="name">Common stock subscriptions receivable (−)</field>
+            <field name="code">3009</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="300"/>
+        </record>
+        <record model="account.account.template" id="30090">
+            <field name="name">Subscriptions receivable from officers and directors for issuance of common stock (−)</field>
+            <field name="code">30090</field>
+            <field name="type" ref="stock_subscriptions_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="3009"/>
+        </record>
+        <record model="account.account.template" id="30091">
+            <field name="name">Subscriptions receivable from shareholders or affiliates for issuance of common stock (−)</field>
+            <field name="code">30091</field>
+            <field name="type" ref="stock_subscriptions_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="3009"/>
+        </record>
         <record model="account.account.template" id="301">
             <field name="name">Preferred stock</field>
             <field name="code">301</field>
             <field name="kind">view</field>
             <field name="parent" ref="30"/>
+        </record>
+        <record model="account.account.template" id="3017">
+            <field name="name">Preferred stock subscribed</field>
+            <field name="code">3017</field>
+            <field name="type" ref="stock_subscriptions"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="301"/>
         </record>
         <record model="account.account.template" id="3018">
             <field name="name">Paid-in capital in excess of par on preferred stock</field>
@@ -2486,6 +2539,32 @@
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="301"/>
+        </record>
+        <record model="account.account.template" id="3019">
+            <field name="name">Preferred stock subscriptions receivable (−)</field>
+            <field name="code">3019</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="301"/>
+        </record>
+        <record model="account.account.template" id="30190">
+            <field name="name">Subscriptions receivable from officers and directors for issuance of preferred stock (−)</field>
+            <field name="code">30190</field>
+            <field name="type" ref="stock_subscriptions_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="3019"/>
+        </record>
+        <record model="account.account.template" id="30191">
+            <field name="name">Subscriptions receivable from shareholders or affiliates for issuance of preferred stock (−)</field>
+            <field name="code">30191</field>
+            <field name="type" ref="stock_subscriptions_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="3019"/>
         </record>
         <record model="account.account.template" id="31">
             <field name="name">Retained earnings</field>
@@ -2594,114 +2673,64 @@
             <field name="parent" ref="32"/>
         </record>
         <record model="account.account.template" id="33">
-            <field name="name">Other equity</field>
+            <field name="name">Treasury shares</field>
             <field name="code">33</field>
             <field name="kind">view</field>
             <field name="parent" ref="3"/>
         </record>
         <record model="account.account.template" id="330">
-            <field name="name">Stock subscriptions</field>
+            <field name="name">Treasury stock value</field>
             <field name="code">330</field>
-            <field name="kind">view</field>
+            <field name="type" ref="treasury_shares"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="33"/>
-        </record>
-        <record model="account.account.template" id="3300">
-            <field name="name">Common stock subscribed</field>
-            <field name="code">3300</field>
-            <field name="type" ref="stock_subscriptions"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="party_required" eval="True"/>
-            <field name="parent" ref="330"/>
-        </record>
-        <record model="account.account.template" id="3301">
-            <field name="name">Preferred stock subscribed</field>
-            <field name="code">3301</field>
-            <field name="type" ref="stock_subscriptions"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="party_required" eval="True"/>
-            <field name="parent" ref="330"/>
         </record>
         <record model="account.account.template" id="331">
-            <field name="name">Stock subscriptions receivable</field>
+            <field name="name">Treasury stock deferred employee stock ownership plan</field>
             <field name="code">331</field>
-            <field name="kind">view</field>
+            <field name="type" ref="treasury_shares"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="33"/>
         </record>
-        <record model="account.account.template" id="3310">
-            <field name="name">Subscriptions receivable from officers and directors for issuance of capital stock</field>
-            <field name="code">3310</field>
-            <field name="type" ref="stock_subscriptions_receivables"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">receivable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
-            <field name="parent" ref="331"/>
+        <record model="account.account.template" id="34">
+            <field name="name">Other equity</field>
+            <field name="code">34</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="3"/>
         </record>
-        <record model="account.account.template" id="3311">
-            <field name="name">Subscriptions receivable from shareholders or affiliates for issuance of capital stock</field>
-            <field name="code">3311</field>
-            <field name="type" ref="stock_subscriptions_receivables"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">receivable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
-            <field name="parent" ref="331"/>
-        </record>
-        <record model="account.account.template" id="332">
+        <record model="account.account.template" id="340">
             <field name="name">Capital stock held by subsidiary</field>
-            <field name="code">332</field>
+            <field name="code">340</field>
             <field name="type" ref="capital_stock_held_by_subsidiary"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="parent" ref="33"/>
+            <field name="parent" ref="34"/>
         </record>
-        <record model="account.account.template" id="333">
-            <field name="name">Treasury shares</field>
-            <field name="code">333</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="33"/>
-        </record>
-        <record model="account.account.template" id="3330">
-            <field name="name">Treasury stock value</field>
-            <field name="code">3330</field>
-            <field name="type" ref="treasury_shares"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="333"/>
-        </record>
-        <record model="account.account.template" id="3331">
-            <field name="name">Treasury stock deferred employee stock ownership plan</field>
-            <field name="code">3331</field>
-            <field name="type" ref="treasury_shares"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="333"/>
-        </record>
-        <record model="account.account.template" id="334">
+        <record model="account.account.template" id="341">
             <field name="name">Deferred compensation equity</field>
-            <field name="code">334</field>
+            <field name="code">341</field>
             <field name="type" ref="deferred_compensation_equity"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="parent" ref="33"/>
+            <field name="parent" ref="34"/>
         </record>
-        <record model="account.account.template" id="335">
+        <record model="account.account.template" id="342">
             <field name="name">Unearned employee stock ownership plan shares</field>
-            <field name="code">335</field>
+            <field name="code">342</field>
             <field name="type" ref="unearned_employee_stock_ownership_plan_shares"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="parent" ref="33"/>
+            <field name="parent" ref="34"/>
         </record>
-        <record model="account.account.template" id="336">
+        <record model="account.account.template" id="343">
             <field name="name">Warrants and rights outstanding</field>
-            <field name="code">336</field>
+            <field name="code">343</field>
             <field name="type" ref="warrants_and_rights_outstanding"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="parent" ref="33"/>
+            <field name="parent" ref="34"/>
         </record>
         <record model="account.account.template" id="4">
             <field name="name">Revenues</field>
