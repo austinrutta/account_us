@@ -3705,13 +3705,27 @@
             <field name="kind">view</field>
             <field name="parent" ref="59"/>
         </record>
-        <record model="account.account.template" id="5912">
+        <record model="account.account.template" id="5910">
             <field name="name">Business licenses and fees</field>
-            <field name="code">5912</field>
+            <field name="code">5910</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="591"/>
+        </record>
+        <record model="account.account.template" id="59100">
+            <field name="name">Business entity registration fees</field>
+            <field name="code">59100</field>
             <field name="type" ref="other_operating_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="591"/>
+            <field name="parent" ref="5910"/>
+        </record>
+        <record model="account.account.template" id="59101">
+            <field name="name">Municipal business licensing fees</field>
+            <field name="code">59101</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5910"/>
         </record>
         <record model="account.account.template" id="592">
             <field name="name">Insurance, nonemployee related</field>
