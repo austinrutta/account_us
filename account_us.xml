@@ -3326,17 +3326,17 @@
             <field name="parent" ref="532"/>
         </record>
         <record model="account.account.template" id="53200">
-            <field name="name">Postage expense, general and administrative</field>
+            <field name="name">Postage expense, sales</field>
             <field name="code">53200</field>
-            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
+            <field name="type" ref="communicating_advertising_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5320"/>
         </record>
         <record model="account.account.template" id="53201">
-            <field name="name">Advertisement mailing expense</field>
+            <field name="name">Postage expense, general and administrative</field>
             <field name="code">53201</field>
-            <field name="type" ref="communicating_advertising_expenses"/>
+            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5320"/>
@@ -3348,7 +3348,7 @@
             <field name="parent" ref="53"/>
         </record>
         <record model="account.account.template" id="5331">
-            <field name="name">Printing and duplication expense, advertising</field>
+            <field name="name">Printing and duplication expense, sales</field>
             <field name="code">5331</field>
             <field name="type" ref="producing_advertising_expenses"/>
             <field name="deferral" eval="False"/>
