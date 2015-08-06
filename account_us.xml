@@ -1037,12 +1037,6 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="other_promotional_materials_expenses">
-            <field name="name">Other promotional materials</field>
-            <field name="parent" ref="selling_and_distribution_advertising_and_promotional_materials_expenses"/>
-            <field name="sequence" eval="30"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
         <record model="account.account.type.template" id="selling_and_distribution_contract_services">
             <field name="name">Contract services</field>
             <field name="parent" ref="selling_and_distribution_expenses"/>
@@ -3526,7 +3520,7 @@
         <record model="account.account.template" id="54700">
             <field name="name">Booth rental expense</field>
             <field name="code">54700</field>
-            <field name="type" ref="other_promotional_materials_expenses"/>
+            <field name="type" ref="selling_and_distribution_travel_and_tradeshows_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5470"/>
@@ -3534,7 +3528,7 @@
         <record model="account.account.template" id="54701">
             <field name="name">Electricity rental expense</field>
             <field name="code">54701</field>
-            <field name="type" ref="other_promotional_materials_expenses"/>
+            <field name="type" ref="selling_and_distribution_travel_and_tradeshows_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5470"/>
@@ -3542,7 +3536,7 @@
         <record model="account.account.template" id="54702">
             <field name="name">Internet rental expense</field>
             <field name="code">54702</field>
-            <field name="type" ref="other_promotional_materials_expenses"/>
+            <field name="type" ref="selling_and_distribution_travel_and_tradeshows_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5470"/>
@@ -3550,7 +3544,7 @@
         <record model="account.account.template" id="54709">
             <field name="name">Other tradeshow and exhibits equipment rental expense</field>
             <field name="code">54709</field>
-            <field name="type" ref="other_promotional_materials_expenses"/>
+            <field name="type" ref="selling_and_distribution_travel_and_tradeshows_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5470"/>
