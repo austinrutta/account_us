@@ -3693,6 +3693,12 @@
             <field name="kind">view</field>
             <field name="parent" ref="5"/>
         </record>
+        <record model="account.account.template" id="590">
+            <field name="name">Membership dues—organization</field>
+            <field name="code">590</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="59"/>
+        </record>
         <record model="account.account.template" id="591">
             <field name="name">Other operating taxes</field>
             <field name="code">591</field>
