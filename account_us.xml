@@ -2823,32 +2823,6 @@
             <field name="kind">view</field>
             <field name="parent" ref="5"/>
         </record>
-        <record model="account.account.template" id="500">
-            <field name="name">Cost of goods sold</field>
-            <field name="code">500</field>
-            <field name="type" ref="cost_of_goods_sold"/>
-            <field name="kind">view</field>
-            <field name="parent" ref="50"/>
-        </record>
-        <record model="account.account.template" id="5000">
-            <field name="name">Cost of goods manufactured and sold</field>
-            <field name="code">5000</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="500"/>
-        </record>
-        <record model="account.account.template" id="5001">
-            <field name="name">Cost of goods purchased and sold</field>
-            <field name="code">5001</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="500"/>
-        </record>
-        <record model="account.account.template" id="501">
-            <field name="name">Cost of services rendered</field>
-            <field name="code">501</field>
-            <field name="type" ref="cost_of_services_rendered"/>
-            <field name="kind">view</field>
-            <field name="parent" ref="50"/>
-        </record>
         <record model="account.account.template" id="51">
             <field name="name">Personnel</field>
             <field name="code">51</field>
