@@ -3180,7 +3180,7 @@
             <field name="parent" ref="5220"/>
         </record>
         <record model="account.account.template" id="52201">
-            <field name="name">Custom graphic design expense—advertising</field>
+            <field name="name">Custom graphic design expense—sales</field>
             <field name="code">52201</field>
             <field name="type" ref="producing_advertising_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3210,7 +3210,7 @@
             <field name="parent" ref="5221"/>
         </record>
         <record model="account.account.template" id="52211">
-            <field name="name">Artwork, font, and other stock media costs—advertising</field>
+            <field name="name">Artwork, font, and other stock media costs—sales</field>
             <field name="code">52211</field>
             <field name="type" ref="producing_advertising_expenses"/>
             <field name="deferral" eval="False"/>
