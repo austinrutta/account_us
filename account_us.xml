@@ -3300,7 +3300,7 @@
             <field name="parent" ref="5310"/>
         </record>
         <record model="account.account.template" id="5311">
-            <field name="name">Internet</field>
+            <field name="name">Network</field>
             <field name="code">5311</field>
             <field name="kind">view</field>
             <field name="parent" ref="531"/>
