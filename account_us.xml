@@ -2406,7 +2406,7 @@
             <field name="parent" ref="212"/>
         </record>
         <record model="account.account.template" id="212052">
-            <field name="name">Sales tax payable, Utah (UT)</field>
+            <field name="name">Sales tax payable—Utah (UT)</field>
             <field name="code">212052</field>
             <field name="type" ref="sales_tax_collected"/>
             <field name="deferral" eval="True"/>
@@ -2862,7 +2862,7 @@
             <field name="parent" ref="510"/>
         </record>
         <record model="account.account.template" id="51000">
-            <field name="name">Salaries expense, research and development</field>
+            <field name="name">Salaries expense—research and development</field>
             <field name="code">51000</field>
             <field name="type" ref="research_and_development_personnel_costs"/>
             <field name="deferral" eval="False"/>
@@ -2870,7 +2870,7 @@
             <field name="parent" ref="5100"/>
         </record>
         <record model="account.account.template" id="51001">
-            <field name="name">Salaries expense, sales</field>
+            <field name="name">Salaries expense—sales</field>
             <field name="code">51001</field>
             <field name="type" ref="selling_and_distribution_personnel_costs"/>
             <field name="deferral" eval="False"/>
@@ -2878,7 +2878,7 @@
             <field name="parent" ref="5100"/>
         </record>
         <record model="account.account.template" id="51002">
-            <field name="name">Salaries expense, officers</field>
+            <field name="name">Salaries expense—officers</field>
             <field name="code">51002</field>
             <field name="type" ref="general_and_administrative_personnel_costs"/>
             <field name="deferral" eval="False"/>
@@ -2886,7 +2886,7 @@
             <field name="parent" ref="5100"/>
         </record>
         <record model="account.account.template" id="51003">
-            <field name="name">Salaries expense, cost of services</field>
+            <field name="name">Salaries expense—cost of services</field>
             <field name="code">51003</field>
             <field name="type" ref="costs_of_services_personnel_costs"/>
             <field name="deferral" eval="False"/>
@@ -2900,7 +2900,7 @@
             <field name="parent" ref="510"/>
         </record>
         <record model="account.account.template" id="51010">
-            <field name="name">Wages expense, sales</field>
+            <field name="name">Wages expense—sales</field>
             <field name="code">51010</field>
             <field name="type" ref="selling_and_distribution_personnel_costs"/>
             <field name="deferral" eval="False"/>
@@ -2908,7 +2908,7 @@
             <field name="parent" ref="5101"/>
         </record>
         <record model="account.account.template" id="51011">
-            <field name="name">Wages expense, cost of services</field>
+            <field name="name">Wages expense—cost of services</field>
             <field name="code">51011</field>
             <field name="type" ref="costs_of_services_personnel_costs"/>
             <field name="deferral" eval="False"/>
@@ -2968,7 +2968,7 @@
             <field name="parent" ref="511"/>
         </record>
         <record model="account.account.template" id="51101">
-            <field name="name">Employer FICA, sales</field>
+            <field name="name">Employer FICA—sales</field>
             <field name="code">51101</field>
             <field name="type" ref="selling_and_distribution_personnel_costs"/>
             <field name="deferral" eval="False"/>
@@ -3108,7 +3108,7 @@
             <field name="parent" ref="520"/>
         </record>
         <record model="account.account.template" id="52000">
-            <field name="name">Attorney’s fees, research and development</field>
+            <field name="name">Attorney’s fees—research and development</field>
             <field name="code">52000</field>
             <field name="type" ref="research_and_development_contract_services"/>
             <field name="deferral" eval="False"/>
@@ -3116,7 +3116,7 @@
             <field name="parent" ref="5200"/>
         </record>
         <record model="account.account.template" id="52001">
-            <field name="name">Attorney’s fees, sales</field>
+            <field name="name">Attorney’s fees—sales</field>
             <field name="code">52001</field>
             <field name="type" ref="selling_and_distribution_contract_services"/>
             <field name="deferral" eval="False"/>
@@ -3124,7 +3124,7 @@
             <field name="parent" ref="5200"/>
         </record>
         <record model="account.account.template" id="52002">
-            <field name="name">Attorney’s fees, general and administrative</field>
+            <field name="name">Attorney’s fees—general and administrative</field>
             <field name="code">52002</field>
             <field name="type" ref="general_and_administrative_contract_services"/>
             <field name="deferral" eval="False"/>
@@ -3144,7 +3144,7 @@
             <field name="parent" ref="520"/>
         </record>
         <record model="account.account.template" id="52020">
-            <field name="name">Legal documents, research and development</field>
+            <field name="name">Legal documents—research and development</field>
             <field name="code">52020</field>
             <field name="type" ref="research_and_development_contract_services"/>
             <field name="deferral" eval="False"/>
@@ -3152,7 +3152,7 @@
             <field name="parent" ref="5202"/>
         </record>
         <record model="account.account.template" id="52021">
-            <field name="name">Legal documents, sales</field>
+            <field name="name">Legal documents—sales</field>
             <field name="code">52021</field>
             <field name="type" ref="selling_and_distribution_contract_services"/>
             <field name="deferral" eval="False"/>
@@ -3160,7 +3160,7 @@
             <field name="parent" ref="5202"/>
         </record>
         <record model="account.account.template" id="52022">
-            <field name="name">Legal documents, general and administrative</field>
+            <field name="name">Legal documents—general and administrative</field>
             <field name="code">52022</field>
             <field name="type" ref="general_and_administrative_contract_services"/>
             <field name="deferral" eval="False"/>
@@ -3210,7 +3210,7 @@
             <field name="parent" ref="522"/>
         </record>
         <record model="account.account.template" id="52200">
-            <field name="name">Custom graphic design expense, cost of sales</field>
+            <field name="name">Custom graphic design expense—cost of sales</field>
             <field name="code">52200</field>
             <field name="type" ref="research_and_development_contract_services"/>
             <field name="deferral" eval="False"/>
@@ -3218,7 +3218,7 @@
             <field name="parent" ref="5220"/>
         </record>
         <record model="account.account.template" id="52201">
-            <field name="name">Custom graphic design expense, advertising</field>
+            <field name="name">Custom graphic design expense—advertising</field>
             <field name="code">52201</field>
             <field name="type" ref="producing_advertising_expenses"/>
             <field name="deferral" eval="False"/>
