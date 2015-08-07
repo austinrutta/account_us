@@ -3679,7 +3679,7 @@
         </record>
         <record model="account.account.template" id="54921">
             <field name="name">Depreciation expense—delivery equipment</field>
-            <field name="code">54920</field>
+            <field name="code">54921</field>
             <field name="type" ref="selling_and_distribution_depreciation_and_amortization"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
