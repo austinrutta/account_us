@@ -1695,13 +1695,13 @@
             <field name="parent" ref="160"/>
         </record>
         <record model="account.account.template" id="1609">
-            <field name="name">Amortization and value of land and land improvements (−)</field>
+            <field name="name">Accumulated amortization and value of land and land improvements (−)</field>
             <field name="code">1609</field>
             <field name="kind">view</field>
             <field name="parent" ref="160"/>
         </record>
         <record model="account.account.template" id="16090">
-            <field name="name">Amortization of acquisition costs of land (−)</field>
+            <field name="name">Accumulated amortization of acquisition costs of land (−)</field>
             <field name="code">16090</field>
             <field name="type" ref="land"/>
             <field name="deferral" eval="True"/>
@@ -1709,7 +1709,7 @@
             <field name="parent" ref="1609"/>
         </record>
         <record model="account.account.template" id="16091">
-            <field name="name">Impairment of land (−)</field>
+            <field name="name">Accumulated impairment of land (−)</field>
             <field name="code">16091</field>
             <field name="type" ref="land"/>
             <field name="deferral" eval="True"/>
@@ -1747,13 +1747,13 @@
             <field name="parent" ref="161"/>
         </record>
         <record model="account.account.template" id="1619">
-            <field name="name">Depreciation of buildings and improvements (−)</field>
+            <field name="name">Accumulated depreciation of buildings and improvements (−)</field>
             <field name="code">1619</field>
             <field name="kind">view</field>
             <field name="parent" ref="161"/>
         </record>
         <record model="account.account.template" id="16190">
-            <field name="name">Depreciation of administrative structures (−)</field>
+            <field name="name">Accumulated depreciation of administrative structures (−)</field>
             <field name="code">16190</field>
             <field name="type" ref="buildings"/>
             <field name="deferral" eval="True"/>
@@ -1761,7 +1761,7 @@
             <field name="parent" ref="1619"/>
         </record>
         <record model="account.account.template" id="16191">
-            <field name="name">Depreciation of industrial buildings (−)</field>
+            <field name="name">Accumulated depreciation of industrial buildings (−)</field>
             <field name="code">16191</field>
             <field name="type" ref="buildings"/>
             <field name="deferral" eval="True"/>
@@ -1769,7 +1769,7 @@
             <field name="parent" ref="1619"/>
         </record>
         <record model="account.account.template" id="16192">
-            <field name="name">Depreciation of leasehold improvements (−)</field>
+            <field name="name">Accumulated depreciation of leasehold improvements (−)</field>
             <field name="code">16192</field>
             <field name="type" ref="buildings"/>
             <field name="deferral" eval="True"/>
@@ -1799,13 +1799,13 @@
             <field name="parent" ref="162"/>
         </record>
         <record model="account.account.template" id="1629">
-            <field name="name">Depreciation on production machinery and equipment (−)</field>
+            <field name="name">Accumulated depreciation on production machinery and equipment (−)</field>
             <field name="code">1629</field>
             <field name="kind">view</field>
             <field name="parent" ref="162"/>
         </record>
         <record model="account.account.template" id="16290">
-            <field name="name">Depreciation of machinery and tools (−)</field>
+            <field name="name">Accumulated depreciation of machinery and tools (−)</field>
             <field name="code">16290</field>
             <field name="type" ref="production_machinery_and_equipment"/>
             <field name="deferral" eval="True"/>
@@ -1813,7 +1813,7 @@
             <field name="parent" ref="1629"/>
         </record>
         <record model="account.account.template" id="16291">
-            <field name="name">Depreciation of information technology assets (−)</field>
+            <field name="name">Accumulated depreciation of information technology assets (−)</field>
             <field name="code">16291</field>
             <field name="type" ref="production_machinery_and_equipment"/>
             <field name="deferral" eval="True"/>
@@ -1843,13 +1843,13 @@
             <field name="parent" ref="163"/>
         </record>
         <record model="account.account.template" id="1639">
-            <field name="name">Depreciation of transportation equipment (−)</field>
+            <field name="name">Accumulated depreciation of transportation equipment (−)</field>
             <field name="code">1639</field>
             <field name="kind">view</field>
             <field name="parent" ref="163"/>
         </record>
         <record model="account.account.template" id="16390">
-            <field name="name">Depreciation of vehicles (−)</field>
+            <field name="name">Accumulated depreciation of vehicles (−)</field>
             <field name="code">16390</field>
             <field name="type" ref="transportation_equipment"/>
             <field name="deferral" eval="True"/>
@@ -1857,7 +1857,7 @@
             <field name="parent" ref="1639"/>
         </record>
         <record model="account.account.template" id="16391">
-            <field name="name">Depreciation of delivery equipment (−)</field>
+            <field name="name">Accumulated depreciation of delivery equipment (−)</field>
             <field name="code">16391</field>
             <field name="type" ref="transportation_equipment"/>
             <field name="deferral" eval="True"/>
@@ -1915,13 +1915,13 @@
             <field name="parent" ref="1641"/>
         </record>
         <record model="account.account.template" id="1649">
-            <field name="name">Depreciation of furniture, fixtures, and office equipment (−)</field>
+            <field name="name">Accumulated depreciation of furniture, fixtures, and office equipment (−)</field>
             <field name="code">1649</field>
             <field name="kind">view</field>
             <field name="parent" ref="164"/>
         </record>
         <record model="account.account.template" id="16490">
-            <field name="name">Depreciation of furniture and fixtures (−)</field>
+            <field name="name">Accumulated depreciation of furniture and fixtures (−)</field>
             <field name="code">16490</field>
             <field name="type" ref="furniture_fixtures_office"/>
             <field name="deferral" eval="True"/>
@@ -1929,7 +1929,7 @@
             <field name="parent" ref="1649"/>
         </record>
         <record model="account.account.template" id="16491">
-            <field name="name">Depreciation of office equipment (−)</field>
+            <field name="name">Accumulated depreciation of office equipment (−)</field>
             <field name="code">16491</field>
             <field name="type" ref="furniture_fixtures_office"/>
             <field name="deferral" eval="True"/>
@@ -1996,7 +1996,7 @@
             <field name="parent" ref="170"/>
         </record>
         <record model="account.account.template" id="1709">
-            <field name="name">Amortization of marketing-related intangible assets (−)</field>
+            <field name="name">Accumulated amortization of marketing-related intangible assets (−)</field>
             <field name="code">1709</field>
             <field name="type" ref="marketing_related_intangibles"/>
             <field name="deferral" eval="True"/>
@@ -2034,7 +2034,7 @@
             <field name="parent" ref="171"/>
         </record>
         <record model="account.account.template" id="1719">
-            <field name="name">Amortization of customer-related intangible assets (−)</field>
+            <field name="name">Accumulated amortization of customer-related intangible assets (−)</field>
             <field name="code">1719</field>
             <field name="type" ref="marketing_related_intangibles"/>
             <field name="deferral" eval="True"/>
@@ -2080,7 +2080,7 @@
             <field name="parent" ref="172"/>
         </record>
         <record model="account.account.template" id="1729">
-            <field name="name">Amortization of artistic-related intangible assets (−)</field>
+            <field name="name">Accumulated amortization of artistic-related intangible assets (−)</field>
             <field name="code">1729</field>
             <field name="type" ref="artistic_related_intangibles"/>
             <field name="deferral" eval="True"/>
@@ -2148,7 +2148,7 @@
             <field name="parent" ref="173"/>
         </record>
         <record model="account.account.template" id="1739">
-            <field name="name">Amortization of contract-based intangible assets (−)</field>
+            <field name="name">Accumulated amortization of contract-based intangible assets (−)</field>
             <field name="code">1739</field>
             <field name="type" ref="contract_based_intangibles"/>
             <field name="deferral" eval="True"/>
@@ -2238,13 +2238,13 @@
             <field name="parent" ref="174"/>
         </record>
         <record model="account.account.template" id="1749">
-            <field name="name">Amortization of technology-based intangible assets (−)</field>
+            <field name="name">Accumulated amortization of technology-based intangible assets (−)</field>
             <field name="code">1749</field>
             <field name="kind">view</field>
             <field name="parent" ref="174"/>
         </record>
         <record model="account.account.template" id="17490">
-            <field name="name">Amortization of capitalized software (−)</field>
+            <field name="name">Accumulated amortization of capitalized software (−)</field>
             <field name="code">17490</field>
             <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
@@ -2252,7 +2252,7 @@
             <field name="parent" ref="1749"/>
         </record>
         <record model="account.account.template" id="17491">
-            <field name="name">Amortization of other technology-based intangible assets (−)</field>
+            <field name="name">Accumulated amortization of other technology-based intangible assets (−)</field>
             <field name="code">17491</field>
             <field name="type" ref="other_technology_based_intangibles"/>
             <field name="deferral" eval="True"/>
@@ -2274,7 +2274,7 @@
             <field name="parent" ref="175"/>
         </record>
         <record model="account.account.template" id="1751">
-            <field name="name">Amortization of research and development costs</field>
+            <field name="name">Accumulated amortization of research and development costs</field>
             <field name="code">1751</field>
             <field name="type" ref="research_and_development"/>
             <field name="deferral" eval="True"/>
