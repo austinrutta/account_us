@@ -1890,7 +1890,7 @@
         </record>
         <record model="account.account.template" id="1640">
             <field name="name">Furniture, fixtures, and office equipment for administrative structures</field>
-            <field name="code">16400</field>
+            <field name="code">1640</field>
             <field name="type" ref="furniture_fixtures_office"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
@@ -3643,7 +3643,7 @@
         </record>
         <record model="account.account.template" id="5491">
             <field name="name">Buildings and improvements</field>
-            <field name="code">5490</field>
+            <field name="code">5491</field>
             <field name="kind">view</field>
             <field name="parent" ref="549"/>
         </record>
