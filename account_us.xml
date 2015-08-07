@@ -604,6 +604,12 @@
             <field name="parent" ref="contributed_capital"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="donated_capital">
+            <field name="name">Donated capital</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="contributed_capital"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="earned_capital">
             <field name="name">Earned capital</field>
             <field name="parent" ref="equity"/>
@@ -2565,6 +2571,13 @@
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="3019"/>
+        </record>
+        <record model="account.account.template" id="302">
+            <field name="name">Donated capital</field>
+            <field name="code">302</field>
+            <field name="type" ref="donated_capital"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="30"/>
         </record>
         <record model="account.account.template" id="31">
             <field name="name">Retained earnings</field>
