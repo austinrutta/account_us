@@ -2573,7 +2573,7 @@
             <field name="parent" ref="3019"/>
         </record>
         <record model="account.account.template" id="302">
-            <field name="name">Donated capital</field>
+            <field name="name">Donated capital (by owners or shareholders)</field>
             <field name="code">302</field>
             <field name="type" ref="donated_capital"/>
             <field name="kind">view</field>
