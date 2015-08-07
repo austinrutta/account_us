@@ -997,6 +997,18 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="grants_and_donations_received">
+            <field name="name">Grants and donations received</field>
+            <field name="parent" ref="non_operating_revenues"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_non_operating_revenues">
+            <field name="name">Other non-operating revenues</field>
+            <field name="parent" ref="non_operating_revenues"/>
+            <field name="sequence" eval="90"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="non_operating_expenses">
             <field name="name">Non-operating expenses</field>
             <field name="parent" ref="non_operating_income"/>
@@ -1009,10 +1021,28 @@
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="other_financing_costs">
+            <field name="name">Other financing costs</field>
+            <field name="parent" ref="non_operating_expenses"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="bank_service_charges">
+            <field name="name">Bank service charges</field>
+            <field name="parent" ref="non_operating_expenses"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="grants_and_donations_given">
             <field name="name">Grants and donations given</field>
             <field name="parent" ref="non_operating_expenses"/>
-            <field name="sequence" eval="20"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_non_operating_expenses">
+            <field name="name">Other non-operating expenses</field>
+            <field name="parent" ref="non_operating_expenses"/>
+            <field name="sequence" eval="90"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="operating_income">
@@ -3948,10 +3978,328 @@
             <field name="parent" ref="root"/>
         </record>
         <record model="account.account.template" id="60">
-            <field name="name">Interest</field>
+            <field name="name">Gains and losses</field>
             <field name="code">60</field>
             <field name="kind">view</field>
             <field name="parent" ref="6"/>
+        </record>
+        <record model="account.account.template" id="600">
+            <field name="name">Financial instruments</field>
+            <field name="code">600</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="60"/>
+        </record>
+        <record model="account.account.template" id="601">
+            <field name="name">Foreign currency transactions</field>
+            <field name="code">601</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="60"/>
+        </record>
+        <record model="account.account.template" id="6010">
+            <field name="name">Gain on foreign currency transactions</field>
+            <field name="code">6010</field>
+            <field name="type" ref="gains_on_foreign_currency_transactions"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="601"/>
+        </record>
+        <record model="account.account.template" id="6011">
+            <field name="name">Loss on foreign currency transactions (−)</field>
+            <field name="code">6011</field>
+            <field name="type" ref="losses_on_foreign_currency_transactions"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="601"/>
+        </record>
+        <record model="account.account.template" id="602">
+            <field name="name">Disposal of assets</field>
+            <field name="code">602</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="60"/>
+        </record>
+        <record model="account.account.template" id="6020">
+            <field name="name">Disposal of assets—investments</field>
+            <field name="code">6020</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="602"/>
+        </record>
+        <record model="account.account.template" id="6021">
+            <field name="name">Disposal of assets—tangible assets</field>
+            <field name="code">6021</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="602"/>
+        </record>
+        <record model="account.account.template" id="6022">
+            <field name="name">Disposal of assets—intangible assets</field>
+            <field name="code">6022</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="602"/>
+        </record>
+        <record model="account.account.template" id="6023">
+            <field name="name">Disposal of assets—other non-current assets</field>
+            <field name="code">6023</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="602"/>
+        </record>
+        <record model="account.account.template" id="603">
+            <field name="name">Impairment losses</field>
+            <field name="code">603</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="60"/>
+        </record>
+        <record model="account.account.template" id="6030">
+            <field name="name">Impairment losses—investments</field>
+            <field name="code">6030</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="603"/>
+        </record>
+        <record model="account.account.template" id="6031">
+            <field name="name">Impairment losses—tangible assets</field>
+            <field name="code">6031</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="603"/>
+        </record>
+        <record model="account.account.template" id="6032">
+            <field name="name">Impairment losses—intangible assets</field>
+            <field name="code">6032</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="603"/>
+        </record>
+        <record model="account.account.template" id="6033">
+            <field name="name">Impairment losses—other non-current assets</field>
+            <field name="code">6033</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="603"/>
+        </record>
+        <record model="account.account.template" id="604">
+            <field name="name">Write-downs and extinguishments</field>
+            <field name="code">604</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="60"/>
+        </record>
+        <record model="account.account.template" id="6040">
+            <field name="name">Write-downs</field>
+            <field name="code">6040</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="604"/>
+        </record>
+        <record model="account.account.template" id="6041">
+            <field name="name">Extinguishments of debt</field>
+            <field name="code">6041</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="604"/>
+        </record>
+        <record model="account.account.template" id="605">
+            <field name="name">Shares of profit</field>
+            <field name="code">605</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="60"/>
+        </record>
+        <record model="account.account.template" id="6050">
+            <field name="name">Shares of profit—associates</field>
+            <field name="code">6050</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="605"/>
+        </record>
+        <record model="account.account.template" id="6051">
+            <field name="name">Shares of profit—joint ventures</field>
+            <field name="code">6051</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="605"/>
+        </record>
+        <record model="account.account.template" id="609">
+            <field name="name">Other gains and losses</field>
+            <field name="code">609</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="60"/>
+        </record>
+        <record model="account.account.template" id="6090">
+            <field name="name">Uninsured casualty loss</field>
+            <field name="code">6090</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="609"/>
+        </record>
+        <record model="account.account.template" id="6091">
+            <field name="name">Litigation settlements</field>
+            <field name="code">6091</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="609"/>
+        </record>
+        <record model="account.account.template" id="6092">
+            <field name="name">Contracts</field>
+            <field name="code">6092</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="609"/>
+        </record>
+        <record model="account.account.template" id="61">
+            <field name="name">Non-operating revenues</field>
+            <field name="code">61</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="6"/>
+        </record>
+        <record model="account.account.template" id="610">
+            <field name="name">Revenue from financial investments</field>
+            <field name="code">610</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="61"/>
+        </record>
+        <record model="account.account.template" id="6100">
+            <field name="name">Interest revenue</field>
+            <field name="code">6100</field>
+            <field name="type" ref="interest_revenues"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="610"/>
+        </record>
+        <record model="account.account.template" id="6101">
+            <field name="name">Dividend revenue</field>
+            <field name="code">6101</field>
+            <field name="type" ref="dividend_revenues"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="610"/>
+        </record>
+        <record model="account.account.template" id="611">
+            <field name="name">Rental revenue</field>
+            <field name="code">611</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="61"/>
+        </record>
+        <record model="account.account.template" id="612">
+            <field name="name">Royalties</field>
+            <field name="code">612</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="61"/>
+        </record>
+        <record model="account.account.template" id="613">
+            <field name="name">Grants and donations received</field>
+            <field name="code">613</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="61"/>
+        </record>
+        <record model="account.account.template" id="6130">
+            <field name="name">Grant revenues</field>
+            <field name="code">6130</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="613"/>
+        </record>
+        <record model="account.account.template" id="61300">
+            <field name="name">Government grants</field>
+            <field name="code">61300</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="6130"/>
+        </record>
+        <record model="account.account.template" id="61301">
+            <field name="name">Non-government grants</field>
+            <field name="code">61301</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="6130"/>
+        </record>
+        <record model="account.account.template" id="6131">
+            <field name="name">Donation revenues</field>
+            <field name="code">6131</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="613"/>
+        </record>
+        <record model="account.account.template" id="61310">
+            <field name="name">Individual or small business donations</field>
+            <field name="code">61310</field>
+            <field name="type" ref="grants_and_donations_received"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="6131"/>
+        </record>
+        <record model="account.account.template" id="61311">
+            <field name="name">Corporate donations</field>
+            <field name="code">61311</field>
+            <field name="type" ref="grants_and_donations_received"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="6131"/>
+        </record>
+        <record model="account.account.template" id="619">
+            <field name="name">Other non-operating revenues</field>
+            <field name="code">619</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="61"/>
+        </record>
+        <record model="account.account.template" id="6190">
+            <field name="name">Insurance proceeds received</field>
+            <field name="code">6190</field>
+            <field name="type" ref="other_non_operating_revenues"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="619"/>
+        </record>
+        <record model="account.account.template" id="62">
+            <field name="name">Non-operating expenses</field>
+            <field name="code">62</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="6"/>
+        </record>
+        <record model="account.account.template" id="620">
+            <field name="name">Financial expenses</field>
+            <field name="code">620</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="62"/>
+        </record>
+        <record model="account.account.template" id="6200">
+            <field name="name">Interest expense</field>
+            <field name="code">6200</field>
+            <field name="type" ref="interest_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="620"/>
+        </record>
+        <record model="account.account.template" id="6201">
+            <field name="name">Debt issuance costs</field>
+            <field name="code">6201</field>
+            <field name="type" ref="other_financing_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="620"/>
+        </record>
+        <record model="account.account.template" id="6202">
+            <field name="name">Bank service charges</field>
+            <field name="code">6202</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="620"/>
+        </record>
+        <record model="account.account.template" id="62020">
+            <field name="name">Wiring fees</field>
+            <field name="code">62020</field>
+            <field name="type" ref="bank_service_charges"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="6202"/>
+        </record>
+        <record model="account.account.template" id="62021">
+            <field name="name">Automated teller machine (ATM) fees</field>
+            <field name="code">62021</field>
+            <field name="type" ref="bank_service_charges"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="6202"/>
+        </record>
+        <record model="account.account.template" id="62022">
+            <field name="name">Stock trading fees</field>
+            <field name="code">62022</field>
+            <field name="type" ref="bank_service_charges"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="6202"/>
+        </record>
+        <record model="account.account.template" id="621">
+            <field name="name">Grants or donations given</field>
+            <field name="code">621</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="62"/>
+        </record>
+        <record model="account.account.template" id="629">
+            <field name="name">Other non-operating expenses</field>
+            <field name="code">629</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="62"/>
         </record>
         <record model="account.account.template" id="7">
             <field name="name">Income tax expense</field>
