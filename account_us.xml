@@ -2908,9 +2908,9 @@
             <field name="kind">expense</field>
             <field name="parent" ref="5101"/>
         </record>
-        <record model="account.account.template" id="51010">
+        <record model="account.account.template" id="51011">
             <field name="name">Wages expense—sales</field>
-            <field name="code">51010</field>
+            <field name="code">51011</field>
             <field name="type" ref="selling_and_distribution_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
