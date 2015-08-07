@@ -3685,6 +3685,28 @@
             <field name="kind">expense</field>
             <field name="parent" ref="5492"/>
         </record>
+        <record model="account.account.template" id="5493">
+            <field name="name">Furniture, fixtures, and office equipment</field>
+            <field name="code">5493</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="549"/>
+        </record>
+        <record model="account.account.template" id="54930">
+            <field name="name">Depreciation expense—furniture, fixtures, and office equipment for administrative structures</field>
+            <field name="code">54930</field>
+            <field name="type" ref="general_and_administrative_depreciation_and_amortization"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5493"/>
+        </record>
+        <record model="account.account.template" id="54931">
+            <field name="name">Depreciation expense—furniture, fixtures, and office equipment for sales</field>
+            <field name="code">54931</field>
+            <field name="type" ref="selling_and_distribution_depreciation_and_amortization"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5493"/>
+        </record>
         <record model="account.account.template" id="55">
             <field name="name">Travel and meetings</field>
             <field name="code">55</field>
