@@ -1889,48 +1889,20 @@
             <field name="parent" ref="16"/>
         </record>
         <record model="account.account.template" id="1640">
-            <field name="name">Furniture and fixtures</field>
-            <field name="code">1640</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="164"/>
-        </record>
-        <record model="account.account.template" id="16400">
-            <field name="name">Furniture and fixtures for administrative structures</field>
+            <field name="name">Furniture, fixtures, and office equipment for administrative structures</field>
             <field name="code">16400</field>
             <field name="type" ref="furniture_fixtures_office"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="parent" ref="1640"/>
-        </record>
-        <record model="account.account.template" id="16401">
-            <field name="name">Furniture and fixtures for industrial buildings</field>
-            <field name="code">16401</field>
-            <field name="type" ref="furniture_fixtures_office"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="1640"/>
-        </record>
-        <record model="account.account.template" id="1641">
-            <field name="name">Office equipment</field>
-            <field name="code">1641</field>
-            <field name="kind">view</field>
             <field name="parent" ref="164"/>
         </record>
-        <record model="account.account.template" id="16410">
-            <field name="name">Office equipment for administrative structures</field>
-            <field name="code">16410</field>
+        <record model="account.account.template" id="1641">
+            <field name="name">Furniture, fixtures, and office equipment for industrial buildings</field>
+            <field name="code">1641</field>
             <field name="type" ref="furniture_fixtures_office"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="parent" ref="1641"/>
-        </record>
-        <record model="account.account.template" id="16411">
-            <field name="name">Office equipment for industrial buildings</field>
-            <field name="code">16411</field>
-            <field name="type" ref="furniture_fixtures_office"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="1641"/>
+            <field name="parent" ref="164"/>
         </record>
         <record model="account.account.template" id="1649">
             <field name="name">Accumulated depreciation of furniture, fixtures, and office equipment (−)</field>
@@ -1939,7 +1911,7 @@
             <field name="parent" ref="164"/>
         </record>
         <record model="account.account.template" id="16490">
-            <field name="name">Accumulated depreciation of furniture and fixtures (−)</field>
+            <field name="name">Accumulated depreciation of furniture, fixtures, and office equipment for administrative structures (−)</field>
             <field name="code">16490</field>
             <field name="type" ref="furniture_fixtures_office"/>
             <field name="deferral" eval="True"/>
@@ -1947,7 +1919,7 @@
             <field name="parent" ref="1649"/>
         </record>
         <record model="account.account.template" id="16491">
-            <field name="name">Accumulated depreciation of office equipment (−)</field>
+            <field name="name">Accumulated depreciation of furniture, fixtures, and office equipment for industrial buildings (−)</field>
             <field name="code">16491</field>
             <field name="type" ref="furniture_fixtures_office"/>
             <field name="deferral" eval="True"/>
