@@ -2894,14 +2894,6 @@
             <field name="kind">expense</field>
             <field name="parent" ref="5100"/>
         </record>
-        <record model="account.account.template" id="51003">
-            <field name="name">Salaries expense—cost of services</field>
-            <field name="code">51003</field>
-            <field name="type" ref="costs_of_services_personnel_costs"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5100"/>
-        </record>
         <record model="account.account.template" id="5101">
             <field name="name">Wages</field>
             <field name="code">5101</field>
@@ -2909,17 +2901,17 @@
             <field name="parent" ref="510"/>
         </record>
         <record model="account.account.template" id="51010">
-            <field name="name">Wages expense—sales</field>
+            <field name="name">Wages expense—research and development</field>
             <field name="code">51010</field>
-            <field name="type" ref="selling_and_distribution_personnel_costs"/>
+            <field name="type" ref="research_and_development_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5101"/>
         </record>
-        <record model="account.account.template" id="51011">
-            <field name="name">Wages expense—cost of services</field>
-            <field name="code">51011</field>
-            <field name="type" ref="costs_of_services_personnel_costs"/>
+        <record model="account.account.template" id="51010">
+            <field name="name">Wages expense—sales</field>
+            <field name="code">51010</field>
+            <field name="type" ref="selling_and_distribution_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5101"/>
