@@ -3274,7 +3274,7 @@
             <field name="parent" ref="522"/>
         </record>
         <record model="account.account.template" id="529">
-            <field name="name">Other professional fees</field>
+            <field name="name">Other contract services</field>
             <field name="code">529</field>
             <field name="kind">view</field>
             <field name="parent" ref="52"/>
