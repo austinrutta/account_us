@@ -3232,46 +3232,52 @@
             <field name="parent" ref="521"/>
         </record>
         <record model="account.account.template" id="522">
-            <field name="name">Artists</field>
+            <field name="name">Consulting</field>
             <field name="code">522</field>
             <field name="kind">view</field>
             <field name="parent" ref="52"/>
         </record>
-        <record model="account.account.template" id="5220">
-            <field name="name">Graphic design</field>
-            <field name="code">5220</field>
+        <record model="account.account.template" id="525">
+            <field name="name">Artists</field>
+            <field name="code">525</field>
             <field name="kind">view</field>
-            <field name="parent" ref="522"/>
+            <field name="parent" ref="52"/>
         </record>
-        <record model="account.account.template" id="52200">
+        <record model="account.account.template" id="5250">
+            <field name="name">Graphic design</field>
+            <field name="code">5250</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="525"/>
+        </record>
+        <record model="account.account.template" id="52500">
             <field name="name">Custom graphic design expense—general and administrative</field>
-            <field name="code">52200</field>
+            <field name="code">52500</field>
             <field name="type" ref="general_and_administrative_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5220"/>
+            <field name="parent" ref="5250"/>
         </record>
-        <record model="account.account.template" id="52201">
+        <record model="account.account.template" id="52501">
             <field name="name">Custom graphic design expense—sales</field>
-            <field name="code">52201</field>
+            <field name="code">52501</field>
             <field name="type" ref="producing_advertising_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5220"/>
+            <field name="parent" ref="5250"/>
         </record>
-        <record model="account.account.template" id="52202">
+        <record model="account.account.template" id="52502">
             <field name="name">Custom graphic design expense—research and development</field>
-            <field name="code">52202</field>
+            <field name="code">52502</field>
             <field name="type" ref="research_and_development_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5220"/>
+            <field name="parent" ref="5250"/>
         </record>
-        <record model="account.account.template" id="5221">
+        <record model="account.account.template" id="5251">
             <field name="name">Photography</field>
-            <field name="code">5221</field>
+            <field name="code">5251</field>
             <field name="kind">view</field>
-            <field name="parent" ref="522"/>
+            <field name="parent" ref="525"/>
         </record>
         <record model="account.account.template" id="529">
             <field name="name">Other contract services</field>
