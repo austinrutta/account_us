@@ -4302,7 +4302,7 @@
             <field name="parent" ref="6202"/>
         </record>
         <record model="account.account.template" id="621">
-            <field name="name">Crowdfunding expense</field>
+            <field name="name">Crowdfunding expenses</field>
             <field name="code">621</field>
             <field name="kind">view</field>
             <field name="parent" ref="62"/>
@@ -4314,7 +4314,7 @@
             <field name="parent" ref="621"/>
         </record>
         <record model="account.account.template" id="6211">
-            <field name="name">Other crowdfunding expense</field>
+            <field name="name">Other crowdfunding expenses</field>
             <field name="code">6211</field>
             <field name="kind">view</field>
             <field name="parent" ref="621"/>
