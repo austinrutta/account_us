@@ -997,10 +997,16 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="crowdfunding_campaigns">
+            <field name="name">Crowdfunding campaigns</field>
+            <field name="parent" ref="non_operating_revenues"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="grants_and_donations_received">
             <field name="name">Grants and donations received</field>
             <field name="parent" ref="non_operating_revenues"/>
-            <field name="sequence" eval="30"/>
+            <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="other_non_operating_revenues">
@@ -4166,7 +4172,7 @@
             <field name="parent" ref="61"/>
         </record>
         <record model="account.account.template" id="612">
-            <field name="name">Royalties</field>
+            <field name="name">Crowdfunding campaigns</field>
             <field name="code">612</field>
             <field name="kind">view</field>
             <field name="parent" ref="61"/>
@@ -4229,6 +4235,12 @@
             <field name="type" ref="other_non_operating_revenues"/>
             <field name="deferral" eval="False"/>
             <field name="kind">revenue</field>
+            <field name="parent" ref="619"/>
+        </record>
+        <record model="account.account.template" id="6191">
+            <field name="name">Royalties</field>
+            <field name="code">6191</field>
+            <field name="kind">view</field>
             <field name="parent" ref="619"/>
         </record>
         <record model="account.account.template" id="62">
