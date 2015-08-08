@@ -2898,9 +2898,9 @@
             <field name="parent" ref="510"/>
         </record>
         <record model="account.account.template" id="51000">
-            <field name="name">Salaries expense—research and development</field>
+            <field name="name">Salaries expense—officers</field>
             <field name="code">51000</field>
-            <field name="type" ref="research_and_development_personnel_costs"/>
+            <field name="type" ref="general_and_administrative_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5100"/>
@@ -2914,9 +2914,9 @@
             <field name="parent" ref="5100"/>
         </record>
         <record model="account.account.template" id="51002">
-            <field name="name">Salaries expense—officers</field>
+            <field name="name">Salaries expense—research and development</field>
             <field name="code">51002</field>
-            <field name="type" ref="general_and_administrative_personnel_costs"/>
+            <field name="type" ref="research_and_development_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5100"/>
@@ -2928,17 +2928,17 @@
             <field name="parent" ref="510"/>
         </record>
         <record model="account.account.template" id="51010">
-            <field name="name">Wages expense—research and development</field>
+            <field name="name">Wages expense—sales</field>
             <field name="code">51010</field>
-            <field name="type" ref="research_and_development_personnel_costs"/>
+            <field name="type" ref="selling_and_distribution_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5101"/>
         </record>
         <record model="account.account.template" id="51011">
-            <field name="name">Wages expense—sales</field>
+            <field name="name">Wages expense—research and development</field>
             <field name="code">51011</field>
-            <field name="type" ref="selling_and_distribution_personnel_costs"/>
+            <field name="type" ref="research_and_development_personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5101"/>
@@ -3136,9 +3136,9 @@
             <field name="parent" ref="520"/>
         </record>
         <record model="account.account.template" id="52000">
-            <field name="name">Attorney’s fees—research and development</field>
+            <field name="name">Attorney’s fees—general and administrative</field>
             <field name="code">52000</field>
-            <field name="type" ref="research_and_development_contract_services"/>
+            <field name="type" ref="general_and_administrative_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5200"/>
@@ -3152,9 +3152,9 @@
             <field name="parent" ref="5200"/>
         </record>
         <record model="account.account.template" id="52002">
-            <field name="name">Attorney’s fees—general and administrative</field>
+            <field name="name">Attorney’s fees—research and development</field>
             <field name="code">52002</field>
-            <field name="type" ref="general_and_administrative_contract_services"/>
+            <field name="type" ref="research_and_development_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5200"/>
@@ -3172,9 +3172,9 @@
             <field name="parent" ref="520"/>
         </record>
         <record model="account.account.template" id="52020">
-            <field name="name">Legal documents—research and development</field>
+            <field name="name">Legal documents—general and administrative</field>
             <field name="code">52020</field>
-            <field name="type" ref="research_and_development_contract_services"/>
+            <field name="type" ref="general_and_administrative_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5202"/>
@@ -3188,9 +3188,9 @@
             <field name="parent" ref="5202"/>
         </record>
         <record model="account.account.template" id="52022">
-            <field name="name">Legal documents—general and administrative</field>
+            <field name="name">Legal documents—research and development</field>
             <field name="code">52022</field>
-            <field name="type" ref="general_and_administrative_contract_services"/>
+            <field name="type" ref="research_and_development_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5202"/>
@@ -3238,9 +3238,9 @@
             <field name="parent" ref="522"/>
         </record>
         <record model="account.account.template" id="52200">
-            <field name="name">Custom graphic design expense—research and development</field>
+            <field name="name">Custom graphic design expense—general and administrative</field>
             <field name="code">52200</field>
-            <field name="type" ref="research_and_development_contract_services"/>
+            <field name="type" ref="general_and_administrative_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5220"/>
@@ -3254,9 +3254,9 @@
             <field name="parent" ref="5220"/>
         </record>
         <record model="account.account.template" id="52202">
-            <field name="name">Custom graphic design expense—general and administrative</field>
+            <field name="name">Custom graphic design expense—research and development</field>
             <field name="code">52202</field>
-            <field name="type" ref="general_and_administrative_contract_services"/>
+            <field name="type" ref="research_and_development_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5220"/>
@@ -3268,9 +3268,9 @@
             <field name="parent" ref="522"/>
         </record>
         <record model="account.account.template" id="52210">
-            <field name="name">Artwork, font, and other stock media costs—research and development</field>
+            <field name="name">Artwork, font, and other stock media costs—general and administrative</field>
             <field name="code">52210</field>
-            <field name="type" ref="research_and_development_contract_services"/>
+            <field name="type" ref="general_and_administrative_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5221"/>
@@ -3284,9 +3284,9 @@
             <field name="parent" ref="5221"/>
         </record>
         <record model="account.account.template" id="52212">
-            <field name="name">Artwork, font, and other stock media costs—general and administrative</field>
+            <field name="name">Artwork, font, and other stock media costs—research and development</field>
             <field name="code">52212</field>
-            <field name="type" ref="general_and_administrative_contract_services"/>
+            <field name="type" ref="research_and_development_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5221"/>
@@ -3336,9 +3336,9 @@
             <field name="parent" ref="530"/>
         </record>
         <record model="account.account.template" id="53080">
-            <field name="name">Inventory and use tax—research and development</field>
+            <field name="name">Inventory and use tax—general and administrative</field>
             <field name="code">53080</field>
-            <field name="type" ref="research_and_development_materials_and_equipment"/>
+            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5308"/>
@@ -3352,9 +3352,9 @@
             <field name="parent" ref="5308"/>
         </record>
         <record model="account.account.template" id="53082">
-            <field name="name">Inventory and use tax—general and administrative</field>
+            <field name="name">Inventory and use tax—research and development</field>
             <field name="code">53082</field>
-            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
+            <field name="type" ref="research_and_development_materials_and_equipment"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5308"/>
@@ -3414,17 +3414,17 @@
             <field name="parent" ref="532"/>
         </record>
         <record model="account.account.template" id="53200">
-            <field name="name">Postage expense—sales</field>
+            <field name="name">Postage expense—general and administrative</field>
             <field name="code">53200</field>
-            <field name="type" ref="communicating_advertising_expenses"/>
+            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5320"/>
         </record>
         <record model="account.account.template" id="53201">
-            <field name="name">Postage expense—general and administrative</field>
+            <field name="name">Postage expense—sales</field>
             <field name="code">53201</field>
-            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
+            <field name="type" ref="communicating_advertising_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5320"/>
@@ -3436,9 +3436,9 @@
             <field name="parent" ref="53"/>
         </record>
         <record model="account.account.template" id="5330">
-            <field name="name">Printing and duplication expense—research and development</field>
+            <field name="name">Printing and duplication expense—general and administrative</field>
             <field name="code">5330</field>
-            <field name="type" ref="research_and_development_materials_and_equipment"/>
+            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="533"/>
@@ -3452,9 +3452,9 @@
             <field name="parent" ref="533"/>
         </record>
         <record model="account.account.template" id="5332">
-            <field name="name">Printing and duplication expense—general and administrative</field>
+            <field name="name">Printing and duplication expense—research and development</field>
             <field name="code">5332</field>
-            <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
+            <field name="type" ref="research_and_development_materials_and_equipment"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="533"/>
@@ -3762,9 +3762,9 @@
             <field name="parent" ref="550"/>
         </record>
         <record model="account.account.template" id="55010">
-            <field name="name">Airfare costs—research and development</field>
+            <field name="name">Airfare costs—general and administrative</field>
             <field name="code">55010</field>
-            <field name="type" ref="research_and_development_indirect_costs"/>
+            <field name="type" ref="general_and_administrative_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5501"/>
@@ -3778,9 +3778,9 @@
             <field name="parent" ref="5501"/>
         </record>
         <record model="account.account.template" id="55012">
-            <field name="name">Airfare costs—general and administrative</field>
+            <field name="name">Airfare costs—research and development</field>
             <field name="code">55012</field>
-            <field name="type" ref="general_and_administrative_travel_and_meetings_expenses"/>
+            <field name="type" ref="research_and_development_indirect_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5501"/>
