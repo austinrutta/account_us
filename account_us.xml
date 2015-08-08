@@ -3166,40 +3166,34 @@
             <field name="parent" ref="5200"/>
         </record>
         <record model="account.account.template" id="5201">
-            <field name="name">Litigation costs</field>
+            <field name="name">Legal documents</field>
             <field name="code">5201</field>
             <field name="kind">view</field>
             <field name="parent" ref="520"/>
         </record>
-        <record model="account.account.template" id="5202">
-            <field name="name">Legal documents</field>
-            <field name="code">5202</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="520"/>
-        </record>
-        <record model="account.account.template" id="52020">
+        <record model="account.account.template" id="52010">
             <field name="name">Legal documents—general and administrative</field>
-            <field name="code">52020</field>
+            <field name="code">52010</field>
             <field name="type" ref="general_and_administrative_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5202"/>
+            <field name="parent" ref="5201"/>
         </record>
-        <record model="account.account.template" id="52021">
+        <record model="account.account.template" id="52011">
             <field name="name">Legal documents—sales</field>
-            <field name="code">52021</field>
+            <field name="code">52011</field>
             <field name="type" ref="selling_and_distribution_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5202"/>
+            <field name="parent" ref="5201"/>
         </record>
-        <record model="account.account.template" id="52022">
+        <record model="account.account.template" id="52012">
             <field name="name">Legal documents—research and development</field>
-            <field name="code">52022</field>
+            <field name="code">52012</field>
             <field name="type" ref="research_and_development_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5202"/>
+            <field name="parent" ref="5201"/>
         </record>
         <record model="account.account.template" id="521">
             <field name="name">Accounting</field>
