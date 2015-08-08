@@ -1039,10 +1039,16 @@
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="crowdfunding_kickbacks">
+            <field name="name">Crowdfunding kickbacks</field>
+            <field name="parent" ref="non_operating_expenses"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="grants_and_donations_given">
             <field name="name">Grants and donations given</field>
             <field name="parent" ref="non_operating_expenses"/>
-            <field name="sequence" eval="40"/>
+            <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="other_non_operating_expenses">
@@ -4296,8 +4302,14 @@
             <field name="parent" ref="6202"/>
         </record>
         <record model="account.account.template" id="621">
-            <field name="name">Grants or donations given</field>
+            <field name="name">Crowdfunding kickbacks (non-operation cost of sales)</field>
             <field name="code">621</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="62"/>
+        </record>
+        <record model="account.account.template" id="622">
+            <field name="name">Grants or donations given</field>
+            <field name="code">622</field>
             <field name="kind">view</field>
             <field name="parent" ref="62"/>
         </record>
