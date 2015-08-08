@@ -4048,25 +4048,25 @@
             <field name="parent" ref="60"/>
         </record>
         <record model="account.account.template" id="6030">
-            <field name="name">Impairment losses—investments</field>
+            <field name="name">Impairment losses—tangible assets</field>
             <field name="code">6030</field>
             <field name="kind">view</field>
             <field name="parent" ref="603"/>
         </record>
         <record model="account.account.template" id="6031">
-            <field name="name">Impairment losses—tangible assets</field>
+            <field name="name">Impairment losses—intangible assets</field>
             <field name="code">6031</field>
             <field name="kind">view</field>
             <field name="parent" ref="603"/>
         </record>
         <record model="account.account.template" id="6032">
-            <field name="name">Impairment losses—intangible assets</field>
+            <field name="name">Impairment losses—financial assets</field>
             <field name="code">6032</field>
             <field name="kind">view</field>
             <field name="parent" ref="603"/>
         </record>
         <record model="account.account.template" id="6033">
-            <field name="name">Impairment losses—other non-current assets</field>
+            <field name="name">Impairment losses—inventories</field>
             <field name="code">6033</field>
             <field name="kind">view</field>
             <field name="parent" ref="603"/>
