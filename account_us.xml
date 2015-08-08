@@ -4302,10 +4302,22 @@
             <field name="parent" ref="6202"/>
         </record>
         <record model="account.account.template" id="621">
-            <field name="name">Crowdfunding kickbacks (non-operation cost of sales)</field>
+            <field name="name">Crowdfunding expense</field>
             <field name="code">621</field>
             <field name="kind">view</field>
             <field name="parent" ref="62"/>
+        </record>
+        <record model="account.account.template" id="6210">
+            <field name="name">Crowdfunding kickbacks (cost of sales)</field>
+            <field name="code">6210</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="621"/>
+        </record>
+        <record model="account.account.template" id="6211">
+            <field name="name">Other crowdfunding expense</field>
+            <field name="code">6211</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="621"/>
         </record>
         <record model="account.account.template" id="622">
             <field name="name">Grants or donations given</field>
