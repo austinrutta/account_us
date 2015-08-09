@@ -6,9 +6,7 @@ United States GAAP and IFRS financial accounting standards, so hopefully this
 could be used as a starting point for accounting with either approach.
 
 - Expenses (5) are classified according to the type of expense not the
-  structure of the organization (the cost center). For righ now, add the
-  organizational structure through the account name, for example:
-
-::
+  structure of the organization (the cost center). For right now, add the
+  organizational structure through the account name, for example::
   
-telephone expense—sales.
+    telephone expense—sales.
