@@ -9,4 +9,4 @@ could be used as a starting point for accounting with either approach.
   structure of the organization (the cost center). For right now, add the
   organizational structure through the account name, for example::
   
-    telephone expense—sales.
+    telephone expense—sales
