@@ -11,4 +11,4 @@ could be used as a starting point for accounting with either approach.
   supports cost centers, add the organizational structure through the account
   name, for example::
   
-    telephone expense—sales
+    telephone expense—research and development
