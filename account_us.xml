@@ -3961,14 +3961,6 @@
             <field name="kind">expense</field>
             <field name="parent" ref="592"/>
         </record>
-        <record model="account.account.template" id="597">
-            <field name="name">Fines, penalties, and judgments</field>
-            <field name="code">597</field>
-            <field name="type" ref="other_operating_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="59"/>
-        </record>
         <record model="account.account.template" id="598">
             <field name="name">Cash over and short</field>
             <field name="code">598</field>
@@ -4132,14 +4124,20 @@
             <field name="parent" ref="609"/>
         </record>
         <record model="account.account.template" id="6091">
-            <field name="name">Litigation settlements</field>
+            <field name="name">Contracts</field>
             <field name="code">6091</field>
             <field name="kind">view</field>
             <field name="parent" ref="609"/>
         </record>
         <record model="account.account.template" id="6092">
-            <field name="name">Contracts</field>
+            <field name="name">Litigation settlements</field>
             <field name="code">6092</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="609"/>
+        </record>
+        <record model="account.account.template" id="6093">
+            <field name="name">Fines and penalties</field>
+            <field name="code">6093</field>
             <field name="kind">view</field>
             <field name="parent" ref="609"/>
         </record>
