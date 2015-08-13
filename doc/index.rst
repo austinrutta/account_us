@@ -12,3 +12,6 @@ could be used as a starting point for accounting with either approach.
   name, for example::
   
     telephone expense—research and development
+
+  Use an `em dash (—) <https://en.wikipedia.org/wiki/Dash>`_ to separate the
+  two.
