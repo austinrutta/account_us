@@ -322,7 +322,7 @@
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="liabilities_current">
+        <record model="account.account.type.template" id="current_liabilities">
             <field name="name">Current liabilities</field>
             <field name="parent" ref="liabilities"/>
             <field name="sequence" eval="10"/>
@@ -330,7 +330,7 @@
         </record>
         <record model="account.account.type.template" id="payables">
             <field name="name">Operating payables</field>
-            <field name="parent" ref="liabilities_current"/>
+            <field name="parent" ref="current_liabilities"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
@@ -352,8 +352,8 @@
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="accounts_payable_to_related_parties">
-            <field name="name">Accounts payable to related parties</field>
+        <record model="account.account.type.template" id="accounts_payables_to_related_parties">
+            <field name="name">Accounts payables to related parties</field>
             <field name="parent" ref="payables"/>
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
@@ -366,7 +366,7 @@
         </record>
         <record model="account.account.type.template" id="accrued_and_deferred_liabilities">
             <field name="name">Accrued and deferred liabilities</field>
-            <field name="parent" ref="liabilities_current"/>
+            <field name="parent" ref="current_liabilities"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
@@ -442,43 +442,43 @@
             <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="liabilities_current_additional">
-            <field name="name">Additional short-term liabilities and payables</field>
-            <field name="parent" ref="liabilities_current"/>
+        <record model="account.account.type.template" id="other_current_liabilities">
+            <field name="name">Other short-term liabilities and payables</field>
+            <field name="parent" ref="current_liabilities"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="notes_payables">
             <field name="name">Notes payables</field>
-            <field name="parent" ref="liabilities_current_additional"/>
+            <field name="parent" ref="other_current_liabilities"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="dividends_payables">
             <field name="name">Dividends payables</field>
-            <field name="parent" ref="liabilities_current_additional"/>
+            <field name="parent" ref="other_current_liabilities"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="short_term_provisions">
             <field name="name">Short-term provisions</field>
-            <field name="parent" ref="liabilities_current_additional"/>
+            <field name="parent" ref="other_current_liabilities"/>
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="current_of_long_term_debt">
             <field name="name">Current portion of long-term debts</field>
-            <field name="parent" ref="liabilities_current_additional"/>
+            <field name="parent" ref="other_current_liabilities"/>
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="other_short_term_liabilities">
             <field name="name">Other short-term liabilities and payables</field>
-            <field name="parent" ref="liabilities_current_additional"/>
+            <field name="parent" ref="other_current_liabilities"/>
             <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="liabilities_non_current">
+        <record model="account.account.type.template" id="non_current_liabilities">
             <field name="name">Non-current liabilities</field>
             <field name="parent" ref="liabilities"/>
             <field name="sequence" eval="20"/>
@@ -486,7 +486,7 @@
         </record>
         <record model="account.account.type.template" id="non_current_debts">
             <field name="name">Non-current debts</field>
-            <field name="parent" ref="liabilities_non_current"/>
+            <field name="parent" ref="non_current_liabilities"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
@@ -504,19 +504,19 @@
         </record>
         <record model="account.account.type.template" id="lease_obligations">
             <field name="name">Lease obligations</field>
-            <field name="parent" ref="liabilities_non_current"/>
+            <field name="parent" ref="non_current_liabilities"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="deferred_revenues_non_current">
             <field name="name">Deferred revenues</field>
-            <field name="parent" ref="liabilities_non_current"/>
+            <field name="parent" ref="non_current_liabilities"/>
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="contingencies_and_provisions">
             <field name="name">Contingencies and provisions</field>
-            <field name="parent" ref="liabilities_non_current"/>
+            <field name="parent" ref="non_current_liabilities"/>
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
@@ -538,21 +538,21 @@
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="liabilities_non_current_other">
+        <record model="account.account.type.template" id="other_non_current_liabilities">
             <field name="name">Other non-current liabilities</field>
-            <field name="parent" ref="liabilities_non_current"/>
+            <field name="parent" ref="non_current_liabilities"/>
             <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="deferred_tax_liabilities">
             <field name="name">Deferred tax liabilities</field>
-            <field name="parent" ref="liabilities_non_current_other"/>
+            <field name="parent" ref="other_non_current_liabilities"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="manditorily_redeemable_shares">
             <field name="name">Manditorily redeemable shares</field>
-            <field name="parent" ref="liabilities_non_current_other"/>
+            <field name="parent" ref="other_non_current_liabilities"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
@@ -2458,7 +2458,7 @@
         <record model="account.account.template" id="203">
             <field name="name">Accounts payable to related parties</field>
             <field name="code">203</field>
-            <field name="type" ref="accounts_payable_to_related_parties"/>
+            <field name="type" ref="accounts_payables_to_related_parties"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
