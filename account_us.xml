@@ -2457,32 +2457,54 @@
             <field name="kind">view</field>
             <field name="parent" ref="2"/>
         </record>
-        <record model="account.account.template" id="212">
-            <field name="name">Accrued expenses</field>
-            <field name="code">212</field>
+        <record model="account.account.template" id="210">
+            <field name="name">Deferred revenues and credits</field>
+            <field name="code">210</field>
             <field name="kind">view</field>
             <field name="parent" ref="21"/>
         </record>
-        <record model="account.account.template" id="2120">
-            <field name="name">Sales tax collected</field>
-            <field name="code">2120</field>
+        <record model="account.account.template" id="211">
+            <field name="name">Accrued expenses</field>
+            <field name="code">211</field>
             <field name="kind">view</field>
-            <field name="parent" ref="212"/>
+            <field name="parent" ref="21"/>
         </record>
-        <record model="account.account.template" id="212052">
+        <record model="account.account.template" id="2110">
+            <field name="name">Sales tax collected</field>
+            <field name="code">2110</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="211"/>
+        </record>
+        <record model="account.account.template" id="211052">
             <field name="name">Sales tax payable—Utah (UT)</field>
-            <field name="code">212052</field>
+            <field name="code">211052</field>
             <field name="type" ref="sales_tax_collected"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
-            <field name="parent" ref="2120"/>
+            <field name="parent" ref="2110"/>
         </record>
-        <record model="account.account.template" id="2121">
+        <record model="account.account.template" id="2111">
             <field name="name">Accrued use tax</field>
-            <field name="code">2121</field>
+            <field name="code">2111</field>
             <field name="type" ref="accrued_use_tax"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="211"/>
+        </record>
+        <record model="account.account.template" id="212">
+            <field name="name">Employee-related liabilities</field>
+            <field name="code">212</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="21"/>
+        </record>
+        <record model="account.account.template" id="2120">
+            <field name="name">Accrued salaries and wages payable</field>
+            <field name="code">2120</field>
+            <field name="type" ref="accrued_payroll"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
