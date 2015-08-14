@@ -69,13 +69,13 @@
             <field name="sequence" eval="10"/>
             <field name="parent" ref="receivables"/>
         </record>
-        <record model="account.account.type.template" id="notes_receivables">
-            <field name="name">Notes receivables</field>
+        <record model="account.account.type.template" id="accounts_receivables_from_related_parties">
+            <field name="name">Accounts receivables from related parties</field>
             <field name="sequence" eval="20"/>
             <field name="parent" ref="receivables"/>
         </record>
-        <record model="account.account.type.template" id="accounts_receivables_from_related_parties">
-            <field name="name">Accounts receivables from related parties</field>
+        <record model="account.account.type.template" id="notes_receivables">
+            <field name="name">Notes receivables</field>
             <field name="sequence" eval="30"/>
             <field name="parent" ref="receivables"/>
         </record>
@@ -1484,18 +1484,8 @@
             <field name="parent" ref="120"/>
         </record>
         <record model="account.account.template" id="1201">
-            <field name="name">Interest receivable</field>
-            <field name="code">1201</field>
-            <field name="type" ref="accounts_receivables"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">receivable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
-            <field name="parent" ref="120"/>
-        </record>
-        <record model="account.account.template" id="1202">
             <field name="name">Accounts receivable from related parties</field>
-            <field name="code">1202</field>
+            <field name="code">1201</field>
             <field name="type" ref="accounts_receivables_from_related_parties"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
@@ -1524,30 +1514,40 @@
             <field name="parent" ref="12"/>
         </record>
         <record model="account.account.template" id="122">
-            <field name="name">Short-term loans receivable</field>
+            <field name="name">Interest receivable</field>
             <field name="code">122</field>
+            <field name="type" ref="other_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="12"/>
+        </record>
+        <record model="account.account.template" id="123">
+            <field name="name">Short-term loans receivable</field>
+            <field name="code">123</field>
             <field name="kind">view</field>
             <field name="parent" ref="12"/>
         </record>
-        <record model="account.account.template" id="1220">
+        <record model="account.account.template" id="1230">
             <field name="name">Short-term loans receivable from officers or directors</field>
-            <field name="code">1220</field>
+            <field name="code">1230</field>
             <field name="type" ref="loans_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
-            <field name="parent" ref="122"/>
+            <field name="parent" ref="123"/>
         </record>
-        <record model="account.account.template" id="1221">
+        <record model="account.account.template" id="1231">
             <field name="name">Short-term loans receivable from employees</field>
-            <field name="code">1221</field>
+            <field name="code">1231</field>
             <field name="type" ref="loans_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
-            <field name="parent" ref="122"/>
+            <field name="parent" ref="123"/>
         </record>
         <record model="account.account.template" id="127">
             <field name="name">Other receivables</field>
