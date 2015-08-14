@@ -1356,6 +1356,15 @@
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="1001"/>
         </record>
+        <record model="account.account.template" id="10011">
+            <field name="name">Cash withdrawn from the bank</field>
+            <field name="code">10011</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1001"/>
+        </record>
         <record model="account.account.template" id="101">
             <field name="name">Petty cash</field>
             <field name="code">101</field>
