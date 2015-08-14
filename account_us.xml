@@ -1330,52 +1330,76 @@
             <field name="parent" ref="1"/>
         </record>
         <record model="account.account.template" id="100">
-            <field name="name">Petty cash</field>
+            <field name="name">Cash on hand</field>
             <field name="code">100</field>
             <field name="kind">view</field>
             <field name="parent" ref="10"/>
         </record>
-        <record model="account.account.template" id="101">
-            <field name="name">Cash in bank</field>
-            <field name="code">101</field>
+        <record model="account.account.template" id="1000">
+            <field name="name">Cash register drawer funds</field>
+            <field name="code">1000</field>
             <field name="kind">view</field>
-            <field name="parent" ref="10"/>
+            <field name="parent" ref="100"/>
         </record>
-        <record model="account.account.template" id="1010">
-            <field name="name">Operations checking account</field>
-            <field name="code">1010</field>
-            <field name="type" ref="cash"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="101"/>
-        </record>
-        <record model="account.account.template" id="1011">
-            <field name="name">Payroll checking account</field>
-            <field name="code">1011</field>
-            <field name="type" ref="cash"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="101"/>
-        </record>
-        <record model="account.account.template" id="102">
-            <field name="name">Cash equivalents</field>
-            <field name="code">102</field>
+        <record model="account.account.template" id="1001">
+            <field name="name">Undeposited cash</field>
+            <field name="code">1001</field>
             <field name="kind">view</field>
-            <field name="parent" ref="10"/>
+            <field name="parent" ref="100"/>
         </record>
-        <record model="account.account.template" id="103">
-            <field name="name">Restricted cash and investments</field>
-            <field name="code">103</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="10"/>
-        </record>
-        <record model="account.account.template" id="109">
-            <field name="name">Undeposited funds</field>
-            <field name="code">109</field>
+        <record model="account.account.template" id="10010">
+            <field name="name">Cash to be deposited in the bank</field>
+            <field name="code">10010</field>
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1001"/>
+        </record>
+        <record model="account.account.template" id="101">
+            <field name="name">Petty cash</field>
+            <field name="code">101</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="10"/>
+        </record>
+        <record model="account.account.template" id="102">
+            <field name="name">Bank checking accounts</field>
+            <field name="code">102</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="10"/>
+        </record>
+        <record model="account.account.template" id="1020">
+            <field name="name">General checking account</field>
+            <field name="code">1020</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="102"/>
+        </record>
+        <record model="account.account.template" id="1021">
+            <field name="name">Payroll checking account</field>
+            <field name="code">1021</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="102"/>
+        </record>
+        <record model="account.account.template" id="103">
+            <field name="name">Savings accounts</field>
+            <field name="code">103</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="10"/>
+        </record>
+        <record model="account.account.template" id="104">
+            <field name="name">Money market accounts</field>
+            <field name="code">104</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="10"/>
+        </record>
+        <record model="account.account.template" id="109">
+            <field name="name">Restricted cash and investments</field>
+            <field name="code">109</field>
+            <field name="kind">view</field>
             <field name="parent" ref="10"/>
         </record>
         <record model="account.account.template" id="11">
