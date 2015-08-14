@@ -1571,54 +1571,6 @@
             <field name="kind">view</field>
             <field name="parent" ref="1"/>
         </record>
-        <record model="account.account.template" id="130">
-            <field name="name">Raw materials and supplies</field>
-            <field name="code">130</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="13"/>
-        </record>
-        <record model="account.account.template" id="131">
-            <field name="name">Work in process</field>
-            <field name="code">131</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="13"/>
-        </record>
-        <record model="account.account.template" id="132">
-            <field name="name">Finished goods and merchandise</field>
-            <field name="code">132</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="13"/>
-        </record>
-        <record model="account.account.template" id="133">
-            <field name="name">Additional items</field>
-            <field name="code">133</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="13"/>
-        </record>
-        <record model="account.account.template" id="134">
-            <field name="name">Valuation allowance</field>
-            <field name="code">134</field>
-            <field name="type" ref="inventories"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="13"/>
-        </record>
-        <record model="account.account.template" id="135">
-            <field name="name">LIFO reserve</field>
-            <field name="code">135</field>
-            <field name="type" ref="inventories"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="13"/>
-        </record>
-        <record model="account.account.template" id="136">
-            <field name="name">Inventory purchases</field>
-            <field name="code">136</field>
-            <field name="type" ref="inventories"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="13"/>
-        </record>
         <record model="account.account.template" id="14">
             <field name="name">Accrued and deferred items</field>
             <field name="code">14</field>
