@@ -1514,7 +1514,7 @@
             <field name="parent" ref="120"/>
         </record>
         <record model="account.account.template" id="121">
-            <field name="name">Notes receivable</field>
+            <field name="name">Trade notes receivable (current principle portion)</field>
             <field name="code">121</field>
             <field name="type" ref="notes_receivables"/>
             <field name="deferral" eval="True"/>
@@ -1524,13 +1524,13 @@
             <field name="parent" ref="12"/>
         </record>
         <record model="account.account.template" id="122">
-            <field name="name">Loans receivable</field>
+            <field name="name">Short-term loans receivable</field>
             <field name="code">122</field>
             <field name="kind">view</field>
             <field name="parent" ref="12"/>
         </record>
         <record model="account.account.template" id="1220">
-            <field name="name">Loans receivable from officers or directors</field>
+            <field name="name">Short-term loans receivable from officers or directors</field>
             <field name="code">1220</field>
             <field name="type" ref="loans_receivables"/>
             <field name="deferral" eval="True"/>
@@ -1540,7 +1540,7 @@
             <field name="parent" ref="122"/>
         </record>
         <record model="account.account.template" id="1221">
-            <field name="name">Loans receivable from employees</field>
+            <field name="name">Short-term loans receivable from employees</field>
             <field name="code">1221</field>
             <field name="type" ref="loans_receivables"/>
             <field name="deferral" eval="True"/>
