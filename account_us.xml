@@ -1504,7 +1504,7 @@
             <field name="parent" ref="120"/>
         </record>
         <record model="account.account.template" id="121">
-            <field name="name">Trade notes receivable (current principle portion)</field>
+            <field name="name">Trade notes receivable, current principle portion of long-term trade notes</field>
             <field name="code">121</field>
             <field name="type" ref="notes_receivables"/>
             <field name="deferral" eval="True"/>
@@ -1671,6 +1671,16 @@
             <field name="code">145</field>
             <field name="kind">view</field>
             <field name="parent" ref="14"/>
+        </record>
+        <record model="account.account.template" id="1450">
+            <field name="name">Notes receivable, current principal portion of long-term notes</field>
+            <field name="code">1450</field>
+            <field name="type" ref="other_current_assets"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="145"/>
         </record>
         <record model="account.account.template" id="15">
             <field name="name">Financial investments</field>
