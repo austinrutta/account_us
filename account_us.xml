@@ -1418,9 +1418,45 @@
             <field name="parent" ref="1"/>
         </record>
         <record model="account.account.template" id="110">
-            <field name="name">Marketable securities</field>
+            <field name="name">Certificates of deposit</field>
             <field name="code">110</field>
             <field name="type" ref="marketable_securities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="11"/>
+        </record>
+        <record model="account.account.template" id="111">
+            <field name="name">Stocks</field>
+            <field name="code">111</field>
+            <field name="type" ref="marketable_securities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="11"/>
+        </record>
+        <record model="account.account.template" id="112">
+            <field name="name">Bonds</field>
+            <field name="code">112</field>
+            <field name="type" ref="marketable_securities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="11"/>
+        </record>
+        <record model="account.account.template" id="113">
+            <field name="name">Derivatives</field>
+            <field name="code">113</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="11"/>
+        </record>
+        <record model="account.account.template" id="118">
+            <field name="name">Other short-term investments</field>
+            <field name="code">118</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="11"/>
+        </record>
+        <record model="account.account.template" id="119">
+            <field name="name">Value allowance for market value fluctuations (−)</field>
+            <field name="code">119</field>
+            <field name="type" ref="short_term_investments"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="11"/>
