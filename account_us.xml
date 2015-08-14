@@ -472,12 +472,6 @@
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="other_short_term_liabilities">
-            <field name="name">Other short-term liabilities and payables</field>
-            <field name="parent" ref="other_current_liabilities"/>
-            <field name="sequence" eval="50"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
         <record model="account.account.type.template" id="non_current_liabilities">
             <field name="name">Non-current liabilities</field>
             <field name="parent" ref="liabilities"/>
