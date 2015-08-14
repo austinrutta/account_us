@@ -340,28 +340,16 @@
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="short_term_borrowings">
-            <field name="name">Short-term borrowings</field>
-            <field name="parent" ref="payables"/>
-            <field name="sequence" eval="20"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="lines_of_credit">
-            <field name="name">Lines of credit</field>
-            <field name="parent" ref="payables"/>
-            <field name="sequence" eval="30"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
         <record model="account.account.type.template" id="accounts_payables_to_related_parties">
             <field name="name">Accounts payables to related parties</field>
             <field name="parent" ref="payables"/>
-            <field name="sequence" eval="40"/>
+            <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="other_operating_payables">
             <field name="name">Other operating payables</field>
             <field name="parent" ref="payables"/>
-            <field name="sequence" eval="50"/>
+            <field name="sequence" eval="90"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="accrued_and_deferred_liabilities">
@@ -442,34 +430,52 @@
             <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="other_current_liabilities">
-            <field name="name">Other short-term liabilities and payables</field>
+        <record model="account.account.type.template" id="short_term_notes_and_loans_payables">
+            <field name="name">Short-term notes and loans payables</field>
             <field name="parent" ref="current_liabilities"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="notes_payables">
             <field name="name">Notes payables</field>
-            <field name="parent" ref="other_current_liabilities"/>
+            <field name="parent" ref="short_term_notes_and_loans_payables"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="dividends_payables">
-            <field name="name">Dividends payables</field>
-            <field name="parent" ref="other_current_liabilities"/>
+        <record model="account.account.type.template" id="short_term_borrowings">
+            <field name="name">Short-term borrowings</field>
+            <field name="parent" ref="short_term_notes_and_loans_payables"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="short_term_provisions">
-            <field name="name">Short-term provisions</field>
-            <field name="parent" ref="other_current_liabilities"/>
+        <record model="account.account.type.template" id="lines_of_credit">
+            <field name="name">Lines of credit</field>
+            <field name="parent" ref="short_term_notes_and_loans_payables"/>
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="current_of_long_term_debt">
             <field name="name">Current portion of long-term debts</field>
-            <field name="parent" ref="other_current_liabilities"/>
+            <field name="parent" ref="short_term_notes_and_loans_payables"/>
             <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_current_liabilities">
+            <field name="name">Other short-term liabilities and payables</field>
+            <field name="parent" ref="current_liabilities"/>
+            <field name="sequence" eval="90"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="dividends_payables">
+            <field name="name">Dividends payables</field>
+            <field name="parent" ref="other_current_liabilities"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="short_term_provisions">
+            <field name="name">Short-term provisions</field>
+            <field name="parent" ref="other_current_liabilities"/>
+            <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="non_current_liabilities">
@@ -2425,25 +2431,8 @@
             <field name="parent" ref="20"/>
         </record>
         <record model="account.account.template" id="201">
-            <field name="name">Short-term borrowings</field>
-            <field name="code">201</field>
-            <field name="type" ref="short_term_borrowings"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
-            <field name="parent" ref="20"/>
-        </record>
-        <record model="account.account.template" id="202">
-            <field name="name">Lines of credit</field>
-            <field name="code">202</field>
-            <field name="type" ref="lines_of_credit"/>
-            <field name="kind">view</field>
-            <field name="parent" ref="20"/>
-        </record>
-        <record model="account.account.template" id="203">
             <field name="name">Accounts payable to related parties</field>
-            <field name="code">203</field>
+            <field name="code">201</field>
             <field name="type" ref="accounts_payables_to_related_parties"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
@@ -2464,7 +2453,7 @@
             <field name="parent" ref="21"/>
         </record>
         <record model="account.account.template" id="211">
-            <field name="name">Accrued expenses</field>
+            <field name="name">Accrued liabilities</field>
             <field name="code">211</field>
             <field name="kind">view</field>
             <field name="parent" ref="21"/>
@@ -2512,7 +2501,7 @@
             <field name="parent" ref="212"/>
         </record>
         <record model="account.account.template" id="22">
-            <field name="name">Additional short-term liabilities</field>
+            <field name="name">Short-term notes and loans payable</field>
             <field name="code">22</field>
             <field name="kind">view</field>
             <field name="parent" ref="2"/>
@@ -2526,6 +2515,50 @@
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="22"/>
+        </record>
+        <record model="account.account.template" id="221">
+            <field name="name">Short-term loans payable</field>
+            <field name="code">221</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="22"/>
+        </record>
+        <record model="account.account.template" id="2210">
+            <field name="name">Short-term loans payable to officers or directors</field>
+            <field name="code">2210</field>
+            <field name="type" ref="short_term_borrowings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="221"/>
+        </record>
+        <record model="account.account.template" id="2211">
+            <field name="name">Short-term loans payable to employees</field>
+            <field name="code">2211</field>
+            <field name="type" ref="short_term_borrowings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="221"/>
+        </record>
+        <record model="account.account.template" id="222">
+            <field name="name">Lines of credit</field>
+            <field name="code">222</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="22"/>
+        </record>
+        <record model="account.account.template" id="223">
+            <field name="name">Current portion of long-term debt</field>
+            <field name="code">223</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="22"/>
+        </record>
+        <record model="account.account.template" id="24">
+            <field name="name">Other short-term liabilities</field>
+            <field name="code">24</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="2"/>
         </record>
         <record model="account.account.template" id="3">
             <field name="name">Equity</field>
