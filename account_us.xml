@@ -3376,7 +3376,7 @@
             <field name="parent" ref="530"/>
         </record>
         <record model="account.account.template" id="53000">
-            <field name="name">Bank checks expense</field>
+            <field name="name">Bank checks (cheques) expense</field>
             <field name="code">53000</field>
             <field name="type" ref="general_and_administrative_non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
