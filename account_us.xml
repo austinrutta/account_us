@@ -3231,6 +3231,20 @@
             <field name="kind">expense</field>
             <field name="parent" ref="530"/>
         </record>
+        <record model="account.account.template" id="5309">
+            <field name="name">Other materials and supplies</field>
+            <field name="code">5309</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="530"/>
+        </record>
+        <record model="account.account.template" id="53090">
+            <field name="name">Janitorial supplies</field>
+            <field name="code">53090</field>
+            <field name="type" ref="materials_and_supplies"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5309"/>
+        </record>
         <record model="account.account.template" id="532">
             <field name="name">Postage and shipping</field>
             <field name="code">532</field>
@@ -3300,6 +3314,20 @@
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="540"/>
+        </record>
+        <record model="account.account.template" id="5409">
+            <field name="name">Other occupancy costs</field>
+            <field name="code">5409</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="540"/>
+        </record>
+        <record model="account.account.template" id="54090">
+            <field name="name">Janitorial and other contract services</field>
+            <field name="code">54090</field>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5409"/>
         </record>
         <record model="account.account.template" id="541">
             <field name="name">Utilities</field>
