@@ -3231,96 +3231,6 @@
             <field name="kind">expense</field>
             <field name="parent" ref="530"/>
         </record>
-        <record model="account.account.template" id="531">
-            <field name="name">Telephone and telecommunications</field>
-            <field name="code">531</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="53"/>
-        </record>
-        <record model="account.account.template" id="5310">
-            <field name="name">Telephone</field>
-            <field name="code">5310</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="531"/>
-        </record>
-        <record model="account.account.template" id="53100">
-            <field name="name">Telephone usage expense</field>
-            <field name="code">53100</field>
-            <field name="type" ref="non_personnel_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5310"/>
-        </record>
-        <record model="account.account.template" id="53101">
-            <field name="name">Telephone lines</field>
-            <field name="code">53101</field>
-            <field name="type" ref="non_personnel_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5310"/>
-        </record>
-        <record model="account.account.template" id="53102">
-            <field name="name">One-time telephone charges</field>
-            <field name="code">53102</field>
-            <field name="type" ref="non_personnel_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5310"/>
-        </record>
-        <record model="account.account.template" id="53103">
-            <field name="name">Telephone repair and maintenance</field>
-            <field name="code">53103</field>
-            <field name="type" ref="non_personnel_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5310"/>
-        </record>
-        <record model="account.account.template" id="53104">
-            <field name="name">Telecommunications equipment</field>
-            <field name="code">53104</field>
-            <field name="type" ref="non_personnel_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5310"/>
-        </record>
-        <record model="account.account.template" id="5311">
-            <field name="name">Fax</field>
-            <field name="code">5311</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="531"/>
-        </record>
-        <record model="account.account.template" id="5312">
-            <field name="name">Computer networks</field>
-            <field name="code">5312</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="531"/>
-        </record>
-        <record model="account.account.template" id="53120">
-            <field name="name">Internet</field>
-            <field name="code">53120</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="5312"/>
-        </record>
-        <record model="account.account.template" id="531200">
-            <field name="name">Internet connection leasing costs</field>
-            <field name="code">531200</field>
-            <field name="type" ref="non_personnel_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="53120"/>
-        </record>
-        <record model="account.account.template" id="53121">
-            <field name="name">Local area network (LAN)</field>
-            <field name="code">53121</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="5312"/>
-        </record>
-        <record model="account.account.template" id="53122">
-            <field name="name">Wide area network (WAN)</field>
-            <field name="code">53122</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="5312"/>
-        </record>
         <record model="account.account.template" id="532">
             <field name="name">Postage and shipping</field>
             <field name="code">532</field>
@@ -3426,6 +3336,96 @@
             <field name="code">5417</field>
             <field name="kind">view</field>
             <field name="parent" ref="541"/>
+        </record>
+        <record model="account.account.template" id="542">
+            <field name="name">Telephone and telecommunications</field>
+            <field name="code">542</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="53"/>
+        </record>
+        <record model="account.account.template" id="5420">
+            <field name="name">Telephone</field>
+            <field name="code">5420</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="542"/>
+        </record>
+        <record model="account.account.template" id="54200">
+            <field name="name">Telephone usage expense</field>
+            <field name="code">54200</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5420"/>
+        </record>
+        <record model="account.account.template" id="54201">
+            <field name="name">Telephone lines</field>
+            <field name="code">54201</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5420"/>
+        </record>
+        <record model="account.account.template" id="54202">
+            <field name="name">One-time telephone charges</field>
+            <field name="code">54202</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5420"/>
+        </record>
+        <record model="account.account.template" id="54203">
+            <field name="name">Telephone repair and maintenance</field>
+            <field name="code">54203</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5420"/>
+        </record>
+        <record model="account.account.template" id="54204">
+            <field name="name">Telecommunications equipment</field>
+            <field name="code">54204</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5420"/>
+        </record>
+        <record model="account.account.template" id="5421">
+            <field name="name">Fax</field>
+            <field name="code">5421</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="542"/>
+        </record>
+        <record model="account.account.template" id="5422">
+            <field name="name">Computer networks</field>
+            <field name="code">5422</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="542"/>
+        </record>
+        <record model="account.account.template" id="54220">
+            <field name="name">Internet</field>
+            <field name="code">54220</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5422"/>
+        </record>
+        <record model="account.account.template" id="542200">
+            <field name="name">Internet connection leasing costs</field>
+            <field name="code">542200</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54220"/>
+        </record>
+        <record model="account.account.template" id="54221">
+            <field name="name">Local area network (LAN)</field>
+            <field name="code">54221</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5422"/>
+        </record>
+        <record model="account.account.template" id="54222">
+            <field name="name">Wide area network (WAN)</field>
+            <field name="code">54222</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5422"/>
         </record>
         <record model="account.account.template" id="544">
             <field name="name">Property taxes</field>
