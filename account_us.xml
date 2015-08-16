@@ -3430,7 +3430,7 @@
             <field name="parent" ref="5420"/>
         </record>
         <record model="account.account.template" id="54204">
-            <field name="name">Telecommunications equipment</field>
+            <field name="name">Telephone equipment</field>
             <field name="code">54204</field>
             <field name="type" ref="non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
