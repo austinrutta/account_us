@@ -3389,7 +3389,7 @@
             <field name="name">Telephone and telecommunications</field>
             <field name="code">542</field>
             <field name="kind">view</field>
-            <field name="parent" ref="53"/>
+            <field name="parent" ref="54"/>
         </record>
         <record model="account.account.template" id="5420">
             <field name="name">Telephone</field>
