@@ -3201,28 +3201,6 @@
             <field name="kind">view</field>
             <field name="parent" ref="53"/>
         </record>
-        <record model="account.account.template" id="5300">
-            <field name="name">Business forms and financial instrument supplies</field>
-            <field name="code">5300</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="530"/>
-        </record>
-        <record model="account.account.template" id="53000">
-            <field name="name">Bank checks (cheques) expense</field>
-            <field name="code">53000</field>
-            <field name="type" ref="materials_and_supplies"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5300"/>
-        </record>
-        <record model="account.account.template" id="5301">
-            <field name="name">Artwork, font, and other stock media costs</field>
-            <field name="code">5301</field>
-            <field name="type" ref="materials_and_supplies"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="530"/>
-        </record>
         <record model="account.account.template" id="5308">
             <field name="name">Inventory and use taxes</field>
             <field name="code">5308</field>
@@ -3259,6 +3237,14 @@
             <field name="kind">expense</field>
             <field name="parent" ref="532"/>
         </record>
+        <record model="account.account.template" id="5321">
+            <field name="name">Freight expense</field>
+            <field name="code">5321</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="532"/>
+        </record>
         <record model="account.account.template" id="533">
             <field name="name">Printing and duplication</field>
             <field name="code">533</field>
@@ -3274,8 +3260,32 @@
             <field name="parent" ref="533"/>
         </record>
         <record model="account.account.template" id="5331">
-            <field name="name">Custom stationary printing costs</field>
+            <field name="name">Custom stationary and business forms</field>
             <field name="code">5331</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="533"/>
+        </record>
+        <record model="account.account.template" id="53310">
+            <field name="name">Custom stationary printing costs</field>
+            <field name="code">53310</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5331"/>
+        </record>
+        <record model="account.account.template" id="53311">
+            <field name="name">Bank checks (cheques) and other financial instrument printing costs</field>
+            <field name="code">53311</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5331"/>
+        </record>
+        <record model="account.account.template" id="5332">
+            <field name="name">Artwork, font, and other stock media costs</field>
+            <field name="code">5332</field>
             <field name="type" ref="non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
@@ -3474,6 +3484,12 @@
             <field name="code">54222</field>
             <field name="kind">view</field>
             <field name="parent" ref="5422"/>
+        </record>
+        <record model="account.account.template" id="543">
+            <field name="name">Data processing, hosting, and related services</field>
+            <field name="code">543</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="54"/>
         </record>
         <record model="account.account.template" id="544">
             <field name="name">Property taxes</field>
