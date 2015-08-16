@@ -3262,10 +3262,30 @@
         <record model="account.account.template" id="533">
             <field name="name">Printing and duplication</field>
             <field name="code">533</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="53"/>
+        </record>
+        <record model="account.account.template" id="5330">
+            <field name="name">Duplication expense</field>
+            <field name="code">5330</field>
             <field name="type" ref="non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="53"/>
+            <field name="parent" ref="533"/>
+        </record>
+        <record model="account.account.template" id="5331">
+            <field name="name">Custom stationary printing costs</field>
+            <field name="code">5331</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="533"/>
+        </record>
+        <record model="account.account.template" id="5339">
+            <field name="name">Other printing and duplication costs</field>
+            <field name="code">5339</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="533"/>
         </record>
         <record model="account.account.template" id="536">
             <field name="name">Books, subscriptions, and references</field>
