@@ -3132,7 +3132,7 @@
             <field name="parent" ref="52"/>
         </record>
         <record model="account.account.template" id="5210">
-            <field name="name">Accountant’s fees for financial accounting and reporting</field>
+            <field name="name">Financial accounting expense</field>
             <field name="code">5210</field>
             <field name="type" ref="professional_contract_services"/>
             <field name="deferral" eval="False"/>
@@ -3140,7 +3140,7 @@
             <field name="parent" ref="521"/>
         </record>
         <record model="account.account.template" id="5211">
-            <field name="name">Accountant’s fees for tax accounting and return preparation</field>
+            <field name="name">Tax accounting and return preparation expense</field>
             <field name="code">5211</field>
             <field name="type" ref="professional_contract_services"/>
             <field name="deferral" eval="False"/>
@@ -3148,15 +3148,23 @@
             <field name="parent" ref="521"/>
         </record>
         <record model="account.account.template" id="5212">
-            <field name="name">Audit expense</field>
+            <field name="name">Auditing expense</field>
             <field name="code">5212</field>
             <field name="type" ref="professional_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="521"/>
         </record>
+        <record model="account.account.template" id="5213">
+            <field name="name">Payroll processing expense</field>
+            <field name="code">5213</field>
+            <field name="type" ref="professional_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="521"/>
+        </record>
         <record model="account.account.template" id="522">
-            <field name="name">Consulting</field>
+            <field name="name">Management consulting</field>
             <field name="code">522</field>
             <field name="kind">view</field>
             <field name="parent" ref="52"/>
