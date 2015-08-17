@@ -3292,12 +3292,18 @@
             <field name="parent" ref="5331"/>
         </record>
         <record model="account.account.template" id="5332">
-            <field name="name">Artwork, font, and other stock media costs</field>
+            <field name="name">Publication costs</field>
             <field name="code">5332</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="533"/>
+        </record>
+        <record model="account.account.template" id="53320">
+            <field name="name">Artwork, font, and other stock media costs</field>
+            <field name="code">53320</field>
             <field name="type" ref="non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="533"/>
+            <field name="parent" ref="5332"/>
         </record>
         <record model="account.account.template" id="5339">
             <field name="name">Other printing and duplication costs</field>
@@ -3326,12 +3332,6 @@
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="536"/>
-        </record>
-        <record model="account.account.template" id="537">
-            <field name="name">In-house publications</field>
-            <field name="code">537</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="53"/>
         </record>
         <record model="account.account.template" id="54">
             <field name="name">Facilities and equipment</field>
