@@ -3404,7 +3404,7 @@
             <field name="parent" ref="541"/>
         </record>
         <record model="account.account.template" id="542">
-            <field name="name">Telephone and telecommunications</field>
+            <field name="name">Telephone and communications services</field>
             <field name="code">542</field>
             <field name="kind">view</field>
             <field name="parent" ref="54"/>
