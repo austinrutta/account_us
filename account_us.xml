@@ -3260,7 +3260,7 @@
             <field name="parent" ref="53"/>
         </record>
         <record model="account.account.template" id="5330">
-            <field name="name">Duplication expense</field>
+            <field name="name">Copying and duplication expense</field>
             <field name="code">5330</field>
             <field name="type" ref="non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
