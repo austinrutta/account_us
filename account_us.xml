@@ -3215,6 +3215,14 @@
             <field name="kind">expense</field>
             <field name="parent" ref="5231"/>
         </record>
+        <record model="account.account.template" id="5232">
+            <field name="name">Wiring fees—operating</field>
+            <field name="code">5232</field>
+            <field name="type" ref="professional_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="523"/>
+        </record>
         <record model="account.account.template" id="525">
             <field name="name">Artists</field>
             <field name="code">525</field>
