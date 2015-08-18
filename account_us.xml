@@ -3744,42 +3744,98 @@
             <field name="parent" ref="55"/>
         </record>
         <record model="account.account.template" id="5500">
-            <field name="name">Private transport</field>
+            <field name="name">Local travel</field>
             <field name="code">5500</field>
             <field name="kind">view</field>
             <field name="parent" ref="550"/>
         </record>
         <record model="account.account.template" id="5501">
-            <field name="name">Airfare</field>
+            <field name="name">Domestic travel</field>
             <field name="code">5501</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="550"/>
+        </record>
+        <record model="account.account.template" id="55010">
+            <field name="name">Private transport</field>
+            <field name="code">55010</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5501"/>
+        </record>
+        <record model="account.account.template" id="55011">
+            <field name="name">Airfare</field>
+            <field name="code">55011</field>
             <field name="type" ref="travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="550"/>
+            <field name="parent" ref="5501"/>
+        </record>
+        <record model="account.account.template" id="55012">
+            <field name="name">Bus and coach</field>
+            <field name="code">55012</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5501"/>
+        </record>
+        <record model="account.account.template" id="55013">
+            <field name="name">Train</field>
+            <field name="code">55013</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5501"/>
+        </record>
+        <record model="account.account.template" id="55014">
+            <field name="name">Other public transportation</field>
+            <field name="code">55014</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5501"/>
+        </record>
+        <record model="account.account.template" id="55019">
+            <field name="name">Other travel costs</field>
+            <field name="code">55019</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5501"/>
         </record>
         <record model="account.account.template" id="5502">
-            <field name="name">Bus and coach</field>
+            <field name="name">Foreign travel</field>
             <field name="code">5502</field>
             <field name="kind">view</field>
             <field name="parent" ref="550"/>
         </record>
-        <record model="account.account.template" id="5503">
+        <record model="account.account.template" id="55020">
+            <field name="name">Private transport</field>
+            <field name="code">55020</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5502"/>
+        </record>
+        <record model="account.account.template" id="55021">
+            <field name="name">Airfare</field>
+            <field name="code">55021</field>
+            <field name="type" ref="travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5502"/>
+        </record>
+        <record model="account.account.template" id="55022">
+            <field name="name">Bus and coach</field>
+            <field name="code">55022</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5502"/>
+        </record>
+        <record model="account.account.template" id="55023">
             <field name="name">Train</field>
-            <field name="code">5503</field>
+            <field name="code">55023</field>
             <field name="kind">view</field>
-            <field name="parent" ref="550"/>
+            <field name="parent" ref="5502"/>
         </record>
-        <record model="account.account.template" id="5504">
+        <record model="account.account.template" id="55024">
             <field name="name">Other public transportation</field>
-            <field name="code">5504</field>
+            <field name="code">55024</field>
             <field name="kind">view</field>
-            <field name="parent" ref="550"/>
+            <field name="parent" ref="5502"/>
         </record>
-        <record model="account.account.template" id="5509">
+        <record model="account.account.template" id="55029">
             <field name="name">Other travel costs</field>
-            <field name="code">5509</field>
+            <field name="code">55029</field>
             <field name="kind">view</field>
-            <field name="parent" ref="550"/>
+            <field name="parent" ref="5502"/>
         </record>
         <record model="account.account.template" id="551">
             <field name="name">Conferences, conventions, meetings</field>
