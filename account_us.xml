@@ -1021,34 +1021,22 @@
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="interest_expenses">
-            <field name="name">Interest expenses</field>
+        <record model="account.account.type.template" id="financing_expenses">
+            <field name="name">Financing expenses</field>
             <field name="parent" ref="non_operating_expenses"/>
             <field name="sequence" eval="10"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="other_financing_costs">
-            <field name="name">Other financing costs</field>
-            <field name="parent" ref="non_operating_expenses"/>
-            <field name="sequence" eval="20"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="bank_service_charges">
-            <field name="name">Bank service charges</field>
-            <field name="parent" ref="non_operating_expenses"/>
-            <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="crowdfunding_kickbacks">
             <field name="name">Crowdfunding kickbacks</field>
             <field name="parent" ref="non_operating_expenses"/>
-            <field name="sequence" eval="40"/>
+            <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="grants_and_donations_given">
             <field name="name">Grants and donations given</field>
             <field name="parent" ref="non_operating_expenses"/>
-            <field name="sequence" eval="50"/>
+            <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="other_non_operating_expenses">
@@ -3169,6 +3157,64 @@
             <field name="kind">view</field>
             <field name="parent" ref="52"/>
         </record>
+        <record model="account.account.template" id="523">
+            <field name="name">Banking services</field>
+            <field name="code">523</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="52"/>
+        </record>
+        <record model="account.account.template" id="5230">
+            <field name="name">Bank account maintenance charges</field>
+            <field name="code">5230</field>
+            <field name="type" ref="professional_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="523"/>
+        </record>
+        <record model="account.account.template" id="5231">
+            <field name="name">Bank card service charges</field>
+            <field name="code">5231</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="523"/>
+        </record>
+        <record model="account.account.template" id="52310">
+            <field name="name">Credit card service charges</field>
+            <field name="code">52310</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5231"/>
+        </record>
+        <record model="account.account.template" id="523100">
+            <field name="name">Credit card service charges—Mastercard and Visa</field>
+            <field name="code">523100</field>
+            <field name="type" ref="professional_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="52310"/>
+        </record>
+        <record model="account.account.template" id="523101">
+            <field name="name">Credit card service charges—AMEX</field>
+            <field name="code">523101</field>
+            <field name="type" ref="professional_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="52310"/>
+        </record>
+        <record model="account.account.template" id="523102">
+            <field name="name">Credit card service charges—Discover</field>
+            <field name="code">523102</field>
+            <field name="type" ref="professional_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="52310"/>
+        </record>
+        <record model="account.account.template" id="52311">
+            <field name="name">Debit card and ATM service charges</field>
+            <field name="code">52311</field>
+            <field name="type" ref="professional_contract_services"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5231"/>
+        </record>
         <record model="account.account.template" id="525">
             <field name="name">Artists</field>
             <field name="code">525</field>
@@ -4160,7 +4206,7 @@
             <field name="parent" ref="6"/>
         </record>
         <record model="account.account.template" id="620">
-            <field name="name">Financial expenses</field>
+            <field name="name">Financing expenses</field>
             <field name="code">620</field>
             <field name="kind">view</field>
             <field name="parent" ref="62"/>
@@ -4168,7 +4214,7 @@
         <record model="account.account.template" id="6200">
             <field name="name">Interest expense</field>
             <field name="code">6200</field>
-            <field name="type" ref="interest_expenses"/>
+            <field name="type" ref="financing_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="620"/>
@@ -4176,40 +4222,32 @@
         <record model="account.account.template" id="6201">
             <field name="name">Debt issuance costs</field>
             <field name="code">6201</field>
-            <field name="type" ref="other_financing_costs"/>
+            <field name="type" ref="financing_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="620"/>
         </record>
         <record model="account.account.template" id="6202">
-            <field name="name">Bank service charges</field>
+            <field name="name">Wiring fees—non-operating</field>
             <field name="code">6202</field>
+            <field name="type" ref="financing_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="620"/>
+        </record>
+        <record model="account.account.template" id="6209">
+            <field name="name">Other non-operating financial expenses</field>
+            <field name="code">6209</field>
             <field name="kind">view</field>
             <field name="parent" ref="620"/>
         </record>
-        <record model="account.account.template" id="62020">
-            <field name="name">Wiring fees</field>
-            <field name="code">62020</field>
-            <field name="type" ref="bank_service_charges"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="6202"/>
-        </record>
-        <record model="account.account.template" id="62021">
-            <field name="name">Automated teller machine (ATM) fees</field>
-            <field name="code">62021</field>
-            <field name="type" ref="bank_service_charges"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="6202"/>
-        </record>
-        <record model="account.account.template" id="62022">
+        <record model="account.account.template" id="62090">
             <field name="name">Stock trading fees</field>
-            <field name="code">62022</field>
-            <field name="type" ref="bank_service_charges"/>
+            <field name="code">62090</field>
+            <field name="type" ref="financing_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="6202"/>
+            <field name="parent" ref="6209"/>
         </record>
         <record model="account.account.template" id="621">
             <field name="name">Expenses from crowdfunding campaigns</field>
