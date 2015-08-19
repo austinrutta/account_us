@@ -1207,6 +1207,24 @@
             <field name="sequence" eval="60"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="domestic_travel_and_meetings_expenses">
+            <field name="name">Domestic</field>
+            <field name="parent" ref="travel_and_meetings_expenses"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="foreign_travel_and_meetings_expenses">
+            <field name="name">Foreign</field>
+            <field name="parent" ref="travel_and_meetings_expenses"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_travel_and_meetings_expenses">
+            <field name="name">Other travel and meetings expenses</field>
+            <field name="parent" ref="travel_and_meetings_expenses"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="doubtful_accounts">
             <field name="name">Doubtful accounts</field>
             <field name="parent" ref="operating_expenses"/>
@@ -3755,13 +3773,51 @@
             <field name="kind">view</field>
             <field name="parent" ref="550"/>
         </record>
+        <record model="account.account.template" id="55000">
+            <field name="name">Private transport expense—local</field>
+            <field name="code">55000</field>
+            <field name="type" ref="other_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5500"/>
+        </record>
+        <record model="account.account.template" id="55001">
+            <field name="name">Taxi expense—domestic</field>
+            <field name="code">55001</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5500"/>
+        </record>
+        <record model="account.account.template" id="55002">
+            <field name="name">Taxi expense—foreign</field>
+            <field name="code">55002</field>
+            <field name="type" ref="foreign_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5500"/>
+        </record>
         <record model="account.account.template" id="5501">
             <field name="name">Airfare</field>
             <field name="code">5501</field>
-            <field name="type" ref="travel_and_meetings_expenses"/>
+            <field name="kind">view</field>
+            <field name="parent" ref="550"/>
+        </record>
+        <record model="account.account.template" id="55010">
+            <field name="name">Airfare—domestic</field>
+            <field name="code">55010</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="550"/>
+            <field name="parent" ref="5501"/>
+        </record>
+        <record model="account.account.template" id="55011">
+            <field name="name">Airfare—foreign</field>
+            <field name="code">55011</field>
+            <field name="type" ref="foreign_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5501"/>
         </record>
         <record model="account.account.template" id="5502">
             <field name="name">Bus and coach</field>
@@ -3769,11 +3825,43 @@
             <field name="kind">view</field>
             <field name="parent" ref="550"/>
         </record>
+        <record model="account.account.template" id="55020">
+            <field name="name">Bus and coach—domestic</field>
+            <field name="code">55020</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5502"/>
+        </record>
+        <record model="account.account.template" id="55021">
+            <field name="name">Bus and coach—foreign</field>
+            <field name="code">55021</field>
+            <field name="type" ref="foreign_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5502"/>
+        </record>
         <record model="account.account.template" id="5503">
             <field name="name">Train</field>
             <field name="code">5503</field>
             <field name="kind">view</field>
             <field name="parent" ref="550"/>
+        </record>
+        <record model="account.account.template" id="55030">
+            <field name="name">Train—domestic</field>
+            <field name="code">55030</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5503"/>
+        </record>
+        <record model="account.account.template" id="55031">
+            <field name="name">Train—foreign</field>
+            <field name="code">55031</field>
+            <field name="type" ref="foreign_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5503"/>
         </record>
         <record model="account.account.template" id="5504">
             <field name="name">Other public transportation</field>
@@ -3799,17 +3887,85 @@
             <field name="kind">view</field>
             <field name="parent" ref="551"/>
         </record>
+        <record model="account.account.template" id="55100">
+            <field name="name">Conference registration fees—domestic</field>
+            <field name="code">55100</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5510"/>
+        </record>
+        <record model="account.account.template" id="55101">
+            <field name="name">Conference registration fees—foreign</field>
+            <field name="code">55101</field>
+            <field name="type" ref="foreign_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5510"/>
+        </record>
         <record model="account.account.template" id="552">
             <field name="name">Meals and entertainment</field>
             <field name="code">552</field>
             <field name="kind">view</field>
             <field name="parent" ref="55"/>
         </record>
+        <record model="account.account.template" id="5520">
+            <field name="name">Business meals</field>
+            <field name="code">5520</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="552"/>
+        </record>
+        <record model="account.account.template" id="55200">
+            <field name="name">Business meals—local</field>
+            <field name="code">55200</field>
+            <field name="type" ref="other_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5520"/>
+        </record>
+        <record model="account.account.template" id="55201">
+            <field name="name">Business meals—domestic</field>
+            <field name="code">55201</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5520"/>
+        </record>
+        <record model="account.account.template" id="55202">
+            <field name="name">Business meals—foreign</field>
+            <field name="code">55202</field>
+            <field name="type" ref="foreign_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5520"/>
+        </record>
         <record model="account.account.template" id="553">
             <field name="name">Accomodations</field>
             <field name="code">553</field>
             <field name="kind">view</field>
             <field name="parent" ref="55"/>
+        </record>
+        <record model="account.account.template" id="5530">
+            <field name="name">Lodging</field>
+            <field name="code">5530</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="553"/>
+        </record>
+        <record model="account.account.template" id="55300">
+            <field name="name">Lodging—domestic</field>
+            <field name="code">55300</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5530"/>
+        </record>
+        <record model="account.account.template" id="55301">
+            <field name="name">Lodging—foreign</field>
+            <field name="code">55301</field>
+            <field name="type" ref="foreign_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5530"/>
         </record>
         <record model="account.account.template" id="58">
             <field name="name">Doubtful accounts, collections, and credit</field>
