@@ -65,7 +65,7 @@
             <field name="parent" ref="current_assets"/>
         </record>
         <record model="account.account.type.template" id="accounts_receivables">
-            <field name="name">Trade or accounts receivables</field>
+            <field name="name">Trade accounts receivables</field>
             <field name="sequence" eval="10"/>
             <field name="parent" ref="receivables"/>
         </record>
@@ -1581,7 +1581,7 @@
             <field name="parent" ref="14"/>
         </record>
         <record model="account.account.template" id="1450">
-            <field name="name">Notes receivable, current principal portion of long-term notes</field>
+            <field name="name">Nontrade notes receivable, current principal portion of long-term notes</field>
             <field name="code">1450</field>
             <field name="type" ref="other_current_assets"/>
             <field name="deferral" eval="True"/>
