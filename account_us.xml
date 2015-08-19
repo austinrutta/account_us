@@ -3548,36 +3548,58 @@
             <field name="parent" ref="542"/>
         </record>
         <record model="account.account.template" id="5422">
-            <field name="name">Computer networks</field>
+            <field name="name">Cellular</field>
             <field name="code">5422</field>
             <field name="kind">view</field>
             <field name="parent" ref="542"/>
         </record>
         <record model="account.account.template" id="54220">
-            <field name="name">Internet</field>
+            <field name="name">Cellular service expense</field>
             <field name="code">54220</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="5422"/>
-        </record>
-        <record model="account.account.template" id="542200">
-            <field name="name">Internet connection leasing costs</field>
-            <field name="code">542200</field>
             <field name="type" ref="non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="54220"/>
+            <field name="parent" ref="5422"/>
         </record>
         <record model="account.account.template" id="54221">
-            <field name="name">Local area network (LAN)</field>
+            <field name="name">Cellular equipment</field>
             <field name="code">54221</field>
-            <field name="kind">view</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
             <field name="parent" ref="5422"/>
         </record>
-        <record model="account.account.template" id="54222">
-            <field name="name">Wide area network (WAN)</field>
-            <field name="code">54222</field>
+        <record model="account.account.template" id="5425">
+            <field name="name">Computer networks</field>
+            <field name="code">5425</field>
             <field name="kind">view</field>
-            <field name="parent" ref="5422"/>
+            <field name="parent" ref="542"/>
+        </record>
+        <record model="account.account.template" id="54250">
+            <field name="name">Internet</field>
+            <field name="code">54250</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5425"/>
+        </record>
+        <record model="account.account.template" id="542500">
+            <field name="name">Internet connection leasing costs</field>
+            <field name="code">542500</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54250"/>
+        </record>
+        <record model="account.account.template" id="54251">
+            <field name="name">Local area network (LAN)</field>
+            <field name="code">54251</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5425"/>
+        </record>
+        <record model="account.account.template" id="54252">
+            <field name="name">Wide area network (WAN)</field>
+            <field name="code">54252</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5425"/>
         </record>
         <record model="account.account.template" id="543">
             <field name="name">Data processing, hosting, and related services</field>
