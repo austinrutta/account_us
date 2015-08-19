@@ -1141,16 +1141,22 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="professional_contract_services">
-            <field name="name">Professional contract services</field>
+        <record model="account.account.type.template" id="professional_services">
+            <field name="name">Professional services</field>
             <field name="parent" ref="contract_services"/>
             <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="financial_services">
+            <field name="name">Financial services</field>
+            <field name="parent" ref="contract_services"/>
+            <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="other_contract_services">
             <field name="name">Other contract services</field>
             <field name="parent" ref="contract_services"/>
-            <field name="sequence" eval="20"/>
+            <field name="sequence" eval="90"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="non_personnel_expenses">
@@ -3100,7 +3106,7 @@
         <record model="account.account.template" id="5200">
             <field name="name">Attorney’s fees</field>
             <field name="code">5200</field>
-            <field name="type" ref="professional_contract_services"/>
+            <field name="type" ref="professional_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="520"/>
@@ -3108,7 +3114,7 @@
         <record model="account.account.template" id="5201">
             <field name="name">Legal documents</field>
             <field name="code">5201</field>
-            <field name="type" ref="professional_contract_services"/>
+            <field name="type" ref="professional_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="520"/>
@@ -3122,7 +3128,7 @@
         <record model="account.account.template" id="5210">
             <field name="name">Financial accounting expense</field>
             <field name="code">5210</field>
-            <field name="type" ref="professional_contract_services"/>
+            <field name="type" ref="professional_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="521"/>
@@ -3130,7 +3136,7 @@
         <record model="account.account.template" id="5211">
             <field name="name">Tax accounting and return preparation expense</field>
             <field name="code">5211</field>
-            <field name="type" ref="professional_contract_services"/>
+            <field name="type" ref="professional_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="521"/>
@@ -3138,7 +3144,7 @@
         <record model="account.account.template" id="5212">
             <field name="name">Auditing expense</field>
             <field name="code">5212</field>
-            <field name="type" ref="professional_contract_services"/>
+            <field name="type" ref="professional_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="521"/>
@@ -3146,7 +3152,7 @@
         <record model="account.account.template" id="5213">
             <field name="name">Payroll processing expense</field>
             <field name="code">5213</field>
-            <field name="type" ref="professional_contract_services"/>
+            <field name="type" ref="professional_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="521"/>
@@ -3166,7 +3172,7 @@
         <record model="account.account.template" id="5230">
             <field name="name">Bank account maintenance charges</field>
             <field name="code">5230</field>
-            <field name="type" ref="professional_contract_services"/>
+            <field name="type" ref="financial_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="523"/>
@@ -3186,7 +3192,7 @@
         <record model="account.account.template" id="523100">
             <field name="name">Credit card service charges—Mastercard and Visa</field>
             <field name="code">523100</field>
-            <field name="type" ref="professional_contract_services"/>
+            <field name="type" ref="financial_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="52310"/>
@@ -3194,7 +3200,7 @@
         <record model="account.account.template" id="523101">
             <field name="name">Credit card service charges—AMEX</field>
             <field name="code">523101</field>
-            <field name="type" ref="professional_contract_services"/>
+            <field name="type" ref="financial_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="52310"/>
@@ -3202,7 +3208,7 @@
         <record model="account.account.template" id="523102">
             <field name="name">Credit card service charges—Discover</field>
             <field name="code">523102</field>
-            <field name="type" ref="professional_contract_services"/>
+            <field name="type" ref="financial_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="52310"/>
@@ -3210,7 +3216,7 @@
         <record model="account.account.template" id="52311">
             <field name="name">Debit card and ATM service charges</field>
             <field name="code">52311</field>
-            <field name="type" ref="professional_contract_services"/>
+            <field name="type" ref="financial_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5231"/>
@@ -3218,7 +3224,7 @@
         <record model="account.account.template" id="5232">
             <field name="name">Wiring fees—operating</field>
             <field name="code">5232</field>
-            <field name="type" ref="professional_contract_services"/>
+            <field name="type" ref="financial_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="523"/>
