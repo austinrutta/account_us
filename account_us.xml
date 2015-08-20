@@ -3858,10 +3858,24 @@
         <record model="account.account.template" id="54984">
             <field name="name">Amortization expense—technology-based intangibles</field>
             <field name="code">54984</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5498"/>
+        </record>
+        <record model="account.account.template" id="549840">
+            <field name="name">Amortization expense—capitalized software</field>
+            <field name="code">549840</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5498"/>
+            <field name="parent" ref="54984"/>
+        </record>
+        <record model="account.account.template" id="549841">
+            <field name="name">Amortization expense—other technology-based intangibles</field>
+            <field name="code">549841</field>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54984"/>
         </record>
         <record model="account.account.template" id="54985">
             <field name="name">Amortization expense—research and development costs</field>
