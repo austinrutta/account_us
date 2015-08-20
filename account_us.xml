@@ -64,29 +64,29 @@
             <field name="sequence" eval="30"/>
             <field name="parent" ref="current_assets"/>
         </record>
-        <record model="account.account.type.template" id="accounts_receivables">
-            <field name="name">Trade accounts receivables</field>
+        <record model="account.account.type.template" id="trade_receivables">
+            <field name="name">Trade receivables</field>
             <field name="sequence" eval="10"/>
             <field name="parent" ref="receivables"/>
         </record>
+        <record model="account.account.type.template" id="accounts_receivables">
+            <field name="name">Trade accounts receivables</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="trade_receivables"/>
+        </record>
         <record model="account.account.type.template" id="accounts_receivables_from_related_parties">
-            <field name="name">Accounts receivables from related parties</field>
+            <field name="name">Trade accounts receivables from related parties</field>
             <field name="sequence" eval="20"/>
-            <field name="parent" ref="receivables"/>
+            <field name="parent" ref="trade_receivables"/>
         </record>
-        <record model="account.account.type.template" id="notes_receivables">
-            <field name="name">Notes receivables</field>
-            <field name="sequence" eval="30"/>
-            <field name="parent" ref="receivables"/>
+        <record model="account.account.type.template" id="other_trade_receivables">
+            <field name="name">Other trade receivables</field>
+            <field name="sequence" eval="90"/>
+            <field name="parent" ref="trade_receivables"/>
         </record>
-        <record model="account.account.type.template" id="loans_receivables">
-            <field name="name">Loans receivables</field>
-            <field name="sequence" eval="40"/>
-            <field name="parent" ref="receivables"/>
-        </record>
-        <record model="account.account.type.template" id="other_receivables">
-            <field name="name">Other receivables</field>
-            <field name="sequence" eval="50"/>
+        <record model="account.account.type.template" id="non_trade_receivables">
+            <field name="name">Nontrade receivables</field>
+            <field name="sequence" eval="20"/>
             <field name="parent" ref="receivables"/>
         </record>
         <record model="account.account.type.template" id="inventories">
@@ -1394,13 +1394,13 @@
             <field name="parent" ref="1"/>
         </record>
         <record model="account.account.template" id="120">
-            <field name="name">Accounts receivable</field>
+            <field name="name">Trade receivables</field>
             <field name="code">120</field>
             <field name="kind">view</field>
             <field name="parent" ref="12"/>
         </record>
         <record model="account.account.template" id="1200">
-            <field name="name">Accounts receivable</field>
+            <field name="name">Trade accounts receivable</field>
             <field name="code">1200</field>
             <field name="type" ref="accounts_receivables"/>
             <field name="deferral" eval="True"/>
@@ -1410,7 +1410,7 @@
             <field name="parent" ref="120"/>
         </record>
         <record model="account.account.template" id="1201">
-            <field name="name">Accounts receivable from related parties</field>
+            <field name="name">Trade accounts receivable from related parties</field>
             <field name="code">1201</field>
             <field name="type" ref="accounts_receivables_from_related_parties"/>
             <field name="deferral" eval="True"/>
@@ -1419,20 +1419,36 @@
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="120"/>
         </record>
-        <record model="account.account.template" id="1209">
-            <field name="name">Allowance for doubtful accounts (−)</field>
-            <field name="code">1209</field>
-            <field name="type" ref="accounts_receivables"/>
+        <record model="account.account.template" id="1202">
+            <field name="name">Trade notes receivable and current principle portion of long-term trade notes</field>
+            <field name="code">1202</field>
+            <field name="type" ref="other_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="120"/>
         </record>
+        <record model="account.account.template" id="1209">
+            <field name="name">Trade allowances (−)</field>
+            <field name="code">1209</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="120"/>
+        </record>
+        <record model="account.account.template" id="12090">
+            <field name="name">Allowance for doubtful accounts (−)</field>
+            <field name="code">12090</field>
+            <field name="type" ref="accounts_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1209"/>
+        </record>
         <record model="account.account.template" id="121">
-            <field name="name">Trade notes receivable, current principle portion of long-term trade notes</field>
+            <field name="name">Nontrade notes receivable and current principal portion of long-term nontrade notes</field>
             <field name="code">121</field>
-            <field name="type" ref="notes_receivables"/>
+            <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1442,7 +1458,7 @@
         <record model="account.account.template" id="122">
             <field name="name">Interest receivable</field>
             <field name="code">122</field>
-            <field name="type" ref="other_receivables"/>
+            <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1458,7 +1474,7 @@
         <record model="account.account.template" id="1230">
             <field name="name">Short-term loans receivable from officers or directors</field>
             <field name="code">1230</field>
-            <field name="type" ref="loans_receivables"/>
+            <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1468,7 +1484,7 @@
         <record model="account.account.template" id="1231">
             <field name="name">Short-term loans receivable from employees</field>
             <field name="code">1231</field>
-            <field name="type" ref="loans_receivables"/>
+            <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1481,10 +1497,20 @@
             <field name="kind">view</field>
             <field name="parent" ref="12"/>
         </record>
+        <record model="account.account.template" id="1270">
+            <field name="name">Dividends receivable</field>
+            <field name="code">1270</field>
+            <field name="type" ref="non_trade_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="127"/>
+        </record>
         <record model="account.account.template" id="128">
-            <field name="name">Unapplied payments</field>
+            <field name="name">Unapplied trade payments</field>
             <field name="code">128</field>
-            <field name="type" ref="other_receivables"/>
+            <field name="type" ref="other_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="False"/>
@@ -1597,16 +1623,6 @@
             <field name="code">145</field>
             <field name="kind">view</field>
             <field name="parent" ref="14"/>
-        </record>
-        <record model="account.account.template" id="1450">
-            <field name="name">Nontrade notes receivable, current principal portion of long-term notes</field>
-            <field name="code">1450</field>
-            <field name="type" ref="other_current_assets"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">receivable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
-            <field name="parent" ref="145"/>
         </record>
         <record model="account.account.template" id="15">
             <field name="name">Financial investments</field>
