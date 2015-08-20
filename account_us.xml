@@ -3826,7 +3826,7 @@
             <field name="parent" ref="550"/>
         </record>
         <record model="account.account.template" id="55010">
-            <field name="name">Airfare—domestic</field>
+            <field name="name">Airfare expense—domestic</field>
             <field name="code">55010</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3834,7 +3834,7 @@
             <field name="parent" ref="5501"/>
         </record>
         <record model="account.account.template" id="55011">
-            <field name="name">Airfare—foreign</field>
+            <field name="name">Airfare expense—foreign</field>
             <field name="code">55011</field>
             <field name="type" ref="foreign_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3848,7 +3848,7 @@
             <field name="parent" ref="550"/>
         </record>
         <record model="account.account.template" id="55020">
-            <field name="name">Bus and coach—domestic</field>
+            <field name="name">Bus and coach expense—domestic</field>
             <field name="code">55020</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3856,7 +3856,7 @@
             <field name="parent" ref="5502"/>
         </record>
         <record model="account.account.template" id="55021">
-            <field name="name">Bus and coach—foreign</field>
+            <field name="name">Bus and coach expense—foreign</field>
             <field name="code">55021</field>
             <field name="type" ref="foreign_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3870,7 +3870,7 @@
             <field name="parent" ref="550"/>
         </record>
         <record model="account.account.template" id="55030">
-            <field name="name">Train—domestic</field>
+            <field name="name">Train fare expense—domestic</field>
             <field name="code">55030</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3878,7 +3878,7 @@
             <field name="parent" ref="5503"/>
         </record>
         <record model="account.account.template" id="55031">
-            <field name="name">Train—foreign</field>
+            <field name="name">Train fare expense—foreign</field>
             <field name="code">55031</field>
             <field name="type" ref="foreign_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3938,7 +3938,7 @@
             <field name="parent" ref="552"/>
         </record>
         <record model="account.account.template" id="55200">
-            <field name="name">Business meals—local</field>
+            <field name="name">Business meals expense—local</field>
             <field name="code">55200</field>
             <field name="type" ref="other_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3946,7 +3946,7 @@
             <field name="parent" ref="5520"/>
         </record>
         <record model="account.account.template" id="55201">
-            <field name="name">Business meals—domestic</field>
+            <field name="name">Business meals expense—domestic</field>
             <field name="code">55201</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3954,7 +3954,7 @@
             <field name="parent" ref="5520"/>
         </record>
         <record model="account.account.template" id="55202">
-            <field name="name">Business meals—foreign</field>
+            <field name="name">Business meals expense—foreign</field>
             <field name="code">55202</field>
             <field name="type" ref="foreign_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3974,7 +3974,7 @@
             <field name="parent" ref="553"/>
         </record>
         <record model="account.account.template" id="55300">
-            <field name="name">Lodging—domestic</field>
+            <field name="name">Lodging expense—domestic</field>
             <field name="code">55300</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3982,7 +3982,7 @@
             <field name="parent" ref="5530"/>
         </record>
         <record model="account.account.template" id="55301">
-            <field name="name">Lodging—foreign</field>
+            <field name="name">Lodging expense—foreign</field>
             <field name="code">55301</field>
             <field name="type" ref="foreign_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
