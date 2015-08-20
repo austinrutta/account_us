@@ -3603,6 +3603,28 @@
             <field name="kind">view</field>
             <field name="parent" ref="543"/>
         </record>
+        <record model="account.account.template" id="54310">
+            <field name="name">Domain name services</field>
+            <field name="code">54310</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5431"/>
+        </record>
+        <record model="account.account.template" id="543100">
+            <field name="name">Domain name registration expense</field>
+            <field name="code">543100</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54310"/>
+        </record>
+        <record model="account.account.template" id="543101">
+            <field name="name">Internet Corporation for Assigned Names and Numbers (ICANN) fees</field>
+            <field name="code">543101</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54310"/>
+        </record>
         <record model="account.account.template" id="5439">
             <field name="name">Other data processing, hosting, and related services</field>
             <field name="code">5439</field>
