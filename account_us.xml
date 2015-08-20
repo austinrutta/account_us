@@ -3159,22 +3159,6 @@
             <field name="kind">expense</field>
             <field name="parent" ref="521"/>
         </record>
-        <record model="account.account.template" id="5212">
-            <field name="name">Auditing expense</field>
-            <field name="code">5212</field>
-            <field name="type" ref="professional_services"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="521"/>
-        </record>
-        <record model="account.account.template" id="5213">
-            <field name="name">Payroll processing expense</field>
-            <field name="code">5213</field>
-            <field name="type" ref="professional_services"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="521"/>
-        </record>
         <record model="account.account.template" id="522">
             <field name="name">Management consulting</field>
             <field name="code">522</field>
@@ -4470,6 +4454,14 @@
             <field name="code">629</field>
             <field name="kind">view</field>
             <field name="parent" ref="62"/>
+        </record>
+        <record model="account.account.template" id="6290">
+            <field name="name">Auditing expense</field>
+            <field name="code">6290</field>
+            <field name="type" ref="other_non_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="629"/>
         </record>
         <record model="account.account.template" id="7">
             <field name="name">Income tax expense</field>
