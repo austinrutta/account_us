@@ -3659,6 +3659,14 @@
             <field name="kind">expense</field>
             <field name="parent" ref="54310"/>
         </record>
+        <record model="account.account.template" id="543109">
+            <field name="name">Other domain name expense</field>
+            <field name="code">543109</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54310"/>
+        </record>
         <record model="account.account.template" id="5439">
             <field name="name">Other data processing, hosting, and related services</field>
             <field name="code">5439</field>
