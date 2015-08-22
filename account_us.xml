@@ -1420,7 +1420,7 @@
             <field name="parent" ref="120"/>
         </record>
         <record model="account.account.template" id="1202">
-            <field name="name">Trade notes receivable and current principle portion of long-term trade notes</field>
+            <field name="name">Trade notes receivable and current principal portion of long-term trade notes</field>
             <field name="code">1202</field>
             <field name="type" ref="other_trade_receivables"/>
             <field name="deferral" eval="True"/>
@@ -1514,7 +1514,7 @@
             <field name="parent" ref="127"/>
         </record>
         <record model="account.account.template" id="12710">
-            <field name="name">Short-term loans receivable and current principle portion of long-term loans receivable from officers or directors</field>
+            <field name="name">Short-term loans receivable and current principal portion of long-term loans receivable from officers or directors</field>
             <field name="code">12710</field>
             <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
@@ -1524,7 +1524,7 @@
             <field name="parent" ref="1271"/>
         </record>
         <record model="account.account.template" id="12711">
-            <field name="name">Short-term loans receivable and current principle portion of long-term loans receivable from employees</field>
+            <field name="name">Short-term loans receivable and current principal portion of long-term loans receivable from employees</field>
             <field name="code">12711</field>
             <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
