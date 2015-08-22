@@ -3652,7 +3652,7 @@
             <field name="parent" ref="54310"/>
         </record>
         <record model="account.account.template" id="543101">
-            <field name="name">Internet Corporation for Assigned Names and Numbers (ICANN) fees</field>
+            <field name="name">Domain name service (DNS) hosting expense</field>
             <field name="code">543101</field>
             <field name="type" ref="non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
