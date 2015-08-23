@@ -89,6 +89,11 @@
             <field name="sequence" eval="20"/>
             <field name="parent" ref="receivables"/>
         </record>
+        <record model="account.account.type.template" id="other_receivables">
+            <field name="name">Other receivables</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="receivables"/>
+        </record>
         <record model="account.account.type.template" id="inventories">
             <field name="name">Inventories</field>
             <field name="sequence" eval="40"/>
@@ -1534,11 +1539,12 @@
             <field name="parent" ref="1271"/>
         </record>
         <record model="account.account.template" id="128">
-            <field name="name">Unapplied trade payments</field>
+            <field name="name">Unapplied payments</field>
             <field name="code">128</field>
-            <field name="type" ref="other_trade_receivables"/>
+            <field name="type" ref="other_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
+            <!-- In case we don't know who the payor is -->
             <field name="party_required" eval="False"/>
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="12"/>
