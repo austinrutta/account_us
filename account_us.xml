@@ -2241,9 +2241,7 @@
         <record model="account.account.template" id="17420">
             <field name="name">Software to be sold, leased, or marketed—in development</field>
             <field name="code">17420</field>
-            <field name="type" ref="capitalized_software"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">view</field>
             <field name="parent" ref="1742"/>
         </record>
         <record model="account.account.template" id="174200">
