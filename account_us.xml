@@ -2239,24 +2239,36 @@
             <field name="parent" ref="174"/>
         </record>
         <record model="account.account.template" id="17420">
-            <field name="name">Acquisition costs of software to be sold, leased, or marketed</field>
+            <field name="name">Software to be sold, leased, or marketed—in development</field>
             <field name="code">17420</field>
             <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="1742"/>
         </record>
-        <record model="account.account.template" id="17421">
-            <field name="name">Software in development to be sold, leased, or marketed</field>
-            <field name="code">17421</field>
+        <record model="account.account.template" id="174200">
+            <field name="name">Acquisition costs of software to be sold, leased, or marketed</field>
+            <field name="code">174200</field>
             <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="parent" ref="1742"/>
+            <field name="parent" ref="17420"/>
         </record>
-        <record model="account.account.template" id="17422">
-            <field name="name">Capitalized software that is sold, leased, or marketed</field>
-            <field name="code">17422</field>
+        <record model="account.account.template" id="174201">
+            <field name="name">Direct production costs of software to be sold, leased, or marketed</field>
+            <field name="code">174201</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="17420"/>
+        </record>
+        <record model="account.account.template" id="174202">
+            <field name="name">Indirect costs of software to be sold, leased, or marketed</field>
+            <field name="code">174202</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="17420"/>
+        </record>
+        <record model="account.account.template" id="17421">
+            <field name="name">Software that is currently being sold, leased, or marketed</field>
+            <field name="code">17421</field>
             <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
@@ -2269,7 +2281,7 @@
             <field name="parent" ref="174"/>
         </record>
         <record model="account.account.template" id="17430">
-            <field name="name">Internal-use computer software projects in development</field>
+            <field name="name">Internal-use computer software projects—in development</field>
             <field name="code">17430</field>
             <field name="kind">view</field>
             <field name="parent" ref="1743"/>
@@ -2303,7 +2315,7 @@
             <field name="parent" ref="17430"/>
         </record>
         <record model="account.account.template" id="17431">
-            <field name="name">Capitalized internal-use computer software</field>
+            <field name="name">Internal-use computer software—in production</field>
             <field name="code">17431</field>
             <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
