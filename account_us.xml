@@ -3426,13 +3426,13 @@
             <field name="parent" ref="532"/>
         </record>
         <record model="account.account.template" id="533">
-            <field name="name">Printing and duplication</field>
+            <field name="name">Printing and duplication services</field>
             <field name="code">533</field>
             <field name="kind">view</field>
             <field name="parent" ref="53"/>
         </record>
         <record model="account.account.template" id="5330">
-            <field name="name">Copying and duplication expense</field>
+            <field name="name">General copying and duplication expense</field>
             <field name="code">5330</field>
             <field name="type" ref="non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3440,48 +3440,48 @@
             <field name="parent" ref="533"/>
         </record>
         <record model="account.account.template" id="5331">
-            <field name="name">Custom stationary and business forms</field>
+            <field name="name">Custom stationery printing costs</field>
             <field name="code">5331</field>
             <field name="type" ref="non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="533"/>
         </record>
-        <record model="account.account.template" id="53310">
-            <field name="name">Custom stationary printing costs</field>
-            <field name="code">53310</field>
-            <field name="type" ref="non_personnel_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5331"/>
-        </record>
-        <record model="account.account.template" id="53311">
-            <field name="name">Bank checks (cheques) and other financial instrument printing costs</field>
-            <field name="code">53311</field>
-            <field name="type" ref="non_personnel_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5331"/>
-        </record>
         <record model="account.account.template" id="5332">
-            <field name="name">Publication costs</field>
+            <field name="name">Business forms expense</field>
             <field name="code">5332</field>
-            <field name="kind">view</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
             <field name="parent" ref="533"/>
         </record>
-        <record model="account.account.template" id="53320">
-            <field name="name">Artwork, font, and other stock media costs</field>
-            <field name="code">53320</field>
+        <record model="account.account.template" id="5333">
+            <field name="name">Bank checks (cheques) and other financial instrument printing costs</field>
+            <field name="code">5333</field>
             <field name="type" ref="non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5332"/>
+            <field name="parent" ref="533"/>
         </record>
         <record model="account.account.template" id="5339">
             <field name="name">Other printing and duplication costs</field>
             <field name="code">5339</field>
             <field name="kind">view</field>
             <field name="parent" ref="533"/>
+        </record>
+        <record model="account.account.template" id="534">
+            <field name="name">In-house publication costs</field>
+            <field name="code">534</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="53"/>
+        </record>
+        <record model="account.account.template" id="5340">
+            <field name="name">Artwork, font, and other stock media costs</field>
+            <field name="code">5340</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="534"/>
         </record>
         <record model="account.account.template" id="536">
             <field name="name">Books, subscriptions, and references</field>
@@ -3498,7 +3498,7 @@
             <field name="parent" ref="536"/>
         </record>
         <record model="account.account.template" id="5361">
-            <field name="name">Professional publications</field>
+            <field name="name">Professional third-party publications</field>
             <field name="code">5361</field>
             <field name="type" ref="non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
