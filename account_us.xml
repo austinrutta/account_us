@@ -2561,7 +2561,7 @@
             <field name="parent" ref="2121"/>
         </record>
         <record model="account.account.template" id="212100">
-            <field name="name">Employee United States federal income tax withheld</field>
+            <field name="name">Employee federal income tax withheld</field>
             <field name="code">212100</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="deferral" eval="True"/>
