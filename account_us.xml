@@ -2496,6 +2496,16 @@
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="21103"/>
         </record>
+        <record model="account.account.template" id="2111">
+            <field name="name">Interest payable</field>
+            <field name="code">2111</field>
+            <field name="type" ref="accrued_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="211"/>
+        </record>
         <record model="account.account.template" id="212">
             <field name="name">Employee-related liabilities</field>
             <field name="code">212</field>
