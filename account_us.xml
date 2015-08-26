@@ -340,13 +340,13 @@
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="accounts_payables">
-            <field name="name">Accounts payables</field>
+            <field name="name">Trade accounts payables</field>
             <field name="parent" ref="payables"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="accounts_payables_to_related_parties">
-            <field name="name">Accounts payables to related parties</field>
+            <field name="name">Trade accounts payables to related parties</field>
             <field name="parent" ref="payables"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
@@ -360,7 +360,7 @@
         <record model="account.account.type.template" id="accrued_and_deferred_liabilities">
             <field name="name">Accrued and deferred liabilities</field>
             <field name="parent" ref="current_liabilities"/>
-            <field name="sequence" eval="20"/>
+            <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="deferred_revenues">
@@ -441,30 +441,6 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="notes_payables">
-            <field name="name">Notes payables</field>
-            <field name="parent" ref="short_term_notes_and_loans_payables"/>
-            <field name="sequence" eval="10"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="short_term_borrowings">
-            <field name="name">Short-term borrowings</field>
-            <field name="parent" ref="short_term_notes_and_loans_payables"/>
-            <field name="sequence" eval="20"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="lines_of_credit">
-            <field name="name">Lines of credit</field>
-            <field name="parent" ref="short_term_notes_and_loans_payables"/>
-            <field name="sequence" eval="30"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="current_of_long_term_debt">
-            <field name="name">Current portion of long-term debts</field>
-            <field name="parent" ref="short_term_notes_and_loans_payables"/>
-            <field name="sequence" eval="40"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
         <record model="account.account.type.template" id="other_current_liabilities">
             <field name="name">Other short-term liabilities and payables</field>
             <field name="parent" ref="current_liabilities"/>
@@ -493,18 +469,6 @@
             <field name="name">Non-current debts</field>
             <field name="parent" ref="non_current_liabilities"/>
             <field name="sequence" eval="10"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="notes_and_debentures_payables">
-            <field name="name">Notes and debentures payables</field>
-            <field name="parent" ref="non_current_debts"/>
-            <field name="sequence" eval="10"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="loans_payables">
-            <field name="name">Loans payables</field>
-            <field name="parent" ref="non_current_debts"/>
-            <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="lease_obligations">
@@ -547,18 +511,6 @@
             <field name="name">Other non-current liabilities</field>
             <field name="parent" ref="non_current_liabilities"/>
             <field name="sequence" eval="50"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="deferred_tax_liabilities">
-            <field name="name">Deferred tax liabilities</field>
-            <field name="parent" ref="other_non_current_liabilities"/>
-            <field name="sequence" eval="10"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="manditorily_redeemable_shares">
-            <field name="name">Manditorily redeemable shares</field>
-            <field name="parent" ref="other_non_current_liabilities"/>
-            <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="equity">
@@ -2457,7 +2409,7 @@
             <field name="parent" ref="2"/>
         </record>
         <record model="account.account.template" id="200">
-            <field name="name">Accounts payable</field>
+            <field name="name">Trade accounts payable</field>
             <field name="code">200</field>
             <field name="type" ref="accounts_payables"/>
             <field name="deferral" eval="True"/>
@@ -2467,7 +2419,7 @@
             <field name="parent" ref="20"/>
         </record>
         <record model="account.account.template" id="201">
-            <field name="name">Accounts payable to related parties</field>
+            <field name="name">Trade accounts payable to related parties</field>
             <field name="code">201</field>
             <field name="type" ref="accounts_payables_to_related_parties"/>
             <field name="deferral" eval="True"/>
@@ -2523,12 +2475,122 @@
         <record model="account.account.template" id="2120">
             <field name="name">Accrued salaries and wages payable</field>
             <field name="code">2120</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="212"/>
+        </record>
+        <record model="account.account.template" id="21200">
+            <field name="name">Accrued salaries</field>
+            <field name="code">21200</field>
             <field name="type" ref="accrued_payroll"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2120"/>
+        </record>
+        <record model="account.account.template" id="21201">
+            <field name="name">Accrued wages</field>
+            <field name="code">21201</field>
+            <field name="type" ref="accrued_payroll"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2120"/>
+        </record>
+        <record model="account.account.template" id="21202">
+            <field name="name">Accrued commissions</field>
+            <field name="code">21202</field>
+            <field name="type" ref="accrued_payroll"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2120"/>
+        </record>
+        <record model="account.account.template" id="2121">
+            <field name="name">Employee payroll withholdings</field>
+            <field name="code">2121</field>
+            <field name="kind">view</field>
             <field name="parent" ref="212"/>
+        </record>
+        <record model="account.account.template" id="21210">
+            <field name="name">Employee income tax withholdings</field>
+            <field name="code">21210</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="2121"/>
+        </record>
+        <record model="account.account.template" id="212100">
+            <field name="name">Employee United States federal income tax withheld</field>
+            <field name="code">212100</field>
+            <field name="type" ref="payroll_withholdings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="21210"/>
+        </record>
+        <record model="account.account.template" id="212101">
+            <field name="name">Employee state income tax withheld</field>
+            <field name="code">212101</field>
+            <field name="type" ref="payroll_withholdings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="21210"/>
+        </record>
+        <record model="account.account.template" id="212102">
+            <field name="name">Employee local income tax withheld</field>
+            <field name="code">212102</field>
+            <field name="type" ref="payroll_withholdings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="21210"/>
+        </record>
+        <record model="account.account.template" id="21211">
+            <field name="name">Employee FICA withheld</field>
+            <field name="code">21211</field>
+            <field name="type" ref="payroll_withholdings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2121"/>
+        </record>
+        <record model="account.account.template" id="21212">
+            <field name="name">Employee Medicare withheld</field>
+            <field name="code">21212</field>
+            <field name="type" ref="payroll_withholdings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2121"/>
+        </record>
+        <record model="account.account.template" id="21213">
+            <field name="name">Employee garnishments withheld</field>
+            <field name="code">21213</field>
+            <field name="type" ref="payroll_withholdings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2121"/>
+        </record>
+        <record model="account.account.template" id="21215">
+            <field name="name">Employee benefits</field>
+            <field name="code">21215</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="2121"/>
+        </record>
+        <record model="account.account.template" id="21219">
+            <field name="name">Other payroll withholdings</field>
+            <field name="code">21219</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="2121"/>
         </record>
         <record model="account.account.template" id="22">
             <field name="name">Short-term notes and loans payable</field>
@@ -2537,7 +2599,7 @@
             <field name="parent" ref="2"/>
         </record>
         <record model="account.account.template" id="220">
-            <field name="name">Notes payable</field>
+            <field name="name">Trade notes payable</field>
             <field name="code">220</field>
             <field name="type" ref="notes_payables"/>
             <field name="deferral" eval="True"/>
@@ -2589,6 +2651,74 @@
             <field name="code">24</field>
             <field name="kind">view</field>
             <field name="parent" ref="2"/>
+        </record>
+        <record model="account.account.template" id="240">
+            <field name="name">Due to related parties</field>
+            <field name="code">240</field>
+            <field name="type" ref="other_current_liabilities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="24"/>
+        </record>
+        <record model="account.account.template" id="25">
+            <field name="name">Long-term notes and loans payable</field>
+            <field name="code">25</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="2"/>
+        </record>
+        <record model="account.account.template" id="250">
+            <field name="name">Bonds payable</field>
+            <field name="code">250</field>
+            <field name="type" ref="non_current_debts"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="25"/>
+        </record>
+        <record model="account.account.template" id="251">
+            <field name="name">Notes payable</field>
+            <field name="code">251</field>
+            <field name="type" ref="non_current_debts"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="25"/>
+        </record>
+        <record model="account.account.template" id="252">
+            <field name="name">Capital leases</field>
+            <field name="code">252</field>
+            <field name="type" ref="lease_obligations"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="25"/>
+        </record>
+        <record model="account.account.template" id="26">
+            <field name="name">Long-term provisions</field>
+            <field name="code">26</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="2"/>
+        </record>
+        <record model="account.account.template" id="29">
+            <field name="name">Other non-current liabilities</field>
+            <field name="code">29</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="2"/>
+        </record>
+        <record model="account.account.template" id="290">
+            <field name="name">Deferred tax liabilities</field>
+            <field name="code">290</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="29"/>
+        </record>
+        <record model="account.account.template" id="291">
+            <field name="name">Manditorily redeemable shares</field>
+            <field name="code">291</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="29"/>
         </record>
         <record model="account.account.template" id="3">
             <field name="name">Equity</field>
