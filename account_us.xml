@@ -2429,24 +2429,72 @@
             <field name="parent" ref="21"/>
         </record>
         <record model="account.account.template" id="2110">
-            <field name="name">Sales tax payable</field>
+            <field name="name">Accrued taxes payable</field>
             <field name="code">2110</field>
-            <field name="type" ref="accrued_expenses"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">view</field>
             <field name="parent" ref="211"/>
         </record>
-        <record model="account.account.template" id="2111">
-            <field name="name">Accrued use tax</field>
-            <field name="code">2111</field>
+        <record model="account.account.template" id="21100">
+            <field name="name">Collected sales tax payable</field>
+            <field name="code">21100</field>
             <field name="type" ref="accrued_expenses"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
-            <field name="parent" ref="211"/>
+            <field name="parent" ref="2110"/>
+        </record>
+        <record model="account.account.template" id="21101">
+            <field name="name">Accrued use tax payable</field>
+            <field name="code">21101</field>
+            <field name="type" ref="accrued_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2110"/>
+        </record>
+        <record model="account.account.template" id="21102">
+            <field name="name">Accrued real estate and property taxes payable</field>
+            <field name="code">21102</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="2110"/>
+        </record>
+        <record model="account.account.template" id="21103">
+            <field name="name">Accrued income and franchise taxes payable</field>
+            <field name="code">21103</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="2110"/>
+        </record>
+        <record model="account.account.template" id="211030">
+            <field name="name">Accrued federal income taxes payable</field>
+            <field name="code">211030</field>
+            <field name="type" ref="accrued_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="21103"/>
+        </record>
+        <record model="account.account.template" id="211031">
+            <field name="name">Accrued state income and franchise taxes payable</field>
+            <field name="code">211031</field>
+            <field name="type" ref="accrued_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="21103"/>
+        </record>
+        <record model="account.account.template" id="211032">
+            <field name="name">Accrued local income taxes payable</field>
+            <field name="code">211032</field>
+            <field name="type" ref="accrued_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="21103"/>
         </record>
         <record model="account.account.template" id="212">
             <field name="name">Employee-related liabilities</field>
