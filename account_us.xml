@@ -357,6 +357,12 @@
             <field name="sequence" eval="90"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="short_term_notes_and_loans_payables">
+            <field name="name">Short-term notes and loans payables</field>
+            <field name="parent" ref="current_liabilities"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="accrued_and_deferred_liabilities">
             <field name="name">Accrued and deferred liabilities</field>
             <field name="parent" ref="current_liabilities"/>
@@ -433,12 +439,6 @@
             <field name="name">Accrued retirement plan expenses</field>
             <field name="parent" ref="employee_related_liabilities"/>
             <field name="sequence" eval="50"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="short_term_notes_and_loans_payables">
-            <field name="name">Short-term notes and loans payables</field>
-            <field name="parent" ref="current_liabilities"/>
-            <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="other_current_liabilities">
