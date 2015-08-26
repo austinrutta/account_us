@@ -2741,7 +2741,7 @@
             <field name="parent" ref="2"/>
         </record>
         <record model="account.account.template" id="29">
-            <field name="name">Other non-current liabilities</field>
+            <field name="name">Other long-term liabilities</field>
             <field name="code">29</field>
             <field name="kind">view</field>
             <field name="parent" ref="2"/>
