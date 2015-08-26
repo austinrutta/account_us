@@ -2601,7 +2601,7 @@
         <record model="account.account.template" id="220">
             <field name="name">Trade notes payable</field>
             <field name="code">220</field>
-            <field name="type" ref="notes_payables"/>
+            <field name="type" ref="short_term_notes_and_loans_payables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
@@ -2617,7 +2617,7 @@
         <record model="account.account.template" id="2210">
             <field name="name">Short-term loans payable to officers or directors</field>
             <field name="code">2210</field>
-            <field name="type" ref="short_term_borrowings"/>
+            <field name="type" ref="short_term_notes_and_loans_payables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
@@ -2627,7 +2627,7 @@
         <record model="account.account.template" id="2211">
             <field name="name">Short-term loans payable to employees</field>
             <field name="code">2211</field>
-            <field name="type" ref="short_term_borrowings"/>
+            <field name="type" ref="short_term_notes_and_loans_payables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
