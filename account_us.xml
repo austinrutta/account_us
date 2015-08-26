@@ -2431,7 +2431,7 @@
         <record model="account.account.template" id="2110">
             <field name="name">Sales tax payable</field>
             <field name="code">2110</field>
-            <field name="type" ref="sales_tax_collected"/>
+            <field name="type" ref="accrued_expenses"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
@@ -2441,7 +2441,7 @@
         <record model="account.account.template" id="2111">
             <field name="name">Accrued use tax</field>
             <field name="code">2111</field>
-            <field name="type" ref="accrued_use_tax"/>
+            <field name="type" ref="accrued_expenses"/>
             <field name="deferral" eval="True"/>
             <field name="kind">payable</field>
             <field name="party_required" eval="True"/>
@@ -2573,6 +2573,62 @@
             <field name="code">21219</field>
             <field name="kind">view</field>
             <field name="parent" ref="2121"/>
+        </record>
+        <record model="account.account.template" id="2122">
+            <field name="name">Accrued payroll taxes</field>
+            <field name="code">2122</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="212"/>
+        </record>
+        <record model="account.account.template" id="21220">
+            <field name="name">Employer FICA contribution payable</field>
+            <field name="code">21220</field>
+            <field name="type" ref="accrued_payroll_taxes"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2122"/>
+        </record>
+        <record model="account.account.template" id="21221">
+            <field name="name">Employer Medicare contribution payable</field>
+            <field name="code">21221</field>
+            <field name="type" ref="accrued_payroll_taxes"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2122"/>
+        </record>
+        <record model="account.account.template" id="21222">
+            <field name="name">Employer federal unemployment tax payable</field>
+            <field name="code">21222</field>
+            <field name="type" ref="accrued_payroll_taxes"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2122"/>
+        </record>
+        <record model="account.account.template" id="21223">
+            <field name="name">Employer state unemployment tax payable</field>
+            <field name="code">21223</field>
+            <field name="type" ref="accrued_payroll_taxes"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2122"/>
+        </record>
+        <record model="account.account.template" id="21224">
+            <field name="name">Employer workers’ compensation insurance payable</field>
+            <field name="code">21224</field>
+            <field name="type" ref="accrued_payroll_taxes"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2122"/>
         </record>
         <record model="account.account.template" id="22">
             <field name="name">Short-term notes and loans payable</field>
