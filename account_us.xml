@@ -387,24 +387,6 @@
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="sales_tax_collected">
-            <field name="name">Sales tax collected</field>
-            <field name="parent" ref="accrued_expenses"/>
-            <field name="sequence" eval="10"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="accrued_use_tax">
-            <field name="name">Accrued use tax</field>
-            <field name="parent" ref="accrued_expenses"/>
-            <field name="sequence" eval="20"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
-        <record model="account.account.type.template" id="other_accrued_expenses">
-            <field name="name">Other accrued expenses</field>
-            <field name="parent" ref="accrued_expenses"/>
-            <field name="sequence" eval="30"/>
-            <field name="display_balance">credit-debit</field>
-        </record>
         <record model="account.account.type.template" id="employee_related_liabilities">
             <field name="name">Employee-related liabilities</field>
             <field name="parent" ref="accrued_and_deferred_liabilities"/>
