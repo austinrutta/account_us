@@ -4598,7 +4598,9 @@
         <record model="account.account.template" id="590">
             <field name="name">Membership dues—corporate</field>
             <field name="code">590</field>
-            <field name="kind">view</field>
+            <field name="type" ref="other_operating_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
             <field name="parent" ref="59"/>
         </record>
         <record model="account.account.template" id="591">
