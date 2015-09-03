@@ -3547,23 +3547,35 @@
             <field name="kind">view</field>
             <field name="parent" ref="512"/>
         </record>
-        <record model="account.account.template" id="5126">
+        <record model="account.account.template" id="5129">
             <field name="name">Other employer-provided benefits</field>
-            <field name="code">5126</field>
+            <field name="code">5129</field>
             <field name="kind">view</field>
             <field name="parent" ref="512"/>
         </record>
-        <record model="account.account.template" id="51260">
+        <record model="account.account.template" id="51290">
             <field name="name">Education and professional development</field>
-            <field name="code">51260</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="5126"/>
+            <field name="code">51290</field>
+            <field name="type" ref="personnel_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5129"/>
         </record>
-        <record model="account.account.template" id="51261">
+        <record model="account.account.template" id="51291">
             <field name="name">Dependent care assistance</field>
-            <field name="code">51261</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="5126"/>
+            <field name="code">51291</field>
+            <field name="type" ref="personnel_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5129"/>
+        </record>
+        <record model="account.account.template" id="51292">
+            <field name="name">Membership dues</field>
+            <field name="code">51292</field>
+            <field name="type" ref="personnel_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5129"/>
         </record>
         <record model="account.account.template" id="513">
             <field name="name">Employee recruitment</field>
