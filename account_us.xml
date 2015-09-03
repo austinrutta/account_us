@@ -3572,10 +3572,16 @@
         <record model="account.account.template" id="51292">
             <field name="name">Membership dues</field>
             <field name="code">51292</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5129"/>
+        </record>
+        <record model="account.account.template" id="512920">
+            <field name="name">Professional membership dues</field>
+            <field name="code">512920</field>
             <field name="type" ref="personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5129"/>
+            <field name="parent" ref="51292"/>
         </record>
         <record model="account.account.template" id="513">
             <field name="name">Employee recruitment</field>
@@ -4598,10 +4604,16 @@
         <record model="account.account.template" id="590">
             <field name="name">Membership dues—corporate</field>
             <field name="code">590</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="59"/>
+        </record>
+        <record model="account.account.template" id="5900">
+            <field name="name">Professional membership dues—corporate</field>
+            <field name="code">5900</field>
             <field name="type" ref="other_operating_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="59"/>
+            <field name="parent" ref="590"/>
         </record>
         <record model="account.account.template" id="591">
             <field name="name">Other operating taxes</field>
