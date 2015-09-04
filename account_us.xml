@@ -2502,6 +2502,32 @@
             <field name="kind">view</field>
             <field name="parent" ref="21"/>
         </record>
+        <record model="account.account.template" id="214">
+            <field name="name">Due to related parties</field>
+            <field name="code">214</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="21"/>
+        </record>
+        <record model="account.account.template" id="2140">
+            <field name="name">Due to officers, directors, and employees</field>
+            <field name="code">2140</field>
+            <field name="type" ref="non_trade_payables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="214"/>
+        </record>
+        <record model="account.account.template" id="2141">
+            <field name="name">Due to subsidiaries and affiliates</field>
+            <field name="code">2141</field>
+            <field name="type" ref="non_trade_payables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="214"/>
+        </record>
         <record model="account.account.template" id="219">
             <field name="name">Other payables</field>
             <field name="code">219</field>
@@ -2873,32 +2899,6 @@
             <field name="code">24</field>
             <field name="kind">view</field>
             <field name="parent" ref="2"/>
-        </record>
-        <record model="account.account.template" id="240">
-            <field name="name">Due to related parties</field>
-            <field name="code">240</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="24"/>
-        </record>
-        <record model="account.account.template" id="2400">
-            <field name="name">Due to officers, directors, and employees</field>
-            <field name="code">2400</field>
-            <field name="type" ref="other_current_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
-            <field name="parent" ref="240"/>
-        </record>
-        <record model="account.account.template" id="2401">
-            <field name="name">Due to subsidiaries and affiliates</field>
-            <field name="code">2401</field>
-            <field name="type" ref="other_current_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
-            <field name="parent" ref="240"/>
         </record>
         <record model="account.account.template" id="25">
             <field name="name">Long-term notes and loans payable</field>
