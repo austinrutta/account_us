@@ -3891,6 +3891,14 @@
             <field name="kind">expense</field>
             <field name="parent" ref="536"/>
         </record>
+        <record model="account.account.template" id="5362">
+            <field name="name">Conference recordings</field>
+            <field name="code">5362</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="536"/>
+        </record>
         <record model="account.account.template" id="54">
             <field name="name">Facilities and equipment</field>
             <field name="code">54</field>
