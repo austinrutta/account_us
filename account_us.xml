@@ -4388,7 +4388,7 @@
             <field name="parent" ref="5500"/>
         </record>
         <record model="account.account.template" id="55001">
-            <field name="name">Taxi expense—domestic</field>
+            <field name="name">Private transport expense—domestic</field>
             <field name="code">55001</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4396,7 +4396,7 @@
             <field name="parent" ref="5500"/>
         </record>
         <record model="account.account.template" id="55002">
-            <field name="name">Taxi expense—foreign</field>
+            <field name="name">Private transport expense—foreign</field>
             <field name="code">55002</field>
             <field name="type" ref="foreign_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
