@@ -3884,7 +3884,7 @@
             <field name="parent" ref="536"/>
         </record>
         <record model="account.account.template" id="5361">
-            <field name="name">Professional third-party publications</field>
+            <field name="name">Subscriptions to professional or technical publications</field>
             <field name="code">5361</field>
             <field name="type" ref="non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3892,7 +3892,7 @@
             <field name="parent" ref="536"/>
         </record>
         <record model="account.account.template" id="5362">
-            <field name="name">Conference recordings</field>
+            <field name="name">Electronic resources for professional development</field>
             <field name="code">5362</field>
             <field name="type" ref="non_personnel_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4516,7 +4516,7 @@
             <field name="parent" ref="55"/>
         </record>
         <record model="account.account.template" id="5520">
-            <field name="name">Business meals</field>
+            <field name="name">Business meals (50% deductible)</field>
             <field name="code">5520</field>
             <field name="kind">view</field>
             <field name="parent" ref="552"/>
@@ -4544,6 +4544,18 @@
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5520"/>
+        </record>
+        <record model="account.account.template" id="5521">
+            <field name="name">Employee meals (100% deductible)</field>
+            <field name="code">5521</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="552"/>
+        </record>
+        <record model="account.account.template" id="5522">
+            <field name="name">Non-business meals (0% deductible)</field>
+            <field name="code">5522</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="552"/>
         </record>
         <record model="account.account.template" id="553">
             <field name="name">Accomodations</field>
