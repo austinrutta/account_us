@@ -3584,7 +3584,7 @@
             <field name="parent" ref="51292"/>
         </record>
         <record model="account.account.template" id="51293">
-            <field name="name">De minimus food and beverages for employees</field>
+            <field name="name">De minimis food and beverages for employees</field>
             <field name="code">51293</field>
             <field name="type" ref="personnel_costs"/>
             <field name="deferral" eval="False"/>
