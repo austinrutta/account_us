@@ -3583,6 +3583,14 @@
             <field name="kind">expense</field>
             <field name="parent" ref="51292"/>
         </record>
+        <record model="account.account.template" id="51293">
+            <field name="name">De minimus food and beverages for employees</field>
+            <field name="code">51293</field>
+            <field name="type" ref="personnel_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5129"/>
+        </record>
         <record model="account.account.template" id="513">
             <field name="name">Employee recruitment</field>
             <field name="code">513</field>
@@ -4516,13 +4524,13 @@
             <field name="parent" ref="55"/>
         </record>
         <record model="account.account.template" id="5520">
-            <field name="name">Business meals (50% deductible)</field>
+            <field name="name">Business meals and entertainment (50% deductible)</field>
             <field name="code">5520</field>
             <field name="kind">view</field>
             <field name="parent" ref="552"/>
         </record>
         <record model="account.account.template" id="55200">
-            <field name="name">Business meals expense—local</field>
+            <field name="name">Business meals and entertainment expense (50% deductible)—local</field>
             <field name="code">55200</field>
             <field name="type" ref="other_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4530,7 +4538,7 @@
             <field name="parent" ref="5520"/>
         </record>
         <record model="account.account.template" id="55201">
-            <field name="name">Business meals expense—domestic</field>
+            <field name="name">Business meals and entertainment expense (50% deductible)—domestic</field>
             <field name="code">55201</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4538,7 +4546,7 @@
             <field name="parent" ref="5520"/>
         </record>
         <record model="account.account.template" id="55202">
-            <field name="name">Business meals expense—foreign</field>
+            <field name="name">Business meals and entertainment expense (50% deductible)—foreign</field>
             <field name="code">55202</field>
             <field name="type" ref="foreign_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4546,15 +4554,19 @@
             <field name="parent" ref="5520"/>
         </record>
         <record model="account.account.template" id="5521">
-            <field name="name">Employee meals (100% deductible)</field>
+            <field name="name">Expenses directly related to business meetings of employees, stockholders, directors (100% deductible)</field>
             <field name="code">5521</field>
-            <field name="kind">view</field>
+            <field name="type" ref="other_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
             <field name="parent" ref="552"/>
         </record>
         <record model="account.account.template" id="5522">
             <field name="name">Non-business meals (0% deductible)</field>
             <field name="code">5522</field>
-            <field name="kind">view</field>
+            <field name="type" ref="other_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
             <field name="parent" ref="552"/>
         </record>
         <record model="account.account.template" id="553">
