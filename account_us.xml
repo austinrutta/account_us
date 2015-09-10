@@ -4554,7 +4554,7 @@
             <field name="parent" ref="5520"/>
         </record>
         <record model="account.account.template" id="5521">
-            <field name="name">Non-deductible meals and entertainment expense</field>
+            <field name="name">Nondeductible meals and entertainment expense</field>
             <field name="code">5521</field>
             <field name="type" ref="other_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
