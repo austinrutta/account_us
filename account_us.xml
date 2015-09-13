@@ -4390,7 +4390,7 @@
             <field name="parent" ref="5"/>
         </record>
         <record model="account.account.template" id="550">
-            <field name="name">Travel</field>
+            <field name="name">Transportation</field>
             <field name="code">550</field>
             <field name="kind">view</field>
             <field name="parent" ref="55"/>
@@ -4519,50 +4519,6 @@
             <field name="kind">view</field>
             <field name="parent" ref="5501"/>
         </record>
-        <record model="account.account.template" id="5502">
-            <field name="name">Travel meals (IRC § 274(d) 50% deductible) </field>
-            <field name="code">5505</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="550"/>
-        </record>
-        <record model="account.account.template" id="55050">
-            <field name="name">Travel meals expense (IRC § 274(d) 50% deductible)—local</field>
-            <field name="code">55050</field>
-            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5505"/>
-        </record>
-        <record model="account.account.template" id="55051">
-            <field name="name">Travel meals expense (IRC § 274(d) 50% deductible)—domestic</field>
-            <field name="code">55051</field>
-            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5505"/>
-        </record>
-        <record model="account.account.template" id="55052">
-            <field name="name">Travel meals expense (IRC § 274(d) 50% deductible)—foreign</field>
-            <field name="code">55052</field>
-            <field name="type" ref="foreign_travel_and_meetings_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5505"/>
-        </record>
-        <record model="account.account.template" id="5509">
-            <field name="name">Other travel costs</field>
-            <field name="code">5509</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="550"/>
-        </record>
-        <record model="account.account.template" id="55090">
-            <field name="name">Nondeductible personal items purchased during travel</field>
-            <field name="code">55090</field>
-            <field name="type" ref="other_travel_and_meetings_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5509"/>
-        </record>
         <record model="account.account.template" id="551">
             <field name="name">Conferences, conventions, meetings</field>
             <field name="code">551</field>
@@ -4608,7 +4564,7 @@
             <field name="parent" ref="551"/>
         </record>
         <record model="account.account.template" id="552">
-            <field name="name">Entertainment (generally subject to IRC § 274)</field>
+            <field name="name">Meals</field>
             <field name="code">552</field>
             <field name="kind">view</field>
             <field name="parent" ref="55"/>
@@ -4652,24 +4608,80 @@
             <field name="parent" ref="5520"/>
         </record>
         <record model="account.account.template" id="5521">
-          <field name="name">Entertainment gifts (IRC § 274(b): up to $25 deductible per recipient per year)</field>
+            <field name="name">Travel meals (IRC § 274(d) 50% deductible)</field>
             <field name="code">5521</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="552"/>
+        </record>
+        <record model="account.account.template" id="55210">
+            <field name="name">Travel meals expense (IRC § 274(d) 50% deductible)—local</field>
+            <field name="code">55210</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5521"/>
+        </record>
+        <record model="account.account.template" id="55211">
+            <field name="name">Travel meals expense (IRC § 274(d) 50% deductible)—domestic</field>
+            <field name="code">55211</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5521"/>
+        </record>
+        <record model="account.account.template" id="55212">
+            <field name="name">Travel meals expense (IRC § 274(d) 50% deductible)—foreign</field>
+            <field name="code">55212</field>
+            <field name="type" ref="foreign_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5521"/>
+        </record>
+        <record model="account.account.template" id="55213">
+            <field name="name">Nondeductible travel meals expense</field>
+            <field name="code">55213</field>
             <field name="type" ref="other_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="552"/>
+            <field name="parent" ref="5521"/>
         </record>
         <record model="account.account.template" id="5522">
-          <field name="name">Events</field>
+            <field name="name">Conference meals (IRC § 274(d) 50% deductible)</field>
             <field name="code">5522</field>
             <field name="kind">view</field>
             <field name="parent" ref="552"/>
         </record>
-        <record model="account.account.template" id="5529">
-            <field name="name">Other entertainment-related expenses</field>
-            <field name="code">5529</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="552"/>
+        <record model="account.account.template" id="55220">
+            <field name="name">Conference meals expense (IRC § 274(d) 50% deductible)—local</field>
+            <field name="code">55220</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5522"/>
+        </record>
+        <record model="account.account.template" id="55221">
+            <field name="name">Conference meals expense (IRC § 274(d) 50% deductible)—domestic</field>
+            <field name="code">55221</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5522"/>
+        </record>
+        <record model="account.account.template" id="55222">
+            <field name="name">Conference meals expense (IRC § 274(d) 50% deductible)—foreign</field>
+            <field name="code">55222</field>
+            <field name="type" ref="foreign_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5522"/>
+        </record>
+        <record model="account.account.template" id="55223">
+            <field name="name">Nondeductible conference meals expense</field>
+            <field name="code">55223</field>
+            <field name="type" ref="other_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5522"/>
         </record>
         <record model="account.account.template" id="553">
             <field name="name">Accomodations</field>
@@ -4706,6 +4718,34 @@
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5530"/>
+        </record>
+        <record model="account.account.template" id="554">
+            <field name="name">Gifts</field>
+            <field name="code">554</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="55"/>
+        </record>
+        <record model="account.account.template" id="5540">
+            <field name="name">Entertainment gifts (IRC § 274(b): up to $25 deductible per recipient per year)</field>
+            <field name="code">5540</field>
+            <field name="type" ref="other_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="554"/>
+        </record>
+        <record model="account.account.template" id="559">
+            <field name="name">Other travel and meetings expenses</field>
+            <field name="code">559</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="55"/>
+        </record>
+        <record model="account.account.template" id="5590">
+            <field name="name">Nondeductible personal items purchased during travel</field>
+            <field name="code">5590</field>
+            <field name="type" ref="other_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="559"/>
         </record>
         <record model="account.account.template" id="58">
             <field name="name">Doubtful accounts, collections, and credit</field>
