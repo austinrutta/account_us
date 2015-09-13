@@ -3584,12 +3584,26 @@
             <field name="parent" ref="51292"/>
         </record>
         <record model="account.account.template" id="51293">
-            <field name="name">De minimis food and beverages for employees</field>
+            <field name="name">Food-related benefits</field>
             <field name="code">51293</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5129"/>
+        </record>
+        <record model="account.account.template" id="512930">
+            <field name="name">De minimis food and beverages (meals) for employees (IRC § 274(n)(1) and 132(e)(1) 100% deductible)</field>
+            <field name="code">512930</field>
             <field name="type" ref="personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5129"/>
+            <field name="parent" ref="51293"/>
+        </record>
+        <record model="account.account.template" id="512931">
+            <field name="name">Employee recreation meals (IRC § 271(e)(4) 100% deductible)</field>
+            <field name="code">512930</field>
+            <field name="type" ref="personnel_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="51293"/>
         </record>
         <record model="account.account.template" id="513">
             <field name="name">Employee recruitment</field>
@@ -4382,21 +4396,21 @@
             <field name="parent" ref="55"/>
         </record>
         <record model="account.account.template" id="5500">
-            <field name="name">Private transport</field>
+            <field name="name">Private transportation</field>
             <field name="code">5500</field>
             <field name="kind">view</field>
             <field name="parent" ref="550"/>
         </record>
         <record model="account.account.template" id="55000">
-            <field name="name">Private transport expense—local</field>
+            <field name="name">Private transportation expense—local</field>
             <field name="code">55000</field>
-            <field name="type" ref="other_travel_and_meetings_expenses"/>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5500"/>
         </record>
         <record model="account.account.template" id="55001">
-            <field name="name">Private transport expense—domestic</field>
+            <field name="name">Private transportation expense—domestic</field>
             <field name="code">55001</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4404,7 +4418,7 @@
             <field name="parent" ref="5500"/>
         </record>
         <record model="account.account.template" id="55002">
-            <field name="name">Private transport expense—foreign</field>
+            <field name="name">Private transportation expense—foreign</field>
             <field name="code">55002</field>
             <field name="type" ref="foreign_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4412,82 +4426,142 @@
             <field name="parent" ref="5500"/>
         </record>
         <record model="account.account.template" id="5501">
-            <field name="name">Airfare</field>
+            <field name="name">Public transportation</field>
             <field name="code">5501</field>
             <field name="kind">view</field>
             <field name="parent" ref="550"/>
         </record>
         <record model="account.account.template" id="55010">
-            <field name="name">Airfare expense—domestic</field>
+            <field name="name">Airfare</field>
             <field name="code">55010</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5501"/>
+        </record>
+        <record model="account.account.template" id="550100">
+            <field name="name">Airfare expense—domestic</field>
+            <field name="code">550100</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5501"/>
+            <field name="parent" ref="55010"/>
         </record>
-        <record model="account.account.template" id="55011">
+        <record model="account.account.template" id="550101">
             <field name="name">Airfare expense—foreign</field>
-            <field name="code">55011</field>
+            <field name="code">550101</field>
             <field name="type" ref="foreign_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
+            <field name="parent" ref="55010"/>
+        </record>
+        <record model="account.account.template" id="55011">
+            <field name="name">Bus and coach</field>
+            <field name="code">55011</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5501"/>
+        </record>
+        <record model="account.account.template" id="550110">
+            <field name="name">Bus and coach expense—local</field>
+            <field name="code">550110</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="55011"/>
+        </record>
+        <record model="account.account.template" id="550111">
+            <field name="name">Bus and coach expense—domestic</field>
+            <field name="code">550111</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="55011"/>
+        </record>
+        <record model="account.account.template" id="550112">
+            <field name="name">Bus and coach expense—foreign</field>
+            <field name="code">550112</field>
+            <field name="type" ref="foreign_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="55011"/>
+        </record>
+        <record model="account.account.template" id="55012">
+            <field name="name">Train</field>
+            <field name="code">55012</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5501"/>
+        </record>
+        <record model="account.account.template" id="550120">
+            <field name="name">Train fare expense—local</field>
+            <field name="code">550120</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="55012"/>
+        </record>
+        <record model="account.account.template" id="550121">
+            <field name="name">Train fare expense—domestic</field>
+            <field name="code">550121</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="55012"/>
+        </record>
+        <record model="account.account.template" id="550122">
+            <field name="name">Train fare expense—foreign</field>
+            <field name="code">550122</field>
+            <field name="type" ref="foreign_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="55012"/>
+        </record>
+        <record model="account.account.template" id="55019">
+            <field name="name">Other public transportation</field>
+            <field name="code">55019</field>
+            <field name="kind">view</field>
             <field name="parent" ref="5501"/>
         </record>
         <record model="account.account.template" id="5502">
-            <field name="name">Bus and coach</field>
-            <field name="code">5502</field>
+            <field name="name">Travel meals (IRC § 274(d) 50% deductible) </field>
+            <field name="code">5505</field>
             <field name="kind">view</field>
             <field name="parent" ref="550"/>
         </record>
-        <record model="account.account.template" id="55020">
-            <field name="name">Bus and coach expense—domestic</field>
-            <field name="code">55020</field>
+        <record model="account.account.template" id="55050">
+            <field name="name">Travel meals expense (IRC § 274(d) 50% deductible)—local</field>
+            <field name="code">55050</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5502"/>
+            <field name="parent" ref="5505"/>
         </record>
-        <record model="account.account.template" id="55021">
-            <field name="name">Bus and coach expense—foreign</field>
-            <field name="code">55021</field>
-            <field name="type" ref="foreign_travel_and_meetings_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5502"/>
-        </record>
-        <record model="account.account.template" id="5503">
-            <field name="name">Train</field>
-            <field name="code">5503</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="550"/>
-        </record>
-        <record model="account.account.template" id="55030">
-            <field name="name">Train fare expense—domestic</field>
-            <field name="code">55030</field>
+        <record model="account.account.template" id="55051">
+            <field name="name">Travel meals expense (IRC § 274(d) 50% deductible)—domestic</field>
+            <field name="code">55051</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5503"/>
+            <field name="parent" ref="5505"/>
         </record>
-        <record model="account.account.template" id="55031">
-            <field name="name">Train fare expense—foreign</field>
-            <field name="code">55031</field>
+        <record model="account.account.template" id="55052">
+            <field name="name">Travel meals expense (IRC § 274(d) 50% deductible)—foreign</field>
+            <field name="code">55052</field>
             <field name="type" ref="foreign_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5503"/>
-        </record>
-        <record model="account.account.template" id="5504">
-            <field name="name">Other public transportation</field>
-            <field name="code">5504</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="550"/>
+            <field name="parent" ref="5505"/>
         </record>
         <record model="account.account.template" id="5509">
             <field name="name">Other travel costs</field>
             <field name="code">5509</field>
             <field name="kind">view</field>
             <field name="parent" ref="550"/>
+        </record>
+        <record model="account.account.template" id="55090">
+            <field name="name">Nondeductible personal items purchased during travel</field>
+            <field name="code">55090</field>
+            <field name="type" ref="other_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5509"/>
         </record>
         <record model="account.account.template" id="551">
             <field name="name">Conferences, conventions, meetings</field>
@@ -4502,7 +4576,7 @@
             <field name="parent" ref="551"/>
         </record>
         <record model="account.account.template" id="55100">
-            <field name="name">Conference registration fees—domestic</field>
+            <field name="name">Conference registration fees—local</field>
             <field name="code">55100</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4510,15 +4584,23 @@
             <field name="parent" ref="5510"/>
         </record>
         <record model="account.account.template" id="55101">
-            <field name="name">Conference registration fees—foreign</field>
+            <field name="name">Conference registration fees—domestic</field>
             <field name="code">55101</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5510"/>
+        </record>
+        <record model="account.account.template" id="55102">
+            <field name="name">Conference registration fees—foreign</field>
+            <field name="code">55102</field>
             <field name="type" ref="foreign_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5510"/>
         </record>
         <record model="account.account.template" id="5511">
-            <field name="name">Expenses directly related to business meetings of employees, stockholders, directors</field>
+            <field name="name">Items available to the public expense</field>
             <field name="code">5511</field>
             <field name="type" ref="other_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4526,39 +4608,67 @@
             <field name="parent" ref="551"/>
         </record>
         <record model="account.account.template" id="552">
-            <field name="name">Meals and entertainment</field>
+            <field name="name">Entertainment (generally subject to IRC § 274)</field>
             <field name="code">552</field>
             <field name="kind">view</field>
             <field name="parent" ref="55"/>
         </record>
         <record model="account.account.template" id="5520">
-            <field name="name">Business meals and entertainment (IRC § 274(n) 50% deductible)</field>
+            <field name="name">Entertainment meals (IRC § 274(n) 50% deductible)</field>
             <field name="code">5520</field>
             <field name="kind">view</field>
             <field name="parent" ref="552"/>
         </record>
         <record model="account.account.template" id="55200">
-            <field name="name">Business meals and entertainment expense (50% deductible)—domestic</field>
-            <field name="code">55201</field>
+            <field name="name">Entertainment meals expense (IRC § 274(n) 50% deductible)—local</field>
+            <field name="code">55200</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5520"/>
         </record>
         <record model="account.account.template" id="55201">
-            <field name="name">Business meals and entertainment expense (50% deductible)—foreign</field>
+            <field name="name">Entertainment meals expense (IRC § 274(n) 50% deductible)—domestic</field>
             <field name="code">55201</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5520"/>
+        </record>
+        <record model="account.account.template" id="55202">
+            <field name="name">Entertainment meals expense (IRC § 274(n) 50% deductible)—foreign</field>
+            <field name="code">55202</field>
             <field name="type" ref="foreign_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5520"/>
         </record>
+        <record model="account.account.template" id="55203">
+            <field name="name">Nondeductible entertainment meals expense</field>
+            <field name="code">55203</field>
+            <field name="type" ref="other_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5520"/>
+        </record>
         <record model="account.account.template" id="5521">
-            <field name="name">Nondeductible meals and entertainment expense</field>
+          <field name="name">Entertainment gifts (IRC § 274(b): up to $25 deductible per recipient per year)</field>
             <field name="code">5521</field>
             <field name="type" ref="other_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
+            <field name="parent" ref="552"/>
+        </record>
+        <record model="account.account.template" id="5522">
+          <field name="name">Events</field>
+            <field name="code">5522</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="552"/>
+        </record>
+        <record model="account.account.template" id="5529">
+            <field name="name">Other entertainment-related expenses</field>
+            <field name="code">5529</field>
+            <field name="kind">view</field>
             <field name="parent" ref="552"/>
         </record>
         <record model="account.account.template" id="553">
@@ -4574,7 +4684,7 @@
             <field name="parent" ref="553"/>
         </record>
         <record model="account.account.template" id="55300">
-            <field name="name">Lodging expense—domestic</field>
+            <field name="name">Lodging expense—local</field>
             <field name="code">55300</field>
             <field name="type" ref="domestic_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4582,8 +4692,16 @@
             <field name="parent" ref="5530"/>
         </record>
         <record model="account.account.template" id="55301">
-            <field name="name">Lodging expense—foreign</field>
+            <field name="name">Lodging expense—domestic</field>
             <field name="code">55301</field>
+            <field name="type" ref="domestic_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5530"/>
+        </record>
+        <record model="account.account.template" id="55302">
+            <field name="name">Lodging expense—foreign</field>
+            <field name="code">55302</field>
             <field name="type" ref="foreign_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
