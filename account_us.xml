@@ -4633,6 +4633,28 @@
             <field name="kind">expense</field>
             <field name="parent" ref="551"/>
         </record>
+        <record model="account.account.template" id="5512">
+            <field name="name">Individual gifts</field>
+            <field name="code">5512</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="551"/>
+        </record>
+        <record model="account.account.template" id="55120">
+            <field name="name">Entertainment gifts (IRC § 274(b): up to $25 deductible per recipient per year)</field>
+            <field name="code">55120</field>
+            <field name="type" ref="fully_deductible_entertainment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5512"/>
+        </record>
+        <record model="account.account.template" id="55121">
+            <field name="name">Non-deductible portion of entertainment gifts (IRC § 274(b): amounts over $25 per recipient per year)</field>
+            <field name="code">55121</field>
+            <field name="type" ref="non_deductible_entertainment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5512"/>
+        </record>
         <record model="account.account.template" id="552">
             <field name="name">Meals</field>
             <field name="code">552</field>
@@ -4788,20 +4810,6 @@
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5530"/>
-        </record>
-        <record model="account.account.template" id="554">
-            <field name="name">Gifts</field>
-            <field name="code">554</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="55"/>
-        </record>
-        <record model="account.account.template" id="5540">
-            <field name="name">Entertainment gifts (IRC § 274(b): up to $25 deductible per recipient per year)</field>
-            <field name="code">5540</field>
-            <field name="type" ref="fully_deductible_entertainment_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="554"/>
         </record>
         <record model="account.account.template" id="559">
             <field name="name">Other travel and meetings expenses</field>
