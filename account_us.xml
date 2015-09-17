@@ -4648,7 +4648,7 @@
             <field name="parent" ref="5512"/>
         </record>
         <record model="account.account.template" id="55121">
-            <field name="name">Non-deductible portion of entertainment gifts (IRC § 274(b): amounts over $25 per recipient per year)</field>
+            <field name="name">Nondeductible portion of entertainment gifts (IRC § 274(b): amounts over $25 per recipient per year)</field>
             <field name="code">55121</field>
             <field name="type" ref="non_deductible_entertainment_expenses"/>
             <field name="deferral" eval="False"/>
