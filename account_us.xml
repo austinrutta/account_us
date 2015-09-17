@@ -4432,35 +4432,85 @@
             <field name="parent" ref="550"/>
         </record>
         <record model="account.account.template" id="55000">
-            <field name="name">Private transportation expense—local</field>
+            <field name="name">Personal car</field>
             <field name="code">55000</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5500"/>
+        </record>
+        <record model="account.account.template" id="550000">
+            <field name="name">Personal car transportation expense—local</field>
+            <field name="code">550000</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5500"/>
+            <field name="parent" ref="55000"/>
         </record>
-        <record model="account.account.template" id="55001">
-            <field name="name">Private transportation expense—domestic</field>
-            <field name="code">55001</field>
+        <record model="account.account.template" id="550001">
+            <field name="name">Personal car transportation expense—domestic</field>
+            <field name="code">550001</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5500"/>
+            <field name="parent" ref="55000"/>
         </record>
-        <record model="account.account.template" id="55002">
-            <field name="name">Private transportation expense—foreign</field>
-            <field name="code">55002</field>
+        <record model="account.account.template" id="550002">
+            <field name="name">Personal car transportation expense—foreign</field>
+            <field name="code">550002</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5500"/>
+            <field name="parent" ref="55000"/>
         </record>
-        <record model="account.account.template" id="55003">
-            <field name="name">Nondeductible private transportation expense</field>
-            <field name="code">55003</field>
+        <record model="account.account.template" id="550003">
+            <field name="name">Nondeductible personal car transportation expense</field>
+            <field name="code">550003</field>
             <field name="type" ref="non_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
+            <field name="parent" ref="55000"/>
+        </record>
+        <record model="account.account.template" id="55001">
+            <field name="name">Taxicab</field>
+            <field name="code">55001</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5500"/>
+        </record>
+        <record model="account.account.template" id="550010">
+            <field name="name">Taxicab expense—local</field>
+            <field name="code">550010</field>
+            <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="55001"/>
+        </record>
+        <record model="account.account.template" id="550011">
+            <field name="name">Taxicab expense—domestic</field>
+            <field name="code">550011</field>
+            <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="55001"/>
+        </record>
+        <record model="account.account.template" id="550012">
+            <field name="name">Taxicab expense—foreign</field>
+            <field name="code">550012</field>
+            <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="55001"/>
+        </record>
+        <record model="account.account.template" id="550013">
+            <field name="name">Nondeductible taxicab expense</field>
+            <field name="code">550013</field>
+            <field name="type" ref="non_deductible_travel_and_meetings_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="55001"/>
+        </record>
+        <record model="account.account.template" id="55009">
+            <field name="name">Other private transportation expenses</field>
+            <field name="code">55009</field>
+            <field name="kind">view</field>
             <field name="parent" ref="5500"/>
         </record>
         <record model="account.account.template" id="5501">
