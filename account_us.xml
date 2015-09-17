@@ -4832,13 +4832,13 @@
             <field name="parent" ref="55"/>
         </record>
         <record model="account.account.template" id="5530">
-            <field name="name">Lodging</field>
+            <field name="name">Travel lodging</field>
             <field name="code">5530</field>
             <field name="kind">view</field>
             <field name="parent" ref="553"/>
         </record>
         <record model="account.account.template" id="55300">
-            <field name="name">Lodging expense—local</field>
+            <field name="name">Travel lodging expense—local</field>
             <field name="code">55300</field>
             <field name="type" ref="non_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4846,7 +4846,7 @@
             <field name="parent" ref="5530"/>
         </record>
         <record model="account.account.template" id="55301">
-            <field name="name">Lodging expense—domestic</field>
+            <field name="name">Travel lodging expense—domestic</field>
             <field name="code">55301</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4854,7 +4854,7 @@
             <field name="parent" ref="5530"/>
         </record>
         <record model="account.account.template" id="55302">
-            <field name="name">Lodging expense—foreign</field>
+            <field name="name">Travel lodging expense—foreign</field>
             <field name="code">55302</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
