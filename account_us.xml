@@ -4438,7 +4438,7 @@
             <field name="parent" ref="5500"/>
         </record>
         <record model="account.account.template" id="550000">
-            <field name="name">Personal car transportation expense—local</field>
+            <field name="name">Personal car business transportation expense—local</field>
             <field name="code">550000</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4446,7 +4446,7 @@
             <field name="parent" ref="55000"/>
         </record>
         <record model="account.account.template" id="550001">
-            <field name="name">Personal car transportation expense—domestic</field>
+            <field name="name">Personal car business transportation expense—domestic</field>
             <field name="code">550001</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4454,7 +4454,7 @@
             <field name="parent" ref="55000"/>
         </record>
         <record model="account.account.template" id="550002">
-            <field name="name">Personal car transportation expense—foreign</field>
+            <field name="name">Personal car business transportation expense—foreign</field>
             <field name="code">550002</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4462,7 +4462,7 @@
             <field name="parent" ref="55000"/>
         </record>
         <record model="account.account.template" id="550003">
-            <field name="name">Nondeductible personal car transportation expense</field>
+            <field name="name">Nondeductible personal car business transportation expense</field>
             <field name="code">550003</field>
             <field name="type" ref="non_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4476,7 +4476,7 @@
             <field name="parent" ref="5500"/>
         </record>
         <record model="account.account.template" id="550010">
-            <field name="name">Taxicab expense—local</field>
+            <field name="name">Business taxicab expense—local</field>
             <field name="code">550010</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4484,7 +4484,7 @@
             <field name="parent" ref="55001"/>
         </record>
         <record model="account.account.template" id="550011">
-            <field name="name">Taxicab expense—domestic</field>
+            <field name="name">Business taxicab expense—domestic</field>
             <field name="code">550011</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4492,7 +4492,7 @@
             <field name="parent" ref="55001"/>
         </record>
         <record model="account.account.template" id="550012">
-            <field name="name">Taxicab expense—foreign</field>
+            <field name="name">Business taxicab expense—foreign</field>
             <field name="code">550012</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4500,7 +4500,7 @@
             <field name="parent" ref="55001"/>
         </record>
         <record model="account.account.template" id="550013">
-            <field name="name">Nondeductible taxicab expense</field>
+            <field name="name">Nondeductible business taxicab expense</field>
             <field name="code">550013</field>
             <field name="type" ref="non_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4526,7 +4526,7 @@
             <field name="parent" ref="5501"/>
         </record>
         <record model="account.account.template" id="550100">
-            <field name="name">Airfare expense—domestic</field>
+            <field name="name">Business airfare expense—domestic</field>
             <field name="code">550100</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4534,7 +4534,7 @@
             <field name="parent" ref="55010"/>
         </record>
         <record model="account.account.template" id="550101">
-            <field name="name">Airfare expense—foreign</field>
+            <field name="name">Business airfare expense—foreign</field>
             <field name="code">550101</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4542,7 +4542,7 @@
             <field name="parent" ref="55010"/>
         </record>
         <record model="account.account.template" id="550102">
-            <field name="name">Nondeductible airfare expense</field>
+            <field name="name">Nondeductible business airfare expense</field>
             <field name="code">550102</field>
             <field name="type" ref="non_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4556,7 +4556,7 @@
             <field name="parent" ref="5501"/>
         </record>
         <record model="account.account.template" id="550110">
-            <field name="name">Bus and coach expense—local</field>
+            <field name="name">Business bus and coach expense—local</field>
             <field name="code">550110</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4564,7 +4564,7 @@
             <field name="parent" ref="55011"/>
         </record>
         <record model="account.account.template" id="550111">
-            <field name="name">Bus and coach expense—domestic</field>
+            <field name="name">Business bus and coach expense—domestic</field>
             <field name="code">550111</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4572,7 +4572,7 @@
             <field name="parent" ref="55011"/>
         </record>
         <record model="account.account.template" id="550112">
-            <field name="name">Bus and coach expense—foreign</field>
+            <field name="name">Business bus and coach expense—foreign</field>
             <field name="code">550112</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4580,7 +4580,7 @@
             <field name="parent" ref="55011"/>
         </record>
         <record model="account.account.template" id="550113">
-            <field name="name">Nondeductible bus and coach expense</field>
+            <field name="name">Nondeductible business bus and coach expense</field>
             <field name="code">550113</field>
             <field name="type" ref="non_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4594,7 +4594,7 @@
             <field name="parent" ref="5501"/>
         </record>
         <record model="account.account.template" id="550120">
-            <field name="name">Train fare expense—local</field>
+            <field name="name">Business train fare expense—local</field>
             <field name="code">550120</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4602,7 +4602,7 @@
             <field name="parent" ref="55012"/>
         </record>
         <record model="account.account.template" id="550121">
-            <field name="name">Train fare expense—domestic</field>
+            <field name="name">Business train fare expense—domestic</field>
             <field name="code">550121</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4610,7 +4610,7 @@
             <field name="parent" ref="55012"/>
         </record>
         <record model="account.account.template" id="550122">
-            <field name="name">Train fare expense—foreign</field>
+            <field name="name">Business train fare expense—foreign</field>
             <field name="code">550122</field>
             <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4618,7 +4618,7 @@
             <field name="parent" ref="55012"/>
         </record>
         <record model="account.account.template" id="550123">
-            <field name="name">Nondeductible train fare expense</field>
+            <field name="name">Nondeductible business train fare expense</field>
             <field name="code">550123</field>
             <field name="type" ref="non_deductible_travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
