@@ -4705,6 +4705,44 @@
             <field name="kind">expense</field>
             <field name="parent" ref="5512"/>
         </record>
+        <record model="account.account.template" id="5513">
+            <field name="name">Business entertainment activities</field>
+            <field name="code">5513</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="551"/>
+        </record>
+        <record model="account.account.template" id="55130">
+            <field name="name">Business entertainment activity expense—local</field>
+            <field name="code">55130</field>
+            <field name="type" ref="partially_deductible_entertainment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5513"/>
+        </record>
+        <record model="account.account.template" id="55131">
+            <field name="name">Business entertainment activity expense—domestic</field>
+            <field name="code">55131</field>
+            <field name="type" ref="partially_deductible_entertainment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5513"/>
+        </record>
+        <record model="account.account.template" id="55132">
+            <field name="name">Business entertainment activity expense—foreign</field>
+            <field name="code">55132</field>
+            <field name="type" ref="partially_deductible_entertainment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5513"/>
+        </record>
+        <record model="account.account.template" id="55133">
+            <field name="name">Nondeductible business entertainment activity expense</field>
+            <field name="code">55133</field>
+            <field name="type" ref="non_deductible_entertainment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5513"/>
+        </record>
         <record model="account.account.template" id="552">
             <field name="name">Meals</field>
             <field name="code">552</field>
