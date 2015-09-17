@@ -4626,9 +4626,9 @@
             <field name="parent" ref="5510"/>
         </record>
         <record model="account.account.template" id="5511">
-            <field name="name">Conference giveaways expense</field>
+            <field name="name">Giveaways to the public expense</field>
             <field name="code">5511</field>
-            <field name="type" ref="fully_deductible_travel_and_meetings_expenses"/>
+            <field name="type" ref="fully_deductible_entertainment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="551"/>
