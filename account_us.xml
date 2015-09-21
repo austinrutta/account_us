@@ -1086,10 +1086,22 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="personnel_costs">
-            <field name="name">Personnel costs</field>
+        <record model="account.account.type.template" id="personnel">
+            <field name="name">Personnel</field>
             <field name="parent" ref="operating_expenses"/>
             <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="personnel_costs">
+            <field name="name">Deductible personnel costs</field>
+            <field name="parent" ref="personnel"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="non_deductible_personnel_costs">
+            <field name="name">Nondeductible personnel costs</field>
+            <field name="parent" ref="personnel"/>
+            <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="contract_services">
@@ -3634,6 +3646,36 @@
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="51293"/>
+        </record>
+        <record model="account.account.template" id="51294">
+            <field name="name">Employee achievement awards</field>
+            <field name="code">51294</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5129"/>
+        </record>
+        <record model="account.account.template" id="512940">
+            <field name="name">Deductible non-qualified employee achievement awards (IRC § 274(j)(2)(A) ≤ $400 per year per employee)</field>
+            <field name="code">512940</field>
+            <field name="type" ref="personnel_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="51294"/>
+        </record>
+        <record model="account.account.template" id="512941">
+            <field name="name">Deductible qualified employee achievement awards (IRC § 274(j)(2)(B) ≤ $1,600 per year per employee)</field>
+            <field name="code">512941</field>
+            <field name="type" ref="personnel_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="51294"/>
+        </record>
+        <record model="account.account.template" id="512942">
+            <field name="name">Nondeductible employee achievement awards</field>
+            <field name="code">512942</field>
+            <field name="type" ref="non_deductible_personnel_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="51294"/>
         </record>
         <record model="account.account.template" id="513">
             <field name="name">Employee recruitment</field>
