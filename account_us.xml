@@ -3654,7 +3654,7 @@
             <field name="parent" ref="5129"/>
         </record>
         <record model="account.account.template" id="512940">
-            <field name="name">Deductible non-qualified employee achievement awards (IRC § 274(j)(2)(A) ≤ $400 per year per employee)</field>
+            <field name="name">Non-qualified employee achievement awards (IRC § 274(j)(2)(A) ≤ $400 per year per employee 100% deductible)</field>
             <field name="code">512940</field>
             <field name="type" ref="personnel_costs"/>
             <field name="deferral" eval="False"/>
@@ -3662,7 +3662,7 @@
             <field name="parent" ref="51294"/>
         </record>
         <record model="account.account.template" id="512941">
-            <field name="name">Deductible qualified employee achievement awards (IRC § 274(j)(2)(B) ≤ $1,600 per year per employee)</field>
+            <field name="name">Qualified employee achievement awards (IRC § 274(j)(2)(B) ≤ $1,600 per year per employee 100% deductible)</field>
             <field name="code">512941</field>
             <field name="type" ref="personnel_costs"/>
             <field name="deferral" eval="False"/>
