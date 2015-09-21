@@ -4778,17 +4778,17 @@
             <field name="parent" ref="5513"/>
         </record>
         <record model="account.account.template" id="55133">
-            <field name="name">Nondeductible business entertainment activity expense</field>
+            <field name="name">Charitable sports event expense (organized for the primary purpose of benefitting a 501(c)(3) organization)</field>
             <field name="code">55133</field>
-            <field name="type" ref="non_deductible_entertainment_expenses"/>
+            <field name="type" ref="fully_deductible_entertainment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5513"/>
         </record>
-        <record model="account.account.template" id="55134">
-            <field name="name">Sports events organized for the primary purpose of benefitting a qualified charitable organization (a 501(c)(3))</field>
-            <field name="code">55134</field>
-            <field name="type" ref="fully_deductible_entertainment_expenses"/>
+        <record model="account.account.template" id="55139">
+            <field name="name">Nondeductible business entertainment activity expense</field>
+            <field name="code">55139</field>
+            <field name="type" ref="non_deductible_entertainment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5513"/>
