@@ -4785,6 +4785,14 @@
             <field name="kind">expense</field>
             <field name="parent" ref="5513"/>
         </record>
+        <record model="account.account.template" id="55134">
+            <field name="name">Sports events organized for the primary purpose of benefitting a qualified charitable organization (a 501(c)(3))</field>
+            <field name="code">55134</field>
+            <field name="type" ref="fully_deductible_entertainment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5513"/>
+        </record>
         <record model="account.account.template" id="552">
             <field name="name">Meals</field>
             <field name="code">552</field>
