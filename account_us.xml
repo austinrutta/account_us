@@ -5,7 +5,7 @@
 <!-- Balance sheet account types -->
 
         <record model="account.account.type.template" id="us">
-            <field name="name">Chart of Account Types (US)</field>
+            <field name="name">Chart of Account Types (US GAAP)</field>
             <field name="sequence" eval="10"/>
         </record>
         <record model="account.account.type.template" id="assets">

@@ -50,7 +50,7 @@ requires.append(get_require_version('trytond'))
 
 setup(name=name,
     version=version,
-    description='Tryton module with United States chart of accounts',
+    description='Tryton module with United States chart of accounts (US GAAP)',
     long_description=read('README'),
     author='Pentandra',
     author_email='issues@pentandra.com',

@@ -3,6 +3,32 @@ trytond_account_us
 
 The account_us module of the Tryton application platform.
 
+While the primary goal of this module is to provide a useable chart of
+accounts that a corporation could use to comply with US GAAP, some effort is
+being made to align accounts with the IFRS.
+
+This is a work in progress, so use at your own risk.
+
+Sources consulted:
+
+* http://www.dwmbeancounter.com/BCTutorSite/Courses/ChartAccounts/lesson02-6.html
+* http://www.ifrs-gaap.com/en/chart-of-accounts-us-gaap/
+* http://www.ifrs-gaap.com/en/basic-IFRS-chart-of-accounts/
+* http://www.eprentise.com/blog/designing-a-chart-of-accounts/designing-a-global-chart-of-accounts-and-taking-advantage-of-oracle-e-business-suite-release-12/
+* http://nccs.urban.org/projects/ucoa.cfm
+* https://www.sba.gov/sites/default/files/files/inv_charts_of_accounts.pdf
+* https://www.sba.gov/sites/default/files/files/inv_standards.pdf
+* https://asc.fasb.org/
+* https://www.irs.gov/publications/p15
+* https://www.irs.gov/publications/p15b
+* https://www.irs.gov/publications/p463
+* https://www.irs.gov/publications/p535
+* https://www.irs.gov/publications/p542
+
+Sources that would be good to consider more:
+
+* https://www.accountingtools.com/articles/2017/5/14/reduce-the-chart-of-accounts
+
 Installing
 ----------
 
