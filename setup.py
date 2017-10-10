@@ -56,7 +56,7 @@ setup(name=name,
     author_email='issues@pentandra.com',
     url='https://github.com/pentandra/account_us',
     download_url=download_url,
-    keywords='tryton account chart us united states english',
+    keywords='tryton account chart us gaap united states english',
     package_dir={'trytond.modules.account_us': '.'},
     packages=[
         'trytond.modules.account_us',
