@@ -1240,7 +1240,7 @@
 <!-- Accounts -->
 
         <record model="account.account.template" id="root">
-            <field name="name">Chart of Accounts (US)</field>
+            <field name="name">Chart of Accounts (US GAAP)</field>
             <field name="kind">view</field>
             <field name="type" ref="us"/>
         </record>
