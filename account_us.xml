@@ -3584,7 +3584,7 @@
             <field name="parent" ref="5129"/>
         </record>
         <record model="account.account.template" id="512930">
-            <field name="name">De minimis food and beverages (meals) for employees (IRC § 274(n)(1) and 132(e)(1) 100% deductible)</field>
+            <field name="name">De minimis food and beverages (meals) for employees (IRC § 132(e)(1) and IRC § 274(e)(1))</field>
             <field name="code">512930</field>
             <field name="type" ref="personnel_costs"/>
             <field name="deferral" eval="False"/>
@@ -3592,8 +3592,16 @@
             <field name="parent" ref="51293"/>
         </record>
         <record model="account.account.template" id="512931">
-            <field name="name">Employee recreation meals (IRC § 271(e)(4) 100% deductible)</field>
+            <field name="name">Employee recreational activities (IRC § 274(e)(4))</field>
             <field name="code">512931</field>
+            <field name="type" ref="personnel_costs"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="51293"/>
+        </record>
+        <record model="account.account.template" id="512932">
+            <field name="name">Employee (also stockholder, director, etc.) business meetings (IRC § 274(e)(5))</field>
+            <field name="code">512932</field>
             <field name="type" ref="personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
@@ -3606,7 +3614,7 @@
             <field name="parent" ref="5129"/>
         </record>
         <record model="account.account.template" id="512940">
-            <field name="name">Non-qualified employee achievement awards (IRC § 274(j)(2)(A) ≤ $400 per year per employee 100% deductible)</field>
+            <field name="name">Non-qualified employee achievement awards (IRC § 274(j)(2)(A) ≤ $400 per year per employee)</field>
             <field name="code">512940</field>
             <field name="type" ref="personnel_costs"/>
             <field name="deferral" eval="False"/>
@@ -3614,16 +3622,8 @@
             <field name="parent" ref="51294"/>
         </record>
         <record model="account.account.template" id="512941">
-            <field name="name">Qualified employee achievement awards (IRC § 274(j)(2)(B) ≤ $1,600 per year per employee 100% deductible)</field>
+            <field name="name">Qualified employee achievement awards (IRC § 274(j)(2)(B) ≤ $1,600 per year per employee)</field>
             <field name="code">512941</field>
-            <field name="type" ref="personnel_costs"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="51294"/>
-        </record>
-        <record model="account.account.template" id="512942">
-            <field name="name">Nondeductible employee achievement awards</field>
-            <field name="code">512942</field>
             <field name="type" ref="personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
@@ -4498,7 +4498,7 @@
             <field name="parent" ref="551"/>
         </record>
         <record model="account.account.template" id="5511">
-            <field name="name">Giveaways to the public expense</field>
+            <field name="name">Giveaways to the public expense (IRC § 274(n)(2)(A) and 274(e)(7))</field>
             <field name="code">5511</field>
             <field name="type" ref="entertainment_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4506,8 +4506,7 @@
             <field name="parent" ref="551"/>
         </record>
         <record model="account.account.template" id="5512">
-            <!-- (IRC § 274(b): up to $25 deductible per recipient per year) -->
-            <field name="name">Individual gifts expense</field>
+            <field name="name">Individual gifts expense (IRC § 274(b)(1): up to $25 deductible per recipient per year)</field>
             <field name="code">5512</field>
             <field name="type" ref="entertainment_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4515,7 +4514,7 @@
             <field name="parent" ref="551"/>
         </record>
         <record model="account.account.template" id="5513">
-            <field name="name">Business entertainment activity expense</field>
+            <field name="name">Business entertainment activity expense (IRC § 274(a))</field>
             <field name="code">5513</field>
             <field name="type" ref="entertainment_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4529,8 +4528,7 @@
             <field name="parent" ref="55"/>
         </record>
         <record model="account.account.template" id="5520">
-            <!--  (IRC § 274(n) 50% deductible) -->
-            <field name="name">Entertainment meals expense</field>
+            <field name="name">Entertainment meals expense (IRC § 274(n) 50% deductible)</field>
             <field name="code">5520</field>
             <field name="type" ref="entertainment_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4538,18 +4536,8 @@
             <field name="parent" ref="552"/>
         </record>
         <record model="account.account.template" id="5521">
-            <!--  (IRC § 274(d) 50% deductible) -->
-            <field name="name">Travel meals expense</field>
+            <field name="name">Travel meals expense (IRC § 274(d)(1) 50% deductible)</field>
             <field name="code">5521</field>
-            <field name="type" ref="travel_and_meetings_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="552"/>
-        </record>
-        <record model="account.account.template" id="5522">
-            <!--  (IRC § 274(d) 50% deductible) -->
-            <field name="name">Conference meals expense</field>
-            <field name="code">5522</field>
             <field name="type" ref="travel_and_meetings_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
