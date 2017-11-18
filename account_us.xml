@@ -24,24 +24,134 @@
             <field name="sequence" eval="10"/>
             <field name="parent" ref="current_assets"/>
         </record>
+        <record model="account.account.type.template" id="cash">
+            <field name="name">Cash</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="cash_and_cash_equivalents"/>
+        </record>
+        <record model="account.account.type.template" id="cash_equivalents">
+            <field name="name">Cash equivalents</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="cash_and_cash_equivalents"/>
+        </record>
+        <record model="account.account.type.template" id="restricted_cash">
+            <field name="name">Restricted cash and investments</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="cash_and_cash_equivalents"/>
+        </record>
         <record model="account.account.type.template" id="short_term_investments">
             <field name="name">Short-term investments (held for trading)</field>
             <field name="sequence" eval="20"/>
             <field name="parent" ref="current_assets"/>
+        </record>
+        <record model="account.account.type.template" id="marketable_securities">
+            <field name="name">Marketable securities</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="short_term_investments"/>
+        </record>
+        <record model="account.account.type.template" id="derivatives">
+            <field name="name">Derivatives</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="short_term_investments"/>
+        </record>
+        <record model="account.account.type.template" id="other_short_term_investments">
+            <field name="name">Other short-term investments</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="short_term_investments"/>
         </record>
         <record model="account.account.type.template" id="receivables">
             <field name="name">Operating receivables</field>
             <field name="sequence" eval="30"/>
             <field name="parent" ref="current_assets"/>
         </record>
+        <record model="account.account.type.template" id="trade_receivables">
+            <field name="name">Trade receivables</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="receivables"/>
+        </record>
+        <record model="account.account.type.template" id="accounts_receivables">
+            <field name="name">Trade accounts receivables</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="trade_receivables"/>
+        </record>
+        <record model="account.account.type.template" id="accounts_receivables_from_related_parties">
+            <field name="name">Trade accounts receivables from related parties</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="trade_receivables"/>
+        </record>
+        <record model="account.account.type.template" id="other_trade_receivables">
+            <field name="name">Other trade receivables</field>
+            <field name="sequence" eval="90"/>
+            <field name="parent" ref="trade_receivables"/>
+        </record>
+        <record model="account.account.type.template" id="non_trade_receivables">
+            <field name="name">Nontrade receivables</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="receivables"/>
+        </record>
+        <record model="account.account.type.template" id="other_receivables">
+            <field name="name">Other operating receivables</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="receivables"/>
+        </record>
         <record model="account.account.type.template" id="inventories">
             <field name="name">Inventories</field>
             <field name="sequence" eval="40"/>
             <field name="parent" ref="current_assets"/>
         </record>
+        <record model="account.account.type.template" id="raw_materials">
+            <field name="name">Raw materials and other supplies</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="inventories"/>
+        </record>
+        <record model="account.account.type.template" id="goods_in_process">
+            <field name="name">Goods in process</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="inventories"/>
+        </record>
+        <record model="account.account.type.template" id="intermediate_and_finished_goods">
+            <field name="name">Intermediate and finished goods</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="inventories"/>
+        </record>
+        <record model="account.account.type.template" id="merchandise">
+            <field name="name">Merchandise</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="inventories"/>
+        </record>
         <record model="account.account.type.template" id="accrued_and_deferred_assets">
             <field name="name">Accrued and deferred assets</field>
             <field name="sequence" eval="50"/>
+            <field name="parent" ref="current_assets"/>
+        </record>
+        <record model="account.account.type.template" id="prepaid_expenses">
+            <field name="name">Prepaid expenses</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="accrued_and_deferred_assets"/>
+        </record>
+        <record model="account.account.type.template" id="returnable_deposits">
+            <field name="name">Returnable deposits</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="accrued_and_deferred_assets"/>
+        </record>
+        <record model="account.account.type.template" id="accrued_revenues">
+            <field name="name">Accrued revenues</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="accrued_and_deferred_assets"/>
+        </record>
+        <record model="account.account.type.template" id="deferred_costs">
+            <field name="name">Deferred costs</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="accrued_and_deferred_assets"/>
+        </record>
+        <record model="account.account.type.template" id="other_accrued_and_deferred_assets">
+            <field name="name">Other accrued and deferred assets</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="accrued_and_deferred_assets"/>
+        </record>
+        <record model="account.account.type.template" id="other_current_assets">
+            <field name="name">Other current assets</field>
+            <field name="sequence" eval="60"/>
             <field name="parent" ref="current_assets"/>
         </record>
         <record model="account.account.type.template" id="non_current_assets">
@@ -53,6 +163,31 @@
             <field name="name">Investment securities (available-for-sale or held-to-maturity)</field>
             <field name="sequence" eval="10"/>
             <field name="parent" ref="non_current_assets"/>
+        </record>
+        <record model="account.account.type.template" id="long_term_marketable_securities">
+            <field name="name">Marketable securities</field>
+            <field name="sequence" eval="10"/>
+            <field name="parent" ref="investment_securities"/>
+        </record>
+        <record model="account.account.type.template" id="investments_in_related_parties">
+            <field name="name">Investments in associates and other related parties</field>
+            <field name="sequence" eval="20"/>
+            <field name="parent" ref="investment_securities"/>
+        </record>
+        <record model="account.account.type.template" id="loans_and_receivables_as_investments">
+            <field name="name">Loans and receivables classified as investments</field>
+            <field name="sequence" eval="30"/>
+            <field name="parent" ref="investment_securities"/>
+        </record>
+        <record model="account.account.type.template" id="derivative_instruments">
+            <field name="name">Derivative instruments</field>
+            <field name="sequence" eval="40"/>
+            <field name="parent" ref="investment_securities"/>
+        </record>
+        <record model="account.account.type.template" id="other_long_term_investments">
+            <field name="name">Other non-current investments</field>
+            <field name="sequence" eval="50"/>
+            <field name="parent" ref="investment_securities"/>
         </record>
         <record model="account.account.type.template" id="tangible_assets">
             <field name="name">Tangible assets</field>
@@ -422,14 +557,14 @@
         </record>
         <record model="account.account.type.template" id="stock_subscriptions_receivables">
             <field name="name">Stock subscriptions receivables</field>
-            <field name="parent" ref="contributed_capital"/>
             <field name="sequence" eval="40"/>
+            <field name="parent" ref="contributed_capital"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="donated_capital">
             <field name="name">Donated capital</field>
-            <field name="parent" ref="contributed_capital"/>
             <field name="sequence" eval="50"/>
+            <field name="parent" ref="contributed_capital"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="earned_capital">
@@ -896,7 +1031,7 @@
         <record model="account.account.template" id="10010">
             <field name="name">Cash to be deposited in the bank</field>
             <field name="code">10010</field>
-            <field name="type" ref="cash_and_cash_equivalents"/>
+            <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="reconcile" eval="True"/>
@@ -905,7 +1040,7 @@
         <record model="account.account.template" id="10011">
             <field name="name">Cash withdrawn from the bank</field>
             <field name="code">10011</field>
-            <field name="type" ref="cash_and_cash_equivalents"/>
+            <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="reconcile" eval="True"/>
@@ -926,7 +1061,7 @@
         <record model="account.account.template" id="1020">
             <field name="name">General checking account</field>
             <field name="code">1020</field>
-            <field name="type" ref="cash_and_cash_equivalents"/>
+            <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="102"/>
@@ -934,7 +1069,7 @@
         <record model="account.account.template" id="1021">
             <field name="name">Payroll checking account</field>
             <field name="code">1021</field>
-            <field name="type" ref="cash_and_cash_equivalents"/>
+            <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="102"/>
@@ -966,7 +1101,7 @@
         <record model="account.account.template" id="110">
             <field name="name">Certificates of deposit</field>
             <field name="code">110</field>
-            <field name="type" ref="short_term_investments"/>
+            <field name="type" ref="marketable_securities"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="11"/>
@@ -974,7 +1109,7 @@
         <record model="account.account.template" id="111">
             <field name="name">Stocks</field>
             <field name="code">111</field>
-            <field name="type" ref="short_term_investments"/>
+            <field name="type" ref="marketable_securities"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="11"/>
@@ -982,7 +1117,7 @@
         <record model="account.account.template" id="112">
             <field name="name">Bonds</field>
             <field name="code">112</field>
-            <field name="type" ref="short_term_investments"/>
+            <field name="type" ref="marketable_securities"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="11"/>
@@ -1014,7 +1149,7 @@
         <record model="account.account.template" id="1200">
             <field name="name">Trade accounts receivable</field>
             <field name="code">1200</field>
-            <field name="type" ref="receivables"/>
+            <field name="type" ref="accounts_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1024,7 +1159,7 @@
         <record model="account.account.template" id="1201">
             <field name="name">Trade accounts receivable from related parties</field>
             <field name="code">1201</field>
-            <field name="type" ref="receivables"/>
+            <field name="type" ref="accounts_receivables_from_related_parties"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1034,7 +1169,7 @@
         <record model="account.account.template" id="1202">
             <field name="name">Trade notes receivable and current principal portion of long-term trade notes</field>
             <field name="code">1202</field>
-            <field name="type" ref="receivables"/>
+            <field name="type" ref="other_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1050,7 +1185,7 @@
         <record model="account.account.template" id="12090">
             <field name="name">Allowance for doubtful accounts (−)</field>
             <field name="code">12090</field>
-            <field name="type" ref="receivables"/>
+            <field name="type" ref="accounts_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1060,7 +1195,7 @@
         <record model="account.account.template" id="121">
             <field name="name">Nontrade notes receivable and current principal portion of long-term nontrade notes</field>
             <field name="code">121</field>
-            <field name="type" ref="receivables"/>
+            <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1070,7 +1205,7 @@
         <record model="account.account.template" id="122">
             <field name="name">Interest receivable</field>
             <field name="code">122</field>
-            <field name="type" ref="receivables"/>
+            <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1086,7 +1221,7 @@
         <record model="account.account.template" id="1230">
             <field name="name">Due from officers, directors and employees</field>
             <field name="code">1230</field>
-            <field name="type" ref="receivables"/>
+            <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1096,7 +1231,7 @@
         <record model="account.account.template" id="1231">
             <field name="name">Due from subsidiaries and affliates</field>
             <field name="code">1231</field>
-            <field name="type" ref="receivables"/>
+            <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1112,7 +1247,7 @@
         <record model="account.account.template" id="1270">
             <field name="name">Dividends receivable</field>
             <field name="code">1270</field>
-            <field name="type" ref="receivables"/>
+            <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1128,7 +1263,7 @@
         <record model="account.account.template" id="12710">
             <field name="name">Short-term loans receivable and current principal portion of long-term loans receivable from officers or directors</field>
             <field name="code">12710</field>
-            <field name="type" ref="receivables"/>
+            <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1138,7 +1273,7 @@
         <record model="account.account.template" id="12711">
             <field name="name">Short-term loans receivable and current principal portion of long-term loans receivable from employees</field>
             <field name="code">12711</field>
-            <field name="type" ref="receivables"/>
+            <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1148,7 +1283,7 @@
         <record model="account.account.template" id="128">
             <field name="name">Unapplied payments</field>
             <field name="code">128</field>
-            <field name="type" ref="receivables"/>
+            <field name="type" ref="other_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <!-- In case we don't know who the payor is -->
@@ -1177,7 +1312,7 @@
         <record model="account.account.template" id="1400">
             <field name="name">Prepaid insurance expense</field>
             <field name="code">1400</field>
-            <field name="type" ref="accrued_and_deferred_assets"/>
+            <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="140"/>
@@ -1185,7 +1320,7 @@
         <record model="account.account.template" id="1401">
             <field name="name">Prepaid rent expense</field>
             <field name="code">1401</field>
-            <field name="type" ref="accrued_and_deferred_assets"/>
+            <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="140"/>
@@ -1193,7 +1328,7 @@
         <record model="account.account.template" id="1402">
             <field name="name">Prepaid interest expense</field>
             <field name="code">1402</field>
-            <field name="type" ref="accrued_and_deferred_assets"/>
+            <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="140"/>
@@ -1207,7 +1342,7 @@
         <record model="account.account.template" id="14030">
             <field name="name">Advances to officers, directors, and employees</field>
             <field name="code">14030</field>
-            <field name="type" ref="accrued_and_deferred_assets"/>
+            <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1217,7 +1352,7 @@
         <record model="account.account.template" id="14031">
             <field name="name">Advances to subsidiaries and affiliates</field>
             <field name="code">14031</field>
-            <field name="type" ref="accrued_and_deferred_assets"/>
+            <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1227,7 +1362,7 @@
         <record model="account.account.template" id="1404">
             <field name="name">Prepaid travel and accomodations expense</field>
             <field name="code">1404</field>
-            <field name="type" ref="accrued_and_deferred_assets"/>
+            <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="140"/>
@@ -1235,7 +1370,7 @@
         <record model="account.account.template" id="1405">
             <field name="name">Prepaid conference expense</field>
             <field name="code">1405</field>
-            <field name="type" ref="accrued_and_deferred_assets"/>
+            <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="140"/>
@@ -1243,7 +1378,7 @@
         <record model="account.account.template" id="1409">
             <field name="name">Prepaid other expense</field>
             <field name="code">1409</field>
-            <field name="type" ref="accrued_and_deferred_assets"/>
+            <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="140"/>
@@ -1251,21 +1386,21 @@
         <record model="account.account.template" id="141">
             <field name="name">Returnable deposits</field>
             <field name="code">141</field>
-            <field name="type" ref="accrued_and_deferred_assets"/>
+            <field name="type" ref="returnable_deposits"/>
             <field name="kind">view</field>
             <field name="parent" ref="14"/>
         </record>
         <record model="account.account.template" id="142">
             <field name="name">Accrued revenue</field>
             <field name="code">142</field>
-            <field name="type" ref="accrued_and_deferred_assets"/>
+            <field name="type" ref="accrued_revenues"/>
             <field name="kind">view</field>
             <field name="parent" ref="14"/>
         </record>
         <record model="account.account.template" id="143">
             <field name="name">Deferred costs</field>
             <field name="code">143</field>
-            <field name="type" ref="accrued_and_deferred_assets"/>
+            <field name="type" ref="deferred_costs"/>
             <field name="kind">view</field>
             <field name="parent" ref="14"/>
         </record>
@@ -1296,7 +1431,7 @@
         <record model="account.account.template" id="1500">
             <field name="name">Long-term marketable securities</field>
             <field name="code">1500</field>
-            <field name="type" ref="investment_securities"/>
+            <field name="type" ref="long_term_marketable_securities"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="150"/>
@@ -1304,7 +1439,7 @@
         <record model="account.account.template" id="1501">
             <field name="name">Investments in associates and other related parties</field>
             <field name="code">1501</field>
-            <field name="type" ref="investment_securities"/>
+            <field name="type" ref="investments_in_related_parties"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="150"/>
@@ -1318,14 +1453,14 @@
         <record model="account.account.template" id="1510">
             <field name="name">Long-term loans</field>
             <field name="code">1510</field>
-            <field name="type" ref="investment_securities"/>
+            <field name="type" ref="loans_and_receivables_as_investments"/>
             <field name="kind">view</field>
             <field name="parent" ref="151"/>
         </record>
         <record model="account.account.template" id="15100">
             <field name="name">Long-term loans receivable from officers or directors</field>
             <field name="code">15100</field>
-            <field name="type" ref="investment_securities"/>
+            <field name="type" ref="loans_and_receivables_as_investments"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1335,7 +1470,7 @@
         <record model="account.account.template" id="15101">
             <field name="name">Long-term loans receivable from employees</field>
             <field name="code">15101</field>
-            <field name="type" ref="investment_securities"/>
+            <field name="type" ref="loans_and_receivables_as_investments"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
@@ -1345,14 +1480,14 @@
         <record model="account.account.template" id="152">
             <field name="name">Derivative instruments</field>
             <field name="code">152</field>
-            <field name="type" ref="investment_securities"/>
+            <field name="type" ref="derivative_instruments"/>
             <field name="kind">view</field>
             <field name="parent" ref="15"/>
         </record>
         <record model="account.account.template" id="159">
             <field name="name">Other long-term investments</field>
             <field name="code">159</field>
-            <field name="type" ref="investment_securities"/>
+            <field name="type" ref="other_long_term_investments"/>
             <field name="kind">view</field>
             <field name="parent" ref="15"/>
         </record>
