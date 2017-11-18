@@ -756,6 +756,30 @@
             <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="revaluations_of_tangible_assets">
+            <field name="name">Revaluations of tangible assets</field>
+            <field name="parent" ref="asset_revaluations"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="revaluations_of_intangible_assets">
+            <field name="name">Revaluations of intangible assets</field>
+            <field name="parent" ref="asset_revaluations"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="revaluations_of_financial_assets">
+            <field name="name">Revaluations of financial assets</field>
+            <field name="parent" ref="asset_revaluations"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="revaluations_of_inventories">
+            <field name="name">Revaluations of inventories</field>
+            <field name="parent" ref="asset_revaluations"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="reclassification_adjustments">
             <field name="name">Reclassification adjustments</field>
             <field name="parent" ref="other_comprehensive_income"/>
@@ -798,6 +822,24 @@
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="current_income_tax_expense">
+            <field name="name">Current income tax expense</field>
+            <field name="parent" ref="income_tax_expense"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="deferred_income_tax_expense">
+            <field name="name">Deferred income tax expense</field>
+            <field name="parent" ref="income_tax_expense"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_income_tax_expense">
+            <field name="name">Other income tax expense</field>
+            <field name="parent" ref="income_tax_expense"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="income_from_associates">
             <field name="name">Income (loss) from associates, net of tax</field>
             <field name="parent" ref="income_from_continuing_operations"/>
@@ -828,10 +870,64 @@
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="gains_on_financial_instruments">
+            <field name="name">Gains on valuation of financial instruments</field>
+            <field name="parent" ref="non_operating_gains"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="gains_on_foreign_currency_transactions">
+            <field name="name">Gains on foreign currency transactions</field>
+            <field name="parent" ref="non_operating_gains"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="gains_on_disposal_of_assets">
+            <field name="name">Gains on the disposal of assets</field>
+            <field name="parent" ref="non_operating_gains"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_non_operating_gains">
+            <field name="name">Other non-operating gains</field>
+            <field name="parent" ref="non_operating_gains"/>
+            <field name="sequence" eval="50"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="non_operating_losses">
             <field name="name">Non-operating losses</field>
             <field name="parent" ref="non_operating_income"/>
             <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="losses_on_financial_instruments">
+            <field name="name">Losses on valuations of financial instruments</field>
+            <field name="parent" ref="non_operating_losses"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="losses_on_foreign_currency_transactions">
+            <field name="name">Losses on foreign currency transactions</field>
+            <field name="parent" ref="non_operating_losses"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="losses_on_disposal_of_assets">
+            <field name="name">Losses on the disposal of assets</field>
+            <field name="parent" ref="non_operating_losses"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="casualty_losses">
+            <field name="name">Casualty losses</field>
+            <field name="parent" ref="non_operating_losses"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_non_operating_losses">
+            <field name="name">Other non-operating losses</field>
+            <field name="parent" ref="non_operating_losses"/>
+            <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="non_operating_revenues">
@@ -840,10 +936,70 @@
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="interest_revenues">
+            <field name="name">Interest revenues</field>
+            <field name="parent" ref="non_operating_revenues"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="dividend_revenues">
+            <field name="name">Dividend revenues</field>
+            <field name="parent" ref="non_operating_revenues"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="rent_revenues">
+            <field name="name">Rent revenues</field>
+            <field name="parent" ref="non_operating_revenues"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="crowdfunding_campaigns">
+            <field name="name">Crowdfunding campaigns</field>
+            <field name="parent" ref="non_operating_revenues"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="grants_and_donations_received">
+            <field name="name">Grants and donations received</field>
+            <field name="parent" ref="non_operating_revenues"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_non_operating_revenues">
+            <field name="name">Other non-operating revenues</field>
+            <field name="parent" ref="non_operating_revenues"/>
+            <field name="sequence" eval="90"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="non_operating_expenses">
             <field name="name">Non-operating expenses</field>
             <field name="parent" ref="non_operating_income"/>
             <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="financing_expenses">
+            <field name="name">Financing expenses</field>
+            <field name="parent" ref="non_operating_expenses"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="crowdfunding_kickbacks">
+            <field name="name">Crowdfunding kickbacks</field>
+            <field name="parent" ref="non_operating_expenses"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="grants_and_donations_given">
+            <field name="name">Grants and donations given</field>
+            <field name="parent" ref="non_operating_expenses"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_non_operating_expenses">
+            <field name="name">Other non-operating expenses</field>
+            <field name="parent" ref="non_operating_expenses"/>
+            <field name="sequence" eval="90"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="operating_income">
@@ -918,6 +1074,12 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="costs_of_services_personnel_costs">
+            <field name="name">Personnel costs</field>
+            <field name="parent" ref="cost_of_services_rendered"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="operating_expenses">
             <field name="name">Operating expenses</field>
             <field name="parent" ref="operating_income"/>
@@ -936,16 +1098,58 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="professional_services">
+            <field name="name">Professional services</field>
+            <field name="parent" ref="contract_services"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="financial_services">
+            <field name="name">Financial services</field>
+            <field name="parent" ref="contract_services"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_contract_services">
+            <field name="name">Other contract services</field>
+            <field name="parent" ref="contract_services"/>
+            <field name="sequence" eval="90"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="non_personnel_expenses">
             <field name="name">Nonpersonnel expenses</field>
             <field name="parent" ref="operating_expenses"/>
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="materials_and_supplies">
+            <field name="name">Materials and supplies</field>
+            <field name="parent" ref="non_personnel_expenses"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="advertising_and_promotional_materials_expenses">
             <field name="name">Advertising and promotional materials</field>
             <field name="parent" ref="operating_expenses"/>
             <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="producing_advertising_expenses">
+            <field name="name">Producing advertising</field>
+            <field name="parent" ref="advertising_and_promotional_materials_expenses"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="communicating_advertising_expenses">
+            <field name="name">Communicating advertising</field>
+            <field name="parent" ref="advertising_and_promotional_materials_expenses"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="other_promotional_materials_expenses">
+            <field name="name">Other promotional materials</field>
+            <field name="parent" ref="advertising_and_promotional_materials_expenses"/>
+            <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="facilities_and_equipment_expenses">
@@ -3454,7 +3658,7 @@
         <record model="account.account.template" id="5200">
             <field name="name">Attorney’s fees</field>
             <field name="code">5200</field>
-            <field name="type" ref="contract_services"/>
+            <field name="type" ref="professional_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="520"/>
@@ -3462,7 +3666,7 @@
         <record model="account.account.template" id="5201">
             <field name="name">Legal documents</field>
             <field name="code">5201</field>
-            <field name="type" ref="contract_services"/>
+            <field name="type" ref="professional_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="520"/>
@@ -3476,7 +3680,7 @@
         <record model="account.account.template" id="5210">
             <field name="name">Financial accounting expense</field>
             <field name="code">5210</field>
-            <field name="type" ref="contract_services"/>
+            <field name="type" ref="professional_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="521"/>
@@ -3484,7 +3688,7 @@
         <record model="account.account.template" id="5211">
             <field name="name">Tax accounting and return preparation expense</field>
             <field name="code">5211</field>
-            <field name="type" ref="contract_services"/>
+            <field name="type" ref="professional_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="521"/>
@@ -3504,7 +3708,7 @@
         <record model="account.account.template" id="5230">
             <field name="name">Bank account maintenance charges</field>
             <field name="code">5230</field>
-            <field name="type" ref="contract_services"/>
+            <field name="type" ref="financial_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="523"/>
@@ -3524,7 +3728,7 @@
         <record model="account.account.template" id="523100">
             <field name="name">Credit card service charges—Mastercard and Visa</field>
             <field name="code">523100</field>
-            <field name="type" ref="contract_services"/>
+            <field name="type" ref="financial_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="52310"/>
@@ -3532,7 +3736,7 @@
         <record model="account.account.template" id="523101">
             <field name="name">Credit card service charges—AMEX</field>
             <field name="code">523101</field>
-            <field name="type" ref="contract_services"/>
+            <field name="type" ref="financial_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="52310"/>
@@ -3540,7 +3744,7 @@
         <record model="account.account.template" id="523102">
             <field name="name">Credit card service charges—Discover</field>
             <field name="code">523102</field>
-            <field name="type" ref="contract_services"/>
+            <field name="type" ref="financial_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="52310"/>
@@ -3548,7 +3752,7 @@
         <record model="account.account.template" id="52311">
             <field name="name">Debit card and ATM service charges</field>
             <field name="code">52311</field>
-            <field name="type" ref="contract_services"/>
+            <field name="type" ref="financial_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5231"/>
@@ -3556,7 +3760,7 @@
         <record model="account.account.template" id="5232">
             <field name="name">Wiring fees—operating</field>
             <field name="code">5232</field>
-            <field name="type" ref="contract_services"/>
+            <field name="type" ref="financial_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="523"/>
@@ -3570,7 +3774,7 @@
         <record model="account.account.template" id="5250">
             <field name="name">Graphic design</field>
             <field name="code">5250</field>
-            <field name="type" ref="contract_services"/>
+            <field name="type" ref="other_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="525"/>
@@ -3578,7 +3782,7 @@
         <record model="account.account.template" id="5251">
             <field name="name">Photography</field>
             <field name="code">5251</field>
-            <field name="type" ref="contract_services"/>
+            <field name="type" ref="other_contract_services"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="525"/>
@@ -3604,7 +3808,7 @@
         <record model="account.account.template" id="5300">
             <field name="name">Packaging, wrapping, and containers</field>
             <field name="code">5300</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="materials_and_supplies"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="530"/>
@@ -3612,7 +3816,7 @@
         <record model="account.account.template" id="5308">
             <field name="name">Inventory and use taxes</field>
             <field name="code">5308</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="materials_and_supplies"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="530"/>
@@ -3626,7 +3830,7 @@
         <record model="account.account.template" id="53090">
             <field name="name">Janitorial supplies</field>
             <field name="code">53090</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="materials_and_supplies"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5309"/>
@@ -4540,7 +4744,7 @@
         <record model="account.account.template" id="6010">
             <field name="name">Gain on foreign currency transactions</field>
             <field name="code">6010</field>
-            <field name="type" ref="non_operating_gains"/>
+            <field name="type" ref="gains_on_foreign_currency_transactions"/>
             <field name="deferral" eval="False"/>
             <field name="kind">other</field>
             <field name="parent" ref="601"/>
@@ -4548,7 +4752,7 @@
         <record model="account.account.template" id="6011">
             <field name="name">Loss on foreign currency transactions (−)</field>
             <field name="code">6011</field>
-            <field name="type" ref="non_operating_losses"/>
+            <field name="type" ref="losses_on_foreign_currency_transactions"/>
             <field name="deferral" eval="False"/>
             <field name="kind">other</field>
             <field name="parent" ref="601"/>
@@ -4694,7 +4898,7 @@
         <record model="account.account.template" id="6100">
             <field name="name">Interest revenue</field>
             <field name="code">6100</field>
-            <field name="type" ref="non_operating_revenues"/>
+            <field name="type" ref="interest_revenues"/>
             <field name="deferral" eval="False"/>
             <field name="kind">revenue</field>
             <field name="parent" ref="610"/>
@@ -4702,7 +4906,7 @@
         <record model="account.account.template" id="6101">
             <field name="name">Dividend revenue</field>
             <field name="code">6101</field>
-            <field name="type" ref="non_operating_revenues"/>
+            <field name="type" ref="dividend_revenues"/>
             <field name="deferral" eval="False"/>
             <field name="kind">revenue</field>
             <field name="parent" ref="610"/>
@@ -4752,7 +4956,7 @@
         <record model="account.account.template" id="61310">
             <field name="name">Individual or small business donations</field>
             <field name="code">61310</field>
-            <field name="type" ref="non_operating_revenues"/>
+            <field name="type" ref="grants_and_donations_received"/>
             <field name="deferral" eval="False"/>
             <field name="kind">revenue</field>
             <field name="parent" ref="6131"/>
@@ -4760,7 +4964,7 @@
         <record model="account.account.template" id="61311">
             <field name="name">Corporate donations</field>
             <field name="code">61311</field>
-            <field name="type" ref="non_operating_revenues"/>
+            <field name="type" ref="grants_and_donations_received"/>
             <field name="deferral" eval="False"/>
             <field name="kind">revenue</field>
             <field name="parent" ref="6131"/>
@@ -4774,7 +4978,7 @@
         <record model="account.account.template" id="6190">
             <field name="name">Insurance proceeds received</field>
             <field name="code">6190</field>
-            <field name="type" ref="non_operating_revenues"/>
+            <field name="type" ref="other_non_operating_revenues"/>
             <field name="deferral" eval="False"/>
             <field name="kind">revenue</field>
             <field name="parent" ref="619"/>
@@ -4800,7 +5004,7 @@
         <record model="account.account.template" id="6200">
             <field name="name">Interest expense</field>
             <field name="code">6200</field>
-            <field name="type" ref="non_operating_expenses"/>
+            <field name="type" ref="financing_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="620"/>
@@ -4808,7 +5012,7 @@
         <record model="account.account.template" id="6201">
             <field name="name">Debt issuance costs</field>
             <field name="code">6201</field>
-            <field name="type" ref="non_operating_expenses"/>
+            <field name="type" ref="financing_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="620"/>
@@ -4816,7 +5020,7 @@
         <record model="account.account.template" id="6202">
             <field name="name">Wiring fees—non-operating</field>
             <field name="code">6202</field>
-            <field name="type" ref="non_operating_expenses"/>
+            <field name="type" ref="financing_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="620"/>
@@ -4830,7 +5034,7 @@
         <record model="account.account.template" id="62090">
             <field name="name">Stock trading fees</field>
             <field name="code">62090</field>
-            <field name="type" ref="non_operating_expenses"/>
+            <field name="type" ref="financing_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="6209"/>
@@ -4868,7 +5072,7 @@
         <record model="account.account.template" id="6290">
             <field name="name">Auditing expense</field>
             <field name="code">6290</field>
-            <field name="type" ref="non_operating_expenses"/>
+            <field name="type" ref="other_non_operating_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="629"/>
@@ -4888,7 +5092,7 @@
         <record model="account.account.template" id="700">
             <field name="name">Current federal income tax expense</field>
             <field name="code">700</field>
-            <field name="type" ref="income_tax_expense"/>
+            <field name="type" ref="current_income_tax_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="70"/>
@@ -4896,7 +5100,7 @@
         <record model="account.account.template" id="701">
             <field name="name">Current state and local income tax expense</field>
             <field name="code">701</field>
-            <field name="type" ref="income_tax_expense"/>
+            <field name="type" ref="current_income_tax_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="70"/>
@@ -4904,7 +5108,7 @@
         <record model="account.account.template" id="702">
             <field name="name">Current foreign income tax expense</field>
             <field name="code">702</field>
-            <field name="type" ref="income_tax_expense"/>
+            <field name="type" ref="current_income_tax_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="70"/>
@@ -4918,7 +5122,7 @@
         <record model="account.account.template" id="710">
             <field name="name">Deferred federal income tax expense</field>
             <field name="code">710</field>
-            <field name="type" ref="income_tax_expense"/>
+            <field name="type" ref="deferred_income_tax_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="71"/>
@@ -4926,7 +5130,7 @@
         <record model="account.account.template" id="711">
             <field name="name">Deferred state and local income tax expense</field>
             <field name="code">711</field>
-            <field name="type" ref="income_tax_expense"/>
+            <field name="type" ref="deferred_income_tax_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="71"/>
@@ -4934,7 +5138,7 @@
         <record model="account.account.template" id="712">
             <field name="name">Deferred foreign income tax expense</field>
             <field name="code">712</field>
-            <field name="type" ref="income_tax_expense"/>
+            <field name="type" ref="deferred_income_tax_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="71"/>
@@ -5025,28 +5229,28 @@
         <record model="account.account.template" id="940">
             <field name="name">Revaluations of tangible assets</field>
             <field name="code">940</field>
-            <field name="type" ref="asset_revaluations"/>
+            <field name="type" ref="revaluations_of_tangible_assets"/>
             <field name="kind">view</field>
             <field name="parent" ref="94"/>
         </record>
         <record model="account.account.template" id="941">
             <field name="name">Revaluations of intangible assets</field>
             <field name="code">941</field>
-            <field name="type" ref="asset_revaluations"/>
+            <field name="type" ref="revaluations_of_intangible_assets"/>
             <field name="kind">view</field>
             <field name="parent" ref="94"/>
         </record>
         <record model="account.account.template" id="942">
             <field name="name">Revaluations of financial assets</field>
             <field name="code">942</field>
-            <field name="type" ref="asset_revaluations"/>
+            <field name="type" ref="revaluations_of_financial_assets"/>
             <field name="kind">view</field>
             <field name="parent" ref="94"/>
         </record>
         <record model="account.account.template" id="943">
             <field name="name">Revaluations of inventories</field>
             <field name="code">943</field>
-            <field name="type" ref="asset_revaluations"/>
+            <field name="type" ref="revaluations_of_inventories"/>
             <field name="kind">view</field>
             <field name="parent" ref="94"/>
         </record>
