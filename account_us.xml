@@ -4197,8 +4197,14 @@
             <field name="kind">view</field>
             <field name="parent" ref="543"/>
         </record>
+        <record model="account.account.template" id="546">
+            <field name="name">Repairs and maintenance</field>
+            <field name="code">546</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="54"/>
+        </record>
         <record model="account.account.template" id="547">
-            <field name="name">Equipment rental and maintenance</field>
+            <field name="name">Equipment rental</field>
             <field name="code">547</field>
             <field name="kind">view</field>
             <field name="parent" ref="54"/>
