@@ -4038,7 +4038,7 @@
         <record model="account.account.template" id="54200">
             <field name="name">Telephone usage expense</field>
             <field name="code">54200</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5420"/>
@@ -4046,7 +4046,7 @@
         <record model="account.account.template" id="54201">
             <field name="name">Telephone lines</field>
             <field name="code">54201</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5420"/>
@@ -4054,7 +4054,7 @@
         <record model="account.account.template" id="54202">
             <field name="name">One-time telephone charges</field>
             <field name="code">54202</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5420"/>
@@ -4062,7 +4062,7 @@
         <record model="account.account.template" id="54203">
             <field name="name">Telephone repair and maintenance</field>
             <field name="code">54203</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5420"/>
@@ -4070,7 +4070,7 @@
         <record model="account.account.template" id="54204">
             <field name="name">Telephone equipment</field>
             <field name="code">54204</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5420"/>
@@ -4090,7 +4090,7 @@
         <record model="account.account.template" id="54220">
             <field name="name">Cellular service expense</field>
             <field name="code">54220</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5422"/>
@@ -4098,7 +4098,7 @@
         <record model="account.account.template" id="54221">
             <field name="name">Cellular equipment</field>
             <field name="code">54221</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5422"/>
@@ -4118,7 +4118,7 @@
         <record model="account.account.template" id="542500">
             <field name="name">Internet connection leasing costs</field>
             <field name="code">542500</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="54250"/>
