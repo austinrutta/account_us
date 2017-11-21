@@ -4104,7 +4104,7 @@
             <field name="parent" ref="5422"/>
         </record>
         <record model="account.account.template" id="5425">
-            <field name="name">Computer networks</field>
+            <field name="name">Digital networks</field>
             <field name="code">5425</field>
             <field name="kind">view</field>
             <field name="parent" ref="542"/>
