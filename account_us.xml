@@ -4263,165 +4263,165 @@
             <field name="kind">expense</field>
             <field name="parent" ref="5470"/>
         </record>
-        <record model="account.account.template" id="549">
+        <record model="account.account.template" id="548">
             <field name="name">Depreciation and amortization</field>
-            <field name="code">549</field>
+            <field name="code">548</field>
             <field name="kind">view</field>
             <field name="parent" ref="54"/>
         </record>
-        <record model="account.account.template" id="5490">
+        <record model="account.account.template" id="5480">
             <field name="name">Land and land improvements</field>
-            <field name="code">5490</field>
+            <field name="code">5480</field>
             <field name="kind">view</field>
-            <field name="parent" ref="549"/>
+            <field name="parent" ref="548"/>
         </record>
-        <record model="account.account.template" id="54900">
+        <record model="account.account.template" id="54800">
             <field name="name">Amortization expense—acquisition costs of land</field>
-            <field name="code">54900</field>
+            <field name="code">54800</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5490"/>
+            <field name="parent" ref="5480"/>
         </record>
-        <record model="account.account.template" id="54901">
+        <record model="account.account.template" id="54801">
             <field name="name">Depreciation expense—land improvements</field>
-            <field name="code">54901</field>
+            <field name="code">54801</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5490"/>
+            <field name="parent" ref="5480"/>
         </record>
-        <record model="account.account.template" id="5491">
+        <record model="account.account.template" id="5481">
             <field name="name">Buildings and improvements</field>
-            <field name="code">5491</field>
+            <field name="code">5481</field>
             <field name="kind">view</field>
-            <field name="parent" ref="549"/>
+            <field name="parent" ref="548"/>
         </record>
-        <record model="account.account.template" id="54910">
+        <record model="account.account.template" id="54810">
             <field name="name">Depreciation expense—buildings and structures</field>
-            <field name="code">54910</field>
+            <field name="code">54810</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5491"/>
+            <field name="parent" ref="5481"/>
         </record>
-        <record model="account.account.template" id="54911">
+        <record model="account.account.template" id="54811">
             <field name="name">Depreciation expense—leasehold improvements</field>
-            <field name="code">54911</field>
+            <field name="code">54811</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5491"/>
+            <field name="parent" ref="5481"/>
         </record>
-        <record model="account.account.template" id="5492">
+        <record model="account.account.template" id="5482">
             <field name="name">Transportation equipment</field>
-            <field name="code">5492</field>
+            <field name="code">5482</field>
             <field name="kind">view</field>
-            <field name="parent" ref="549"/>
+            <field name="parent" ref="548"/>
         </record>
-        <record model="account.account.template" id="54920">
+        <record model="account.account.template" id="54820">
             <field name="name">Depreciation expense—vehicles</field>
-            <field name="code">54920</field>
+            <field name="code">54820</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5492"/>
+            <field name="parent" ref="5482"/>
         </record>
-        <record model="account.account.template" id="54921">
+        <record model="account.account.template" id="54821">
             <field name="name">Depreciation expense—delivery equipment</field>
-            <field name="code">54921</field>
+            <field name="code">54821</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5492"/>
+            <field name="parent" ref="5482"/>
         </record>
-        <record model="account.account.template" id="5493">
+        <record model="account.account.template" id="5483">
             <field name="name">Furniture, fixtures, and office equipment</field>
-            <field name="code">5493</field>
+            <field name="code">5483</field>
             <field name="kind">view</field>
-            <field name="parent" ref="549"/>
+            <field name="parent" ref="548"/>
         </record>
-        <record model="account.account.template" id="54930">
+        <record model="account.account.template" id="54830">
             <field name="name">Depreciation expense—furniture, fixtures, and office equipment</field>
-            <field name="code">54930</field>
+            <field name="code">54830</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5493"/>
+            <field name="parent" ref="5483"/>
         </record>
-        <record model="account.account.template" id="5498">
+        <record model="account.account.template" id="5488">
             <field name="name">Intangibles</field>
-            <field name="code">5498</field>
+            <field name="code">5488</field>
             <field name="kind">view</field>
-            <field name="parent" ref="549"/>
+            <field name="parent" ref="548"/>
         </record>
-        <record model="account.account.template" id="54980">
+        <record model="account.account.template" id="54880">
             <field name="name">Amortization expense—marketing-related intangibles</field>
-            <field name="code">54980</field>
+            <field name="code">54880</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5498"/>
+            <field name="parent" ref="5488"/>
         </record>
-        <record model="account.account.template" id="54981">
+        <record model="account.account.template" id="54881">
             <field name="name">Amortization expense—customer-related intangibles</field>
-            <field name="code">54981</field>
+            <field name="code">54881</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5498"/>
+            <field name="parent" ref="5488"/>
         </record>
-        <record model="account.account.template" id="54982">
+        <record model="account.account.template" id="54882">
             <field name="name">Amortization expense—artistic-related intangibles</field>
-            <field name="code">54982</field>
+            <field name="code">54882</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5498"/>
+            <field name="parent" ref="5488"/>
         </record>
-        <record model="account.account.template" id="54983">
+        <record model="account.account.template" id="54883">
             <field name="name">Amortization expense—contract-based intangibles</field>
-            <field name="code">54983</field>
+            <field name="code">54883</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5498"/>
+            <field name="parent" ref="5488"/>
         </record>
-        <record model="account.account.template" id="54984">
+        <record model="account.account.template" id="54884">
             <field name="name">Amortization expense—technology-based intangibles</field>
-            <field name="code">54984</field>
+            <field name="code">54884</field>
             <field name="kind">view</field>
-            <field name="parent" ref="5498"/>
+            <field name="parent" ref="5488"/>
         </record>
-        <record model="account.account.template" id="549840">
+        <record model="account.account.template" id="548840">
             <field name="name">Amortization expense—capitalized software</field>
-            <field name="code">549840</field>
+            <field name="code">548840</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="54984"/>
+            <field name="parent" ref="54884"/>
         </record>
-        <record model="account.account.template" id="549841">
+        <record model="account.account.template" id="548841">
             <field name="name">Amortization expense—other technology-based intangibles</field>
-            <field name="code">549841</field>
+            <field name="code">548841</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="54984"/>
+            <field name="parent" ref="54884"/>
         </record>
-        <record model="account.account.template" id="54985">
+        <record model="account.account.template" id="54885">
             <field name="name">Amortization expense—research and development costs</field>
-            <field name="code">54985</field>
+            <field name="code">54885</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5498"/>
+            <field name="parent" ref="5488"/>
         </record>
-        <record model="account.account.template" id="5499">
+        <record model="account.account.template" id="5489">
             <field name="name">Other depreciation and amortization expenses</field>
-            <field name="code">5499</field>
+            <field name="code">5489</field>
             <field name="kind">view</field>
-            <field name="parent" ref="549"/>
+            <field name="parent" ref="548"/>
         </record>
         <record model="account.account.template" id="55">
             <field name="name">Travel, meetings, and entertainment</field>
