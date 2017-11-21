@@ -4148,7 +4148,7 @@
             <field name="parent" ref="543"/>
         </record>
         <record model="account.account.template" id="5431">
-            <field name="name">Third-party computer services</field>
+            <field name="name">Third-party data processing</field>
             <field name="code">5431</field>
             <field name="kind">view</field>
             <field name="parent" ref="543"/>
