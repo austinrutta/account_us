@@ -3863,7 +3863,7 @@
         </record>
         <record model="account.account.template" id="53111">
             <field name="name">Communication or delivery of sales materials</field>
-            <field name="code">53110</field>
+            <field name="code">53111</field>
             <field name="type" ref="communicating_advertising_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
