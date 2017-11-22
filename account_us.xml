@@ -4460,13 +4460,13 @@
             <field name="parent" ref="54"/>
         </record>
         <record model="account.account.template" id="5490">
-            <field name="name">Property taxes</field>
+            <field name="name">Property tax expense</field>
             <field name="code">5490</field>
             <field name="kind">view</field>
             <field name="parent" ref="549"/>
         </record>
         <record model="account.account.template" id="54900">
-            <field name="name">Personal property tax</field>
+            <field name="name">Personal property tax expense</field>
             <field name="code">54900</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4474,7 +4474,7 @@
             <field name="parent" ref="5490"/>
         </record>
         <record model="account.account.template" id="54901">
-            <field name="name">Real estate property tax</field>
+            <field name="name">Real estate property tax expense</field>
             <field name="code">54901</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
