@@ -3550,10 +3550,16 @@
         <record model="account.account.template" id="51290">
             <field name="name">Education and professional development</field>
             <field name="code">51290</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5129"/>
+        </record>
+        <record model="account.account.template" id="512900">
+            <field name="name">Conference registration fees</field>
+            <field name="code">512900</field>
             <field name="type" ref="personnel_costs"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5129"/>
+            <field name="parent" ref="51290"/>
         </record>
         <record model="account.account.template" id="51291">
             <field name="name">Dependent care assistance</field>
@@ -4556,11 +4562,9 @@
             <field name="parent" ref="55"/>
         </record>
         <record model="account.account.template" id="5510">
-            <field name="name">Conference registration fees</field>
+            <field name="name">Hosted events</field>
             <field name="code">5510</field>
-            <field name="type" ref="travel_and_meetings_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+            <field name="kind">view</field>
             <field name="parent" ref="551"/>
         </record>
         <record model="account.account.template" id="5511">
