@@ -1915,6 +1915,14 @@
             <field name="kind">other</field>
             <field name="parent" ref="164"/>
         </record>
+        <record model="account.account.template" id="1642">
+            <field name="name">Furniture and fixtures for advertising</field>
+            <field name="code">1642</field>
+            <field name="type" ref="furniture_fixtures_office"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="164"/>
+        </record>
         <record model="account.account.template" id="1649">
             <field name="name">Accumulated depreciation of furniture, fixtures, and office equipment (−)</field>
             <field name="code">1649</field>
@@ -3873,6 +3881,44 @@
             <field name="kind">view</field>
             <field name="parent" ref="531"/>
         </record>
+        <record model="account.account.template" id="5313">
+            <field name="name">Promotional events, tradeshows and exhibitions</field>
+            <field name="code">5313</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="531"/>
+        </record>
+        <record model="account.account.template" id="53130">
+            <field name="name">Space rental expense</field>
+            <field name="code">53130</field>
+            <field name="type" ref="communicating_advertising_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5313"/>
+        </record>
+        <record model="account.account.template" id="53131">
+            <field name="name">Electricity expense</field>
+            <field name="code">53131</field>
+            <field name="type" ref="communicating_advertising_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5313"/>
+        </record>
+        <record model="account.account.template" id="53132">
+            <field name="name">Internet access expense</field>
+            <field name="code">53132</field>
+            <field name="type" ref="communicating_advertising_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5313"/>
+        </record>
+        <record model="account.account.template" id="53139">
+            <field name="name">Other tradeshow and exhibitions expense</field>
+            <field name="code">53139</field>
+            <field name="type" ref="communicating_advertising_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5313"/>
+        </record>
         <record model="account.account.template" id="5319">
             <field name="name">Other advertising and promotion expenses</field>
             <field name="code">5319</field>
@@ -4254,13 +4300,13 @@
             <field name="parent" ref="54"/>
         </record>
         <record model="account.account.template" id="5470">
-            <field name="name">Tradeshow and exhibits equipment rentals</field>
+            <field name="name">Production machinery and equipment</field>
             <field name="code">5470</field>
             <field name="kind">view</field>
             <field name="parent" ref="547"/>
         </record>
         <record model="account.account.template" id="54700">
-            <field name="name">Booth rental expense</field>
+            <field name="name">Machinery and tools rental expense</field>
             <field name="code">54700</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
@@ -4268,28 +4314,70 @@
             <field name="parent" ref="5470"/>
         </record>
         <record model="account.account.template" id="54701">
-            <field name="name">Electricity rental expense</field>
+            <field name="name">Information technology rental expense</field>
             <field name="code">54701</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5470"/>
         </record>
-        <record model="account.account.template" id="54702">
-            <field name="name">Internet rental expense</field>
-            <field name="code">54702</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="5470"/>
+        <record model="account.account.template" id="5471">
+            <field name="name">Transportation equipment</field>
+            <field name="code">5471</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="547"/>
         </record>
-        <record model="account.account.template" id="54709">
-            <field name="name">Other tradeshow and exhibits equipment rental expense</field>
-            <field name="code">54709</field>
+        <record model="account.account.template" id="54710">
+            <field name="name">Vehicle rental expense</field>
+            <field name="code">54710</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="5470"/>
+            <field name="parent" ref="5471"/>
+        </record>
+        <record model="account.account.template" id="54711">
+            <field name="name">Delivery equipment rental expense</field>
+            <field name="code">54711</field>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5471"/>
+        </record>
+        <record model="account.account.template" id="5472">
+            <field name="name">Furniture, fixtures, and office equipment</field>
+            <field name="code">5472</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="547"/>
+        </record>
+        <record model="account.account.template" id="54720">
+            <field name="name">Furniture, fixtures, and office equipment rental for administrative structures expense</field>
+            <field name="code">54720</field>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5472"/>
+        </record>
+        <record model="account.account.template" id="54721">
+            <field name="name">Furniture, fixtures, and office equipment rental for industrial buildings expense</field>
+            <field name="code">54721</field>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5472"/>
+        </record>
+        <record model="account.account.template" id="54722">
+            <field name="name">Furniture and fixtures rental for advertising expense</field>
+            <field name="code">54722</field>
+            <field name="type" ref="producing_advertising_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5472"/>
+        </record>
+        <record model="account.account.template" id="5479">
+            <field name="name">Other equipment rental</field>
+            <field name="code">5479</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="547"/>
         </record>
         <record model="account.account.template" id="548">
             <field name="name">Depreciation and amortization</field>
