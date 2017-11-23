@@ -3853,6 +3853,24 @@
             <field name="kind">view</field>
             <field name="parent" ref="531"/>
         </record>
+        <record model="account.account.template" id="53100">
+            <field name="name">Advertising in printed material</field>
+            <field name="code">53100</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5310"/>
+        </record>
+        <record model="account.account.template" id="53101">
+            <field name="name">Advertising using audio</field>
+            <field name="code">53101</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5310"/>
+        </record>
+        <record model="account.account.template" id="53102">
+            <field name="name">Advertising using video</field>
+            <field name="code">53102</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5310"/>
+        </record>
         <record model="account.account.template" id="5311">
             <field name="name">Sales materials</field>
             <field name="code">5311</field>
@@ -3868,7 +3886,7 @@
             <field name="parent" ref="5311"/>
         </record>
         <record model="account.account.template" id="53111">
-            <field name="name">Communication or delivery of sales materials</field>
+            <field name="name">Postage or delivery of sales materials</field>
             <field name="code">53111</field>
             <field name="type" ref="communicating_advertising_expenses"/>
             <field name="deferral" eval="False"/>
@@ -3882,7 +3900,7 @@
             <field name="parent" ref="531"/>
         </record>
         <record model="account.account.template" id="5313">
-            <field name="name">Promotional events, tradeshows and exhibitions</field>
+            <field name="name">Promotional events, tradeshows, and exhibitions</field>
             <field name="code">5313</field>
             <field name="kind">view</field>
             <field name="parent" ref="531"/>
