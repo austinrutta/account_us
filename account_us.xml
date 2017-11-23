@@ -4237,41 +4237,47 @@
             <field name="kind">view</field>
             <field name="parent" ref="543"/>
         </record>
+        <record model="account.account.template" id="54300">
+            <field name="name">Data processing supplies</field>
+            <field name="code">54300</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5430"/>
+        </record>
+        <record model="account.account.template" id="54301">
+            <field name="name">Data processing equipment</field>
+            <field name="code">54301</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5430"/>
+        </record>
+        <record model="account.account.template" id="543010">
+            <field name="name">Device repair and maintenance</field>
+            <field name="code">543010</field>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54301"/>
+        </record>
+        <record model="account.account.template" id="543011">
+            <field name="name">Personal computing devices</field>
+            <field name="code">543011</field>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54301"/>
+        </record>
+        <record model="account.account.template" id="543012">
+            <field name="name">Noncapitalized servers—operational</field>
+            <field name="code">543012</field>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54301"/>
+        </record>
         <record model="account.account.template" id="5431">
             <field name="name">Third-party data processing</field>
             <field name="code">5431</field>
             <field name="kind">view</field>
             <field name="parent" ref="543"/>
-        </record>
-        <record model="account.account.template" id="54310">
-            <field name="name">Domain name services</field>
-            <field name="code">54310</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="5431"/>
-        </record>
-        <record model="account.account.template" id="543100">
-            <field name="name">Domain name registration expense</field>
-            <field name="code">543100</field>
-            <field name="type" ref="non_personnel_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="54310"/>
-        </record>
-        <record model="account.account.template" id="543101">
-            <field name="name">Domain name service (DNS) hosting expense</field>
-            <field name="code">543101</field>
-            <field name="type" ref="non_personnel_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="54310"/>
-        </record>
-        <record model="account.account.template" id="543109">
-            <field name="name">Other domain name expense</field>
-            <field name="code">543109</field>
-            <field name="type" ref="non_personnel_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="54310"/>
         </record>
         <record model="account.account.template" id="5432">
             <field name="name">Noncapitalized software license fees</field>
@@ -4280,6 +4286,70 @@
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="543"/>
+        </record>
+        <record model="account.account.template" id="5433">
+            <field name="name">External hosting services</field>
+            <field name="code">5433</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="543"/>
+        </record>
+        <record model="account.account.template" id="54330">
+            <field name="name">Domain name services</field>
+            <field name="code">54330</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5433"/>
+        </record>
+        <record model="account.account.template" id="543300">
+            <field name="name">Domain name registration expense</field>
+            <field name="code">543300</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54330"/>
+        </record>
+        <record model="account.account.template" id="543301">
+            <field name="name">Domain name service (DNS) hosting expense</field>
+            <field name="code">543301</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54330"/>
+        </record>
+        <record model="account.account.template" id="543309">
+            <field name="name">Other domain name expense</field>
+            <field name="code">543309</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54330"/>
+        </record>
+        <record model="account.account.template" id="54338">
+            <field name="name">Infrastructure as a service (IaaS)</field>
+            <field name="code">54338</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5433"/>
+        </record>
+        <record model="account.account.template" id="543380">
+            <field name="name">Infrastructure service usage expense</field>
+            <field name="code">543380</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54338"/>
+        </record>
+        <record model="account.account.template" id="543381">
+            <field name="name">One-time infrastructure service fees</field>
+            <field name="code">543381</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54338"/>
+        </record>
+        <record model="account.account.template" id="54339">
+            <field name="name">Other external hosting services</field>
+            <field name="code">54339</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5433"/>
         </record>
         <record model="account.account.template" id="5439">
             <field name="name">Other data processing, hosting, and related services</field>
