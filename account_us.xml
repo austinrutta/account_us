@@ -4583,12 +4583,10 @@
             <field name="kind">expense</field>
             <field name="parent" ref="551"/>
         </record>
-        <record model="account.account.template" id="5513">
-            <field name="name">Business entertainment activity expense (IRC § 274(a))</field>
-            <field name="code">5513</field>
-            <field name="type" ref="entertainment_expenses"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+        <record model="account.account.template" id="5514">
+            <field name="name">Business entertainment activities (IRC § 274(a))</field>
+            <field name="code">5514</field>
+            <field name="kind">view</field>
             <field name="parent" ref="551"/>
         </record>
         <record model="account.account.template" id="552">
