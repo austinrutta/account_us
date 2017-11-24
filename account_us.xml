@@ -1712,7 +1712,7 @@
             <field name="code">1600</field>
             <field name="type" ref="land"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="160"/>
         </record>
         <record model="account.account.template" id="1601">
@@ -1720,7 +1720,7 @@
             <field name="code">1601</field>
             <field name="type" ref="land"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="160"/>
         </record>
         <record model="account.account.template" id="1609">
@@ -1756,7 +1756,7 @@
             <field name="code">1610</field>
             <field name="type" ref="buildings"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="161"/>
         </record>
         <record model="account.account.template" id="1611">
@@ -1764,7 +1764,7 @@
             <field name="code">1611</field>
             <field name="type" ref="buildings"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="161"/>
         </record>
         <record model="account.account.template" id="1612">
@@ -1772,7 +1772,7 @@
             <field name="code">1612</field>
             <field name="type" ref="buildings"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="161"/>
         </record>
         <record model="account.account.template" id="1619">
@@ -1816,7 +1816,7 @@
             <field name="code">1620</field>
             <field name="type" ref="production_machinery_and_equipment"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="162"/>
         </record>
         <record model="account.account.template" id="1621">
@@ -1824,7 +1824,7 @@
             <field name="code">1621</field>
             <field name="type" ref="production_machinery_and_equipment"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="162"/>
         </record>
         <record model="account.account.template" id="1629">
@@ -1860,7 +1860,7 @@
             <field name="code">1630</field>
             <field name="type" ref="transportation_equipment"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="163"/>
         </record>
         <record model="account.account.template" id="1631">
@@ -1868,7 +1868,7 @@
             <field name="code">1631</field>
             <field name="type" ref="transportation_equipment"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="163"/>
         </record>
         <record model="account.account.template" id="1639">
@@ -1904,7 +1904,7 @@
             <field name="code">1640</field>
             <field name="type" ref="furniture_fixtures_office"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="164"/>
         </record>
         <record model="account.account.template" id="1641">
@@ -1912,7 +1912,7 @@
             <field name="code">1641</field>
             <field name="type" ref="furniture_fixtures_office"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="164"/>
         </record>
         <record model="account.account.template" id="1642">
@@ -1920,7 +1920,7 @@
             <field name="code">1642</field>
             <field name="type" ref="furniture_fixtures_office"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="164"/>
         </record>
         <record model="account.account.template" id="1649">
@@ -1977,7 +1977,7 @@
             <field name="code">1700</field>
             <field name="type" ref="marketing_related_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="170"/>
         </record>
         <record model="account.account.template" id="1701">
@@ -1985,7 +1985,7 @@
             <field name="code">1701</field>
             <field name="type" ref="marketing_related_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="170"/>
         </record>
         <record model="account.account.template" id="1702">
@@ -1993,7 +1993,7 @@
             <field name="code">1702</field>
             <field name="type" ref="marketing_related_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="170"/>
         </record>
         <record model="account.account.template" id="1703">
@@ -2001,7 +2001,7 @@
             <field name="code">1703</field>
             <field name="type" ref="marketing_related_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="170"/>
         </record>
         <record model="account.account.template" id="1704">
@@ -2009,7 +2009,7 @@
             <field name="code">1704</field>
             <field name="type" ref="marketing_related_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="170"/>
         </record>
         <record model="account.account.template" id="1709">
@@ -2031,7 +2031,7 @@
             <field name="code">1710</field>
             <field name="type" ref="customer_related_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="171"/>
         </record>
         <record model="account.account.template" id="1711">
@@ -2039,7 +2039,7 @@
             <field name="code">1711</field>
             <field name="type" ref="customer_related_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="171"/>
         </record>
         <record model="account.account.template" id="1712">
@@ -2047,7 +2047,7 @@
             <field name="code">1712</field>
             <field name="type" ref="customer_related_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="171"/>
         </record>
         <record model="account.account.template" id="1719">
@@ -2069,7 +2069,7 @@
             <field name="code">1720</field>
             <field name="type" ref="artistic_related_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="172"/>
         </record>
         <record model="account.account.template" id="1721">
@@ -2077,7 +2077,7 @@
             <field name="code">1721</field>
             <field name="type" ref="artistic_related_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="172"/>
         </record>
         <record model="account.account.template" id="1722">
@@ -2085,7 +2085,7 @@
             <field name="code">1722</field>
             <field name="type" ref="artistic_related_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="172"/>
         </record>
         <record model="account.account.template" id="1723">
@@ -2093,7 +2093,7 @@
             <field name="code">1723</field>
             <field name="type" ref="artistic_related_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="172"/>
         </record>
         <record model="account.account.template" id="1729">
@@ -2121,7 +2121,7 @@
             <field name="code">17300</field>
             <field name="type" ref="contract_based_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="1730"/>
         </record>
         <record model="account.account.template" id="17301">
@@ -2129,7 +2129,7 @@
             <field name="code">17301</field>
             <field name="type" ref="contract_based_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="1730"/>
         </record>
         <record model="account.account.template" id="1731">
@@ -2137,7 +2137,7 @@
             <field name="code">1731</field>
             <field name="type" ref="contract_based_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="173"/>
         </record>
         <record model="account.account.template" id="1732">
@@ -2145,7 +2145,7 @@
             <field name="code">1732</field>
             <field name="type" ref="contract_based_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="173"/>
         </record>
         <record model="account.account.template" id="1733">
@@ -2153,7 +2153,7 @@
             <field name="code">1733</field>
             <field name="type" ref="contract_based_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="173"/>
         </record>
         <record model="account.account.template" id="1734">
@@ -2161,7 +2161,7 @@
             <field name="code">1734</field>
             <field name="type" ref="contract_based_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="173"/>
         </record>
         <record model="account.account.template" id="1739">
@@ -2183,7 +2183,7 @@
             <field name="code">1740</field>
             <field name="type" ref="other_technology_based_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="174"/>
         </record>
         <record model="account.account.template" id="1741">
@@ -2191,7 +2191,7 @@
             <field name="code">1741</field>
             <field name="type" ref="other_technology_based_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="174"/>
         </record>
         <record model="account.account.template" id="1742">
@@ -2211,7 +2211,7 @@
             <field name="code">174200</field>
             <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="17420"/>
         </record>
         <record model="account.account.template" id="174201">
@@ -2231,7 +2231,7 @@
             <field name="code">17421</field>
             <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="1742"/>
         </record>
         <record model="account.account.template" id="1743">
@@ -2257,7 +2257,7 @@
             <field name="code">1743000</field>
             <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="174300"/>
         </record>
         <record model="account.account.template" id="174301">
@@ -2271,7 +2271,7 @@
             <field name="code">174302</field>
             <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="17430"/>
         </record>
         <record model="account.account.template" id="17431">
@@ -2279,7 +2279,7 @@
             <field name="code">17431</field>
             <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="1743"/>
         </record>
         <record model="account.account.template" id="1744">
@@ -2287,7 +2287,7 @@
             <field name="code">1744</field>
             <field name="type" ref="other_technology_based_intangibles"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="174"/>
         </record>
         <record model="account.account.template" id="1749">
@@ -2323,7 +2323,7 @@
             <field name="code">1750</field>
             <field name="type" ref="research_and_development"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="175"/>
         </record>
         <record model="account.account.template" id="1751">
