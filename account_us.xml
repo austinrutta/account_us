@@ -1945,6 +1945,14 @@
             <field name="kind">other</field>
             <field name="parent" ref="1649"/>
         </record>
+        <record model="account.account.template" id="16492">
+            <field name="name">Accumulated depreciation of furniture and fixtures for advertising (−)</field>
+            <field name="code">16492</field>
+            <field name="type" ref="furniture_fixtures_office"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1649"/>
+        </record>
         <record model="account.account.template" id="169">
             <field name="name">Other tangible assets</field>
             <field name="code">169</field>
@@ -4549,6 +4557,14 @@
             <field name="name">Depreciation expense—furniture, fixtures, and office equipment</field>
             <field name="code">54830</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5483"/>
+        </record>
+        <record model="account.account.template" id="54831">
+            <field name="name">Depreciation expense—furniture and fixtures for advertising</field>
+            <field name="code">54831</field>
+            <field name="type" ref="producing_advertising_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5483"/>
