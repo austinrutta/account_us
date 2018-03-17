@@ -1518,7 +1518,7 @@
             <field name="code">1400</field>
             <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="140"/>
         </record>
         <record model="account.account.template" id="1401">
@@ -1526,7 +1526,7 @@
             <field name="code">1401</field>
             <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="140"/>
         </record>
         <record model="account.account.template" id="1402">
@@ -1534,7 +1534,7 @@
             <field name="code">1402</field>
             <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="140"/>
         </record>
         <record model="account.account.template" id="1403">
@@ -1568,7 +1568,7 @@
             <field name="code">1404</field>
             <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="140"/>
         </record>
         <record model="account.account.template" id="1405">
@@ -1576,7 +1576,7 @@
             <field name="code">1405</field>
             <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="140"/>
         </record>
         <record model="account.account.template" id="1409">
@@ -1584,7 +1584,7 @@
             <field name="code">1409</field>
             <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="parent" ref="140"/>
         </record>
         <record model="account.account.template" id="141">
