@@ -3086,170 +3086,178 @@
             <field name="parent" ref="30"/>
         </record>
         <record model="account.account.template" id="31">
-            <field name="name">Retained earnings</field>
+            <field name="name">Income summary</field>
             <field name="code">31</field>
+            <field name="type" ref="current_earnings"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="3"/>
+        </record>
+        <record model="account.account.template" id="32">
+            <field name="name">Retained earnings</field>
+            <field name="code">32</field>
             <field name="type" ref="retained_earnings"/>
             <field name="kind">view</field>
             <field name="parent" ref="3"/>
         </record>
-        <record model="account.account.template" id="310">
+        <record model="account.account.template" id="320">
             <field name="name">Appropriated retained earnings</field>
-            <field name="code">310</field>
+            <field name="code">320</field>
             <field name="type" ref="appropriated_retained_earnings"/>
             <field name="kind">view</field>
-            <field name="parent" ref="31"/>
-        </record>
-        <record model="account.account.template" id="311">
-            <field name="name">Unappropriated retained earnings</field>
-            <field name="code">311</field>
-            <field name="type" ref="unappropriated_retained_earnings"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="31"/>
-        </record>
-        <record model="account.account.template" id="32">
-            <field name="name">Accumulated other comprehensive income, net of tax</field>
-            <field name="code">32</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="3"/>
-        </record>
-        <record model="account.account.template" id="320">
-            <field name="name">Accumulated net unrealized gain on available-for-sale assets</field>
-            <field name="code">320</field>
-            <field name="type" ref="accumulated_net_unrealized_gain_on_available_for_sale_assets"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
             <field name="parent" ref="32"/>
         </record>
         <record model="account.account.template" id="321">
-            <field name="name">Accumulated gain on cash flow hedges</field>
+            <field name="name">Unappropriated retained earnings</field>
             <field name="code">321</field>
-            <field name="type" ref="accumulated_gain_on_cash_flow_hedges"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="32"/>
-        </record>
-        <record model="account.account.template" id="322">
-            <field name="name">Accumulated exchange differences on translation of foreign operations</field>
-            <field name="code">322</field>
-            <field name="type" ref="accumulated_exchange_differences_on_translation_of_foreign_operations"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="32"/>
-        </record>
-        <record model="account.account.template" id="323">
-            <field name="name">Accumulated minimum pension liability adjustments</field>
-            <field name="code">323</field>
-            <field name="type" ref="accumulated_defined_benefit_plan_income"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="32"/>
-        </record>
-        <record model="account.account.template" id="324">
-            <field name="name">Accumulated asset revaluations</field>
-            <field name="code">324</field>
-            <field name="kind">view</field>
-            <field name="parent" ref="32"/>
-        </record>
-        <record model="account.account.template" id="3240">
-            <field name="name">Accumulated revaluations of tangible assets</field>
-            <field name="code">3240</field>
-            <field name="type" ref="accumulated_revaluations_of_tangible_assets"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="324"/>
-        </record>
-        <record model="account.account.template" id="3241">
-            <field name="name">Accumulated revaluations of intangible assets</field>
-            <field name="code">3241</field>
-            <field name="type" ref="accumulated_revaluations_of_intangible_assets"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="324"/>
-        </record>
-        <record model="account.account.template" id="3242">
-            <field name="name">Accumulated revaluations of financial assets</field>
-            <field name="code">3242</field>
-            <field name="type" ref="accumulated_revaluations_of_financial_assets"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="324"/>
-        </record>
-        <record model="account.account.template" id="3243">
-            <field name="name">Accumulated revaluations of inventories</field>
-            <field name="code">3243</field>
-            <field name="type" ref="accumulated_revaluations_of_inventories"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="324"/>
-        </record>
-        <record model="account.account.template" id="325">
-            <field name="name">Accumulated reclassification adjustments</field>
-            <field name="code">325</field>
-            <field name="type" ref="accumulated_reclassification_adjustments"/>
+            <field name="type" ref="unappropriated_retained_earnings"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="32"/>
         </record>
         <record model="account.account.template" id="33">
-            <field name="name">Treasury shares</field>
+            <field name="name">Accumulated other comprehensive income, net of tax</field>
             <field name="code">33</field>
             <field name="kind">view</field>
             <field name="parent" ref="3"/>
         </record>
         <record model="account.account.template" id="330">
-            <field name="name">Treasury stock value</field>
+            <field name="name">Accumulated net unrealized gain on available-for-sale assets</field>
             <field name="code">330</field>
-            <field name="type" ref="treasury_shares"/>
+            <field name="type" ref="accumulated_net_unrealized_gain_on_available_for_sale_assets"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="33"/>
         </record>
         <record model="account.account.template" id="331">
-            <field name="name">Treasury stock deferred employee stock ownership plan</field>
+            <field name="name">Accumulated gain on cash flow hedges</field>
             <field name="code">331</field>
-            <field name="type" ref="treasury_shares"/>
+            <field name="type" ref="accumulated_gain_on_cash_flow_hedges"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="account.account.template" id="332">
+            <field name="name">Accumulated exchange differences on translation of foreign operations</field>
+            <field name="code">332</field>
+            <field name="type" ref="accumulated_exchange_differences_on_translation_of_foreign_operations"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="account.account.template" id="333">
+            <field name="name">Accumulated minimum pension liability adjustments</field>
+            <field name="code">333</field>
+            <field name="type" ref="accumulated_defined_benefit_plan_income"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="account.account.template" id="334">
+            <field name="name">Accumulated asset revaluations</field>
+            <field name="code">334</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="33"/>
+        </record>
+        <record model="account.account.template" id="3340">
+            <field name="name">Accumulated revaluations of tangible assets</field>
+            <field name="code">3340</field>
+            <field name="type" ref="accumulated_revaluations_of_tangible_assets"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="334"/>
+        </record>
+        <record model="account.account.template" id="3341">
+            <field name="name">Accumulated revaluations of intangible assets</field>
+            <field name="code">3341</field>
+            <field name="type" ref="accumulated_revaluations_of_intangible_assets"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="334"/>
+        </record>
+        <record model="account.account.template" id="3342">
+            <field name="name">Accumulated revaluations of financial assets</field>
+            <field name="code">3342</field>
+            <field name="type" ref="accumulated_revaluations_of_financial_assets"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="334"/>
+        </record>
+        <record model="account.account.template" id="3343">
+            <field name="name">Accumulated revaluations of inventories</field>
+            <field name="code">3343</field>
+            <field name="type" ref="accumulated_revaluations_of_inventories"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="334"/>
+        </record>
+        <record model="account.account.template" id="335">
+            <field name="name">Accumulated reclassification adjustments</field>
+            <field name="code">335</field>
+            <field name="type" ref="accumulated_reclassification_adjustments"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="33"/>
         </record>
         <record model="account.account.template" id="34">
-            <field name="name">Other equity</field>
+            <field name="name">Treasury shares</field>
             <field name="code">34</field>
             <field name="kind">view</field>
             <field name="parent" ref="3"/>
         </record>
         <record model="account.account.template" id="340">
-            <field name="name">Capital stock held by subsidiary</field>
+            <field name="name">Treasury stock value</field>
             <field name="code">340</field>
-            <field name="type" ref="capital_stock_held_by_subsidiary"/>
+            <field name="type" ref="treasury_shares"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
             <field name="parent" ref="34"/>
         </record>
         <record model="account.account.template" id="341">
-            <field name="name">Deferred compensation equity</field>
+            <field name="name">Treasury stock deferred employee stock ownership plan</field>
             <field name="code">341</field>
+            <field name="type" ref="treasury_shares"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="34"/>
+        </record>
+        <record model="account.account.template" id="39">
+            <field name="name">Other equity</field>
+            <field name="code">39</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="3"/>
+        </record>
+        <record model="account.account.template" id="390">
+            <field name="name">Capital stock held by subsidiary</field>
+            <field name="code">390</field>
+            <field name="type" ref="capital_stock_held_by_subsidiary"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="39"/>
+        </record>
+        <record model="account.account.template" id="391">
+            <field name="name">Deferred compensation equity</field>
+            <field name="code">391</field>
             <field name="type" ref="deferred_compensation_equity"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="parent" ref="34"/>
+            <field name="parent" ref="39"/>
         </record>
-        <record model="account.account.template" id="342">
+        <record model="account.account.template" id="392">
             <field name="name">Unearned employee stock ownership plan shares</field>
-            <field name="code">342</field>
+            <field name="code">392</field>
             <field name="type" ref="unearned_employee_stock_ownership_plan_shares"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="parent" ref="34"/>
+            <field name="parent" ref="39"/>
         </record>
-        <record model="account.account.template" id="343">
+        <record model="account.account.template" id="393">
             <field name="name">Warrants and rights outstanding</field>
-            <field name="code">343</field>
+            <field name="code">393</field>
             <field name="type" ref="warrants_and_rights_outstanding"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="parent" ref="34"/>
+            <field name="parent" ref="39"/>
         </record>
         <record model="account.account.template" id="4">
             <field name="name">Revenues</field>
