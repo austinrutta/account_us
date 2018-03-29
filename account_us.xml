@@ -4710,6 +4710,14 @@
             <field name="kind">expense</field>
             <field name="parent" ref="5490"/>
         </record>
+        <record model="account.account.template" id="54902">
+            <field name="name">Motor vehicle tax and registration expense</field>
+            <field name="code">54902</field>
+            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5490"/>
+        </record>
         <record model="account.account.template" id="55">
             <field name="name">Travel, meetings, and entertainment</field>
             <field name="code">55</field>
