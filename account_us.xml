@@ -4366,6 +4366,28 @@
             <field name="kind">expense</field>
             <field name="parent" ref="54330"/>
         </record>
+        <record model="account.account.template" id="54331">
+            <field name="name">Electronic mail services</field>
+            <field name="code">54331</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="5433"/>
+        </record>
+        <record model="account.account.template" id="543310">
+            <field name="name">Electronic mail delivery expense</field>
+            <field name="code">543310</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54331"/>
+        </record>
+        <record model="account.account.template" id="543311">
+            <field name="name">Electronic mail service (SMTP) hosting expense</field>
+            <field name="code">543311</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="54331"/>
+        </record>
         <record model="account.account.template" id="54338">
             <field name="name">Infrastructure as a service (IaaS)</field>
             <field name="code">54338</field>
