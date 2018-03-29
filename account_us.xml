@@ -5036,17 +5036,153 @@
             <field name="kind">view</field>
             <field name="parent" ref="602"/>
         </record>
+        <record model="account.account.template" id="60200">
+            <field name="name">Disposal of equity investments</field>
+            <field name="code">60200</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6020"/>
+        </record>
+        <record model="account.account.template" id="60201">
+            <field name="name">Disposal of debt instruments</field>
+            <field name="code">60201</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6020"/>
+        </record>
+        <record model="account.account.template" id="60202">
+            <field name="name">Disposal of derivative instruments</field>
+            <field name="code">60202</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6020"/>
+        </record>
+        <record model="account.account.template" id="60209">
+            <field name="name">Disposal of other long-term equity investments</field>
+            <field name="code">60209</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6020"/>
+        </record>
         <record model="account.account.template" id="6021">
             <field name="name">Disposal of assets—tangible assets</field>
             <field name="code">6021</field>
             <field name="kind">view</field>
             <field name="parent" ref="602"/>
         </record>
+        <record model="account.account.template" id="60210">
+            <field name="name">Disposal of land and improvements</field>
+            <field name="code">60210</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6021"/>
+        </record>
+        <record model="account.account.template" id="60211">
+            <field name="name">Disposal of buildings and improvements</field>
+            <field name="code">60211</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6021"/>
+        </record>
+        <record model="account.account.template" id="60212">
+            <field name="name">Disposal of production machinery and equipment</field>
+            <field name="code">60212</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6021"/>
+        </record>
+        <record model="account.account.template" id="60213">
+            <field name="name">Disposal of transportation equipment</field>
+            <field name="code">60213</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6021"/>
+        </record>
+        <record model="account.account.template" id="60214">
+            <field name="name">Disposal of furniture, fixtures, and office equipment</field>
+            <field name="code">60214</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6021"/>
+        </record>
+        <record model="account.account.template" id="60219">
+            <field name="name">Disposal of other tangible assets</field>
+            <field name="code">60219</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6021"/>
+        </record>
         <record model="account.account.template" id="6022">
             <field name="name">Disposal of assets—intangible assets</field>
             <field name="code">6022</field>
             <field name="kind">view</field>
             <field name="parent" ref="602"/>
+        </record>
+        <record model="account.account.template" id="60220">
+            <field name="name">Disposal of marketing-related intangible assets</field>
+            <field name="code">60220</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6022"/>
+        </record>
+        <record model="account.account.template" id="60221">
+            <field name="name">Disposal of customer-related intangible assets</field>
+            <field name="code">60221</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6022"/>
+        </record>
+        <record model="account.account.template" id="60222">
+            <field name="name">Disposal of artistic-related intangible assets</field>
+            <field name="code">60222</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6022"/>
+        </record>
+        <record model="account.account.template" id="60223">
+            <field name="name">Disposal of contract-based intangible assets</field>
+            <field name="code">60223</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6022"/>
+        </record>
+        <record model="account.account.template" id="60224">
+            <field name="name">Disposal of technology-based intangible assets</field>
+            <field name="code">60224</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6022"/>
+        </record>
+        <record model="account.account.template" id="60225">
+            <field name="name">Disposal of capitalized research and development costs</field>
+            <field name="code">60225</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6022"/>
+        </record>
+        <record model="account.account.template" id="60229">
+            <field name="name">Disposal of other intangible assets</field>
+            <field name="code">60229</field>
+            <field name="type" ref="losses_on_disposal_of_assets"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6022"/>
         </record>
         <record model="account.account.template" id="6023">
             <field name="name">Disposal of assets—other non-current assets</field>
