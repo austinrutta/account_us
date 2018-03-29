@@ -4314,6 +4314,14 @@
             <field name="kind">view</field>
             <field name="parent" ref="543"/>
         </record>
+        <record model="account.account.template" id="54310">
+            <field name="name">Data processing service usage expense</field>
+            <field name="code">54310</field>
+            <field name="type" ref="non_personnel_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5431"/>
+        </record>
         <record model="account.account.template" id="5432">
             <field name="name">Noncapitalized software license fees</field>
             <field name="code">5432</field>
