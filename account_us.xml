@@ -5074,38 +5074,6 @@
             <field name="kind">view</field>
             <field name="parent" ref="602"/>
         </record>
-        <record model="account.account.template" id="60200">
-            <field name="name">Disposal of equity investments</field>
-            <field name="code">60200</field>
-            <field name="type" ref="losses_on_disposal_of_assets"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="6020"/>
-        </record>
-        <record model="account.account.template" id="60201">
-            <field name="name">Disposal of debt instruments</field>
-            <field name="code">60201</field>
-            <field name="type" ref="losses_on_disposal_of_assets"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="6020"/>
-        </record>
-        <record model="account.account.template" id="60202">
-            <field name="name">Disposal of derivative instruments</field>
-            <field name="code">60202</field>
-            <field name="type" ref="losses_on_disposal_of_assets"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="6020"/>
-        </record>
-        <record model="account.account.template" id="60209">
-            <field name="name">Disposal of other long-term equity investments</field>
-            <field name="code">60209</field>
-            <field name="type" ref="losses_on_disposal_of_assets"/>
-            <field name="deferral" eval="False"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="6020"/>
-        </record>
         <record model="account.account.template" id="6021">
             <field name="name">Disposal of assets—tangible assets</field>
             <field name="code">6021</field>
