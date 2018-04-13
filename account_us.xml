@@ -1251,16 +1251,6 @@
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="1001"/>
         </record>
-        <record model="account.account.template" id="10012">
-            <field name="name">Wires in transit</field>
-            <field name="code">10012</field>
-            <field name="type" ref="cash"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
-            <field name="parent" ref="1001"/>
-        </record>
         <record model="account.account.template" id="101">
             <field name="name">Petty cash</field>
             <field name="code">101</field>
@@ -1301,11 +1291,41 @@
             <field name="kind">view</field>
             <field name="parent" ref="10"/>
         </record>
-        <record model="account.account.template" id="109">
+        <record model="account.account.template" id="108">
             <field name="name">Restricted cash and investments</field>
+            <field name="code">108</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="10"/>
+        </record>
+        <record model="account.account.template" id="109">
+            <field name="name">Other cash and cash equivalents</field>
             <field name="code">109</field>
             <field name="kind">view</field>
             <field name="parent" ref="10"/>
+        </record>
+        <record model="account.account.template" id="1090">
+            <field name="name">Cash in transit</field>
+            <field name="code">1090</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="109"/>
+        </record>
+        <record model="account.account.template" id="10900">
+            <field name="name">Wires in transit</field>
+            <field name="code">10900</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1090"/>
+        </record>
+        <record model="account.account.template" id="10901">
+            <field name="name">Transfers in process</field>
+            <field name="code">10901</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1090"/>
         </record>
         <record model="account.account.template" id="11">
             <field name="name">Short-term investments</field>
