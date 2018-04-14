@@ -2292,7 +2292,7 @@
             <field name="parent" ref="174300"/>
         </record>
         <record model="account.account.template" id="1743001">
-            <field name="name">External artistic-related costs of internal-use computer software</field>
+            <field name="name">External artistic-related costs of internal-use computer software—in development</field>
             <field name="code">1743001</field>
             <field name="type" ref="capitalized_software"/>
             <field name="deferral" eval="True"/>
