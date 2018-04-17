@@ -5684,6 +5684,14 @@
             <field name="kind">expense</field>
             <field name="parent" ref="6209"/>
         </record>
+        <record model="account.account.template" id="62091">
+            <field name="name">Currency exchange fees and commissions</field>
+            <field name="code">62091</field>
+            <field name="type" ref="financing_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="6209"/>
+        </record>
         <record model="account.account.template" id="621">
             <field name="name">Expenses from crowdfunding campaigns</field>
             <field name="code">621</field>
