@@ -1246,7 +1246,7 @@
             <field name="code">10011</field>
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="1001"/>
