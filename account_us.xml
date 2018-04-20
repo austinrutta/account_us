@@ -951,19 +951,19 @@
         <record model="account.account.type.template" id="rent_revenues">
             <field name="name">Rent revenues</field>
             <field name="parent" ref="non_operating_revenues"/>
-            <field name="sequence" eval="20"/>
+            <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="crowdfunding_campaigns">
             <field name="name">Crowdfunding campaigns</field>
             <field name="parent" ref="non_operating_revenues"/>
-            <field name="sequence" eval="30"/>
+            <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="grants_and_donations_received">
             <field name="name">Grants and donations received</field>
             <field name="parent" ref="non_operating_revenues"/>
-            <field name="sequence" eval="40"/>
+            <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="other_non_operating_revenues">
@@ -5549,8 +5549,24 @@
             <field name="parent" ref="610"/>
         </record>
         <record model="account.account.template" id="6101">
-            <field name="name">Dividend revenue</field>
+            <field name="name">Delinquency fees income</field>
             <field name="code">6101</field>
+            <field name="type" ref="interest_revenues"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="610"/>
+        </record>
+        <record model="account.account.template" id="6102">
+            <field name="name">Prepayment fees income</field>
+            <field name="code">6102</field>
+            <field name="type" ref="interest_revenues"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">revenue</field>
+            <field name="parent" ref="610"/>
+        </record>
+        <record model="account.account.template" id="6103">
+            <field name="name">Dividend revenue</field>
+            <field name="code">6103</field>
             <field name="type" ref="dividend_revenues"/>
             <field name="deferral" eval="False"/>
             <field name="kind">revenue</field>
