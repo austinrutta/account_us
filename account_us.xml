@@ -1257,6 +1257,276 @@
             <field name="kind">view</field>
             <field name="parent" ref="10"/>
         </record>
+        <record model="account.account.template" id="1010">
+            <field name="name">African currencies</field>
+            <field name="code">1010</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="101"/>
+        </record>
+        <record model="account.account.template" id="10100">
+            <field name="name">Petty cash—South African rand</field>
+            <field name="code">10100</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1010"/>
+        </record>
+        <record model="account.account.template" id="1011">
+            <field name="name">American currencies</field>
+            <field name="code">1011</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="101"/>
+        </record>
+        <record model="account.account.template" id="10110">
+            <field name="name">Petty cash—US dollar</field>
+            <field name="code">10110</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1011"/>
+        </record>
+        <record model="account.account.template" id="10111">
+            <field name="name">Petty cash—Canadian dollar</field>
+            <field name="code">10111</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1011"/>
+        </record>
+        <record model="account.account.template" id="10112">
+            <field name="name">Petty cash—Mexican peso</field>
+            <field name="code">10112</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1011"/>
+        </record>
+        <record model="account.account.template" id="10113">
+            <field name="name">Petty cash—Brazilian real</field>
+            <field name="code">10113</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1011"/>
+        </record>
+        <record model="account.account.template" id="1012">
+            <field name="name">Asian currencies</field>
+            <field name="code">1012</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="101"/>
+        </record>
+        <record model="account.account.template" id="10120">
+            <field name="name">Petty cash—Japanese yen</field>
+            <field name="code">10120</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1012"/>
+        </record>
+        <record model="account.account.template" id="10121">
+            <field name="name">Petty cash—Renminbi</field>
+            <field name="code">10121</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1012"/>
+        </record>
+        <record model="account.account.template" id="10122">
+            <field name="name">Petty cash—Singapore dollar</field>
+            <field name="code">10122</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1012"/>
+        </record>
+        <record model="account.account.template" id="10123">
+            <field name="name">Petty cash—Hong Kong dollar</field>
+            <field name="code">10123</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1012"/>
+        </record>
+        <record model="account.account.template" id="10124">
+            <field name="name">Petty cash—South Korean won</field>
+            <field name="code">10124</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1012"/>
+        </record>
+        <record model="account.account.template" id="10125">
+            <field name="name">Petty cash—Turkish lira</field>
+            <field name="code">10125</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1012"/>
+        </record>
+        <record model="account.account.template" id="10126">
+            <field name="name">Petty cash—Russian ruble</field>
+            <field name="code">10126</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1012"/>
+        </record>
+        <record model="account.account.template" id="10127">
+            <field name="name">Petty cash—Indian rupee</field>
+            <field name="code">10127</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1012"/>
+        </record>
+        <record model="account.account.template" id="1013">
+            <field name="name">European currencies</field>
+            <field name="code">1013</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="101"/>
+        </record>
+        <record model="account.account.template" id="10130">
+            <field name="name">Petty cash—Euro</field>
+            <field name="code">10130</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1013"/>
+        </record>
+        <record model="account.account.template" id="10131">
+            <field name="name">Petty cash—Pound sterling</field>
+            <field name="code">10131</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1013"/>
+        </record>
+        <record model="account.account.template" id="10132">
+            <field name="name">Petty cash—Swiss franc</field>
+            <field name="code">10132</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1013"/>
+        </record>
+        <record model="account.account.template" id="10133">
+            <field name="name">Petty cash—Swedish krona</field>
+            <field name="code">10133</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1013"/>
+        </record>
+        <record model="account.account.template" id="10134">
+            <field name="name">Petty cash—Norwegian krone</field>
+            <field name="code">10134</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1013"/>
+        </record>
+        <record model="account.account.template" id="10135">
+            <field name="name">Petty cash—Danish krone</field>
+            <field name="code">10135</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1013"/>
+        </record>
+        <record model="account.account.template" id="10136">
+            <field name="name">Petty cash—Polish zloty</field>
+            <field name="code">10136</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1013"/>
+        </record>
+        <record model="account.account.template" id="10137">
+            <field name="name">Petty cash—Hungarian forint</field>
+            <field name="code">10137</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1013"/>
+        </record>
+        <record model="account.account.template" id="10138">
+            <field name="name">Petty cash—Czech koruna</field>
+            <field name="code">10138</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1013"/>
+        </record>
+        <record model="account.account.template" id="10139">
+            <field name="name">Other European currencies</field>
+            <field name="code">10139</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="1013"/>
+        </record>
+        <record model="account.account.template" id="101390">
+            <field name="name">Petty cash—Romanian leu</field>
+            <field name="code">101390</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="10139"/>
+        </record>
+        <record model="account.account.template" id="101394">
+            <field name="name">Petty cash—Ukrainian hryvnia</field>
+            <field name="code">101394</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="10139"/>
+        </record>
+        <record model="account.account.template" id="1014">
+            <field name="name">Currencies of Oceania</field>
+            <field name="code">1014</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="101"/>
+        </record>
+        <record model="account.account.template" id="10140">
+            <field name="name">Petty cash—Australian dollar</field>
+            <field name="code">10140</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1014"/>
+        </record>
+        <record model="account.account.template" id="10141">
+            <field name="name">Petty cash—New Zealand dollar</field>
+            <field name="code">10141</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1014"/>
+        </record>
         <record model="account.account.template" id="102">
             <field name="name">Bank checking accounts</field>
             <field name="code">102</field>
