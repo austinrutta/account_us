@@ -1597,6 +1597,15 @@
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="1090"/>
         </record>
+        <record model="account.account.template" id="10902">
+            <field name="name">Conversions in process</field>
+            <field name="code">10902</field>
+            <field name="type" ref="cash"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1090"/>
+        </record>
         <record model="account.account.template" id="11">
             <field name="name">Short-term investments</field>
             <field name="code">11</field>
