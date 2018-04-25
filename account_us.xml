@@ -3388,11 +3388,27 @@
             <field name="parent" ref="3019"/>
         </record>
         <record model="account.account.template" id="302">
-            <field name="name">Donated capital (by owners or shareholders)</field>
+            <field name="name">Donated capital (by owners or shareholders only)</field>
             <field name="code">302</field>
             <field name="type" ref="donated_capital"/>
             <field name="kind">view</field>
             <field name="parent" ref="30"/>
+        </record>
+        <record model="account.account.template" id="3020">
+            <field name="name">Donated capital from officers and directors</field>
+            <field name="code">3020</field>
+            <field name="type" ref="donated_capital"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="302"/>
+        </record>
+        <record model="account.account.template" id="3021">
+            <field name="name">Donated capital from shareholders or affiliates</field>
+            <field name="code">3021</field>
+            <field name="type" ref="donated_capital"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="302"/>
         </record>
         <record model="account.account.template" id="31">
             <field name="name">Income summary</field>
