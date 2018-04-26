@@ -1269,7 +1269,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1010"/>
         </record>
         <record model="account.account.template" id="1011">
@@ -1284,7 +1283,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1011"/>
         </record>
         <record model="account.account.template" id="10111">
@@ -1293,7 +1291,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1011"/>
         </record>
         <record model="account.account.template" id="10112">
@@ -1302,7 +1299,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1011"/>
         </record>
         <record model="account.account.template" id="10113">
@@ -1311,7 +1307,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1011"/>
         </record>
         <record model="account.account.template" id="1012">
@@ -1326,7 +1321,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1012"/>
         </record>
         <record model="account.account.template" id="10121">
@@ -1335,7 +1329,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1012"/>
         </record>
         <record model="account.account.template" id="10122">
@@ -1344,7 +1337,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1012"/>
         </record>
         <record model="account.account.template" id="10123">
@@ -1353,7 +1345,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1012"/>
         </record>
         <record model="account.account.template" id="10124">
@@ -1362,7 +1353,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1012"/>
         </record>
         <record model="account.account.template" id="10125">
@@ -1371,7 +1361,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1012"/>
         </record>
         <record model="account.account.template" id="10126">
@@ -1380,7 +1369,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1012"/>
         </record>
         <record model="account.account.template" id="10127">
@@ -1389,7 +1377,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1012"/>
         </record>
         <record model="account.account.template" id="1013">
@@ -1404,7 +1391,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1013"/>
         </record>
         <record model="account.account.template" id="10131">
@@ -1413,7 +1399,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1013"/>
         </record>
         <record model="account.account.template" id="10132">
@@ -1422,7 +1407,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1013"/>
         </record>
         <record model="account.account.template" id="10133">
@@ -1431,7 +1415,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1013"/>
         </record>
         <record model="account.account.template" id="10134">
@@ -1440,7 +1423,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1013"/>
         </record>
         <record model="account.account.template" id="10135">
@@ -1449,7 +1431,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1013"/>
         </record>
         <record model="account.account.template" id="10136">
@@ -1458,7 +1439,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1013"/>
         </record>
         <record model="account.account.template" id="10137">
@@ -1467,7 +1447,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1013"/>
         </record>
         <record model="account.account.template" id="10138">
@@ -1476,7 +1455,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1013"/>
         </record>
         <record model="account.account.template" id="10139">
@@ -1491,7 +1469,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="10139"/>
         </record>
         <record model="account.account.template" id="101394">
@@ -1500,7 +1477,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="10139"/>
         </record>
         <record model="account.account.template" id="1014">
@@ -1515,7 +1491,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1014"/>
         </record>
         <record model="account.account.template" id="10141">
@@ -1524,7 +1499,6 @@
             <field name="type" ref="cash"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1014"/>
         </record>
         <record model="account.account.template" id="102">
