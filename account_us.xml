@@ -3190,6 +3190,42 @@
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="2233"/>
         </record>
+        <record model="account.account.template" id="2234">
+            <field name="name">Deferred income tax liabilities</field>
+            <field name="code">2234</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="223"/>
+        </record>
+        <record model="account.account.template" id="22340">
+            <field name="name">Deferred federal income tax liability</field>
+            <field name="code">22340</field>
+            <field name="type" ref="tax_liabilities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2234"/>
+        </record>
+        <record model="account.account.template" id="22341">
+            <field name="name">Deferred state income tax liability</field>
+            <field name="code">22341</field>
+            <field name="type" ref="tax_liabilities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2234"/>
+        </record>
+        <record model="account.account.template" id="22342">
+            <field name="name">Deferred local income tax liability</field>
+            <field name="code">22342</field>
+            <field name="type" ref="tax_liabilities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">payable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="2234"/>
+        </record>
         <record model="account.account.template" id="224">
             <field name="name">Provisions</field>
             <field name="code">224</field>
