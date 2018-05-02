@@ -834,10 +834,22 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="benefit_due_to_loss_carryback">
+            <field name="name">Benefit due to loss carryback</field>
+            <field name="parent" ref="income_tax_expense"/>
+            <field name="sequence" eval="30"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
+        <record model="account.account.type.template" id="benefit_due_to_loss_carryforward">
+            <field name="name">Benefit due to loss carryforward</field>
+            <field name="parent" ref="income_tax_expense"/>
+            <field name="sequence" eval="40"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="other_income_tax_expense">
             <field name="name">Other income tax expense</field>
             <field name="parent" ref="income_tax_expense"/>
-            <field name="sequence" eval="30"/>
+            <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="income_from_associates">
@@ -1768,6 +1780,42 @@
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="1271"/>
         </record>
+        <record model="account.account.template" id="1273">
+            <field name="name">Income tax refunds receivable</field>
+            <field name="code">1273</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="127"/>
+        </record>
+        <record model="account.account.template" id="12730">
+            <field name="name">Federal income tax refund receivable</field>
+            <field name="code">12730</field>
+            <field name="type" ref="non_trade_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1273"/>
+        </record>
+        <record model="account.account.template" id="12731">
+            <field name="name">State and local income tax refund receivable</field>
+            <field name="code">12731</field>
+            <field name="type" ref="non_trade_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1273"/>
+        </record>
+        <record model="account.account.template" id="12732">
+            <field name="name">Foreign income tax refund receivable</field>
+            <field name="code">12732</field>
+            <field name="type" ref="non_trade_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1273"/>
+        </record>
         <record model="account.account.template" id="128">
             <field name="name">Unapplied payments</field>
             <field name="code">128</field>
@@ -2686,10 +2734,62 @@
         <record model="account.account.template" id="193">
             <field name="name">Deferred tax assets</field>
             <field name="code">193</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="19"/>
+        </record>
+        <record model="account.account.template" id="1930">
+            <field name="name">Deferred federal tax asset</field>
+            <field name="code">1930</field>
             <field name="type" ref="deferred_tax_assets"/>
             <field name="deferral" eval="True"/>
             <field name="kind">other</field>
-            <field name="parent" ref="19"/>
+            <field name="parent" ref="193"/>
+        </record>
+        <record model="account.account.template" id="1931">
+            <field name="name">Deferred state and local tax asset</field>
+            <field name="code">1931</field>
+            <field name="type" ref="deferred_tax_assets"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="193"/>
+        </record>
+        <record model="account.account.template" id="1932">
+            <field name="name">Deferred foreign tax asset</field>
+            <field name="code">1932</field>
+            <field name="type" ref="deferred_tax_assets"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="193"/>
+        </record>
+        <record model="account.account.template" id="1939">
+            <field name="name">Allowances to reduce deferred tax assets to expected realizable value (−)</field>
+            <field name="code">1939</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="193"/>
+        </record>
+        <record model="account.account.template" id="19390">
+            <field name="name">Allowance to reduce deferred federal tax asset to expected realizable value (−)</field>
+            <field name="code">19390</field>
+            <field name="type" ref="deferred_tax_assets"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1939"/>
+        </record>
+        <record model="account.account.template" id="19391">
+            <field name="name">Allowance to reduce deferred state or local tax asset to expected realizable value (−)</field>
+            <field name="code">19391</field>
+            <field name="type" ref="deferred_tax_assets"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1939"/>
+        </record>
+        <record model="account.account.template" id="19392">
+            <field name="name">Allowance to reduce deferred foreign tax asset to expected realizable value (−)</field>
+            <field name="code">19392</field>
+            <field name="type" ref="deferred_tax_assets"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1939"/>
         </record>
         <record model="account.account.template" id="199">
             <field name="name">Other non-current assets</field>
@@ -6140,6 +6240,126 @@
             <field name="code">75</field>
             <field name="kind">view</field>
             <field name="parent" ref="7"/>
+        </record>
+        <record model="account.account.template" id="750">
+            <field name="name">Benefits due to loss carryback</field>
+            <field name="code">750</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="75"/>
+        </record>
+        <record model="account.account.template" id="7500">
+            <field name="name">Benefit due to loss carryback (federal income tax expense)</field>
+            <field name="code">7500</field>
+            <field name="type" ref="benefit_due_to_loss_carryback"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="750"/>
+        </record>
+        <record model="account.account.template" id="7501">
+            <field name="name">Benefit due to loss carryback (state and local income tax expense)</field>
+            <field name="code">7501</field>
+            <field name="type" ref="benefit_due_to_loss_carryback"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="750"/>
+        </record>
+        <record model="account.account.template" id="7502">
+            <field name="name">Benefit due to loss carryback (foreign income tax expense)</field>
+            <field name="code">7502</field>
+            <field name="type" ref="benefit_due_to_loss_carryback"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="750"/>
+        </record>
+        <record model="account.account.template" id="751">
+            <field name="name">Benefits due to loss carryforward</field>
+            <field name="code">751</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="75"/>
+        </record>
+        <record model="account.account.template" id="7510">
+            <field name="name">Benefit due to loss carryforward (federal income tax expense)</field>
+            <field name="code">7510</field>
+            <field name="type" ref="benefit_due_to_loss_carryforward"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="751"/>
+        </record>
+        <record model="account.account.template" id="7511">
+            <field name="name">Benefit due to loss carryforward (state and local income tax expense)</field>
+            <field name="code">7511</field>
+            <field name="type" ref="benefit_due_to_loss_carryforward"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="751"/>
+        </record>
+        <record model="account.account.template" id="7512">
+            <field name="name">Benefit due to loss carryforward (foreign income tax expense)</field>
+            <field name="code">7512</field>
+            <field name="type" ref="benefit_due_to_loss_carryforward"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="751"/>
+        </record>
+        <record model="account.account.template" id="752">
+            <field name="name">Income tax penalties expense</field>
+            <field name="code">752</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="75"/>
+        </record>
+        <record model="account.account.template" id="7520">
+            <field name="name">Federal income tax penalties expense</field>
+            <field name="code">7520</field>
+            <field name="type" ref="other_income_tax_expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="752"/>
+        </record>
+        <record model="account.account.template" id="7521">
+            <field name="name">State and local income tax penalties expense</field>
+            <field name="code">7521</field>
+            <field name="type" ref="other_income_tax_expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="752"/>
+        </record>
+        <record model="account.account.template" id="7522">
+            <field name="name">Foreign income tax penalties expense</field>
+            <field name="code">7522</field>
+            <field name="type" ref="other_income_tax_expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="752"/>
+        </record>
+        <record model="account.account.template" id="753">
+            <field name="name">Interest on unpaid income tax expense</field>
+            <field name="code">753</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="75"/>
+        </record>
+        <record model="account.account.template" id="7530">
+            <field name="name">Interest on unpaid federal income tax expense</field>
+            <field name="code">7530</field>
+            <field name="type" ref="other_income_tax_expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="753"/>
+        </record>
+        <record model="account.account.template" id="7531">
+            <field name="name">Interest on unpaid state and local income tax expense</field>
+            <field name="code">7531</field>
+            <field name="type" ref="other_income_tax_expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="753"/>
+        </record>
+        <record model="account.account.template" id="7532">
+            <field name="name">Interest on unpaid foreign income tax expense</field>
+            <field name="code">7532</field>
+            <field name="type" ref="other_income_tax_expense"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="753"/>
         </record>
         <record model="account.account.template" id="8">
             <field name="name">Below-the-line items</field>
