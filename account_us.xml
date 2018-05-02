@@ -1780,6 +1780,16 @@
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="1271"/>
         </record>
+        <record model="account.account.template" id="1272">
+            <field name="name">Reimbursements receivable</field>
+            <field name="code">1272</field>
+            <field name="type" ref="non_trade_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="127"/>
+        </record>
         <record model="account.account.template" id="1273">
             <field name="name">Income tax refunds receivable</field>
             <field name="code">1273</field>
