@@ -1906,7 +1906,7 @@
             <field name="parent" ref="1403"/>
         </record>
         <record model="account.account.template" id="1404">
-            <field name="name">Prepaid travel and accomodations expense</field>
+            <field name="name">Prepaid travel and accommodations expense</field>
             <field name="code">1404</field>
             <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
@@ -5304,7 +5304,7 @@
             <field name="parent" ref="552"/>
         </record>
         <record model="account.account.template" id="553">
-            <field name="name">Accomodations</field>
+            <field name="name">Accommodations</field>
             <field name="code">553</field>
             <field name="kind">view</field>
             <field name="parent" ref="55"/>
