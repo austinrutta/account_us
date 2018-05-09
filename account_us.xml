@@ -1797,7 +1797,7 @@
             <field name="parent" ref="127"/>
         </record>
         <record model="account.account.template" id="12730">
-            <field name="name">Federal income tax refund receivable</field>
+            <field name="name">Federal income tax refunds receivable</field>
             <field name="code">12730</field>
             <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
@@ -1807,7 +1807,7 @@
             <field name="parent" ref="1273"/>
         </record>
         <record model="account.account.template" id="12731">
-            <field name="name">State and local income tax refund receivable</field>
+            <field name="name">State and local income tax refunds receivable</field>
             <field name="code">12731</field>
             <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
@@ -1817,7 +1817,7 @@
             <field name="parent" ref="1273"/>
         </record>
         <record model="account.account.template" id="12732">
-            <field name="name">Foreign income tax refund receivable</field>
+            <field name="name">Foreign income tax refunds receivable</field>
             <field name="code">12732</field>
             <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
