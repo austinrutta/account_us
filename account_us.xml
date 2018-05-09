@@ -1170,6 +1170,12 @@
             <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="data_processing_and_hosting_expense">
+            <field name="name">Third-party data processing and hosting</field>
+            <field name="parent" ref="facilities_and_equipment_expenses"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="travel_meetings_and_entertainment_expenses">
             <field name="name">Travel, meetings, and entertainment</field>
             <field name="parent" ref="operating_expenses"/>
@@ -4770,7 +4776,7 @@
         <record model="account.account.template" id="54310">
             <field name="name">Data processing service usage expense</field>
             <field name="code">54310</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="data_processing_and_hosting_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5431"/>
@@ -4778,7 +4784,7 @@
         <record model="account.account.template" id="5432">
             <field name="name">Noncapitalized software license fees</field>
             <field name="code">5432</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="data_processing_and_hosting_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="543"/>
@@ -4798,7 +4804,7 @@
         <record model="account.account.template" id="543300">
             <field name="name">Domain name registration expense</field>
             <field name="code">543300</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="data_processing_and_hosting_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="54330"/>
@@ -4806,7 +4812,7 @@
         <record model="account.account.template" id="543301">
             <field name="name">Domain name service (DNS) hosting expense</field>
             <field name="code">543301</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="data_processing_and_hosting_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="54330"/>
@@ -4814,7 +4820,7 @@
         <record model="account.account.template" id="543309">
             <field name="name">Other domain name expense</field>
             <field name="code">543309</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="data_processing_and_hosting_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="54330"/>
@@ -4828,7 +4834,7 @@
         <record model="account.account.template" id="543310">
             <field name="name">Electronic mail delivery expense</field>
             <field name="code">543310</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="data_processing_and_hosting_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="54331"/>
@@ -4836,7 +4842,7 @@
         <record model="account.account.template" id="543311">
             <field name="name">Electronic mail service (SMTP) hosting expense</field>
             <field name="code">543311</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="data_processing_and_hosting_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="54331"/>
@@ -4850,7 +4856,7 @@
         <record model="account.account.template" id="543380">
             <field name="name">Infrastructure service usage expense</field>
             <field name="code">543380</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="data_processing_and_hosting_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="54338"/>
@@ -4858,7 +4864,7 @@
         <record model="account.account.template" id="543381">
             <field name="name">One-time infrastructure service fees</field>
             <field name="code">543381</field>
-            <field name="type" ref="non_personnel_expenses"/>
+            <field name="type" ref="data_processing_and_hosting_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="54338"/>
