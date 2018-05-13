@@ -1709,14 +1709,30 @@
             <field name="parent" ref="12"/>
         </record>
         <record model="account.account.template" id="122">
-            <field name="name">Interest receivable</field>
+            <field name="name">Short-term loans receivable</field>
             <field name="code">122</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="12"/>
+        </record>
+        <record model="account.account.template" id="1220">
+            <field name="name">Short-term loans receivable and current principal portion of long-term loans receivable from officers or directors</field>
+            <field name="code">1220</field>
             <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
-            <field name="parent" ref="12"/>
+            <field name="parent" ref="122"/>
+        </record>
+        <record model="account.account.template" id="1221">
+            <field name="name">Short-term loans receivable and current principal portion of long-term loans receivable from employees</field>
+            <field name="code">1221</field>
+            <field name="type" ref="non_trade_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="122"/>
         </record>
         <record model="account.account.template" id="123">
             <field name="name">Due from related parties</field>
@@ -1761,76 +1777,50 @@
             <field name="parent" ref="127"/>
         </record>
         <record model="account.account.template" id="1271">
-            <field name="name">Short-term loans receivable</field>
+            <field name="name">Reimbursements receivable</field>
             <field name="code">1271</field>
-            <field name="kind">view</field>
+            <field name="type" ref="non_trade_receivables"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
             <field name="parent" ref="127"/>
-        </record>
-        <record model="account.account.template" id="12710">
-            <field name="name">Short-term loans receivable and current principal portion of long-term loans receivable from officers or directors</field>
-            <field name="code">12710</field>
-            <field name="type" ref="non_trade_receivables"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">receivable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
-            <field name="parent" ref="1271"/>
-        </record>
-        <record model="account.account.template" id="12711">
-            <field name="name">Short-term loans receivable and current principal portion of long-term loans receivable from employees</field>
-            <field name="code">12711</field>
-            <field name="type" ref="non_trade_receivables"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">receivable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
-            <field name="parent" ref="1271"/>
         </record>
         <record model="account.account.template" id="1272">
-            <field name="name">Reimbursements receivable</field>
-            <field name="code">1272</field>
-            <field name="type" ref="non_trade_receivables"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">receivable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
-            <field name="parent" ref="127"/>
-        </record>
-        <record model="account.account.template" id="1273">
             <field name="name">Income tax refunds receivable</field>
-            <field name="code">1273</field>
+            <field name="code">1272</field>
             <field name="kind">view</field>
             <field name="parent" ref="127"/>
         </record>
-        <record model="account.account.template" id="12730">
+        <record model="account.account.template" id="12720">
             <field name="name">Federal income tax refunds receivable</field>
-            <field name="code">12730</field>
+            <field name="code">12720</field>
             <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
-            <field name="parent" ref="1273"/>
+            <field name="parent" ref="1272"/>
         </record>
-        <record model="account.account.template" id="12731">
+        <record model="account.account.template" id="12721">
             <field name="name">State and local income tax refunds receivable</field>
-            <field name="code">12731</field>
+            <field name="code">12721</field>
             <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
-            <field name="parent" ref="1273"/>
+            <field name="parent" ref="1272"/>
         </record>
-        <record model="account.account.template" id="12732">
+        <record model="account.account.template" id="12722">
             <field name="name">Foreign income tax refunds receivable</field>
-            <field name="code">12732</field>
+            <field name="code">12722</field>
             <field name="type" ref="non_trade_receivables"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
-            <field name="parent" ref="1273"/>
+            <field name="parent" ref="1272"/>
         </record>
         <record model="account.account.template" id="128">
             <field name="name">Unapplied payments</field>
@@ -1856,111 +1846,268 @@
             <field name="parent" ref="1"/>
         </record>
         <record model="account.account.template" id="140">
-            <field name="name">Prepaid expenses</field>
+            <field name="name">Prepaid items</field>
             <field name="code">140</field>
             <field name="kind">view</field>
             <field name="parent" ref="14"/>
         </record>
         <record model="account.account.template" id="1400">
-            <field name="name">Prepaid insurance expense</field>
+            <field name="name">Prepaid contract services</field>
             <field name="code">1400</field>
-            <field name="type" ref="prepaid_expenses"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">expense</field>
+            <field name="kind">view</field>
             <field name="parent" ref="140"/>
         </record>
         <record model="account.account.template" id="1401">
-            <field name="name">Prepaid rent expense</field>
+            <field name="name">Prepaid non-personnel items</field>
             <field name="code">1401</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="140"/>
+        </record>
+        <record model="account.account.template" id="14010">
+            <field name="name">Prepaid advertising and promotion</field>
+            <field name="code">14010</field>
             <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="140"/>
+            <field name="parent" ref="1401"/>
+        </record>
+        <record model="account.account.template" id="14011">
+            <field name="name">Prepaid postage and shipping</field>
+            <field name="code">14011</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1401"/>
+        </record>
+        <record model="account.account.template" id="14012">
+            <field name="name">Prepaid printing, duplication, and publication</field>
+            <field name="code">14012</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1401"/>
+        </record>
+        <record model="account.account.template" id="14013">
+            <field name="name">Prepaid subscriptions</field>
+            <field name="code">14013</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1401"/>
         </record>
         <record model="account.account.template" id="1402">
-            <field name="name">Prepaid interest expense</field>
+            <field name="name">Prepaid facilities and equipment items</field>
             <field name="code">1402</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="140"/>
+        </record>
+        <record model="account.account.template" id="14020">
+            <field name="name">Prepaid rent</field>
+            <field name="code">14020</field>
             <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
             <field name="kind">expense</field>
-            <field name="parent" ref="140"/>
+            <field name="parent" ref="1402"/>
+        </record>
+        <record model="account.account.template" id="14021">
+            <field name="name">Prepaid utilities</field>
+            <field name="code">14021</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1402"/>
+        </record>
+        <record model="account.account.template" id="14022">
+            <field name="name">Prepaid telephone and communications services</field>
+            <field name="code">14022</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1402"/>
+        </record>
+        <record model="account.account.template" id="14023">
+            <field name="name">Prepaid data processing, hosting, and related services</field>
+            <field name="code">14023</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1402"/>
+        </record>
+        <record model="account.account.template" id="14024">
+            <field name="name">Prepaid repairs and maintenance</field>
+            <field name="code">14024</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1402"/>
+        </record>
+        <record model="account.account.template" id="14025">
+            <field name="name">Prepaid equipment rental</field>
+            <field name="code">14025</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1402"/>
+        </record>
+        <record model="account.account.template" id="14029">
+            <field name="name">Other prepaid facilities and equipment</field>
+            <field name="code">14029</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1402"/>
         </record>
         <record model="account.account.template" id="1403">
-            <field name="name">Advances</field>
+            <field name="name">Prepaid travel, meetings, and entertainment items</field>
             <field name="code">1403</field>
             <field name="kind">view</field>
             <field name="parent" ref="140"/>
         </record>
         <record model="account.account.template" id="14030">
-            <field name="name">Advances to officers, directors, and employees</field>
+            <field name="name">Prepaid transportation</field>
             <field name="code">14030</field>
             <field name="type" ref="prepaid_expenses"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">receivable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">expense</field>
             <field name="parent" ref="1403"/>
         </record>
         <record model="account.account.template" id="14031">
-            <field name="name">Advances to subsidiaries and affiliates</field>
+            <field name="name">Prepaid conferences, conventions, and meetings</field>
             <field name="code">14031</field>
             <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1403"/>
+        </record>
+        <record model="account.account.template" id="14032">
+            <field name="name">Prepaid meals</field>
+            <field name="code">14032</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1403"/>
+        </record>
+        <record model="account.account.template" id="14033">
+            <field name="name">Prepaid accommodations</field>
+            <field name="code">14033</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1403"/>
+        </record>
+        <record model="account.account.template" id="1409">
+            <field name="name">Other prepaid expenses</field>
+            <field name="code">1409</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="140"/>
+        </record>
+        <record model="account.account.template" id="14090">
+            <field name="name">Prepaid membership dues—corporate</field>
+            <field name="code">14090</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1409"/>
+        </record>
+        <record model="account.account.template" id="14091">
+            <field name="name">Unexpired insurance</field>
+            <field name="code">14091</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="1409"/>
+        </record>
+        <record model="account.account.template" id="14092">
+            <field name="name">Prepaid interest</field>
+            <field name="code">14092</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1409"/>
+        </record>
+        <record model="account.account.template" id="14099">
+            <field name="name">Other prepaid expense</field>
+            <field name="code">14099</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1409"/>
+        </record>
+        <record model="account.account.template" id="141">
+            <field name="name">Accrued revenue</field>
+            <field name="code">141</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="14"/>
+        </record>
+        <record model="account.account.template" id="1410">
+            <field name="name">Interest receivable</field>
+            <field name="code">1410</field>
+            <field name="type" ref="accrued_revenues"/>
             <field name="deferral" eval="True"/>
             <field name="kind">receivable</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
-            <field name="parent" ref="1403"/>
-        </record>
-        <record model="account.account.template" id="1404">
-            <field name="name">Prepaid travel and accommodations expense</field>
-            <field name="code">1404</field>
-            <field name="type" ref="prepaid_expenses"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="140"/>
-        </record>
-        <record model="account.account.template" id="1405">
-            <field name="name">Prepaid conference expense</field>
-            <field name="code">1405</field>
-            <field name="type" ref="prepaid_expenses"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="140"/>
-        </record>
-        <record model="account.account.template" id="1409">
-            <field name="name">Prepaid other expense</field>
-            <field name="code">1409</field>
-            <field name="type" ref="prepaid_expenses"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">expense</field>
-            <field name="parent" ref="140"/>
-        </record>
-        <record model="account.account.template" id="141">
-            <field name="name">Returnable deposits</field>
-            <field name="code">141</field>
-            <field name="type" ref="returnable_deposits"/>
-            <field name="kind">view</field>
-            <field name="parent" ref="14"/>
+            <field name="parent" ref="141"/>
         </record>
         <record model="account.account.template" id="142">
-            <field name="name">Accrued revenue</field>
+            <field name="name">Deferred costs of related parties</field>
             <field name="code">142</field>
-            <field name="type" ref="accrued_revenues"/>
             <field name="kind">view</field>
             <field name="parent" ref="14"/>
         </record>
-        <record model="account.account.template" id="143">
-            <field name="name">Deferred costs</field>
-            <field name="code">143</field>
-            <field name="type" ref="deferred_costs"/>
+        <record model="account.account.template" id="1420">
+            <field name="name">Advances</field>
+            <field name="code">1420</field>
             <field name="kind">view</field>
-            <field name="parent" ref="14"/>
+            <field name="parent" ref="142"/>
+        </record>
+        <record model="account.account.template" id="14200">
+            <field name="name">Advances to officers, directors, and employees</field>
+            <field name="code">14200</field>
+            <field name="type" ref="deferred_costs"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1420"/>
+        </record>
+        <record model="account.account.template" id="14201">
+            <field name="name">Advances to subsidiaries and affiliates</field>
+            <field name="code">14201</field>
+            <field name="type" ref="deferred_costs"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">receivable</field>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1420"/>
+        </record>
+        <record model="account.account.template" id="1421">
+            <field name="name">Prepaid employer-provided benefits</field>
+            <field name="code">1421</field>
+            <field name="kind">view</field>
+            <field name="parent" ref="142"/>
+        </record>
+        <record model="account.account.template" id="14210">
+            <field name="name">Prepaid conference registration fees</field>
+            <field name="code">14210</field>
+            <field name="type" ref="prepaid_expenses"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="1421"/>
         </record>
         <record model="account.account.template" id="144">
             <field name="name">Other accrued and deferred items</field>
             <field name="code">144</field>
             <field name="kind">view</field>
             <field name="parent" ref="14"/>
+        </record>
+        <record model="account.account.template" id="1440">
+            <field name="name">Returnable deposits</field>
+            <field name="code">1440</field>
+            <field name="type" ref="returnable_deposits"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="144"/>
         </record>
         <record model="account.account.template" id="145">
             <field name="name">Other current assets</field>
@@ -2725,7 +2872,7 @@
             <field name="parent" ref="1"/>
         </record>
         <record model="account.account.template" id="190">
-            <field name="name">Prepaid and other accrued assets</field>
+            <field name="name">Deferred costs and other accrued assets</field>
             <field name="code">190</field>
             <field name="type" ref="non_current_prepaid_expenses"/>
             <field name="kind">view</field>
