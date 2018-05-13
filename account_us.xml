@@ -1176,6 +1176,12 @@
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="depreciation_and_amortization_expense">
+            <field name="name">Depreciation and amortization</field>
+            <field name="parent" ref="facilities_and_equipment_expenses"/>
+            <field name="sequence" eval="20"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
         <record model="account.account.type.template" id="travel_meetings_and_entertainment_expenses">
             <field name="name">Travel, meetings, and entertainment</field>
             <field name="parent" ref="operating_expenses"/>
@@ -5135,7 +5141,7 @@
         <record model="account.account.template" id="54800">
             <field name="name">Amortization expense—acquisition costs of land</field>
             <field name="code">54800</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5480"/>
@@ -5143,7 +5149,7 @@
         <record model="account.account.template" id="54801">
             <field name="name">Depreciation expense—land improvements</field>
             <field name="code">54801</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5480"/>
@@ -5157,7 +5163,7 @@
         <record model="account.account.template" id="54810">
             <field name="name">Depreciation expense—buildings and structures</field>
             <field name="code">54810</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5481"/>
@@ -5165,7 +5171,7 @@
         <record model="account.account.template" id="54811">
             <field name="name">Depreciation expense—leasehold improvements</field>
             <field name="code">54811</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5481"/>
@@ -5179,7 +5185,7 @@
         <record model="account.account.template" id="54820">
             <field name="name">Depreciation expense—vehicles</field>
             <field name="code">54820</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5482"/>
@@ -5187,7 +5193,7 @@
         <record model="account.account.template" id="54821">
             <field name="name">Depreciation expense—delivery equipment</field>
             <field name="code">54821</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5482"/>
@@ -5201,7 +5207,7 @@
         <record model="account.account.template" id="54830">
             <field name="name">Depreciation expense—furniture, fixtures, and office equipment</field>
             <field name="code">54830</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5483"/>
@@ -5223,7 +5229,7 @@
         <record model="account.account.template" id="54880">
             <field name="name">Amortization expense—marketing-related intangibles</field>
             <field name="code">54880</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5488"/>
@@ -5231,7 +5237,7 @@
         <record model="account.account.template" id="54881">
             <field name="name">Amortization expense—customer-related intangibles</field>
             <field name="code">54881</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5488"/>
@@ -5239,7 +5245,7 @@
         <record model="account.account.template" id="54882">
             <field name="name">Amortization expense—artistic-related intangibles</field>
             <field name="code">54882</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5488"/>
@@ -5247,7 +5253,7 @@
         <record model="account.account.template" id="54883">
             <field name="name">Amortization expense—contract-based intangibles</field>
             <field name="code">54883</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5488"/>
@@ -5261,7 +5267,7 @@
         <record model="account.account.template" id="548840">
             <field name="name">Amortization expense—capitalized software</field>
             <field name="code">548840</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="54884"/>
@@ -5269,7 +5275,7 @@
         <record model="account.account.template" id="548841">
             <field name="name">Amortization expense—other technology-based intangibles</field>
             <field name="code">548841</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="54884"/>
@@ -5277,7 +5283,7 @@
         <record model="account.account.template" id="54885">
             <field name="name">Amortization expense—research and development costs</field>
             <field name="code">54885</field>
-            <field name="type" ref="facilities_and_equipment_expenses"/>
+            <field name="type" ref="depreciation_and_amortization_expense"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5488"/>
