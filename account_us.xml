@@ -1212,6 +1212,12 @@
             <field name="sequence" eval="90"/>
             <field name="display_balance">credit-debit</field>
         </record>
+        <record model="account.account.type.template" id="taxes_and_licenses_expenses">
+            <field name="name">Taxes and licenses</field>
+            <field name="parent" ref="other_operating_expenses"/>
+            <field name="sequence" eval="10"/>
+            <field name="display_balance">credit-debit</field>
+        </record>
 
 <!-- Accounts -->
 
@@ -5555,7 +5561,7 @@
         <record model="account.account.template" id="59100">
             <field name="name">Business entity registration fees</field>
             <field name="code">59100</field>
-            <field name="type" ref="other_operating_expenses"/>
+            <field name="type" ref="taxes_and_licenses_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5910"/>
@@ -5563,7 +5569,7 @@
         <record model="account.account.template" id="59101">
             <field name="name">Municipal business licensing fees</field>
             <field name="code">59101</field>
-            <field name="type" ref="other_operating_expenses"/>
+            <field name="type" ref="taxes_and_licenses_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="5910"/>
