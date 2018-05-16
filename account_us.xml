@@ -2078,7 +2078,7 @@
             <field name="code">14200</field>
             <field name="type" ref="deferred_costs"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">receivable</field>
+            <field name="kind">other</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="1420"/>
@@ -2088,7 +2088,7 @@
             <field name="code">14201</field>
             <field name="type" ref="deferred_costs"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">receivable</field>
+            <field name="kind">other</field>
             <field name="party_required" eval="True"/>
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="1420"/>
@@ -2164,7 +2164,6 @@
         <record model="account.account.template" id="1510">
             <field name="name">Long-term loans</field>
             <field name="code">1510</field>
-            <field name="type" ref="loans_and_receivables_as_investments"/>
             <field name="kind">view</field>
             <field name="parent" ref="151"/>
         </record>
@@ -2173,9 +2172,8 @@
             <field name="code">15100</field>
             <field name="type" ref="loans_and_receivables_as_investments"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">receivable</field>
+            <field name="kind">other</field>
             <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1510"/>
         </record>
         <record model="account.account.template" id="15101">
@@ -2183,9 +2181,8 @@
             <field name="code">15101</field>
             <field name="type" ref="loans_and_receivables_as_investments"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">receivable</field>
+            <field name="kind">other</field>
             <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="1510"/>
         </record>
         <record model="account.account.template" id="152">
@@ -3146,7 +3143,7 @@
             <field name="parent" ref="22"/>
         </record>
         <record model="account.account.template" id="2220">
-            <field name="name">Accrued salaries and wages payable</field>
+            <field name="name">Accrued salaries and wages</field>
             <field name="code">2220</field>
             <field name="kind">view</field>
             <field name="parent" ref="222"/>
@@ -3156,9 +3153,8 @@
             <field name="code">22200</field>
             <field name="type" ref="accrued_payroll"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
+            <field name="kind">other</field>
             <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="2220"/>
         </record>
         <record model="account.account.template" id="22201">
@@ -3166,9 +3162,8 @@
             <field name="code">22201</field>
             <field name="type" ref="accrued_payroll"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
+            <field name="kind">other</field>
             <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="2220"/>
         </record>
         <record model="account.account.template" id="22202">
@@ -3176,9 +3171,8 @@
             <field name="code">22202</field>
             <field name="type" ref="accrued_payroll"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
+            <field name="kind">other</field>
             <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="2220"/>
         </record>
         <record model="account.account.template" id="2221">
@@ -3198,9 +3192,7 @@
             <field name="code">222100</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="22210"/>
         </record>
         <record model="account.account.template" id="222101">
@@ -3208,9 +3200,7 @@
             <field name="code">222101</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="22210"/>
         </record>
         <record model="account.account.template" id="222102">
@@ -3218,9 +3208,7 @@
             <field name="code">222102</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="22210"/>
         </record>
         <record model="account.account.template" id="22211">
@@ -3228,9 +3216,7 @@
             <field name="code">22211</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2221"/>
         </record>
         <record model="account.account.template" id="22212">
@@ -3238,9 +3224,7 @@
             <field name="code">22212</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2221"/>
         </record>
         <record model="account.account.template" id="22213">
@@ -3248,9 +3232,7 @@
             <field name="code">22213</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2221"/>
         </record>
         <record model="account.account.template" id="22215">
@@ -3264,9 +3246,7 @@
             <field name="code">222150</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="22215"/>
         </record>
         <record model="account.account.template" id="222151">
@@ -3274,9 +3254,7 @@
             <field name="code">222151</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="22215"/>
         </record>
         <record model="account.account.template" id="222152">
@@ -3284,9 +3262,7 @@
             <field name="code">222152</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="22215"/>
         </record>
         <record model="account.account.template" id="22219">
@@ -3302,53 +3278,43 @@
             <field name="parent" ref="222"/>
         </record>
         <record model="account.account.template" id="22220">
-            <field name="name">Employer FICA contribution payable</field>
+            <field name="name">Employer FICA contribution</field>
             <field name="code">22220</field>
             <field name="type" ref="accrued_payroll_taxes"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2222"/>
         </record>
         <record model="account.account.template" id="22221">
-            <field name="name">Employer Medicare contribution payable</field>
+            <field name="name">Employer Medicare contribution</field>
             <field name="code">22221</field>
             <field name="type" ref="accrued_payroll_taxes"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2222"/>
         </record>
         <record model="account.account.template" id="22222">
-            <field name="name">Employer federal unemployment tax payable</field>
+            <field name="name">Employer federal unemployment tax</field>
             <field name="code">22222</field>
             <field name="type" ref="accrued_payroll_taxes"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2222"/>
         </record>
         <record model="account.account.template" id="22223">
-            <field name="name">Employer state unemployment tax payable</field>
+            <field name="name">Employer state unemployment tax</field>
             <field name="code">22223</field>
             <field name="type" ref="accrued_payroll_taxes"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2222"/>
         </record>
         <record model="account.account.template" id="22224">
-            <field name="name">Employer workers’ compensation insurance payable</field>
+            <field name="name">Employer workers’ compensation insurance</field>
             <field name="code">22224</field>
             <field name="type" ref="accrued_payroll_taxes"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2222"/>
         </record>
         <record model="account.account.template" id="2223">
@@ -3358,43 +3324,35 @@
             <field name="parent" ref="222"/>
         </record>
         <record model="account.account.template" id="22230">
-            <field name="name">Employer-provided health insurance payable</field>
+            <field name="name">Employer-provided health insurance</field>
             <field name="code">22230</field>
             <field name="type" ref="employer_benefit_plan_contributions"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2223"/>
         </record>
         <record model="account.account.template" id="22231">
-            <field name="name">Employer-provided life insurance payable</field>
+            <field name="name">Employer-provided life insurance</field>
             <field name="code">22231</field>
             <field name="type" ref="employer_benefit_plan_contributions"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2223"/>
         </record>
         <record model="account.account.template" id="22232">
-            <field name="name">Employer-provided 401k contributions payable</field>
+            <field name="name">Employer-provided 401k contributions</field>
             <field name="code">22232</field>
             <field name="type" ref="employer_benefit_plan_contributions"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2223"/>
         </record>
         <record model="account.account.template" id="22233">
-            <field name="name">Employer-provided IRA contributions payable</field>
+            <field name="name">Employer-provided IRA contributions</field>
             <field name="code">22233</field>
             <field name="type" ref="employer_benefit_plan_contributions"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2223"/>
         </record>
         <record model="account.account.template" id="223">
@@ -3404,65 +3362,93 @@
             <field name="parent" ref="22"/>
         </record>
         <record model="account.account.template" id="2230">
-            <field name="name">Sales tax payable</field>
+            <field name="name">Sales tax collected</field>
             <field name="code">2230</field>
-            <field name="type" ref="tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">view</field>
             <field name="parent" ref="223"/>
         </record>
+        <record model="account.account.template" id="22300">
+            <field name="name">Sales tax collected</field>
+            <field name="code">22300</field>
+            <field name="type" ref="tax_liabilities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="2230"/>
+        </record>
+        <record model="account.account.template" id="22301">
+            <field name="name">Sales tax collected</field>
+            <field name="code">22301</field>
+            <field name="type" ref="tax_liabilities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="2230"/>
+        </record>
+        <record model="account.account.template" id="22302">
+            <field name="name">Sales tax collected</field>
+            <field name="code">22302</field>
+            <field name="type" ref="tax_liabilities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="2230"/>
+        </record>
+        <record model="account.account.template" id="22303">
+            <field name="name">Sales tax collected</field>
+            <field name="code">22303</field>
+            <field name="type" ref="tax_liabilities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="2230"/>
+        </record>
+        <record model="account.account.template" id="22304">
+            <field name="name">Sales tax collected</field>
+            <field name="code">22304</field>
+            <field name="type" ref="tax_liabilities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="2230"/>
+        </record>
         <record model="account.account.template" id="2231">
-            <field name="name">Use tax payable</field>
+            <field name="name">Accrued use tax</field>
             <field name="code">2231</field>
             <field name="type" ref="tax_liabilities"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="223"/>
         </record>
         <record model="account.account.template" id="2232">
-            <field name="name">Accrued real estate and property taxes payable</field>
+            <field name="name">Accrued real estate and property taxes</field>
             <field name="code">2232</field>
             <field name="kind">view</field>
             <field name="parent" ref="223"/>
         </record>
         <record model="account.account.template" id="2233">
-            <field name="name">Accrued income and franchise taxes payable</field>
+            <field name="name">Accrued income and franchise taxes</field>
             <field name="code">2233</field>
             <field name="kind">view</field>
             <field name="parent" ref="223"/>
         </record>
         <record model="account.account.template" id="22330">
-            <field name="name">Accrued federal income taxes payable</field>
+            <field name="name">Accrued federal income taxes</field>
             <field name="code">22330</field>
             <field name="type" ref="tax_liabilities"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2233"/>
         </record>
         <record model="account.account.template" id="22331">
-            <field name="name">Accrued state income and franchise taxes payable</field>
+            <field name="name">Accrued state income and franchise taxes</field>
             <field name="code">22331</field>
             <field name="type" ref="tax_liabilities"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2233"/>
         </record>
         <record model="account.account.template" id="22332">
-            <field name="name">Accrued local income taxes payable</field>
+            <field name="name">Accrued local income taxes</field>
             <field name="code">22332</field>
             <field name="type" ref="tax_liabilities"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2233"/>
         </record>
         <record model="account.account.template" id="2234">
@@ -3476,9 +3462,7 @@
             <field name="code">22340</field>
             <field name="type" ref="tax_liabilities"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2234"/>
         </record>
         <record model="account.account.template" id="22341">
@@ -3486,9 +3470,7 @@
             <field name="code">22341</field>
             <field name="type" ref="tax_liabilities"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2234"/>
         </record>
         <record model="account.account.template" id="22342">
@@ -3496,9 +3478,7 @@
             <field name="code">22342</field>
             <field name="type" ref="tax_liabilities"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="2234"/>
         </record>
         <record model="account.account.template" id="224">
@@ -3524,9 +3504,7 @@
             <field name="code">250</field>
             <field name="type" ref="non_current_debts"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="25"/>
         </record>
         <record model="account.account.template" id="251">
@@ -3534,9 +3512,7 @@
             <field name="code">251</field>
             <field name="type" ref="non_current_debts"/>
             <field name="deferral" eval="True"/>
-            <field name="kind">payable</field>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
             <field name="parent" ref="25"/>
         </record>
         <record model="account.account.template" id="252">
