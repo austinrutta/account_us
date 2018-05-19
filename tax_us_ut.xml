@@ -3,8 +3,164 @@
 this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data>
-        <record model="account.tax.code.template" id="tax_code_us">
-            <field name="name">Chart of tax codes (US)</field>
+
+        <!-- Tax code templates -->
+        <record model="account.tax.code.template" id="tax_code_us_ut">
+            <field name="name">Chart of tax accounts (US–UT)</field>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_sut">
+            <field name="name">Sales and use tax</field>
+            <field name="code">SUT</field>
+            <field name="parent" ref="tax_code_us_ut"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_11">
+            <field name="name">Total state and local taxes due (9 − 10)</field>
+            <field name="code">11</field>
+            <field name="parent" ref="tax_code_sut"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_10">
+            <field name="name">Residential fuels included in line 7</field>
+            <field name="code">10</field>
+            <field name="parent" ref="tax_code_11"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_9">
+            <field name="name">Total tax (8a + 8b)</field>
+            <field name="code">9</field>
+            <field name="parent" ref="tax_code_11"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_8a">
+            <field name="name">Taxes on non-food and prepared food sales</field>
+            <field name="code">8a</field>
+            <field name="parent" ref="tax_code_9"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_8b">
+            <field name="name">Taxes on grocery food sales</field>
+            <field name="code">8b</field>
+            <field name="parent" ref="tax_code_9"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_7">
+            <field name="name">Net taxable sales and purchases (5 ± 6)</field>
+            <field name="code">7</field>
+            <field name="parent" ref="tax_code_sut"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_6">
+            <field name="name">Adjustments</field>
+            <field name="code">6</field>
+            <field name="parent" ref="tax_code_7"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_6_credit_notes">
+            <field name="name">Credit notes issued</field>
+            <field name="parent" ref="tax_code_6"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_6_sales_discounts">
+            <field name="name">Sales discounts allowed</field>
+            <field name="parent" ref="tax_code_6"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_6_bad_debts">
+            <field name="name">Bad debts recognized</field>
+            <field name="parent" ref="tax_code_6"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_6_excess_tax">
+            <field name="name">Excess tax collected</field>
+            <field name="parent" ref="tax_code_6"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_5">
+            <field name="name">Total taxable amounts (3 + 4)</field>
+            <field name="code">5</field>
+            <field name="parent" ref="tax_code_7"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_4">
+            <field name="name">Goods purchased tax free and used by you</field>
+            <field name="code">4</field>
+            <field name="parent" ref="tax_code_5"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_3">
+            <field name="name">Taxable sales (1 − 2)</field>
+            <field name="code">3</field>
+            <field name="parent" ref="tax_code_5"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_2">
+            <field name="name">Exempt sales (−)</field>
+            <field name="code">2</field>
+            <field name="parent" ref="tax_code_3"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_1">
+            <field name="name">Total sales of goods and services</field>
+            <field name="code">1</field>
+            <field name="parent" ref="tax_code_3"/>
+            <field name="account" ref="root"/>
+        </record>
+
+        <!-- Tax group templates -->
+        <record model="account.tax.group" id="group_sut_sales_of_goods">
+            <field name="name">Sales tax on goods</field>
+            <field name="code">Sales tax on goods</field>
+            <field name="kind">sale</field>
+        </record>
+        <record model="account.tax.group" id="group_sut_sales_of_services">
+            <field name="name">Sales tax on services</field>
+            <field name="code">Sales tax on services</field>
+            <field name="kind">sale</field>
+        </record>
+        <record model="account.tax.group" id="group_sut_purchases">
+            <field name="name">Use tax on purchases</field>
+            <field name="code">Use tax on purchases</field>
+            <field name="kind">purchase</field>
+        </record>
+
+        <!-- Tax templates -->
+
+        <record model="account.tax.template" id="sut_purchases_03_038">
+            <field name="name">Use tax on purchases made from Logan Utah at 6.6%</field>
+            <field name="description">Use tax 6.6%</field>
+            <field name="group" ref="group_sut_purchases"/>
+            <field name="type">none</field>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.template" id="sut_purchases_03_038_1">
+            <field name="name">Use tax on purchases in Logan, Utah at 6.6% (1)</field>
+            <field name="description">Use tax 6.6% (1)</field>
+            <field name="parent" ref="sut_purchases_03_038"/>
+            <field name="rate" eval="Decimal('.066')"/>
+            <field name="type">percentage</field>
+            <field name="invoice_account" ref="59110"/>
+            <field name="credit_note_account" ref="59110"/>
+            <field name="invoice_base_code" ref="tax_code_4"/>
+            <field name="invoice_tax_code" ref="tax_code_8a"/>
+            <field name="credit_note_base_code" ref="tax_code_6_credit_notes"/>
+            <field name="credit_note_tax_code" ref="tax_code_8a"/>
+            <field name="account" ref="root"/>
+        </record>
+        <record model="account.tax.template" id="sut_purchases_03_038_2">
+            <field name="name">Use tax on purchases in Logan, Utah at 6.6% (2)</field>
+            <field name="description">Use tax 6.6% (2)</field>
+            <field name="parent" ref="sut_purchases_03_038"/>
+            <field name="rate" eval="Decimal('-.066')"/>
+            <field name="type">percentage</field>
+            <field name="invoice_account" ref="2231"/>
+            <field name="credit_note_account" ref="2231"/>
+            <field name="invoice_base_code" ref="tax_code_4"/>
+            <field name="invoice_tax_code" ref="tax_code_8a"/>
+            <field name="invoice_tax_sign" eval="Decimal('-1')"/>
+            <field name="credit_note_base_code" ref="tax_code_4"/>
+            <field name="credit_note_base_sign" eval="Decimal('1')"/>
             <field name="account" ref="root"/>
         </record>
     </data>
