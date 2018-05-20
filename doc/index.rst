@@ -15,3 +15,9 @@ accounts and analytic accounts. Here are some conclusions I have come to:
 - To satisfy income tax reporting needs, use a higher granularity of financial
   accounts than is required for financial accounting to differentiate types of
   expenditures.
+
+- Tax files are separated by legal jurisdiction. For example, in the US the
+  laws governing sales and use tax are handled at the state level, so each
+  state has its own file of taxes and tax codes. This is a more iterative and
+  flexible approach for small and medium business to take and doesn't
+  necessitate integration with a 3rd-party like TaxJar or AvaTax.
