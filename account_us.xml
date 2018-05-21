@@ -5556,6 +5556,14 @@
             <field name="kind">view</field>
             <field name="parent" ref="591"/>
         </record>
+        <record model="account.account.template" id="59110">
+            <field name="name">Tax on inventory that was used by the company expense</field>
+            <field name="code">59110</field>
+            <field name="type" ref="taxes_and_licenses_expenses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">expense</field>
+            <field name="parent" ref="5911"/>
+        </record>
         <record model="account.account.template" id="592">
             <field name="name">Insurance, nonemployee related</field>
             <field name="code">592</field>
