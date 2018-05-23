@@ -3367,46 +3367,6 @@
             <field name="kind">view</field>
             <field name="parent" ref="223"/>
         </record>
-        <record model="account.account.template" id="22300">
-            <field name="name">Sales tax collected</field>
-            <field name="code">22300</field>
-            <field name="type" ref="tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="2230"/>
-        </record>
-        <record model="account.account.template" id="22301">
-            <field name="name">Sales tax collected</field>
-            <field name="code">22301</field>
-            <field name="type" ref="tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="2230"/>
-        </record>
-        <record model="account.account.template" id="22302">
-            <field name="name">Sales tax collected</field>
-            <field name="code">22302</field>
-            <field name="type" ref="tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="2230"/>
-        </record>
-        <record model="account.account.template" id="22303">
-            <field name="name">Sales tax collected</field>
-            <field name="code">22303</field>
-            <field name="type" ref="tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="2230"/>
-        </record>
-        <record model="account.account.template" id="22304">
-            <field name="name">Sales tax collected</field>
-            <field name="code">22304</field>
-            <field name="type" ref="tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
-            <field name="parent" ref="2230"/>
-        </record>
         <record model="account.account.template" id="2231">
             <field name="name">Accrued use tax</field>
             <field name="code">2231</field>
