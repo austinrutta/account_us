@@ -816,39 +816,39 @@
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="income_tax_expense">
+        <record model="account.account.type.template" id="income_tax_expenses">
             <field name="name">Income tax expense</field>
             <field name="parent" ref="income_from_continuing_operations"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="current_income_tax_expense">
+        <record model="account.account.type.template" id="current_income_tax_expenses">
             <field name="name">Current income tax expense</field>
-            <field name="parent" ref="income_tax_expense"/>
+            <field name="parent" ref="income_tax_expenses"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="deferred_income_tax_expense">
+        <record model="account.account.type.template" id="deferred_income_tax_expenses">
             <field name="name">Deferred income tax expense</field>
-            <field name="parent" ref="income_tax_expense"/>
+            <field name="parent" ref="income_tax_expenses"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="benefit_due_to_loss_carryback">
             <field name="name">Benefit due to loss carryback</field>
-            <field name="parent" ref="income_tax_expense"/>
+            <field name="parent" ref="income_tax_expenses"/>
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="benefit_due_to_loss_carryforward">
             <field name="name">Benefit due to loss carryforward</field>
-            <field name="parent" ref="income_tax_expense"/>
+            <field name="parent" ref="income_tax_expenses"/>
             <field name="sequence" eval="40"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="other_income_tax_expense">
+        <record model="account.account.type.template" id="other_income_tax_expenses">
             <field name="name">Other income tax expense</field>
-            <field name="parent" ref="income_tax_expense"/>
+            <field name="parent" ref="income_tax_expenses"/>
             <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
         </record>
@@ -6285,7 +6285,7 @@
         <record model="account.account.template" id="700">
             <field name="name">Current federal income tax expense</field>
             <field name="code">700</field>
-            <field name="type" ref="current_income_tax_expense"/>
+            <field name="type" ref="current_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="70"/>
@@ -6315,7 +6315,7 @@
         <record model="account.account.template" id="710">
             <field name="name">Deferred federal income tax expense</field>
             <field name="code">710</field>
-            <field name="type" ref="deferred_income_tax_expense"/>
+            <field name="type" ref="deferred_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="71"/>
@@ -6429,7 +6429,7 @@
         <record model="account.account.template" id="7520">
             <field name="name">Federal income tax penalties expense</field>
             <field name="code">7520</field>
-            <field name="type" ref="other_income_tax_expense"/>
+            <field name="type" ref="other_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="752"/>
@@ -6437,7 +6437,7 @@
         <record model="account.account.template" id="7521">
             <field name="name">State and local income tax penalties expense</field>
             <field name="code">7521</field>
-            <field name="type" ref="other_income_tax_expense"/>
+            <field name="type" ref="other_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="752"/>
@@ -6445,7 +6445,7 @@
         <record model="account.account.template" id="7522">
             <field name="name">Foreign income tax penalties expense</field>
             <field name="code">7522</field>
-            <field name="type" ref="other_income_tax_expense"/>
+            <field name="type" ref="other_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="752"/>
@@ -6459,7 +6459,7 @@
         <record model="account.account.template" id="7530">
             <field name="name">Interest on unpaid federal income tax expense</field>
             <field name="code">7530</field>
-            <field name="type" ref="other_income_tax_expense"/>
+            <field name="type" ref="other_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="753"/>
@@ -6467,7 +6467,7 @@
         <record model="account.account.template" id="7531">
             <field name="name">Interest on unpaid state and local income tax expense</field>
             <field name="code">7531</field>
-            <field name="type" ref="other_income_tax_expense"/>
+            <field name="type" ref="other_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="753"/>
@@ -6475,7 +6475,7 @@
         <record model="account.account.template" id="7532">
             <field name="name">Interest on unpaid foreign income tax expense</field>
             <field name="code">7532</field>
-            <field name="type" ref="other_income_tax_expense"/>
+            <field name="type" ref="other_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
             <field name="kind">expense</field>
             <field name="parent" ref="753"/>
