@@ -817,19 +817,19 @@
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="income_tax_expenses">
-            <field name="name">Income tax expense</field>
+            <field name="name">Income tax expenses</field>
             <field name="parent" ref="income_from_continuing_operations"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="current_income_tax_expenses">
-            <field name="name">Current income tax expense</field>
+            <field name="name">Current income tax expenses</field>
             <field name="parent" ref="income_tax_expenses"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="deferred_income_tax_expenses">
-            <field name="name">Deferred income tax expense</field>
+            <field name="name">Deferred income tax expenses</field>
             <field name="parent" ref="income_tax_expenses"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
@@ -847,7 +847,7 @@
             <field name="display_balance">credit-debit</field>
         </record>
         <record model="account.account.type.template" id="other_income_tax_expenses">
-            <field name="name">Other income tax expense</field>
+            <field name="name">Other income tax expenses</field>
             <field name="parent" ref="income_tax_expenses"/>
             <field name="sequence" eval="50"/>
             <field name="display_balance">credit-debit</field>
@@ -5503,7 +5503,7 @@
             <field name="parent" ref="591"/>
         </record>
         <record model="account.account.template" id="59110">
-            <field name="name">Tax on inventory that was used by the company expense</field>
+            <field name="name">Tax on inventory consumed by the company expense</field>
             <field name="code">59110</field>
             <field name="type" ref="taxes_and_licenses_expenses"/>
             <field name="deferral" eval="False"/>
