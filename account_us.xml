@@ -948,14 +948,14 @@
             <field name="sequence" eval="30"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="interest_revenues">
-            <field name="name">Interest revenues</field>
+        <record model="account.account.type.template" id="dividend_revenues">
+            <field name="name">Dividend revenues</field>
             <field name="parent" ref="non_operating_revenues"/>
             <field name="sequence" eval="10"/>
             <field name="display_balance">credit-debit</field>
         </record>
-        <record model="account.account.type.template" id="dividend_revenues">
-            <field name="name">Dividend revenues</field>
+        <record model="account.account.type.template" id="interest_revenues">
+            <field name="name">Interest revenues</field>
             <field name="parent" ref="non_operating_revenues"/>
             <field name="sequence" eval="20"/>
             <field name="display_balance">credit-debit</field>
