@@ -2920,17 +2920,13 @@
         <record model="account.account.template" id="1931">
             <field name="name">Deferred state and local tax asset</field>
             <field name="code">1931</field>
-            <field name="type" ref="deferred_tax_assets"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">view</field>
             <field name="parent" ref="193"/>
         </record>
         <record model="account.account.template" id="1932">
             <field name="name">Deferred foreign tax asset</field>
             <field name="code">1932</field>
-            <field name="type" ref="deferred_tax_assets"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">view</field>
             <field name="parent" ref="193"/>
         </record>
         <record model="account.account.template" id="1939">
@@ -3370,9 +3366,7 @@
         <record model="account.account.template" id="2231">
             <field name="name">Accrued use tax</field>
             <field name="code">2231</field>
-            <field name="type" ref="tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">view</field>
             <field name="parent" ref="223"/>
         </record>
         <record model="account.account.template" id="2232">
@@ -3396,19 +3390,15 @@
             <field name="parent" ref="2233"/>
         </record>
         <record model="account.account.template" id="22331">
-            <field name="name">Accrued state income and franchise taxes</field>
+            <field name="name">Accrued state and local income and franchise taxes</field>
             <field name="code">22331</field>
-            <field name="type" ref="tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">view</field>
             <field name="parent" ref="2233"/>
         </record>
         <record model="account.account.template" id="22332">
-            <field name="name">Accrued local income taxes</field>
+            <field name="name">Accrued foreign income taxes</field>
             <field name="code">22332</field>
-            <field name="type" ref="tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">view</field>
             <field name="parent" ref="2233"/>
         </record>
         <record model="account.account.template" id="2234">
@@ -3426,19 +3416,15 @@
             <field name="parent" ref="2234"/>
         </record>
         <record model="account.account.template" id="22341">
-            <field name="name">Deferred state income tax liability</field>
+            <field name="name">Deferred state and local income tax liability</field>
             <field name="code">22341</field>
-            <field name="type" ref="tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">view</field>
             <field name="parent" ref="2234"/>
         </record>
         <record model="account.account.template" id="22342">
-            <field name="name">Deferred local income tax liability</field>
+            <field name="name">Deferred foreign income tax liability</field>
             <field name="code">22342</field>
-            <field name="type" ref="tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
+            <field name="kind">view</field>
             <field name="parent" ref="2234"/>
         </record>
         <record model="account.account.template" id="224">
@@ -6287,23 +6273,23 @@
             <field name="code">700</field>
             <field name="type" ref="current_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+            <field name="kind">other</field>
             <field name="parent" ref="70"/>
         </record>
         <record model="account.account.template" id="701">
             <field name="name">Current state and local income tax expense</field>
             <field name="code">701</field>
-            <field name="type" ref="current_income_tax_expense"/>
+            <field name="type" ref="current_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+            <field name="kind">other</field>
             <field name="parent" ref="70"/>
         </record>
         <record model="account.account.template" id="702">
             <field name="name">Current foreign income tax expense</field>
             <field name="code">702</field>
-            <field name="type" ref="current_income_tax_expense"/>
+            <field name="type" ref="current_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+            <field name="kind">other</field>
             <field name="parent" ref="70"/>
         </record>
         <record model="account.account.template" id="71">
@@ -6317,23 +6303,23 @@
             <field name="code">710</field>
             <field name="type" ref="deferred_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+            <field name="kind">other</field>
             <field name="parent" ref="71"/>
         </record>
         <record model="account.account.template" id="711">
             <field name="name">Deferred state and local income tax expense</field>
             <field name="code">711</field>
-            <field name="type" ref="deferred_income_tax_expense"/>
+            <field name="type" ref="deferred_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+            <field name="kind">other</field>
             <field name="parent" ref="71"/>
         </record>
         <record model="account.account.template" id="712">
             <field name="name">Deferred foreign income tax expense</field>
             <field name="code">712</field>
-            <field name="type" ref="deferred_income_tax_expense"/>
+            <field name="type" ref="deferred_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+            <field name="kind">other</field>
             <field name="parent" ref="71"/>
         </record>
         <record model="account.account.template" id="72">
@@ -6431,7 +6417,7 @@
             <field name="code">7520</field>
             <field name="type" ref="other_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+            <field name="kind">other</field>
             <field name="parent" ref="752"/>
         </record>
         <record model="account.account.template" id="7521">
@@ -6439,7 +6425,7 @@
             <field name="code">7521</field>
             <field name="type" ref="other_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+            <field name="kind">other</field>
             <field name="parent" ref="752"/>
         </record>
         <record model="account.account.template" id="7522">
@@ -6447,7 +6433,7 @@
             <field name="code">7522</field>
             <field name="type" ref="other_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+            <field name="kind">other</field>
             <field name="parent" ref="752"/>
         </record>
         <record model="account.account.template" id="753">
@@ -6461,7 +6447,7 @@
             <field name="code">7530</field>
             <field name="type" ref="other_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+            <field name="kind">other</field>
             <field name="parent" ref="753"/>
         </record>
         <record model="account.account.template" id="7531">
@@ -6469,7 +6455,7 @@
             <field name="code">7531</field>
             <field name="type" ref="other_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+            <field name="kind">other</field>
             <field name="parent" ref="753"/>
         </record>
         <record model="account.account.template" id="7532">
@@ -6477,7 +6463,7 @@
             <field name="code">7532</field>
             <field name="type" ref="other_income_tax_expenses"/>
             <field name="deferral" eval="False"/>
-            <field name="kind">expense</field>
+            <field name="kind">other</field>
             <field name="parent" ref="753"/>
         </record>
         <record model="account.account.template" id="8">
