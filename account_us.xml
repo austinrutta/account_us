@@ -5954,6 +5954,14 @@
             <field name="kind">view</field>
             <field name="parent" ref="603"/>
         </record>
+        <record model="account.account.template" id="60300">
+            <field name="name">Loss due to production machinery and equipment obsolescense (−)</field>
+            <field name="code">60300</field>
+            <field name="type" ref="other_non_operating_losses"/>
+            <field name="deferral" eval="False"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="6030"/>
+        </record>
         <record model="account.account.template" id="6031">
             <field name="name">Impairment losses—intangible assets</field>
             <field name="code">6031</field>
