@@ -3337,8 +3337,6 @@
         <record model="account.account.template" id="302">
             <field name="name">Donated capital (by owners or shareholders only)</field>
             <field name="code">302</field>
-            <field name="type" ref="donated_capital"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="30"/>
         </record>
         <record model="account.account.template" id="3020">
@@ -3362,15 +3360,11 @@
         <record model="account.account.template" id="32">
             <field name="name">Retained earnings</field>
             <field name="code">32</field>
-            <field name="type" ref="retained_earnings"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="3"/>
         </record>
         <record model="account.account.template" id="320">
             <field name="name">Appropriated retained earnings</field>
             <field name="code">320</field>
-            <field name="type" ref="appropriated_retained_earnings"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="32"/>
         </record>
         <record model="account.account.template" id="321">
@@ -3565,15 +3559,11 @@
         <record model="account.account.template" id="42">
             <field name="name">Revenues from related parties</field>
             <field name="code">42</field>
-            <field name="type" ref="revenues_from_related_parties"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="4"/>
         </record>
         <record model="account.account.template" id="43">
             <field name="name">Other operating revenues</field>
             <field name="code">43</field>
-            <field name="type" ref="other_operating_revenues"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="4"/>
         </record>
         <record model="account.account.template" id="5">
@@ -5616,71 +5606,51 @@
         <record model="account.account.template" id="90">
             <field name="name">Net unrealized gain on available-for-sale assets</field>
             <field name="code">90</field>
-            <field name="type" ref="net_unrealized_gain_on_available_for_sale_assets"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="9"/>
         </record>
         <record model="account.account.template" id="91">
             <field name="name">Gain on cash flow hedges</field>
             <field name="code">91</field>
-            <field name="type" ref="gain_on_cash_flow_hedges"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="9"/>
         </record>
         <record model="account.account.template" id="92">
             <field name="name">Exchange differences on translation of foreign operations</field>
             <field name="code">92</field>
-            <field name="type" ref="exchange_differences_on_translation_of_foreign_operations"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="9"/>
         </record>
         <record model="account.account.template" id="93">
             <field name="name">Minimum pension liability adjustments</field>
             <field name="code">93</field>
-            <field name="type" ref="defined_benefit_plan_income"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="9"/>
         </record>
         <record model="account.account.template" id="94">
             <field name="name">Asset revaluations</field>
             <field name="code">94</field>
-            <field name="type" ref="asset_revaluations"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="9"/>
         </record>
         <record model="account.account.template" id="940">
             <field name="name">Revaluations of tangible assets</field>
             <field name="code">940</field>
-            <field name="type" ref="revaluations_of_tangible_assets"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="94"/>
         </record>
         <record model="account.account.template" id="941">
             <field name="name">Revaluations of intangible assets</field>
             <field name="code">941</field>
-            <field name="type" ref="revaluations_of_intangible_assets"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="94"/>
         </record>
         <record model="account.account.template" id="942">
             <field name="name">Revaluations of financial assets</field>
             <field name="code">942</field>
-            <field name="type" ref="revaluations_of_financial_assets"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="94"/>
         </record>
         <record model="account.account.template" id="943">
             <field name="name">Revaluations of inventories</field>
             <field name="code">943</field>
-            <field name="type" ref="revaluations_of_inventories"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="94"/>
         </record>
         <record model="account.account.template" id="95">
             <field name="name">Reclassification adjustments</field>
             <field name="code">95</field>
-            <field name="type" ref="reclassification_adjustments"/>
-            <field name="closed" eval="True"/>
             <field name="parent" ref="9"/>
         </record>
         <record model="account.account.template" id="99">
