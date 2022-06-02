@@ -881,6 +881,7 @@
             <field name="sequence" eval="20"/>
             <field name="parent" ref="off_balance"/>
             <field name="statement">off-balance</field>
+            <field name="expense" eval="True"/>
         </record>
         <record model="account.account.type.template" id="off_balance_transitional">
             <field name="name">Transitional accounts</field>
