@@ -1305,13 +1305,6 @@
             <field name="statement">income</field>
             <field name="expense" eval="True"/>
         </record>
-        <record model="account.account.type.template" id="cost_of_services_personnel_costs">
-            <field name="name">Personnel costs</field>
-            <field name="parent" ref="cost_of_services_rendered"/>
-            <field name="sequence" eval="10"/>
-            <field name="statement">income</field>
-            <field name="expense" eval="True"/>
-        </record>
         <record model="account.account.type.template" id="operating_expenses">
             <field name="name">Operating expenses</field>
             <field name="parent" ref="operating_income"/>
@@ -1959,6 +1952,122 @@
             <field name="code">13</field>
             <field name="parent" ref="1"/>
         </record>
+        <record model="account.account.template" id="130">
+            <field name="name">Materials inventory</field>
+            <field name="code">130</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="1300">
+            <field name="name">Purchases of parts and materials</field>
+            <field name="code">1300</field>
+            <field name="type" ref="raw_materials"/>
+            <field name="parent" ref="130"/>
+        </record>
+        <record model="account.account.template" id="1301">
+            <field name="name">Indirect raw materials</field>
+            <field name="code">1301</field>
+            <field name="type" ref="raw_materials"/>
+            <field name="parent" ref="130"/>
+        </record>
+        <record model="account.account.template" id="131">
+            <field name="name">Work-in-process inventory</field>
+            <field name="code">131</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="1310">
+            <field name="name">Direct parts and material costs of work-in-process</field>
+            <field name="code">1310</field>
+            <field name="type" ref="goods_in_process"/>
+            <field name="parent" ref="131"/>
+        </record>
+        <record model="account.account.template" id="1311">
+            <field name="name">Direct personnel and labor costs of work-in-process</field>
+            <field name="code">1311</field>
+            <field name="type" ref="goods_in_process"/>
+            <field name="parent" ref="131"/>
+        </record>
+        <record model="account.account.template" id="1312">
+            <field name="name">Overhead applied to work-in-process</field>
+            <field name="code">1312</field>
+            <field name="type" ref="goods_in_process"/>
+            <field name="parent" ref="131"/>
+        </record>
+        <record model="account.account.template" id="132">
+            <field name="name">Intermediate goods</field>
+            <field name="code">132</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="133">
+            <field name="name">Finished goods</field>
+            <field name="code">133</field>
+            <field name="type" ref="intermediate_and_finished_goods"/>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="134">
+            <field name="name">Merchandise held for resale</field>
+            <field name="code">134</field>
+            <field name="type" ref="merchandise"/>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="139">
+            <field name="name">Work-in-process overhead</field>
+            <field name="code">139</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="1390">
+            <field name="name">Indirect materials</field>
+            <field name="code">1390</field>
+            <field name="type" ref="off_balance_suspense"/>
+            <field name="parent" ref="139"/>
+        </record>
+        <record model="account.account.template" id="1391">
+            <field name="name">Indirect personnel and labor costs</field>
+            <field name="code">1391</field>
+            <field name="type" ref="off_balance_suspense"/>
+            <field name="parent" ref="139"/>
+        </record>
+        <record model="account.account.template" id="1392">
+            <field name="name">Production facilities costs</field>
+            <field name="code">1392</field>
+            <field name="type" ref="off_balance_suspense"/>
+            <field name="parent" ref="139"/>
+        </record>
+        <record model="account.account.template" id="13920">
+            <field name="name">Lease payments of production facilities</field>
+            <field name="code">13920</field>
+            <field name="type" ref="off_balance_suspense"/>
+            <field name="parent" ref="1392"/>
+        </record>
+        <record model="account.account.template" id="13921">
+            <field name="name">Depreciation expense of production facilities</field>
+            <field name="code">13921</field>
+            <field name="type" ref="off_balance_suspense"/>
+            <field name="parent" ref="1392"/>
+        </record>
+        <record model="account.account.template" id="1393">
+            <field name="name">Utilities for production</field>
+            <field name="code">1393</field>
+            <field name="type" ref="off_balance_suspense"/>
+            <field name="parent" ref="139"/>
+        </record>
+        <record model="account.account.template" id="1394">
+            <field name="name">Insurance relating to production</field>
+            <field name="code">1394</field>
+            <field name="type" ref="off_balance_suspense"/>
+            <field name="parent" ref="139"/>
+        </record>
+        <record model="account.account.template" id="1399">
+            <field name="name">Other work-in-process overhead costs</field>
+            <field name="code">1399</field>
+            <field name="type" ref="off_balance_suspense"/>
+            <field name="parent" ref="139"/>
+        </record>
+        <record model="account.account.template" id="13990">
+            <field name="name">Property taxes for production facilities and equipment</field>
+            <field name="code">13990</field>
+            <field name="type" ref="off_balance_suspense"/>
+            <field name="parent" ref="1399"/>
+        </record>
         <record model="account.account.template" id="14">
             <field name="name">Accrued and deferred items</field>
             <field name="code">14</field>
@@ -2340,7 +2449,7 @@
             <field name="parent" ref="162"/>
         </record>
         <record model="account.account.template" id="16290">
-            <field name="name">Accumulated depreciation of machinery and tools (−)</field>
+            <field name="name">Accumulated depreciation of production machinery and tools (−)</field>
             <field name="code">16290</field>
             <field name="type" ref="production_machinery_and_equipment"/>
             <field name="parent" ref="1629"/>
@@ -3575,6 +3684,29 @@
             <field name="name">Cost of revenues</field>
             <field name="code">50</field>
             <field name="parent" ref="5"/>
+        </record>
+        <record model="account.account.template" id="500">
+            <field name="name">Cost of goods sold</field>
+            <field name="code">500</field>
+            <field name="parent" ref="50"/>
+        </record>
+        <record model="account.account.template" id="5000">
+            <field name="name">Cost of finished goods sold</field>
+            <field name="code">5000</field>
+            <field name="type" ref="cost_of_goods_sold"/>
+            <field name="parent" ref="500"/>
+        </record>
+        <record model="account.account.template" id="5001">
+            <field name="name">Cost of merchandise sold</field>
+            <field name="code">5001</field>
+            <field name="type" ref="cost_of_goods_sold"/>
+            <field name="parent" ref="500"/>
+        </record>
+        <record model="account.account.template" id="501">
+            <field name="name">Cost of services rendered</field>
+            <field name="code">501</field>
+            <field name="type" ref="cost_of_services_rendered"/>
+            <field name="parent" ref="50"/>
         </record>
         <record model="account.account.template" id="51">
             <field name="name">Personnel</field>
