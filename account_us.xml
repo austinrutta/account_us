@@ -1305,7 +1305,7 @@
             <field name="statement">income</field>
             <field name="expense" eval="True"/>
         </record>
-        <record model="account.account.type.template" id="costs_of_services_personnel_costs">
+        <record model="account.account.type.template" id="cost_of_services_personnel_costs">
             <field name="name">Personnel costs</field>
             <field name="parent" ref="cost_of_services_rendered"/>
             <field name="sequence" eval="10"/>
