@@ -24,7 +24,7 @@ accounts and analytic accounts. Here are some conclusions I have come to:
   medium business to take and doesn't necessitate integration with a 3rd-party
   like TaxJar or AvaTax. Currently existing modules include:
 
-  -  `account_us_ut`<https://github.com/pentandra/account_us_ut>`.
+  -  `account_us_ut <https://github.com/pentandra/account_us_ut>`_
 
 --------
 
