@@ -7,13 +7,16 @@ import os
 import re
 from configparser import ConfigParser
 
-from setuptools import setup
+from setuptools import find_packages, setup
 
 
 def read(fname):
-    return io.open(
+    content = io.open(
         os.path.join(os.path.dirname(__file__), fname),
         'r', encoding='utf-8').read()
+    content = re.sub(
+        r'(?m)^\.\. toctree::\r?\n((^$|^\s.*$)\r?\n)*', '', content)
+    return content
 
 
 def get_require_version(name):
@@ -24,6 +27,7 @@ def get_require_version(name):
     require %= (name, major_version, minor_version,
         major_version, minor_version + 1)
     return require
+
 
 config = ConfigParser()
 config.read_file(open(os.path.join(os.path.dirname(__file__), 'tryton.cfg')))
@@ -44,6 +48,7 @@ if minor_version % 2:
     download_url = (
         'hg+http://hg.tryton.org/modules/%s#egg=%s-%s' % (
             name[8:], name, version))
+
 local_version = []
 if os.environ.get('CI_JOB_ID'):
     local_version.append(os.environ['CI_JOB_ID'])
@@ -56,7 +61,6 @@ else:
             break
 if local_version:
     version += '+' + '.'.join(local_version)
-
 requires = []
 for dep in info.get('depends', []):
     if not re.match(r'(ir|res)(\W|$)', dep):
@@ -68,12 +72,13 @@ dependency_links = []
 if minor_version % 2:
     dependency_links.append(
         'https://trydevpi.tryton.org/?local_version='
-        + '.'.join(local_version))
+        + '.'.join(local_version)
+        )
 
 setup(name=name,
     version=version,
     description='Tryton module with United States chart of accounts (US GAAP)',
-    long_description=read('README'),
+    long_description=read('README.rst'),
     author='Pentandra',
     author_email='issues@pentandra.com',
     url='https://github.com/pentandra/account_us',
@@ -113,6 +118,7 @@ setup(name=name,
     extras_require={
         'test': tests_require,
         },
+    dependency_links=dependency_links,
     zip_safe=False,
     entry_points="""
     [trytond.modules]
