@@ -13,7 +13,7 @@ accounting in Tryton_.
 
 This is a work in progress, so use at your own risk.
 
-For questions or technical support, please `contact us`.
+For questions or technical support, please `contact us`_.
 
 .. _GAAP: https://en.wikipedia.org/wiki/Generally_Accepted_Accounting_Principles_(United_States)
 .. _Tryton: https://www.tryton.org
