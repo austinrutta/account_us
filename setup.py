@@ -85,10 +85,10 @@ setup(name=name,
     download_url=download_url,
     keywords='tryton account chart us gaap english',
     package_dir={'trytond.modules.account_us': '.'},
-    packages=[
-        'trytond.modules.account_us',
-        'trytond.modules.account_us.tests',
-        ],
+    packages=(
+        ['trytond.modules.account_us']
+        + ['trytond.modules.account_us.%s' % p for p in find_packages()]
+        ),
     package_data={
         'trytond.modules.account_us': (info.get('xml', [])
             + ['tryton.cfg']),
