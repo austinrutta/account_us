@@ -2015,191 +2015,198 @@
         <record model="account.account.template" id="1311">
             <field name="name">Direct labor costs of work-in-process</field>
             <field name="code">1311</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="131"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="13110">
-            <field name="name">Wages expense—direct production</field>
+            <field name="name">Wages—direct production</field>
             <field name="code">13110</field>
-            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="1311"/>
+        </record>
+        <record model="account.account.template" id="131100">
+            <field name="name">Wages expense—direct production</field>
+            <field name="code">131100</field>
+            <field name="type" ref="direct_labor_costs"/>
+            <field name="parent" ref="13110"/>
+        </record>
+        <record model="account.account.template" id="131101">
+            <field name="name">Bonuses—direct production</field>
+            <field name="code">131101</field>
+            <field name="type" ref="direct_labor_costs"/>
+            <field name="parent" ref="13110"/>
+        </record>
+        <record model="account.account.template" id="131102">
+            <field name="name">Incentive pay—direct production</field>
+            <field name="code">131102</field>
+            <field name="type" ref="direct_labor_costs"/>
+            <field name="parent" ref="13110"/>
+        </record>
+        <record model="account.account.template" id="131103">
+            <field name="name">Severance pay—direct production</field>
+            <field name="code">131103</field>
+            <field name="type" ref="direct_labor_costs"/>
+            <field name="parent" ref="13110"/>
         </record>
         <record model="account.account.template" id="13111">
-            <field name="name">Bonuses—direct production</field>
+            <field name="name">Required payroll-related expenses—direct production</field>
             <field name="code">13111</field>
-            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="1311"/>
+        </record>
+        <record model="account.account.template" id="131110">
+            <field name="name">Employer FICA—direct production</field>
+            <field name="code">131110</field>
+            <field name="type" ref="direct_labor_costs"/>
+            <field name="parent" ref="13111"/>
+        </record>
+        <record model="account.account.template" id="131111">
+            <field name="name">Employer medicare-direct production</field>
+            <field name="code">131111</field>
+            <field name="type" ref="direct_labor_costs"/>
+            <field name="parent" ref="13111"/>
+        </record>
+        <record model="account.account.template" id="131112">
+            <field name="name">Workers’ compensation insurance-direct production</field>
+            <field name="code">131112</field>
+            <field name="parent" ref="13111"/>
+        </record>
+        <record model="account.account.template" id="131113">
+            <field name="name">Unemployment insurance—direct production</field>
+            <field name="code">131113</field>
+            <field name="parent" ref="13111"/>
         </record>
         <record model="account.account.template" id="13112">
-            <field name="name">Incentive pay—direct production</field>
+            <field name="name">Fringe benefits—direct production</field>
             <field name="code">13112</field>
-            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="1311"/>
+        </record>
+        <record model="account.account.template" id="131120">
+            <field name="name">Paid leave-direct production</field>
+            <field name="code">131120</field>
+            <field name="parent" ref="13112"/>
+        </record>
+        <record model="account.account.template" id="1311200">
+            <field name="name">Vacation pay-direct production</field>
+            <field name="code">1311200</field>
+            <field name="parent" ref="131120"/>
+        </record>
+        <record model="account.account.template" id="1311201">
+            <field name="name">Holiday pay-direct production</field>
+            <field name="code">1311201</field>
+            <field name="parent" ref="131120"/>
+        </record>
+        <record model="account.account.template" id="1311202">
+            <field name="name">Sick pay—direct production</field>
+            <field name="code">1311202</field>
+            <field name="parent" ref="131120"/>
+        </record>
+        <record model="account.account.template" id="1311203">
+            <field name="name">Other paid leave—direct production</field>
+            <field name="code">1311203</field>
+            <field name="parent" ref="131120"/>
+        </record>
+        <record model="account.account.template" id="131121">
+            <field name="name">Group health insurance—direct production</field>
+            <field name="code">131121</field>
+            <field name="parent" ref="13112"/>
+        </record>
+        <record model="account.account.template" id="131122">
+            <field name="name">Life insurance—direct production</field>
+            <field name="code">131122</field>
+            <field name="parent" ref="13112"/>
+        </record>
+        <record model="account.account.template" id="131123">
+            <field name="name">Employer 401k contributions—direct production</field>
+            <field name="code">131123</field>
+            <field name="parent" ref="13112"/>
+        </record>
+        <record model="account.account.template" id="131124">
+            <field name="name">Employer IRA contributions—direct production</field>
+            <field name="code">131124</field>
+            <field name="parent" ref="13112"/>
+        </record>
+        <record model="account.account.template" id="131125">
+            <field name="name">Pensions and retirement—direct production</field>
+            <field name="code">131125</field>
+            <field name="parent" ref="13112"/>
+        </record>
+        <record model="account.account.template" id="131129">
+            <field name="name">Other employer-provided benefits—direct production</field>
+            <field name="code">131129</field>
+            <field name="parent" ref="13112"/>
+        </record>
+        <record model="account.account.template" id="1311290">
+            <field name="name">Education and professional development—direct production</field>
+            <field name="code">1311290</field>
+            <field name="parent" ref="131129"/>
+        </record>
+        <record model="account.account.template" id="1311291">
+            <field name="name">Dependent care assistance—direct production</field>
+            <field name="code">1311291</field>
+            <field name="type" ref="direct_labor_costs"/>
+            <field name="parent" ref="131129"/>
+        </record>
+        <record model="account.account.template" id="1311292">
+            <field name="name">Membership dues—direct production</field>
+            <field name="code">1311292</field>
+            <field name="parent" ref="131129"/>
+        </record>
+        <record model="account.account.template" id="13112920">
+            <field name="name">Trade membership dues—direct production</field>
+            <field name="code">13112920</field>
+            <field name="type" ref="direct_labor_costs"/>
+            <field name="parent" ref="131129"/>
+        </record>
+        <record model="account.account.template" id="1311293">
+            <field name="name">Food-related benefits—direct production</field>
+            <field name="code">1311293</field>
+            <field name="parent" ref="131129"/>
+        </record>
+        <record model="account.account.template" id="13112930">
+            <field name="name">De minimis food and beverages (meals) for employees (IRC § 132(e)(1) and IRC § 274(e)(1))—direct production</field>
+            <field name="code">13112930</field>
+            <field name="type" ref="direct_labor_costs"/>
+            <field name="parent" ref="1311293"/>
+        </record>
+        <record model="account.account.template" id="13112931">
+            <field name="name">Employee recreational activities (IRC § 274(e)(4))—direct production</field>
+            <field name="code">13112931</field>
+            <field name="type" ref="direct_labor_costs"/>
+            <field name="parent" ref="1311293"/>
+        </record>
+        <record model="account.account.template" id="13112932">
+            <field name="name">Employee business meetings (IRC § 274(e)(5))—direct production</field>
+            <field name="code">13112932</field>
+            <field name="type" ref="direct_labor_costs"/>
+            <field name="parent" ref="1311293"/>
+        </record>
+        <record model="account.account.template" id="1311294">
+            <field name="name">Employee achievement awards—direct production</field>
+            <field name="code">1311294</field>
+            <field name="parent" ref="131129"/>
+        </record>
+        <record model="account.account.template" id="13112940">
+            <field name="name">Non-qualified employee achievement awards (IRC § 274(j)(2)(A) ≤ $400 per year per employee)—direct production</field>
+            <field name="code">13112940</field>
+            <field name="type" ref="direct_labor_costs"/>
+            <field name="parent" ref="1311294"/>
+        </record>
+        <record model="account.account.template" id="13112941">
+            <field name="name">Qualified employee achievement awards (IRC § 274(j)(2)(B) ≤ $1,600 per year per employee)—direct production</field>
+            <field name="code">13112941</field>
+            <field name="type" ref="direct_labor_costs"/>
+            <field name="parent" ref="1311294"/>
         </record>
         <record model="account.account.template" id="13113">
-            <field name="name">Severance pay—direct production</field>
+            <field name="name">Employee recruitment—direct production</field>
             <field name="code">13113</field>
-            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="1311"/>
         </record>
-        <record model="account.account.template" id="1312">
-            <field name="name">Required payroll-related expenses—direct production</field>
-            <field name="code">1312</field>
-            <field name="parent" ref="131"/>
-        </record>
-        <record model="account.account.template" id="13120">
-            <field name="name">Employer FICA—direct production</field>
-            <field name="code">13120</field>
-            <field name="type" ref="direct_labor_costs"/>
-            <field name="parent" ref="1312"/>
-        </record>
-        <record model="account.account.template" id="13121">
-            <field name="name">Employer medicare-direct production</field>
-            <field name="code">13121</field>
-            <field name="type" ref="direct_labor_costs"/>
-            <field name="parent" ref="1312"/>
-        </record>
-        <record model="account.account.template" id="13122">
-            <field name="name">Workers’ compensation insurance-direct production</field>
-            <field name="code">13122</field>
-            <field name="parent" ref="1312"/>
-        </record>
-        <record model="account.account.template" id="13123">
-            <field name="name">Unemployment insurance—direct production</field>
-            <field name="code">13123</field>
-            <field name="parent" ref="1312"/>
-        </record>
-        <record model="account.account.template" id="1313">
-            <field name="name">Fringe benefits—directo production</field>
-            <field name="code">512</field>
-            <field name="parent" ref="131"/>
-        </record>
-        <record model="account.account.template" id="13130">
-            <field name="name">Paid leave-direct production</field>
-            <field name="code">13130</field>
-            <field name="parent" ref="1313"/>
-        </record>
-        <record model="account.account.template" id="131300">
-            <field name="name">Vacation pay-direct production</field>
-            <field name="code">131300</field>
-            <field name="parent" ref="13130"/>
-        </record>
-        <record model="account.account.template" id="131301">
-            <field name="name">Holiday pay-direct production</field>
-            <field name="code">131301</field>
-            <field name="parent" ref="13130"/>
-        </record>
-        <record model="account.account.template" id="131302">
-            <field name="name">Sick pay—direct production</field>
-            <field name="code">131302</field>
-            <field name="parent" ref="13130"/>
-        </record>
-        <record model="account.account.template" id="131303">
-            <field name="name">Other paid leave—direct production</field>
-            <field name="code">131303</field>
-            <field name="parent" ref="13130"/>
-        </record>
-        <record model="account.account.template" id="13131">
-            <field name="name">Group health insurance—direct production</field>
-            <field name="code">13131</field>
-            <field name="parent" ref="1313"/>
-        </record>
-        <record model="account.account.template" id="13132">
-            <field name="name">Life insurance—direct production</field>
-            <field name="code">13132</field>
-            <field name="parent" ref="1313"/>
-        </record>
-        <record model="account.account.template" id="13133">
-            <field name="name">Employer 401k contributions—direct production</field>
-            <field name="code">13133</field>
-            <field name="parent" ref="1313"/>
-        </record>
-        <record model="account.account.template" id="13134">
-            <field name="name">Employer IRA contributions—direct production</field>
-            <field name="code">13134</field>
-            <field name="parent" ref="1313"/>
-        </record>
-        <record model="account.account.template" id="13135">
-            <field name="name">Pensions and retirement—direct production</field>
-            <field name="code">13135</field>
-            <field name="parent" ref="1313"/>
-        </record>
-        <record model="account.account.template" id="13139">
-            <field name="name">Other employer-provided benefits—direct production</field>
-            <field name="code">13139</field>
-            <field name="parent" ref="1313"/>
-        </record>
-        <record model="account.account.template" id="131390">
-            <field name="name">Education and professional development—direct production</field>
-            <field name="code">131390</field>
-            <field name="parent" ref="13139"/>
-        </record>
-        <record model="account.account.template" id="131391">
-            <field name="name">Dependent care assistance—direct production</field>
-            <field name="code">131391</field>
-            <field name="type" ref="direct_labor_costs"/>
-            <field name="parent" ref="13139"/>
-        </record>
-        <record model="account.account.template" id="131392">
-            <field name="name">Membership dues—direct production</field>
-            <field name="code">131392</field>
-            <field name="parent" ref="13139"/>
-        </record>
-        <record model="account.account.template" id="1313920">
-            <field name="name">Trade membership dues—direct production</field>
-            <field name="code">1313920</field>
-            <field name="type" ref="direct_labor_costs"/>
-            <field name="parent" ref="13139"/>
-        </record>
-        <record model="account.account.template" id="131393">
-            <field name="name">Food-related benefits—direct production</field>
-            <field name="code">131393</field>
-            <field name="parent" ref="13139"/>
-        </record>
-        <record model="account.account.template" id="1313930">
-            <field name="name">De minimis food and beverages (meals) for employees (IRC § 132(e)(1) and IRC § 274(e)(1))—direct production</field>
-            <field name="code">1313930</field>
-            <field name="type" ref="direct_labor_costs"/>
-            <field name="parent" ref="131393"/>
-        </record>
-        <record model="account.account.template" id="1313931">
-            <field name="name">Employee recreational activities (IRC § 274(e)(4))—direct production</field>
-            <field name="code">1313931</field>
-            <field name="type" ref="direct_labor_costs"/>
-            <field name="parent" ref="131393"/>
-        </record>
-        <record model="account.account.template" id="1313932">
-            <field name="name">Employee business meetings (IRC § 274(e)(5))—direct production</field>
-            <field name="code">1313932</field>
-            <field name="type" ref="direct_labor_costs"/>
-            <field name="parent" ref="131393"/>
-        </record>
-        <record model="account.account.template" id="131394">
-            <field name="name">Employee achievement awards—direct production</field>
-            <field name="code">131394</field>
-            <field name="parent" ref="13139"/>
-        </record>
-        <record model="account.account.template" id="1313940">
-            <field name="name">Non-qualified employee achievement awards (IRC § 274(j)(2)(A) ≤ $400 per year per employee)—direct production</field>
-            <field name="code">1313940</field>
-            <field name="type" ref="direct_labor_costs"/>
-            <field name="parent" ref="131394"/>
-        </record>
-        <record model="account.account.template" id="1313941">
-            <field name="name">Qualified employee achievement awards (IRC § 274(j)(2)(B) ≤ $1,600 per year per employee)—direct production</field>
-            <field name="code">1313941</field>
-            <field name="type" ref="direct_labor_costs"/>
-            <field name="parent" ref="131394"/>
-        </record>
-        <record model="account.account.template" id="1314">
-            <field name="name">Employee recruitment—direct production</field>
-            <field name="code">1314</field>
-            <field name="parent" ref="131"/>
-        </record>
-        <record model="account.account.template" id="1315">
+        <record model="account.account.template" id="13114">
             <field name="name">Temporary help—direct production</field>
-            <field name="code">1315</field>
+            <field name="code">13114</field>
             <field name="type" ref="direct_labor_costs"/>
-            <field name="parent" ref="131"/>
+            <field name="parent" ref="1311"/>
         </record>
         <record model="account.account.template" id="1312">
             <field name="name">Overhead allocated to work-in-process</field>
