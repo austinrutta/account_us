@@ -7,7 +7,7 @@ United States GAAP_ and IFRS_ financial accounting standards, so hopefully this
 could be used as a starting point for accounting with either approach.
 
 Currently, this module only supports corporate accounting. For partnership or
-other types of business entity support, email or file an issue to discuss.
+other types of business entity support, `email`_ or `file an issue`_ to discuss.
 
 Influential, but possibly temporary, conclusions
 ------------------------------------------------
@@ -22,7 +22,7 @@ accounts and analytic accounts. Here are some conclusions I have come to:
 
 - To satisfy income tax reporting needs, use a higher granularity of financial
   accounts than is required for financial accounting to differentiate types of
-  expenditures.
+  expenditures (i.e. more detailed sub-accounts).
 
 - Taxes are grouped into separate submodules according to legal jurisdiction.
   For example, in the US the laws governing sales and use tax are handled at
@@ -33,28 +33,38 @@ accounts and analytic accounts. Here are some conclusions I have come to:
 
   -  `account_us_ut <https://github.com/pentandra/account_us_ut>`_ (Utah)
 
-Research sources
-----------------
+Chart structure
+---------------
 
-Sources consulted:
+Unlike countries such as France, Spain, and Sweden, the US-based Financial
+Accounting Standards Board (`FASB`_) has not provided nor prescribed a specific
+chart of accounts. So the structure of of this chart has materialized  over
+time from various sources. Some parts are more fleshed out than others.
 
-* http://www.dwmbeancounter.com/BCTutorSite/Courses/ChartAccounts/lesson02-6.html
+Sources consulted
+.................
+
+* https://asc.fasb.org/
+* https://github.com/tryton/account_fr and https://github.com/tryton/account_be (for help with Tryton account types and general inspiration)
+* https://en.wikipedia.org/wiki/Chart_of_accounts
+* https://web.archive.org/web/20160825052543/https://nccs.urban.org/projects/ucoa.cfm
+  * and derivative Tryton module (archived): https://code.google.com/archive/p/tryton-ucoa/
 * http://www.ifrs-gaap.com/en/chart-of-accounts-us-gaap/
 * http://www.ifrs-gaap.com/en/basic-IFRS-chart-of-accounts/
+* https://www.gaap.cz/sites/default/files/upload/pdf/1-GAAP-IFRS.pdf
 * http://www.eprentise.com/blog/designing-a-chart-of-accounts/designing-a-global-chart-of-accounts-and-taking-advantage-of-oracle-e-business-suite-release-12/
-* http://nccs.urban.org/projects/ucoa.cfm
+* http://www.dwmbeancounter.com/BCTutorSite/Courses/ChartAccounts/lesson02-6.html
 * https://www.sba.gov/sites/default/files/files/inv_charts_of_accounts.pdf
 * https://www.sba.gov/sites/default/files/files/inv_standards.pdf
-* https://asc.fasb.org/
 * https://www.irs.gov/publications/p15
 * https://www.irs.gov/publications/p15b
 * https://www.irs.gov/publications/p463
 * https://www.irs.gov/publications/p535
 * https://www.irs.gov/publications/p542
 * https://www.law.cornell.edu/uscode/text/26/274
-* https://github.com/tryton/account_fr and https://github.com/tryton/account_be (for help with Tryton account types and general inspiration)
 
-Sources that would be good to consider more:
+Sources that would be good to consider more
+...........................................
 
 * https://www.accountingtools.com/articles/2017/5/14/reduce-the-chart-of-accounts
 * https://bugs.tryton.org/issue9642 (Aligning with existing IFRS efforts for Tryton)
@@ -67,3 +77,6 @@ Sources that would be good to consider more:
 .. _segment reporting: https://asc.fasb.org/section&trid=2134533
 .. _cost centers: https://en.wikipedia.org/wiki/Cost_centre_(business)
 .. _company subdivisions: https://discuss.tryton.org/t/brands-or-subdivisions/3537/4
+.. _file an issue: https://github.com/pentandra/account_us/issues
+.. _email: https://pentandra.com/company/#contact
+.. _FASB: https://fasb.org/
