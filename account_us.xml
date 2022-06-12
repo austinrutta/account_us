@@ -3305,6 +3305,23 @@
             <field name="type" ref="production_machinery_and_equipment"/>
             <field name="parent" ref="162"/>
         </record>
+        <record model="account.account.template" id="1628">
+            <field name="name">Repair and maintenance allowances (−)</field>
+            <field name="code">1628</field>
+            <field name="parent" ref="162"/>
+        </record>
+        <record model="account.account.template" id="16280">
+            <field name="name">Repair and maintenance allowance of production machinery and tools (−)</field>
+            <field name="code">16280</field>
+            <field name="type" ref="production_machinery_and_equipment"/>
+            <field name="parent" ref="1628"/>
+        </record>
+        <record model="account.account.template" id="16281">
+            <field name="name">Repair and maintenance allowance of information technology assets (−)</field>
+            <field name="code">16281</field>
+            <field name="type" ref="production_machinery_and_equipment"/>
+            <field name="parent" ref="1628"/>
+        </record>
         <record model="account.account.template" id="1629">
             <field name="name">Accumulated depreciation on production machinery and equipment (−)</field>
             <field name="code">1629</field>
