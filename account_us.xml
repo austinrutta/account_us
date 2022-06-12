@@ -205,6 +205,14 @@
             <field name="statement">balance</field>
             <field name="assets" eval="True"/>
         </record>
+        <record model="account.account.type.template" id="inventory_purchases">
+            <field name="name">Inventory purchases in transit</field>
+            <field name="sequence" eval="60"/>
+            <field name="parent" ref="inventories"/>
+            <field name="statement">balance</field>
+            <field name="assets" eval="True"/>
+            <field name="expense" eval="True"/>
+        </record>
         <record model="account.account.type.template" id="accrued_and_deferred_assets">
             <field name="name">Accrued and deferred assets</field>
             <field name="sequence" eval="50"/>
@@ -2230,6 +2238,29 @@
             <field name="code">134</field>
             <field name="type" ref="merchandise"/>
             <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="138">
+            <field name="name">Inventory purchases in transit</field>
+            <field name="code">138</field>
+            <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="1380">
+            <field name="name">Raw materials and parts in transit</field>
+            <field name="code">1380</field>
+            <field name="type" ref="inventory_purchases"/>
+            <field name="parent" ref="138"/>
+        </record>
+        <record model="account.account.template" id="1381">
+            <field name="name">Raw supplies and consumables in transit</field>
+            <field name="code">1381</field>
+            <field name="type" ref="inventory_purchases"/>
+            <field name="parent" ref="138"/>
+        </record>
+        <record model="account.account.template" id="1382">
+            <field name="name">Merchandise in transit</field>
+            <field name="code">1382</field>
+            <field name="type" ref="inventory_purchases"/>
+            <field name="parent" ref="138"/>
         </record>
         <record model="account.account.template" id="139">
             <field name="name">Unallocated production overhead</field>
