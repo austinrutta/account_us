@@ -24,22 +24,26 @@ accounts and analytic accounts. Here are some conclusions I have come to:
   accounts than is required for financial accounting to differentiate types of
   expenditures (i.e. more detailed sub-accounts).
 
-- Taxes are grouped into separate submodules according to legal jurisdiction.
-  For example, in the US the laws governing sales and use tax are handled at
-  the state (subdivision) level, so each state has its own file of taxes and
-  tax codes. This is a more iterative and flexible approach for small and
-  medium business to take and doesn't necessitate integration with a 3rd-party
-  like TaxJar or AvaTax. Currently existing modules include:
+- This is a detailed chart of accounts, suitable for a medium to large company
+  (it should also work just fine for a small company too, like mine). The
+  nesting for some accounts currently goes 8 levels deep. This is not at all
+  performant on the Accounts `tree view`_. For each level, it seems that there
+  is an exponential increase in time used to load the chart from the database.
+  This should probably be fixed (or I should use a shallower structure), but
+  just to let you know.
 
-  -  `account_us_ut <https://github.com/pentandra/account_us_ut>`_ (Utah)
 
 Chart structure
 ---------------
 
-Unlike countries such as France, Spain, and Sweden, the US-based Financial
-Accounting Standards Board (`FASB`_) has not provided nor prescribed a specific
-chart of accounts. So the structure of of this chart has materialized  over
-time from various sources. Some parts are more fleshed out than others.
+Unlike countries such as France, Spain, and Sweden, the United States does not
+have a national chart of accounts, nor does any of its states (to my knowledge)
+have an official state chart of accounts. Because of this, the structure of of
+this chart has materialized over time from various publicly available sources.
+Some parts are more fleshed out than others. Note the `license`_. But there is
+an expectation that financial reporting from public companies (at least) will
+follow the Accounting Standards Codifications (`ASC`_) published by the
+US-based Financial Accounting Standards Board (`FASB`_).
 
 Sources consulted
 .................
@@ -72,6 +76,21 @@ Sources that would be good to consider more
 * https://danielpocock.com/adapting-localizing-tryton-for-your-country-free-open-source-accounting-software/
 * https://www.fmtconsultants.com/design-scalable-chart-accounts/
 
+Tax chart structure
+-------------------
+
+On the other hand, sales and use taxes in the US are handled at the state
+(subdivision) level. Each state has prescribed its own chart of of taxes and
+tax codes.  Due to the immense task of compiling tax information for all 50
+states, I have taken the path of grouping state taxes into separate submodules
+according to legal jurisdiction. This is a more iterative and flexible approach
+for small and medium business to take and doesn't necessitate integration with
+a 3rd-party like TaxJar or AvaTax. Contributions are welcome.
+
+Currently existing tax modules (in some level of completeness) include:
+
+-  `account_us_ut <https://github.com/pentandra/account_us_ut>`_ (Utah)
+
 .. _GAAP: https://en.wikipedia.org/wiki/Generally_Accepted_Accounting_Principles_(United_States)
 .. _IFRS: https://en.wikipedia.org/wiki/International_Financial_Reporting_Standards
 .. _segment reporting: https://asc.fasb.org/section&trid=2134533
@@ -79,4 +98,6 @@ Sources that would be good to consider more
 .. _company subdivisions: https://discuss.tryton.org/t/brands-or-subdivisions/3537/4
 .. _file an issue: https://github.com/pentandra/account_us/issues
 .. _email: https://pentandra.com/company/#contact
+.. _ASC: https://asc.fasb.org/
 .. _FASB: https://fasb.org/
+.. _tree view: https://docs.tryton.org/projects/server/en/latest/topics/views/index.html#tree
