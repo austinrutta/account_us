@@ -6,7 +6,7 @@ The account_us module adds a chart of accounts for US corporate GAAP_
 accounting in Tryton_.
 
 This project is currently alpha-quality and subject to major reconstruction, so
-use at your own risk. Feedback is greatly appreciated!
+use `at your own risk`_. Feedback is greatly appreciated!
 
 For feedback, questions, or technical support, please `contact us`_ or `file an
 issue`_.
@@ -21,3 +21,4 @@ issue`_.
 .. _Tryton: https://www.tryton.org
 .. _contact us: https://pentandra.com/company/#contact
 .. _file an issue: https://github.com/pentandra/account_us/issues
+.. _at your own risk: LICENSE

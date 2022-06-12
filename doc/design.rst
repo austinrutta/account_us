@@ -101,3 +101,4 @@ Currently existing tax modules (in some level of completeness) include:
 .. _ASC: https://asc.fasb.org/
 .. _FASB: https://fasb.org/
 .. _tree view: https://docs.tryton.org/projects/server/en/latest/topics/views/index.html#tree
+.. _license: ../LICENSE
