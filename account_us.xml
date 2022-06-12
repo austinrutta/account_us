@@ -5402,7 +5402,7 @@
             <field name="parent" ref="54"/>
         </record>
         <record model="account.account.template" id="5470">
-            <field name="name">Production machinery and equipment</field>
+            <field name="name">Non-production machinery and equipment</field>
             <field name="code">5470</field>
             <field name="parent" ref="547"/>
         </record>
@@ -5413,7 +5413,7 @@
             <field name="parent" ref="5470"/>
         </record>
         <record model="account.account.template" id="54701">
-            <field name="name">Information technology rental expense</field>
+            <field name="name">Information technology equipment rental expense</field>
             <field name="code">54701</field>
             <field name="type" ref="facilities_and_equipment_expenses"/>
             <field name="parent" ref="5470"/>
