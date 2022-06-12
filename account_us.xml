@@ -1992,21 +1992,68 @@
             <field name="parent" ref="1"/>
         </record>
         <record model="account.account.template" id="130">
-            <field name="name">Raw materials, parts, and supplies inventory</field>
+            <field name="name">Raw materials, parts, and supplies</field>
             <field name="code">130</field>
             <field name="parent" ref="13"/>
         </record>
         <record model="account.account.template" id="1300">
-            <field name="name">Purchases of parts and materials</field>
+            <field name="name">Raw materials and parts inventory</field>
             <field name="code">1300</field>
             <field name="type" ref="raw_materials"/>
             <field name="parent" ref="130"/>
         </record>
         <record model="account.account.template" id="1301">
-            <field name="name">Indirect raw materials</field>
+            <field name="name">Raw supplies and consumables</field>
             <field name="code">1301</field>
             <field name="type" ref="raw_materials"/>
             <field name="parent" ref="130"/>
+            <field name="closed" eval="True"/>
+        </record>
+        <record model="account.account.template" id="13010">
+            <field name="name">Consumables</field>
+            <field name="code">13010</field>
+            <field name="type" ref="raw_materials"/>
+            <field name="parent" ref="1301"/>
+        </record>
+        <record model="account.account.template" id="13011">
+            <field name="name">Consumable supplies</field>
+            <field name="code">13011</field>
+            <field name="parent" ref="1301"/>
+        </record>
+        <record model="account.account.template" id="130110">
+            <field name="name">Fuels</field>
+            <field name="code">130110</field>
+            <field name="type" ref="raw_materials"/>
+            <field name="parent" ref="13011"/>
+        </record>
+        <record model="account.account.template" id="130111">
+            <field name="name">Maintenance products</field>
+            <field name="code">130111</field>
+            <field name="type" ref="raw_materials"/>
+            <field name="parent" ref="13011"/>
+        </record>
+        <record model="account.account.template" id="130112">
+            <field name="name">Workshop and factory supplies</field>
+            <field name="code">130112</field>
+            <field name="type" ref="raw_materials"/>
+            <field name="parent" ref="13011"/>
+        </record>
+        <record model="account.account.template" id="130113">
+            <field name="name">Office supplies</field>
+            <field name="code">130113</field>
+            <field name="type" ref="raw_materials"/>
+            <field name="parent" ref="13011"/>
+        </record>
+        <record model="account.account.template" id="13012">
+            <field name="name">Packaging materials</field>
+            <field name="code">13012</field>
+            <field name="parent" ref="1301"/>
+        </record>
+        <record model="account.account.template" id="130120">
+            <field name="name">Integral product packaging</field>
+            <field name="code">130120</field>
+            <field name="type" ref="raw_materials"/>
+            <field name="parent" ref="13012"/>
         </record>
         <record model="account.account.template" id="131">
             <field name="name">Work-in-process inventory</field>
@@ -2019,6 +2066,19 @@
             <field name="code">1310</field>
             <field name="type" ref="direct_materials"/>
             <field name="parent" ref="131"/>
+            <field name="closed" eval="True"/>
+        </record>
+        <record model="account.account.template" id="13100">
+            <field name="name">Direct production parts and materials</field>
+            <field name="code">13100</field>
+            <field name="type" ref="direct_materials"/>
+            <field name="parent" ref="1310"/>
+        </record>
+        <record model="account.account.template" id="13101">
+            <field name="name">Direct production supplies</field>
+            <field name="code">13101</field>
+            <field name="type" ref="direct_materials"/>
+            <field name="parent" ref="1310"/>
         </record>
         <record model="account.account.template" id="1311">
             <field name="name">Direct labor costs of work-in-process</field>
@@ -2221,7 +2281,70 @@
             <field name="code">1312</field>
             <field name="type" ref="production_overhead"/>
             <field name="parent" ref="131"/>
+            <field name="closed" eval="True"/>
         </record>
+        <record model="account.account.template" id="13120">
+            <field name="name">Standard overhead cost allocations to work-in-process</field>
+            <field name="code">13120</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="1312"/>
+        </record>
+        <record model="account.account.template" id="13121">
+            <field name="name">Specific overhead cost allocations to work-in-process</field>
+            <field name="code">13121</field>
+            <field name="parent" ref="1312"/>
+        </record>
+        <record model="account.account.template" id="131210">
+            <field name="name">Indirect production materials</field>
+            <field name="code">131210</field>
+            <field name="parent" ref="13121"/>
+        </record>
+        <record model="account.account.template" id="1312100">
+            <field name="name">Consumables</field>
+            <field name="code">1312100</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="131210"/>
+        </record>
+        <record model="account.account.template" id="1312101">
+            <field name="name">Consumable supplies</field>
+            <field name="code">1312101</field>
+            <field name="parent" ref="131210"/>
+        </record>
+        <record model="account.account.template" id="13121010">
+            <field name="name">Fuels</field>
+            <field name="code">13121010</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="1312101"/>
+        </record>
+        <record model="account.account.template" id="13121011">
+            <field name="name">Maintenance products</field>
+            <field name="code">13121011</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="1312101"/>
+        </record>
+        <record model="account.account.template" id="13121012">
+            <field name="name">Workshop and factory supplies</field>
+            <field name="code">13121012</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="1312101"/>
+        </record>
+        <record model="account.account.template" id="13121013">
+            <field name="name">Office supplies</field>
+            <field name="code">13121013</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="1312101"/>
+        </record>
+        <record model="account.account.template" id="1312102">
+            <field name="name">Packaging materials</field>
+            <field name="code">1312102</field>
+            <field name="parent" ref="131210"/>
+        </record>
+        <record model="account.account.template" id="131211">
+            <field name="name">Indirect personnel and labor costs</field>
+            <field name="code">131211</field>
+            <field name="parent" ref="13121"/>
+        </record>
+        <!-- TODO: Fill in remaining overhead cost allocation accounts  -->
         <record model="account.account.template" id="132">
             <field name="name">Intermediate goods</field>
             <field name="code">132</field>
