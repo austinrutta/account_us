@@ -39,11 +39,12 @@ Chart structure
 Unlike countries such as France, Spain, and Sweden, the United States does not
 have a national chart of accounts, nor does any of its states (to my knowledge)
 have an official state chart of accounts. Because of this, the structure of of
-this chart has materialized over time from various publicly available sources.
-Some parts are more fleshed out than others. Note the `license`_. But there is
-an expectation that financial reporting from public companies (at least) will
-follow the Accounting Standards Codifications (`ASC`_) published by the
-US-based Financial Accounting Standards Board (`FASB`_).
+this chart has materialized over time from various publicly available,
+informational sources.  Some parts are more fleshed out than others. Note the
+`license`_. But there is an expectation that financial reporting from public
+companies (at least) will follow the Accounting Standards Codifications
+(`ASC`_) published by the US-based Financial Accounting Standards Board
+(`FASB`_).
 
 Sources consulted
 .................
