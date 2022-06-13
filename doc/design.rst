@@ -6,9 +6,6 @@ The account_us module adds a chart of accounts that is based on a hybrid of
 United States GAAP_ and IFRS_ financial accounting standards, so hopefully this
 could be used as a starting point for accounting with either approach.
 
-Currently, this module only supports corporate accounting. For partnership or
-other types of business entity support, `email`_ or `file an issue`_ to discuss.
-
 Influential, but possibly temporary, conclusions
 ------------------------------------------------
 
@@ -23,13 +20,6 @@ accounts and analytic accounts. Here are some conclusions I have come to:
 - To satisfy income tax reporting needs, use a higher granularity of financial
   accounts than is required for financial accounting to differentiate types of
   expenditures (i.e. more detailed sub-accounts).
-
-- This is a detailed chart of accounts, suitable for a medium to large company
-  (it should also work just fine for a small company too, like mine). The
-  nesting for some accounts currently goes 8 levels deep. This is not at all
-  performant on the Accounts or Account Templates `tree view`_ if you try to
-  expand all the accounts at once. `Just don't do it`_.
-
 
 Chart structure
 ---------------
@@ -95,10 +85,6 @@ Currently existing tax modules (in some level of completeness) include:
 .. _segment reporting: https://asc.fasb.org/section&trid=2134533
 .. _cost centers: https://en.wikipedia.org/wiki/Cost_centre_(business)
 .. _company subdivisions: https://discuss.tryton.org/t/brands-or-subdivisions/3537/4
-.. _file an issue: https://github.com/pentandra/account_us/issues
-.. _email: https://pentandra.com/company/#contact
 .. _ASC: https://asc.fasb.org/
 .. _FASB: https://fasb.org/
-.. _tree view: https://docs.tryton.org/projects/server/en/latest/topics/views/index.html#tree
 .. _license: ../LICENSE
-.. _Just don't do it: https://discuss.tryton.org/t/tree-view-performance-with-deeply-nested-chart-of-accounts/5353/2?u=cman
