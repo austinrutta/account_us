@@ -27,10 +27,8 @@ accounts and analytic accounts. Here are some conclusions I have come to:
 - This is a detailed chart of accounts, suitable for a medium to large company
   (it should also work just fine for a small company too, like mine). The
   nesting for some accounts currently goes 8 levels deep. This is not at all
-  performant on the Accounts `tree view`_. For each level, it seems that there
-  is an exponential increase in time used to load the chart from the database.
-  This should probably be fixed (or I should use a shallower structure), but
-  just to let you know.
+  performant on the Accounts or Account Templates `tree view`_ if you try to
+  expand all the accounts at once. `Just don't do it`_.
 
 
 Chart structure
@@ -103,3 +101,4 @@ Currently existing tax modules (in some level of completeness) include:
 .. _FASB: https://fasb.org/
 .. _tree view: https://docs.tryton.org/projects/server/en/latest/topics/views/index.html#tree
 .. _license: ../LICENSE
+.. _Just don't do it: https://discuss.tryton.org/t/tree-view-performance-with-deeply-nested-chart-of-accounts/5353/2?u=cman
