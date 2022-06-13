@@ -22,4 +22,4 @@ expand all the accounts at once. `Just don't do it`_.
 .. _file an issue: https://github.com/pentandra/account_us/issues
 .. _email: https://pentandra.com/company/#contact
 .. _tree view: https://docs.tryton.org/projects/server/en/latest/topics/views/index.html#tree
-.. _Just don't do it: https://discuss.tryton.org/t/tree-view-performance-with-deeply-nested-chart-of-accounts/5353/2?u=cman
+.. _Just don't do it: https://discuss.tryton.org/t/tree-view-performance-with-deeply-nested-chart-of-accounts/5353/2
