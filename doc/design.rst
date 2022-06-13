@@ -21,18 +21,20 @@ accounts and analytic accounts. Here are some conclusions I have come to:
   accounts than is required for financial accounting to differentiate types of
   expenditures (i.e. more detailed sub-accounts).
 
-Chart structure
----------------
+Financial chart structure
+-------------------------
 
 Unlike countries such as France, Spain, and Sweden, the United States does not
 have a national chart of accounts, nor does any of its states (to my knowledge)
 have an official state chart of accounts. Because of this, the structure of of
 this chart has materialized over time from various publicly available,
-informational sources.  Some parts are more fleshed out than others. Note the
-`license`_. But there is an expectation that financial reporting from public
-companies (at least) will follow the Accounting Standards Codifications
-(`ASC`_) published by the US-based Financial Accounting Standards Board
-(`FASB`_).
+informational sources. Some parts are more fleshed out than others. Note `the
+license`_.
+
+Even though there is some flexibility in the structure of the financial
+accounts, it is expectated that financial reporting will follow the Accounting
+Standards Codifications (`ASC`_) published by the US-based Financial Accounting
+Standards Board (`FASB`_).
 
 Sources consulted
 .................
@@ -68,13 +70,14 @@ Sources that would be good to consider more
 Tax chart structure
 -------------------
 
-On the other hand, sales and use taxes in the US are handled at the state
-(subdivision) level. Each state has prescribed its own chart of of taxes and
-tax codes.  Due to the immense task of compiling tax information for all 50
-states, I have taken the path of grouping state taxes into separate submodules
-according to legal jurisdiction. This is a more iterative and flexible approach
-for small and medium business to take and doesn't necessitate integration with
-a 3rd-party like TaxJar or AvaTax. Contributions are welcome.
+Unlike the `financial chart structure`_, sales and use taxes in the US are
+handled at the state (subdivision) level and each state has prescribed its own
+chart of of taxes and tax codes. Due to the immense task of compiling tax
+information for all 50 states, I have taken the path of grouping state taxes
+into separate submodules according to legal jurisdiction. This is a more
+iterative and flexible approach for small and medium business to take and
+doesn't necessitate integration with a 3rd-party like TaxJar or AvaTax.
+Contributions are welcome.
 
 Currently existing tax modules (in some level of completeness) include:
 
@@ -87,4 +90,4 @@ Currently existing tax modules (in some level of completeness) include:
 .. _company subdivisions: https://discuss.tryton.org/t/brands-or-subdivisions/3537/4
 .. _ASC: https://asc.fasb.org/
 .. _FASB: https://fasb.org/
-.. _license: ../LICENSE
+.. _the license: ../LICENSE
