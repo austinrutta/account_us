@@ -1329,15 +1329,29 @@
             <field name="statement">income</field>
             <field name="expense" eval="True"/>
         </record>
-        <record model="account.account.type.template" id="cost_of_goods_sold">
-            <field name="name">Cost of goods sold</field>
+        <record model="account.account.type.template" id="cost_of_products_and_services">
+            <field name="name">Cost of products and services sold</field>
             <field name="parent" ref="cost_of_revenues"/>
             <field name="sequence" eval="10"/>
             <field name="statement">income</field>
             <field name="expense" eval="True"/>
         </record>
-        <record model="account.account.type.template" id="cost_of_services_rendered">
-            <field name="name">Cost of services rendered</field>
+        <record model="account.account.type.template" id="cost_of_products_and_services_variable">
+            <field name="name">Variable</field>
+            <field name="parent" ref="cost_of_products_and_services"/>
+            <field name="sequence" eval="10"/>
+            <field name="statement">income</field>
+            <field name="expense" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="cost_of_products_and_services_fixed">
+            <field name="name">Fixed</field>
+            <field name="parent" ref="cost_of_products_and_services"/>
+            <field name="sequence" eval="20"/>
+            <field name="statement">income</field>
+            <field name="expense" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="cost_of_merchandise">
+            <field name="name">Cost of merchandise sold</field>
             <field name="parent" ref="cost_of_revenues"/>
             <field name="sequence" eval="20"/>
             <field name="statement">income</field>
@@ -2283,67 +2297,129 @@
             <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="13120">
-            <field name="name">Standard overhead cost allocations to work-in-process</field>
+            <field name="name">Indirect materials—allocated overhead</field>
             <field name="code">13120</field>
             <field name="type" ref="production_overhead"/>
             <field name="parent" ref="1312"/>
         </record>
         <record model="account.account.template" id="13121">
-            <field name="name">Specific overhead cost allocations to work-in-process</field>
+            <field name="name">Indirect labor—allocated overhead</field>
             <field name="code">13121</field>
             <field name="parent" ref="1312"/>
         </record>
-        <record model="account.account.template" id="131210">
-            <field name="name">Indirect production materials</field>
-            <field name="code">131210</field>
-            <field name="parent" ref="13121"/>
+        <record model="account.account.template" id="13122">
+            <field name="name">Overhead allocations of production facilities and equipment</field>
+            <field name="code">13122</field>
+            <field name="parent" ref="1312"/>
         </record>
-        <record model="account.account.template" id="1312100">
-            <field name="name">Consumables</field>
-            <field name="code">1312100</field>
+        <record model="account.account.template" id="131220">
+            <field name="name">Occupancy costs—allocated overhead</field>
+            <field name="code">131220</field>
             <field name="type" ref="production_overhead"/>
-            <field name="parent" ref="131210"/>
+            <field name="parent" ref="13122"/>
         </record>
-        <record model="account.account.template" id="1312101">
-            <field name="name">Consumable supplies</field>
-            <field name="code">1312101</field>
-            <field name="parent" ref="131210"/>
-        </record>
-        <record model="account.account.template" id="13121010">
-            <field name="name">Fuels</field>
-            <field name="code">13121010</field>
+        <record model="account.account.template" id="131221">
+            <field name="name">Utilities—allocated overhead</field>
+            <field name="code">131221</field>
             <field name="type" ref="production_overhead"/>
-            <field name="parent" ref="1312101"/>
+            <field name="parent" ref="13122"/>
         </record>
-        <record model="account.account.template" id="13121011">
-            <field name="name">Maintenance products</field>
-            <field name="code">13121011</field>
+        <record model="account.account.template" id="131222">
+            <field name="name">Communications and data processing—allocated overhead</field>
+            <field name="code">131222</field>
             <field name="type" ref="production_overhead"/>
-            <field name="parent" ref="1312101"/>
+            <field name="parent" ref="13122"/>
         </record>
-        <record model="account.account.template" id="13121012">
-            <field name="name">Workshop and factory supplies</field>
-            <field name="code">13121012</field>
+        <record model="account.account.template" id="131223">
+            <field name="name">Repairs and maintenance—allocated overhead</field>
+            <field name="code">131223</field>
+            <field name="parent" ref="13122"/>
+        </record>
+        <record model="account.account.template" id="131224">
+            <field name="name">Equipment allocations</field>
+            <field name="code">131224</field>
+            <field name="parent" ref="13122"/>
+        </record>
+        <record model="account.account.template" id="1312240">
+            <field name="name">Equipment setup and retooling—allocated overhead</field>
+            <field name="code">1312240</field>
             <field name="type" ref="production_overhead"/>
-            <field name="parent" ref="1312101"/>
+            <field name="parent" ref="131224"/>
         </record>
-        <record model="account.account.template" id="13121013">
-            <field name="name">Office supplies</field>
-            <field name="code">13121013</field>
+        <record model="account.account.template" id="1312241">
+            <field name="name">Equipment rental costs—allocated overhead</field>
+            <field name="code">1312241</field>
             <field name="type" ref="production_overhead"/>
-            <field name="parent" ref="1312101"/>
+            <field name="parent" ref="131224"/>
         </record>
-        <record model="account.account.template" id="1312102">
-            <field name="name">Packaging materials</field>
-            <field name="code">1312102</field>
-            <field name="parent" ref="131210"/>
+        <record model="account.account.template" id="131225">
+            <field name="name">Depreciation and amortization allocations</field>
+            <field name="code">131225</field>
+            <field name="parent" ref="13122"/>
         </record>
-        <record model="account.account.template" id="131211">
-            <field name="name">Indirect personnel and labor costs</field>
-            <field name="code">131211</field>
-            <field name="parent" ref="13121"/>
+        <record model="account.account.template" id="1312250">
+            <field name="name">Depreciation and amortization of land and improvements thereof—allocated overhead</field>
+            <field name="code">1312250</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="131225"/>
         </record>
-        <!-- TODO: Fill in remaining overhead cost allocation accounts  -->
+        <record model="account.account.template" id="1312251">
+            <field name="name">Depreciation and amortization of production buildings and improvements thereof—allocated overhead</field>
+            <field name="code">1312251</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="131225"/>
+        </record>
+        <record model="account.account.template" id="1312252">
+            <field name="name">Depreciation of transportation equipment—allocated overhead</field>
+            <field name="code">1312252</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="131225"/>
+        </record>
+        <record model="account.account.template" id="1312253">
+            <field name="name">Depreciation of furniture, fixtures, and office equipment for production facilities—allocated overhead</field>
+            <field name="code">1312253</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="131225"/>
+        </record>
+        <record model="account.account.template" id="1312253">
+            <field name="name">Depreciation of furniture, fixtures, and office equipment for production facilities—allocated overhead</field>
+            <field name="code">1312253</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="131225"/>
+        </record>
+        <record model="account.account.template" id="1312258">
+            <field name="name">Amortization of intangibles used for production—allocated overhead</field>
+            <field name="code">1312258</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="131225"/>
+        </record>
+        <record model="account.account.template" id="1312259">
+            <field name="name">Other depreciation and amortization allocations</field>
+            <field name="code">1312259</field>
+            <field name="parent" ref="131225"/>
+        </record>
+        <record model="account.account.template" id="131229">
+            <field name="name">Other production facilities and equipment allocations</field>
+            <field name="code">131229</field>
+            <field name="parent" ref="13122"/>
+        </record>
+        <record model="account.account.template" id="1312290">
+            <field name="name">Property tax expense—allocated overhead</field>
+            <field name="code">1312290</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="131229"/>
+        </record>
+        <record model="account.account.template" id="13123">
+            <field name="name">Insurance</field>
+            <field name="code">13122</field>
+            <field name="type" ref="production_overhead"/>
+            <field name="parent" ref="1312"/>
+        </record>
+        <record model="account.account.template" id="13129">
+            <field name="name">Other overhead allocations</field>
+            <field name="code">13129</field>
+            <field name="parent" ref="1312"/>
+        </record>
         <record model="account.account.template" id="132">
             <field name="name">Intermediate goods</field>
             <field name="code">132</field>
@@ -4659,7 +4735,7 @@
             <field name="parent" ref="400"/>
         </record>
         <record model="account.account.template" id="4002">
-            <field name="name">Sales of work in process</field>
+            <field name="name">Sales of direct materials and work in process</field>
             <field name="code">4002</field>
             <field name="type" ref="goods"/>
             <field name="parent" ref="400"/>
@@ -4818,26 +4894,199 @@
             <field name="parent" ref="5"/>
         </record>
         <record model="account.account.template" id="500">
-            <field name="name">Cost of goods sold</field>
+            <field name="name">Cost of products sold and services rendered</field>
             <field name="code">500</field>
             <field name="parent" ref="50"/>
         </record>
         <record model="account.account.template" id="5000">
-            <field name="name">Cost of finished goods sold</field>
+            <field name="name">Direct materials costs</field>
             <field name="code">5000</field>
-            <field name="type" ref="cost_of_goods_sold"/>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="500"/>
         </record>
         <record model="account.account.template" id="5001">
-            <field name="name">Cost of merchandise sold</field>
+            <field name="name">Direct labor costs</field>
             <field name="code">5001</field>
-            <field name="type" ref="cost_of_goods_sold"/>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="500"/>
+            <field name="closed" eval="True"/>
+        </record>
+        <record model="account.account.template" id="50010">
+            <field name="name">Cost of wages—direct labor</field>
+            <field name="code">50010</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5001"/>
+        </record>
+        <record model="account.account.template" id="50011">
+            <field name="name">Required payroll-related costs—direct labor</field>
+            <field name="code">50011</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5001"/>
+        </record>
+        <record model="account.account.template" id="50012">
+            <field name="name">Costs of fringe benefits—direct labor</field>
+            <field name="code">50012</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5001"/>
+        </record>
+        <record model="account.account.template" id="50019">
+            <field name="name">Other direct labor costs</field>
+            <field name="code">50019</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5001"/>
+        </record>
+        <record model="account.account.template" id="5002">
+            <field name="name">Variable overhead</field>
+            <field name="code">5002</field>
             <field name="parent" ref="500"/>
         </record>
-        <record model="account.account.template" id="501">
-            <field name="name">Cost of services rendered</field>
-            <field name="code">501</field>
-            <field name="type" ref="cost_of_services_rendered"/>
+        <record model="account.account.template" id="50020">
+            <field name="name">Indirect materials costs</field>
+            <field name="code">50020</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5002"/>
+        </record>
+        <record model="account.account.template" id="50021">
+            <field name="name">Indirect labor costs</field>
+            <field name="code">50021</field>
+            <field name="parent" ref="5002"/>
+        </record>
+        <record model="account.account.template" id="500210">
+            <field name="name">Cost of salaries and wages—indirect labor</field>
+            <field name="code">500219</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="50021"/>
+        </record>
+        <record model="account.account.template" id="500211">
+            <field name="name">Required payroll-related costs—indirect labor</field>
+            <field name="code">500211</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="50021"/>
+        </record>
+        <record model="account.account.template" id="500212">
+            <field name="name">Costs of fringe benefits—indirect labor</field>
+            <field name="code">500212</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="50021"/>
+        </record>
+        <record model="account.account.template" id="500219">
+            <field name="name">Other indirect labor costs</field>
+            <field name="code">500219</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="50021"/>
+        </record>
+        <record model="account.account.template" id="50022">
+            <field name="name">Utilities costs</field>
+            <field name="code">50022</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5002"/>
+        </record>
+        <record model="account.account.template" id="50023">
+            <field name="name">Communications and data processing costs</field>
+            <field name="code">50023</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5002"/>
+        </record>
+        <record model="account.account.template" id="50024">
+            <field name="name">Repairs and maintenance costs</field>
+            <field name="code">50024</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5002"/>
+        </record>
+        <record model="account.account.template" id="50025">
+            <field name="name">Equipment setup and retooling costs</field>
+            <field name="code">50025</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5002"/>
+        </record>
+        <record model="account.account.template" id="5003">
+            <field name="name">Fixed overhead</field>
+            <field name="code">5003</field>
+            <field name="parent" ref="500"/>
+        </record>
+        <record model="account.account.template" id="50030">
+            <field name="name">Occupancy costs</field>
+            <field name="code">50030</field>
+            <field name="type" ref="cost_of_products_and_services_fixed"/>
+            <field name="parent" ref="5003"/>
+        </record>
+        <record model="account.account.template" id="50031">
+            <field name="name">Equipment rental costs</field>
+            <field name="code">50031</field>
+            <field name="type" ref="cost_of_products_and_services_fixed"/>
+            <field name="parent" ref="5003"/>
+        </record>
+        <record model="account.account.template" id="50035">
+            <field name="name">Depreciation and amortization costs</field>
+            <field name="code">50035</field>
+            <field name="parent" ref="5003"/>
+        </record>
+        <record model="account.account.template" id="500350">
+            <field name="name">Depreciation and amortization of land and improvements thereof</field>
+            <field name="code">500350</field>
+            <field name="type" ref="cost_of_products_and_services_fixed"/>
+            <field name="parent" ref="50035"/>
+        </record>
+        <record model="account.account.template" id="500351">
+            <field name="name">Depreciation and amortization of production buildings and improvements thereof</field>
+            <field name="code">500351</field>
+            <field name="type" ref="cost_of_products_and_services_fixed"/>
+            <field name="parent" ref="50035"/>
+        </record>
+        <record model="account.account.template" id="500352">
+            <field name="name">Depreciation of transportation equipment</field>
+            <field name="code">500352</field>
+            <field name="type" ref="cost_of_products_and_services_fixed"/>
+            <field name="parent" ref="50035"/>
+        </record>
+        <record model="account.account.template" id="500353">
+            <field name="name">Depreciation of furniture, fixtures, and office equipment for production facilities</field>
+            <field name="code">500353</field>
+            <field name="type" ref="cost_of_products_and_services_fixed"/>
+            <field name="parent" ref="50035"/>
+        </record>
+        <record model="account.account.template" id="500358">
+            <field name="name">Amortization of intangibles used for production</field>
+            <field name="code">500358</field>
+            <field name="type" ref="cost_of_products_and_services_fixed"/>
+            <field name="parent" ref="50035"/>
+        </record>
+        <record model="account.account.template" id="500359">
+            <field name="name">Other depreciation and amortization costs</field>
+            <field name="code">500359</field>
+            <field name="parent" ref="50035"/>
+        </record>
+        <record model="account.account.template" id="50039">
+            <field name="name">Other production facilities and equipment costs</field>
+            <field name="code">50039</field>
+            <field name="parent" ref="5003"/>
+        </record>
+        <record model="account.account.template" id="5004">
+            <field name="name">Insurance</field>
+            <field name="code">5004</field>
+            <field name="type" ref="cost_of_products_and_services_fixed"/>
+            <field name="parent" ref="500"/>
+        </record>
+        <record model="account.account.template" id="5009">
+            <field name="name">Other fixed costs</field>
+            <field name="code">5009</field>
+            <field name="parent" ref="500"/>
+        </record>
+        <record model="account.account.template" id="50090">
+            <field name="name">Property tax expense costs</field>
+            <field name="code">50090</field>
+            <field name="type" ref="cost_of_products_and_services_fixed"/>
+            <field name="parent" ref="5009"/>
+        </record>
+        <record model="account.account.template" id="505">
+            <field name="name">Cost of merchandise sold</field>
+            <field name="code">505</field>
+            <field name="type" ref="cost_of_merchandise"/>
+            <field name="parent" ref="50"/>
+        </record>
+        <record model="account.account.template" id="509">
+            <field name="name">Other production costs and expenses</field>
+            <field name="code">509</field>
             <field name="parent" ref="50"/>
         </record>
         <record model="account.account.template" id="51">
