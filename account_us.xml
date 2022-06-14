@@ -4722,9 +4722,7 @@
         <record model="account.account.template" id="41">
             <field name="name">Services</field>
             <field name="code">41</field>
-            <field name="type" ref="services"/>
             <field name="parent" ref="4"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="410">
             <field name="name">Point of sale revenues</field>
