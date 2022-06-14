@@ -4783,8 +4783,23 @@
             <field name="parent" ref="4"/>
         </record>
         <record model="account.account.template" id="43">
-            <field name="name">Other operating revenues</field>
+            <field name="name">Special sales</field>
             <field name="code">43</field>
+            <field name="parent" ref="4"/>
+        </record>
+        <record model="account.account.template" id="430">
+            <field name="name">Franchises</field>
+            <field name="code">430</field>
+            <field name="parent" ref="43"/>
+        </record>
+        <record model="account.account.template" id="431">
+            <field name="name">Consignments</field>
+            <field name="code">431</field>
+            <field name="parent" ref="43"/>
+        </record>
+        <record model="account.account.template" id="49">
+            <field name="name">Other operating revenues</field>
+            <field name="code">49</field>
             <field name="parent" ref="4"/>
         </record>
         <record model="account.account.template" id="5">
