@@ -4686,7 +4686,7 @@
         </record>
         <record model="account.account.template" id="4011">
             <field name="name">Billings on constructions in process (percentage-of-completion method)</field>
-            <field name="code">4010</field>
+            <field name="code">4011</field>
             <field name="type" ref="goods"/>
             <field name="parent" ref="401"/>
         </record>
