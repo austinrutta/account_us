@@ -2405,7 +2405,7 @@
         </record>
         <record model="account.account.template" id="13123">
             <field name="name">Insurance</field>
-            <field name="code">13122</field>
+            <field name="code">13123</field>
             <field name="type" ref="production_overhead"/>
             <field name="parent" ref="1312"/>
         </record>
