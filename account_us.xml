@@ -2381,12 +2381,6 @@
             <field name="type" ref="production_overhead"/>
             <field name="parent" ref="131225"/>
         </record>
-        <record model="account.account.template" id="1312253">
-            <field name="name">Depreciation of furniture, fixtures, and office equipment for production facilities—allocated overhead</field>
-            <field name="code">1312253</field>
-            <field name="type" ref="production_overhead"/>
-            <field name="parent" ref="131225"/>
-        </record>
         <record model="account.account.template" id="1312258">
             <field name="name">Amortization of intangibles used for production—allocated overhead</field>
             <field name="code">1312258</field>
