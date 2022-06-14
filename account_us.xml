@@ -211,7 +211,6 @@
             <field name="parent" ref="inventories"/>
             <field name="statement">balance</field>
             <field name="assets" eval="True"/>
-            <field name="expense" eval="True"/>
         </record>
         <record model="account.account.type.template" id="accrued_and_deferred_assets">
             <field name="name">Accrued and deferred assets</field>
