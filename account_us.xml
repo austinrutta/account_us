@@ -5013,42 +5013,8 @@
         <record model="account.account.template" id="50035">
             <field name="name">Depreciation and amortization costs</field>
             <field name="code">50035</field>
+            <field name="type" ref="cost_of_products_and_services_fixed"/>
             <field name="parent" ref="5003"/>
-        </record>
-        <record model="account.account.template" id="500350">
-            <field name="name">Depreciation and amortization of land and improvements thereof</field>
-            <field name="code">500350</field>
-            <field name="type" ref="cost_of_products_and_services_fixed"/>
-            <field name="parent" ref="50035"/>
-        </record>
-        <record model="account.account.template" id="500351">
-            <field name="name">Depreciation and amortization of production buildings and improvements thereof</field>
-            <field name="code">500351</field>
-            <field name="type" ref="cost_of_products_and_services_fixed"/>
-            <field name="parent" ref="50035"/>
-        </record>
-        <record model="account.account.template" id="500352">
-            <field name="name">Depreciation of transportation equipment</field>
-            <field name="code">500352</field>
-            <field name="type" ref="cost_of_products_and_services_fixed"/>
-            <field name="parent" ref="50035"/>
-        </record>
-        <record model="account.account.template" id="500353">
-            <field name="name">Depreciation of furniture, fixtures, and office equipment for production facilities</field>
-            <field name="code">500353</field>
-            <field name="type" ref="cost_of_products_and_services_fixed"/>
-            <field name="parent" ref="50035"/>
-        </record>
-        <record model="account.account.template" id="500358">
-            <field name="name">Amortization of intangibles used for production</field>
-            <field name="code">500358</field>
-            <field name="type" ref="cost_of_products_and_services_fixed"/>
-            <field name="parent" ref="50035"/>
-        </record>
-        <record model="account.account.template" id="500359">
-            <field name="name">Other depreciation and amortization costs</field>
-            <field name="code">500359</field>
-            <field name="parent" ref="50035"/>
         </record>
         <record model="account.account.template" id="50039">
             <field name="name">Other production facilities and equipment costs</field>
