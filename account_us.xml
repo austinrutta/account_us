@@ -4636,16 +4636,66 @@
             <field name="parent" ref="4"/>
         </record>
         <record model="account.account.template" id="400">
-            <field name="name">Products</field>
+            <field name="name">Point of sale revenues</field>
             <field name="code">400</field>
             <field name="type" ref="goods"/>
             <field name="parent" ref="40"/>
+            <field name="closed" eval="True"/>
+        </record>
+        <record model="account.account.template" id="4000">
+            <field name="name">Sales of finished products</field>
+            <field name="code">4000</field>
+            <field name="type" ref="goods"/>
+            <field name="parent" ref="400"/>
+        </record>
+        <record model="account.account.template" id="4001">
+            <field name="name">Sales of intermediate products</field>
+            <field name="code">4001</field>
+            <field name="type" ref="goods"/>
+            <field name="parent" ref="400"/>
+        </record>
+        <record model="account.account.template" id="4002">
+            <field name="name">Sales of work in process</field>
+            <field name="code">4002</field>
+            <field name="type" ref="goods"/>
+            <field name="parent" ref="400"/>
+        </record>
+        <record model="account.account.template" id="4004">
+            <field name="name">Merchandise sales</field>
+            <field name="code">4004</field>
+            <field name="type" ref="goods"/>
+            <field name="parent" ref="400"/>
+        </record>
+        <record model="account.account.template" id="4008">
+            <field name="name">Sales of damaged products or merchandise</field>
+            <field name="code">4008</field>
+            <field name="type" ref="goods"/>
+            <field name="parent" ref="400"/>
         </record>
         <record model="account.account.template" id="401">
-            <field name="name">Merchandise</field>
+            <field name="name">Revenues on contracts and sales of goods in process</field>
             <field name="code">401</field>
             <field name="type" ref="goods"/>
             <field name="parent" ref="40"/>
+            <field name="closed" eval="True"/>
+        </record>
+        <record model="account.account.template" id="4010">
+            <field name="name">Receipts from completed constructions (completed-contract method)</field>
+            <field name="code">4010</field>
+            <field name="type" ref="goods"/>
+            <field name="parent" ref="401"/>
+        </record>
+        <record model="account.account.template" id="4011">
+            <field name="name">Billings on constructions in process (percentage-of-completion method)</field>
+            <field name="code">4010</field>
+            <field name="type" ref="goods"/>
+            <field name="parent" ref="401"/>
+        </record>
+        <record model="account.account.template" id="4012">
+            <field name="name">Billings on subscriptions of goods</field>
+            <field name="code">4012</field>
+            <field name="type" ref="goods"/>
+            <field name="parent" ref="401"/>
         </record>
         <record model="account.account.template" id="409">
             <field name="name">Adjustments on sales of goods (−)</field>
@@ -4673,13 +4723,45 @@
         <record model="account.account.template" id="41">
             <field name="name">Services</field>
             <field name="code">41</field>
+            <field name="type" ref="services"/>
             <field name="parent" ref="4"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="410">
-            <field name="name">General services</field>
+            <field name="name">Point of sale revenues</field>
             <field name="code">410</field>
             <field name="type" ref="services"/>
             <field name="parent" ref="41"/>
+            <field name="closed" eval="True"/>
+        </record>
+        <record model="account.account.template" id="4100">
+            <field name="name">Receipts from individual services performed</field>
+            <field name="code">4100</field>
+            <field name="type" ref="services"/>
+            <field name="parent" ref="410"/>
+        </record>
+        <record model="account.account.template" id="411">
+            <field name="name">Revenues on contracts and services in process</field>
+            <field name="code">411</field>
+            <field name="parent" ref="41"/>
+        </record>
+        <record model="account.account.template" id="4110">
+            <field name="name">Receipts from completed service contracts (completed-contract method)</field>
+            <field name="code">4110</field>
+            <field name="type" ref="services"/>
+            <field name="parent" ref="411"/>
+        </record>
+        <record model="account.account.template" id="4111">
+            <field name="name">Billings on service contracts in process (percentage-of-completion method)</field>
+            <field name="code">4111</field>
+            <field name="type" ref="services"/>
+            <field name="parent" ref="411"/>
+        </record>
+        <record model="account.account.template" id="4112">
+            <field name="name">Billings on service subscriptions</field>
+            <field name="code">4112</field>
+            <field name="type" ref="services"/>
+            <field name="parent" ref="411"/>
         </record>
         <record model="account.account.template" id="419">
             <field name="name">Adjustments on sales of services (−)</field>
