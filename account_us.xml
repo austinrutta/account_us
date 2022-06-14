@@ -2361,29 +2361,6 @@
             <field name="type" ref="merchandise"/>
             <field name="parent" ref="13"/>
         </record>
-        <record model="account.account.template" id="137">
-            <field name="name">Inventory purchases in transit</field>
-            <field name="code">137</field>
-            <field name="parent" ref="13"/>
-        </record>
-        <record model="account.account.template" id="1370">
-            <field name="name">Raw materials and parts in transit</field>
-            <field name="code">1370</field>
-            <field name="type" ref="inventory_purchases"/>
-            <field name="parent" ref="137"/>
-        </record>
-        <record model="account.account.template" id="1371">
-            <field name="name">Raw supplies and consumables in transit</field>
-            <field name="code">1371</field>
-            <field name="type" ref="inventory_purchases"/>
-            <field name="parent" ref="137"/>
-        </record>
-        <record model="account.account.template" id="1372">
-            <field name="name">Merchandise in transit</field>
-            <field name="code">1372</field>
-            <field name="type" ref="inventory_purchases"/>
-            <field name="parent" ref="137"/>
-        </record>
         <record model="account.account.template" id="138">
             <field name="name">Unallocated production overhead</field>
             <field name="code">138</field>
@@ -3087,6 +3064,29 @@
             <field name="name">Other inventory items</field>
             <field name="code">139</field>
             <field name="parent" ref="13"/>
+        </record>
+        <record model="account.account.template" id="1390">
+            <field name="name">Inventory purchases in transit</field>
+            <field name="code">1390</field>
+            <field name="parent" ref="139"/>
+        </record>
+        <record model="account.account.template" id="13900">
+            <field name="name">Raw materials and parts in transit</field>
+            <field name="code">13900</field>
+            <field name="type" ref="inventory_purchases"/>
+            <field name="parent" ref="1390"/>
+        </record>
+        <record model="account.account.template" id="13901">
+            <field name="name">Raw supplies and consumables in transit</field>
+            <field name="code">13901</field>
+            <field name="type" ref="inventory_purchases"/>
+            <field name="parent" ref="1390"/>
+        </record>
+        <record model="account.account.template" id="13902">
+            <field name="name">Merchandise in transit</field>
+            <field name="code">13902</field>
+            <field name="type" ref="inventory_purchases"/>
+            <field name="parent" ref="1390"/>
         </record>
         <record model="account.account.template" id="14">
             <field name="name">Accrued and deferred items</field>
