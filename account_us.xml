@@ -1413,6 +1413,41 @@
             <field name="statement">income</field>
             <field name="expense" eval="True"/>
         </record>
+        <record model="account.account.type.template" id="purchases_raw_materials">
+            <field name="name">Raw materials and supplies purchases</field>
+            <field name="parent" ref="materials_and_supplies"/>
+            <field name="sequence" eval="10"/>
+            <field name="statement">income</field>
+            <field name="expense" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="variations_raw_materials">
+            <field name="name">Variation in raw materials inventories</field>
+            <field name="parent" ref="purchases_raw_materials"/>
+            <field name="sequence" eval="10"/>
+            <field name="statement">income</field>
+            <field name="stock" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="purchases_merchandise">
+            <field name="name">Merchandise purchases</field>
+            <field name="parent" ref="materials_and_supplies"/>
+            <field name="sequence" eval="20"/>
+            <field name="statement">income</field>
+            <field name="expense" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="variations_merchandise">
+            <field name="name">Variation in merchandise inventories</field>
+            <field name="parent" ref="purchases_merchandise"/>
+            <field name="sequence" eval="10"/>
+            <field name="statement">income</field>
+            <field name="stock" eval="True"/>
+        </record>
+        <record model="account.account.type.template" id="other_materials_and_supplies">
+            <field name="name">Other materials and supplies</field>
+            <field name="parent" ref="materials_and_supplies"/>
+            <field name="sequence" eval="30"/>
+            <field name="statement">income</field>
+            <field name="expense" eval="True"/>
+        </record>
         <record model="account.account.type.template" id="advertising_and_promotional_materials_expenses">
             <field name="name">Advertising and promotional materials</field>
             <field name="parent" ref="operating_expenses"/>
@@ -5410,9 +5445,136 @@
             <field name="parent" ref="53"/>
         </record>
         <record model="account.account.template" id="5300">
-            <field name="name">Packaging, wrapping, and containers</field>
+            <field name="name">Raw materials and supplies—inventory purchases</field>
             <field name="code">5300</field>
-            <field name="type" ref="materials_and_supplies"/>
+            <field name="type" ref="purchases_raw_materials"/>
+            <field name="parent" ref="530"/>
+            <field name="closed" eval="True"/>
+        </record>
+        <record model="account.account.template" id="5301">
+            <field name="name">Other supplies—inventory purchases</field>
+            <field name="code">5300</field>
+            <field name="parent" ref="530"/>
+        </record>
+        <record model="account.account.template" id="53010">
+            <field name="name">Consumable materials—inventory purchases</field>
+            <field name="code">53010</field>
+            <field name="type" ref="purchases_raw_materials"/>
+            <field name="parent" ref="5301"/>
+        </record>
+        <record model="account.account.template" id="53011">
+            <field name="name">Consumable supplies—inventory purchases</field>
+            <field name="code">53011</field>
+            <field name="parent" ref="5301"/>
+        </record>
+        <record model="account.account.template" id="530110">
+            <field name="name">Fuels—inventory purchases</field>
+            <field name="code">530110</field>
+            <field name="type" ref="purchases_raw_materials"/>
+            <field name="parent" ref="53011"/>
+        </record>
+        <record model="account.account.template" id="530111">
+            <field name="name">Maintenance products—inventory purchases</field>
+            <field name="code">530111</field>
+            <field name="type" ref="purchases_raw_materials"/>
+            <field name="parent" ref="53011"/>
+        </record>
+        <record model="account.account.template" id="530112">
+            <field name="name">Workshop and factory supplies—inventory purchases</field>
+            <field name="code">530112</field>
+            <field name="type" ref="purchases_raw_materials"/>
+            <field name="parent" ref="53011"/>
+        </record>
+        <record model="account.account.template" id="530113">
+            <field name="name">Store supplies—inventory purchases</field>
+            <field name="code">530113</field>
+            <field name="type" ref="purchases_raw_materials"/>
+            <field name="parent" ref="53011"/>
+        </record>
+        <record model="account.account.template" id="530114">
+            <field name="name">Office supplies—inventory purchases</field>
+            <field name="code">530114</field>
+            <field name="type" ref="purchases_raw_materials"/>
+            <field name="parent" ref="53011"/>
+        </record>
+        <record model="account.account.template" id="53012">
+            <field name="name">Packaging—inventory purchases</field>
+            <field name="code">53012</field>
+            <field name="parent" ref="5301"/>
+        </record>
+        <record model="account.account.template" id="530120">
+            <field name="name">Integral product packaging—inventory purchases</field>
+            <field name="code">530120</field>
+            <field name="type" ref="purchases_raw_materials"/>
+            <field name="parent" ref="53012"/>
+        </record>
+        <record model="account.account.template" id="5302">
+            <field name="name">Inventory in transit</field>
+            <field name="code">5302</field>
+            <field name="parent" ref="530"/>
+        </record>
+        <record model="account.account.template" id="53020">
+            <field name="name">Raw materials and supplies—inventory in transit</field>
+            <field name="code">53020</field>
+            <field name="type" ref="variations_raw_materials"/>
+            <field name="parent" ref="5302"/>
+        </record>
+        <record model="account.account.template" id="53021">
+            <field name="name">Other supplies—inventory in transit</field>
+            <field name="code">53021</field>
+            <field name="type" ref="variations_raw_materials"/>
+            <field name="parent" ref="5302"/>
+        </record>
+        <record model="account.account.template" id="53025">
+            <field name="name">Merchandise—inventory in transit</field>
+            <field name="code">53025</field>
+            <field name="type" ref="variations_merchandise"/>
+            <field name="parent" ref="5302"/>
+        </record>
+        <record model="account.account.template" id="5303">
+            <field name="name">Purchases of equipment and works</field>
+            <field name="code">5303</field>
+            <field name="type" ref="other_materials_and_supplies"/>
+            <field name="parent" ref="530"/>
+        </record>
+        <record model="account.account.template" id="5304">
+            <field name="name">Non-stock purchases of materials and supplies</field>
+            <field name="code">5304</field>
+            <field name="parent" ref="530"/>
+        </record>
+        <record model="account.account.template" id="53040">
+            <field name="name">Non-storable supplies (water, energy, ...)—non-stock</field>
+            <field name="code">53040</field>
+            <field name="type" ref="other_materials_and_supplies"/>
+            <field name="parent" ref="5304"/>
+        </record>
+        <record model="account.account.template" id="53041">
+            <field name="name">Maintenance supplies and small equipment—non-stock</field>
+            <field name="code">53041</field>
+            <field name="type" ref="other_materials_and_supplies"/>
+            <field name="parent" ref="5304"/>
+        </record>
+        <record model="account.account.template" id="53042">
+            <field name="name">Administrative supplies—non-stock</field>
+            <field name="code">53042</field>
+            <field name="type" ref="other_materials_and_supplies"/>
+            <field name="parent" ref="5304"/>
+        </record>
+        <record model="account.account.template" id="53049">
+            <field name="name">Other materials and supplies</field>
+            <field name="code">53049</field>
+            <field name="type" ref="other_materials_and_supplies"/>
+            <field name="parent" ref="5304"/>
+        </record>
+        <record model="account.account.template" id="5305">
+            <field name="name">Purchases of merchandise</field>
+            <field name="code">5305</field>
+            <field name="type" ref="purchases_merchandise"/>
+            <field name="parent" ref="530"/>
+        </record>
+        <record model="account.account.template" id="5308">
+            <field name="name">Purchase discounts</field>
+            <field name="code">5308</field>
             <field name="parent" ref="530"/>
         </record>
         <record model="account.account.template" id="5309">
@@ -5421,9 +5583,9 @@
             <field name="parent" ref="530"/>
         </record>
         <record model="account.account.template" id="53090">
-            <field name="name">Janitorial supplies</field>
+            <field name="name">Packaging, wrapping, and containers—non-stock</field>
             <field name="code">53090</field>
-            <field name="type" ref="materials_and_supplies"/>
+            <field name="type" ref="other_materials_and_supplies"/>
             <field name="parent" ref="5309"/>
         </record>
         <record model="account.account.template" id="531">
