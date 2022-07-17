@@ -4233,22 +4233,22 @@
             <field name="name">Accrued salaries</field>
             <field name="code">22200</field>
             <field name="type" ref="accrued_payroll"/>
-            <field name="party_required" eval="True"/>
             <field name="parent" ref="2220"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22201">
             <field name="name">Accrued wages</field>
             <field name="code">22201</field>
             <field name="type" ref="accrued_payroll"/>
-            <field name="party_required" eval="True"/>
             <field name="parent" ref="2220"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22202">
             <field name="name">Accrued commissions</field>
             <field name="code">22202</field>
             <field name="type" ref="accrued_payroll"/>
-            <field name="party_required" eval="True"/>
             <field name="parent" ref="2220"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="2221">
             <field name="name">Employee payroll withholdings</field>
