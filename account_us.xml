@@ -4767,35 +4767,30 @@
             <field name="code">4000</field>
             <field name="type" ref="goods"/>
             <field name="parent" ref="400"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="4001">
             <field name="name">Sales of intermediate products</field>
             <field name="code">4001</field>
             <field name="type" ref="goods"/>
             <field name="parent" ref="400"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="4002">
             <field name="name">Sales of direct materials and work in process</field>
             <field name="code">4002</field>
             <field name="type" ref="goods"/>
             <field name="parent" ref="400"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="4004">
             <field name="name">Merchandise sales</field>
             <field name="code">4004</field>
             <field name="type" ref="goods"/>
             <field name="parent" ref="400"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="4008">
             <field name="name">Sales of damaged products or merchandise</field>
             <field name="code">4008</field>
             <field name="type" ref="goods"/>
             <field name="parent" ref="400"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="401">
             <field name="name">Revenues on contracts and sales of goods in process</field>
@@ -4809,21 +4804,18 @@
             <field name="code">4010</field>
             <field name="type" ref="goods"/>
             <field name="parent" ref="401"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="4011">
             <field name="name">Billings on constructions in process (percentage-of-completion method)</field>
             <field name="code">4011</field>
             <field name="type" ref="goods"/>
             <field name="parent" ref="401"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="4012">
             <field name="name">Billings on subscriptions of goods</field>
             <field name="code">4012</field>
             <field name="type" ref="goods"/>
             <field name="parent" ref="401"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="409">
             <field name="name">Adjustments on sales of goods (−)</field>
@@ -4865,7 +4857,6 @@
             <field name="code">4100</field>
             <field name="type" ref="services"/>
             <field name="parent" ref="410"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="411">
             <field name="name">Revenues on contracts and services in process</field>
@@ -4877,21 +4868,18 @@
             <field name="code">4110</field>
             <field name="type" ref="services"/>
             <field name="parent" ref="411"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="4111">
             <field name="name">Billings on service contracts in process (percentage-of-completion method)</field>
             <field name="code">4111</field>
             <field name="type" ref="services"/>
             <field name="parent" ref="411"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="4112">
             <field name="name">Billings on service subscriptions</field>
             <field name="code">4112</field>
             <field name="type" ref="services"/>
             <field name="parent" ref="411"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="419">
             <field name="name">Adjustments on sales of services (−)</field>
