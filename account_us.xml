@@ -2184,11 +2184,13 @@
         <record model="account.account.template" id="131112">
             <field name="name">Workers’ compensation insurance-direct production</field>
             <field name="code">131112</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13111"/>
         </record>
         <record model="account.account.template" id="131113">
             <field name="name">Unemployment insurance—direct production</field>
             <field name="code">131113</field>
+            <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13111"/>
         </record>
         <record model="account.account.template" id="13112">
@@ -5187,6 +5189,7 @@
         <record model="account.account.template" id="5113">
             <field name="name">Unemployment insurance</field>
             <field name="code">5113</field>
+            <field name="type" ref="personnel_costs"/>
             <field name="parent" ref="511"/>
         </record>
         <record model="account.account.template" id="512">
