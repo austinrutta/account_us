@@ -2145,28 +2145,24 @@
             <field name="code">131100</field>
             <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13110"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="131101">
             <field name="name">Bonuses—direct production</field>
             <field name="code">131101</field>
             <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13110"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="131102">
             <field name="name">Incentive pay—direct production</field>
             <field name="code">131102</field>
             <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13110"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="131103">
             <field name="name">Severance pay—direct production</field>
             <field name="code">131103</field>
             <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13110"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="13111">
             <field name="name">Required payroll-related expenses—direct production</field>
@@ -2178,14 +2174,12 @@
             <field name="code">131110</field>
             <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13111"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="131111">
             <field name="name">Employer medicare-direct production</field>
             <field name="code">131111</field>
             <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13111"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="131112">
             <field name="name">Workers’ compensation insurance-direct production</field>
@@ -2495,7 +2489,6 @@
             <field name="code">138100</field>
             <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13810"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="138101">
             <field name="name">Indirect production wages</field>
@@ -2507,7 +2500,6 @@
             <field name="code">138102</field>
             <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13810"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="138103">
             <field name="name">Incentive pay—production overhead</field>
@@ -2529,21 +2521,18 @@
             <field name="code">138110</field>
             <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13811"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="138111">
             <field name="name">Employer medicare—production overhead</field>
             <field name="code">138111</field>
             <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13811"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="138112">
             <field name="name">Workers’ compensation insurance—production overhead</field>
             <field name="code">138112</field>
             <field name="type" ref="unallocated_overhead"/>
             <field name="parent" ref="13811"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="138113">
             <field name="name">Unemployment insurance—production overhead</field>
@@ -4233,22 +4222,22 @@
             <field name="name">Accrued salaries</field>
             <field name="code">22200</field>
             <field name="type" ref="accrued_payroll"/>
+            <field name="party_required" eval="True"/>
             <field name="parent" ref="2220"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22201">
             <field name="name">Accrued wages</field>
             <field name="code">22201</field>
             <field name="type" ref="accrued_payroll"/>
+            <field name="party_required" eval="True"/>
             <field name="parent" ref="2220"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22202">
             <field name="name">Accrued commissions</field>
             <field name="code">22202</field>
             <field name="type" ref="accrued_payroll"/>
+            <field name="party_required" eval="True"/>
             <field name="parent" ref="2220"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="2221">
             <field name="name">Employee payroll withholdings</field>
@@ -4265,42 +4254,36 @@
             <field name="code">222100</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="parent" ref="22210"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="222101">
             <field name="name">Employee state income tax withheld</field>
             <field name="code">222101</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="parent" ref="22210"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="222102">
             <field name="name">Employee local income tax withheld</field>
             <field name="code">222102</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="parent" ref="22210"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22211">
             <field name="name">Employee FICA withheld</field>
             <field name="code">22211</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="parent" ref="2221"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22212">
             <field name="name">Employee Medicare withheld</field>
             <field name="code">22212</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="parent" ref="2221"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22213">
             <field name="name">Employee garnishments withheld</field>
             <field name="code">22213</field>
             <field name="type" ref="payroll_withholdings"/>
             <field name="parent" ref="2221"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22215">
             <field name="name">Employee benefits</field>
@@ -4340,35 +4323,30 @@
             <field name="code">22220</field>
             <field name="type" ref="accrued_payroll_taxes"/>
             <field name="parent" ref="2222"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22221">
             <field name="name">Employer Medicare contribution</field>
             <field name="code">22221</field>
             <field name="type" ref="accrued_payroll_taxes"/>
             <field name="parent" ref="2222"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22222">
             <field name="name">Employer federal unemployment tax</field>
             <field name="code">22222</field>
             <field name="type" ref="accrued_payroll_taxes"/>
             <field name="parent" ref="2222"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22223">
             <field name="name">Employer state unemployment tax</field>
             <field name="code">22223</field>
             <field name="type" ref="accrued_payroll_taxes"/>
             <field name="parent" ref="2222"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22224">
             <field name="name">Employer workers’ compensation insurance</field>
             <field name="code">22224</field>
             <field name="type" ref="accrued_payroll_taxes"/>
             <field name="parent" ref="2222"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="2223">
             <field name="name">Employer benefit plan contributions</field>
@@ -5133,21 +5111,18 @@
             <field name="code">51000</field>
             <field name="type" ref="personnel_costs"/>
             <field name="parent" ref="5100"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="51001">
             <field name="name">Salaries expense—other</field>
             <field name="code">51001</field>
             <field name="type" ref="personnel_costs"/>
             <field name="parent" ref="5100"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="5101">
             <field name="name">Wages expense</field>
             <field name="code">5101</field>
             <field name="type" ref="personnel_costs"/>
             <field name="parent" ref="510"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="5102">
             <field name="name">Commissions</field>
@@ -5159,21 +5134,18 @@
             <field name="code">51020</field>
             <field name="type" ref="personnel_costs"/>
             <field name="parent" ref="5102"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="51021">
             <field name="name">Sales commission adjustments</field>
             <field name="code">51021</field>
             <field name="type" ref="personnel_costs"/>
             <field name="parent" ref="5102"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="5103">
             <field name="name">Bonuses</field>
             <field name="code">5103</field>
             <field name="type" ref="personnel_costs"/>
             <field name="parent" ref="510"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="5104">
             <field name="name">Incentive pay</field>
@@ -5195,21 +5167,18 @@
             <field name="code">5110</field>
             <field name="type" ref="personnel_costs"/>
             <field name="parent" ref="511"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="5111">
             <field name="name">Employer medicare</field>
             <field name="code">5111</field>
             <field name="type" ref="personnel_costs"/>
             <field name="parent" ref="511"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="5112">
             <field name="name">Workers’ compensation insurance</field>
             <field name="code">5112</field>
             <field name="type" ref="personnel_costs"/>
             <field name="parent" ref="511"/>
-            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="5113">
             <field name="name">Unemployment insurance</field>
