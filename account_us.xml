@@ -5463,11 +5463,10 @@
             <field name="code">5300</field>
             <field name="type" ref="purchases_raw_materials"/>
             <field name="parent" ref="530"/>
-            <field name="closed" eval="False"/>
         </record>
         <record model="account.account.template" id="5301">
             <field name="name">Other supplies—inventory purchases</field>
-            <field name="code">5300</field>
+            <field name="code">5301</field>
             <field name="parent" ref="530"/>
         </record>
         <record model="account.account.template" id="53010">
