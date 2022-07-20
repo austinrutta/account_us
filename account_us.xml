@@ -4224,25 +4224,22 @@
             <field name="name">Accrued salaries</field>
             <field name="code">22200</field>
             <field name="type" ref="accrued_payroll"/>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="2220"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22201">
             <field name="name">Accrued wages</field>
             <field name="code">22201</field>
             <field name="type" ref="accrued_payroll"/>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="2220"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22202">
             <field name="name">Accrued commissions</field>
             <field name="code">22202</field>
             <field name="type" ref="accrued_payroll"/>
-            <field name="party_required" eval="True"/>
-            <field name="reconcile" eval="True"/>
             <field name="parent" ref="2220"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="2221">
             <field name="name">Employee payroll withholdings</field>
@@ -4258,43 +4255,43 @@
             <field name="name">Employee federal income tax withheld</field>
             <field name="code">222100</field>
             <field name="type" ref="payroll_withholdings"/>
-            <field name="party_required" eval="True"/>
             <field name="parent" ref="22210"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="222101">
             <field name="name">Employee state income tax withheld</field>
             <field name="code">222101</field>
             <field name="type" ref="payroll_withholdings"/>
-            <field name="party_required" eval="True"/>
             <field name="parent" ref="22210"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="222102">
             <field name="name">Employee local income tax withheld</field>
             <field name="code">222102</field>
             <field name="type" ref="payroll_withholdings"/>
-            <field name="party_required" eval="True"/>
             <field name="parent" ref="22210"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22211">
             <field name="name">Employee FICA withheld</field>
             <field name="code">22211</field>
             <field name="type" ref="payroll_withholdings"/>
-            <field name="party_required" eval="True"/>
             <field name="parent" ref="2221"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22212">
             <field name="name">Employee Medicare withheld</field>
             <field name="code">22212</field>
             <field name="type" ref="payroll_withholdings"/>
-            <field name="party_required" eval="True"/>
             <field name="parent" ref="2221"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22213">
             <field name="name">Employee garnishments withheld</field>
             <field name="code">22213</field>
             <field name="type" ref="payroll_withholdings"/>
-            <field name="party_required" eval="True"/>
             <field name="parent" ref="2221"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22215">
             <field name="name">Employee benefits</field>
@@ -4336,35 +4333,36 @@
             <field name="name">Employer FICA contribution</field>
             <field name="code">22220</field>
             <field name="type" ref="accrued_payroll_taxes"/>
-            <field name="party_required" eval="True"/>
             <field name="parent" ref="2222"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22221">
             <field name="name">Employer Medicare contribution</field>
             <field name="code">22221</field>
             <field name="type" ref="accrued_payroll_taxes"/>
-            <field name="party_required" eval="True"/>
             <field name="parent" ref="2222"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22222">
             <field name="name">Employer federal unemployment tax</field>
             <field name="code">22222</field>
             <field name="type" ref="accrued_payroll_taxes"/>
-            <field name="party_required" eval="True"/>
             <field name="parent" ref="2222"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22223">
             <field name="name">Employer state unemployment tax</field>
             <field name="code">22223</field>
             <field name="type" ref="accrued_payroll_taxes"/>
-            <field name="party_required" eval="True"/>
             <field name="parent" ref="2222"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="22224">
             <field name="name">Employer workers’ compensation insurance</field>
             <field name="code">22224</field>
             <field name="type" ref="accrued_payroll_taxes"/>
             <field name="parent" ref="2222"/>
+            <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="2223">
             <field name="name">Employer benefit plan contributions</field>
