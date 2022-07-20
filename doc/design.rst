@@ -6,21 +6,6 @@ The account_us module adds a chart of accounts that is based on a hybrid of
 United States GAAP_ and IFRS_ financial accounting standards, so hopefully this
 could be used as a starting point for accounting with either approach.
 
-Influential, but possibly temporary, conclusions
-------------------------------------------------
-
-There are decisions to be made on when to model transactions with financial
-accounts and analytic accounts. Here are some conclusions I have come to:
-
-- Analytic accounts should be used for `segment reporting`_ and `cost
-  centers`_. A lot of redundant financial accounts can be avoided this way.
-
-  This may change with current discussion about `company subdivisions`_.
-
-- To satisfy income tax reporting needs, use a higher granularity of financial
-  accounts than is required for financial accounting to differentiate types of
-  expenditures (i.e. more detailed sub-accounts).
-
 Financial chart structure
 -------------------------
 
@@ -43,7 +28,7 @@ Sources consulted
 * https://github.com/tryton/account_fr and https://github.com/tryton/account_be (for help with Tryton account types and general inspiration)
 * https://en.wikipedia.org/wiki/Chart_of_accounts
 * https://web.archive.org/web/20160825052543/https://nccs.urban.org/projects/ucoa.cfm
-  * and derivative Tryton module (archived): https://code.google.com/archive/p/tryton-ucoa/
+    * and derivative Tryton module (archived): https://code.google.com/archive/p/tryton-ucoa/
 * http://www.ifrs-gaap.com/en/chart-of-accounts-us-gaap/
 * http://www.ifrs-gaap.com/en/basic-IFRS-chart-of-accounts/
 * https://www.gaap.cz/sites/default/files/upload/pdf/1-GAAP-IFRS.pdf
@@ -82,6 +67,30 @@ Contributions are welcome.
 Currently existing tax modules (in some level of completeness) include:
 
 -  `account_us_ut <https://github.com/pentandra/account_us_ut>`_ (Utah)
+
+Financial versus analytic accounting
+------------------------------------
+
+There are decisions to be made on when to model transactions with financial
+accounts and analytic accounts. In general, analytic accounts are intended to
+track changes on nominal or "income statement" accounts and for each and all
+analytic axes or "roots" to be relevant and applicable on each move line. This
+would mean that analytic accounts are generally not a good fit for modeling
+transactions that need special or unusual treatment. Special financial accounts
+are better in these cases. This principle has led to the following design
+guidance:
+
+- Use state-specific financial accounts for fiduciary obligations, like
+  employment tax liabilities.
+
+- Analytic accounts should be used for `segment reporting`_ and `cost
+  centers`_. A lot of redundant financial accounts can be avoided this way.
+
+  This may change with current discussion about `company subdivisions`_.
+
+- To satisfy income tax reporting needs, use a higher granularity of financial
+  accounts than is required for financial accounting to differentiate types of
+  expenditures for tax purposes (i.e. more detailed sub-accounts).
 
 .. _GAAP: https://en.wikipedia.org/wiki/Generally_Accepted_Accounting_Principles_(United_States)
 .. _IFRS: https://en.wikipedia.org/wiki/International_Financial_Reporting_Standards
