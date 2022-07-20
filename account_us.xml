@@ -3928,6 +3928,198 @@
             <field name="code">174301</field>
             <field name="parent" ref="17430"/>
         </record>
+        <record model="account.account.template" id="1743010">
+            <field name="name">Salaries and wages—internal-use computer software in development</field>
+            <field name="code">1743010</field>
+            <field name="parent" ref="174301"/>
+        </record>
+        <record model="account.account.template" id="17430100">
+            <field name="name">Salaries expense—internal-use computer software in development</field>
+            <field name="code">17430100</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="1743010"/>
+        </record>
+        <record model="account.account.template" id="17430101">
+            <field name="name">Wages expense—internal-use computer software in development</field>
+            <field name="code">17430101</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="1743010"/>
+        </record>
+        <record model="account.account.template" id="17430102">
+            <field name="name">Bonuses—internal-use computer software in development</field>
+            <field name="code">17430102</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="1743010"/>
+        </record>
+        <record model="account.account.template" id="17430103">
+            <field name="name">Incentive pay—internal-use computer software in development</field>
+            <field name="code">17430103</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="1743010"/>
+        </record>
+        <record model="account.account.template" id="17430104">
+            <field name="name">Severance pay—internal-use computer software in development</field>
+            <field name="code">17430104</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="1743010"/>
+        </record>
+        <record model="account.account.template" id="1743011">
+            <field name="name">Required payroll-related expenses—internal-use computer software in development</field>
+            <field name="code">1743011</field>
+            <field name="parent" ref="174301"/>
+        </record>
+        <record model="account.account.template" id="17430110">
+            <field name="name">Employer FICA—internal-use computer software in development</field>
+            <field name="code">17430110</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="1743011"/>
+        </record>
+        <record model="account.account.template" id="17430111">
+            <field name="name">Employer medicare-direct production</field>
+            <field name="code">17430111</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="1743011"/>
+        </record>
+        <record model="account.account.template" id="17430112">
+            <field name="name">Workers’ compensation insurance-direct production</field>
+            <field name="code">17430112</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="1743011"/>
+        </record>
+        <record model="account.account.template" id="17430113">
+            <field name="name">Unemployment insurance—internal-use computer software in development</field>
+            <field name="code">17430113</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="1743011"/>
+        </record>
+        <record model="account.account.template" id="1743012">
+            <field name="name">Fringe benefits—internal-use computer software in development</field>
+            <field name="code">1743012</field>
+            <field name="parent" ref="174301"/>
+        </record>
+        <record model="account.account.template" id="17430120">
+            <field name="name">Paid leave-direct production</field>
+            <field name="code">17430120</field>
+            <field name="parent" ref="1743012"/>
+        </record>
+        <record model="account.account.template" id="174301200">
+            <field name="name">Vacation pay-direct production</field>
+            <field name="code">174301200</field>
+            <field name="parent" ref="17430120"/>
+        </record>
+        <record model="account.account.template" id="174301201">
+            <field name="name">Holiday pay-direct production</field>
+            <field name="code">174301201</field>
+            <field name="parent" ref="17430120"/>
+        </record>
+        <record model="account.account.template" id="174301202">
+            <field name="name">Sick pay—internal-use computer software in development</field>
+            <field name="code">174301202</field>
+            <field name="parent" ref="17430120"/>
+        </record>
+        <record model="account.account.template" id="174301203">
+            <field name="name">Other paid leave—internal-use computer software in development</field>
+            <field name="code">174301203</field>
+            <field name="parent" ref="17430120"/>
+        </record>
+        <record model="account.account.template" id="17430121">
+            <field name="name">Group health insurance—internal-use computer software in development</field>
+            <field name="code">17430121</field>
+            <field name="parent" ref="1743012"/>
+        </record>
+        <record model="account.account.template" id="17430122">
+            <field name="name">Life insurance—internal-use computer software in development</field>
+            <field name="code">17430122</field>
+            <field name="parent" ref="1743012"/>
+        </record>
+        <record model="account.account.template" id="17430123">
+            <field name="name">Employer 401k contributions—internal-use computer software in development</field>
+            <field name="code">17430123</field>
+            <field name="parent" ref="1743012"/>
+        </record>
+        <record model="account.account.template" id="17430124">
+            <field name="name">Employer IRA contributions—internal-use computer software in development</field>
+            <field name="code">17430124</field>
+            <field name="parent" ref="1743012"/>
+        </record>
+        <record model="account.account.template" id="17430125">
+            <field name="name">Pensions and retirement—internal-use computer software in development</field>
+            <field name="code">17430125</field>
+            <field name="parent" ref="1743012"/>
+        </record>
+        <record model="account.account.template" id="17430129">
+            <field name="name">Other employer-provided benefits—internal-use computer software in development</field>
+            <field name="code">17430129</field>
+            <field name="parent" ref="1743012"/>
+        </record>
+        <record model="account.account.template" id="174301290">
+            <field name="name">Education and professional development—internal-use computer software in development</field>
+            <field name="code">174301290</field>
+            <field name="parent" ref="17430129"/>
+        </record>
+        <record model="account.account.template" id="174301291">
+            <field name="name">Dependent care assistance—internal-use computer software in development</field>
+            <field name="code">174301291</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="17430129"/>
+        </record>
+        <record model="account.account.template" id="174301292">
+            <field name="name">Professional membership dues—internal-use computer software in development</field>
+            <field name="code">174301292</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="17430129"/>
+        </record>
+        <record model="account.account.template" id="174301293">
+            <field name="name">Food-related benefits—internal-use computer software in development</field>
+            <field name="code">174301293</field>
+            <field name="parent" ref="17430129"/>
+        </record>
+        <record model="account.account.template" id="1743012930">
+            <field name="name">De minimis food and beverages (meals) for employees (IRC § 132(e)(1) and IRC § 274(e)(1))—internal-use computer software in development</field>
+            <field name="code">1743012930</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="174301293"/>
+        </record>
+        <record model="account.account.template" id="1743012931">
+            <field name="name">Employee recreational activities (IRC § 274(e)(4))—internal-use computer software in development</field>
+            <field name="code">1743012931</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="174301293"/>
+        </record>
+        <record model="account.account.template" id="1743012932">
+            <field name="name">Employee business meetings (IRC § 274(e)(5))—internal-use computer software in development</field>
+            <field name="code">1743012932</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="174301293"/>
+        </record>
+        <record model="account.account.template" id="174301294">
+            <field name="name">Employee achievement awards—internal-use computer software in development</field>
+            <field name="code">174301294</field>
+            <field name="parent" ref="17430129"/>
+        </record>
+        <record model="account.account.template" id="1743012940">
+            <field name="name">Non-qualified employee achievement awards (IRC § 274(j)(2)(A) ≤ $400 per year per employee)—internal-use computer software in development</field>
+            <field name="code">1743012940</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="174301294"/>
+        </record>
+        <record model="account.account.template" id="1743012941">
+            <field name="name">Qualified employee achievement awards (IRC § 274(j)(2)(B) ≤ $1,600 per year per employee)—internal-use computer software in development</field>
+            <field name="code">1743012941</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="174301294"/>
+        </record>
+        <record model="account.account.template" id="1743013">
+            <field name="name">Employee recruitment—internal-use computer software in development</field>
+            <field name="code">1743013</field>
+            <field name="parent" ref="174301"/>
+        </record>
+        <record model="account.account.template" id="1743014">
+            <field name="name">Temporary help—internal-use computer software in development</field>
+            <field name="code">1743014</field>
+            <field name="type" ref="capitalized_software"/>
+            <field name="parent" ref="174301"/>
+        </record>
         <record model="account.account.template" id="174302">
             <field name="name">Interest expense incurred while developing internal-use computer software</field>
             <field name="code">174302</field>
