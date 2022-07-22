@@ -3975,13 +3975,13 @@
             <field name="parent" ref="1743011"/>
         </record>
         <record model="account.account.template" id="17430111">
-            <field name="name">Employer medicare-direct production</field>
+            <field name="name">Employer medicare-internal-use computer software in development</field>
             <field name="code">17430111</field>
             <field name="type" ref="capitalized_software"/>
             <field name="parent" ref="1743011"/>
         </record>
         <record model="account.account.template" id="17430112">
-            <field name="name">Workers’ compensation insurance-direct production</field>
+            <field name="name">Workers’ compensation insurance-internal-use computer software in development</field>
             <field name="code">17430112</field>
             <field name="type" ref="capitalized_software"/>
             <field name="parent" ref="1743011"/>
@@ -3998,17 +3998,17 @@
             <field name="parent" ref="174301"/>
         </record>
         <record model="account.account.template" id="17430120">
-            <field name="name">Paid leave-direct production</field>
+            <field name="name">Paid leave-internal-use computer software in development</field>
             <field name="code">17430120</field>
             <field name="parent" ref="1743012"/>
         </record>
         <record model="account.account.template" id="174301200">
-            <field name="name">Vacation pay-direct production</field>
+            <field name="name">Vacation pay-internal-use computer software in development</field>
             <field name="code">174301200</field>
             <field name="parent" ref="17430120"/>
         </record>
         <record model="account.account.template" id="174301201">
-            <field name="name">Holiday pay-direct production</field>
+            <field name="name">Holiday pay-internal-use computer software in development</field>
             <field name="code">174301201</field>
             <field name="parent" ref="17430120"/>
         </record>
