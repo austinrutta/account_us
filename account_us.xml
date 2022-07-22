@@ -4133,8 +4133,14 @@
             <field name="parent" ref="1743"/>
         </record>
         <record model="account.account.template" id="1744">
-            <field name="name">Databases</field>
+            <field name="name">Website development costs (ASC 350-50)</field>
             <field name="code">1744</field>
+            <field name="type" ref="other_technology_based_intangibles"/>
+            <field name="parent" ref="174"/>
+        </record>
+        <record model="account.account.template" id="1748">
+            <field name="name">Databases</field>
+            <field name="code">1748</field>
             <field name="type" ref="other_technology_based_intangibles"/>
             <field name="parent" ref="174"/>
         </record>
