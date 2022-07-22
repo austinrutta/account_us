@@ -5148,18 +5148,181 @@
             <field name="code">50010</field>
             <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="5001"/>
+            <field name="closed" eval="True"/>
+        </record>
+        <record model="account.account.template" id="500100">
+            <field name="name">Wages cost—direct labor</field>
+            <field name="code">500100</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="50010"/>
+        </record>
+        <record model="account.account.template" id="500101">
+            <field name="name">Bonuses—direct labor</field>
+            <field name="code">500101</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="50010"/>
+        </record>
+        <record model="account.account.template" id="500102">
+            <field name="name">Incentive pay—direct labor</field>
+            <field name="code">500102</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="50010"/>
+        </record>
+        <record model="account.account.template" id="500103">
+            <field name="name">Severance pay—direct labor</field>
+            <field name="code">500103</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="50010"/>
         </record>
         <record model="account.account.template" id="50011">
             <field name="name">Required payroll-related costs—direct labor</field>
             <field name="code">50011</field>
             <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="5001"/>
+            <field name="closed" eval="True"/>
+        </record>
+        <record model="account.account.template" id="500110">
+            <field name="name">Employer FICA—direct labor</field>
+            <field name="code">500110</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="50011"/>
+        </record>
+        <record model="account.account.template" id="500111">
+            <field name="name">Employer medicare-direct labor</field>
+            <field name="code">500111</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="50011"/>
+        </record>
+        <record model="account.account.template" id="500112">
+            <field name="name">Workers’ compensation insurance-direct labor</field>
+            <field name="code">500112</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="50011"/>
+        </record>
+        <record model="account.account.template" id="500113">
+            <field name="name">Unemployment insurance—direct labor</field>
+            <field name="code">500113</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="50011"/>
         </record>
         <record model="account.account.template" id="50012">
             <field name="name">Costs of fringe benefits—direct labor</field>
             <field name="code">50012</field>
             <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="5001"/>
+            <field name="closed" eval="True"/>
+        </record>
+        <record model="account.account.template" id="500120">
+            <field name="name">Paid leave-direct labor</field>
+            <field name="code">500120</field>
+            <field name="parent" ref="50012"/>
+        </record>
+        <record model="account.account.template" id="5001200">
+            <field name="name">Vacation pay-direct labor</field>
+            <field name="code">5001200</field>
+            <field name="parent" ref="500120"/>
+        </record>
+        <record model="account.account.template" id="5001201">
+            <field name="name">Holiday pay-direct labor</field>
+            <field name="code">5001201</field>
+            <field name="parent" ref="500120"/>
+        </record>
+        <record model="account.account.template" id="5001202">
+            <field name="name">Sick pay—direct labor</field>
+            <field name="code">5001202</field>
+            <field name="parent" ref="500120"/>
+        </record>
+        <record model="account.account.template" id="5001203">
+            <field name="name">Other paid leave—direct labor</field>
+            <field name="code">5001203</field>
+            <field name="parent" ref="500120"/>
+        </record>
+        <record model="account.account.template" id="500121">
+            <field name="name">Group health insurance—direct labor</field>
+            <field name="code">500121</field>
+            <field name="parent" ref="50012"/>
+        </record>
+        <record model="account.account.template" id="500122">
+            <field name="name">Life insurance—direct labor</field>
+            <field name="code">500122</field>
+            <field name="parent" ref="50012"/>
+        </record>
+        <record model="account.account.template" id="500123">
+            <field name="name">Employer 401k contributions—direct labor</field>
+            <field name="code">500123</field>
+            <field name="parent" ref="50012"/>
+        </record>
+        <record model="account.account.template" id="500124">
+            <field name="name">Employer IRA contributions—direct labor</field>
+            <field name="code">500124</field>
+            <field name="parent" ref="50012"/>
+        </record>
+        <record model="account.account.template" id="500125">
+            <field name="name">Pensions and retirement—direct labor</field>
+            <field name="code">500125</field>
+            <field name="parent" ref="50012"/>
+        </record>
+        <record model="account.account.template" id="500129">
+            <field name="name">Other employer-provided benefits—direct labor</field>
+            <field name="code">500129</field>
+            <field name="parent" ref="50012"/>
+        </record>
+        <record model="account.account.template" id="5001290">
+            <field name="name">Education and professional development—direct labor</field>
+            <field name="code">5001290</field>
+            <field name="parent" ref="500129"/>
+        </record>
+        <record model="account.account.template" id="5001291">
+            <field name="name">Dependent care assistance—direct labor</field>
+            <field name="code">5001291</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="500129"/>
+        </record>
+        <record model="account.account.template" id="5001292">
+            <field name="name">Trade membership dues—direct labor</field>
+            <field name="code">5001292</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="500129"/>
+        </record>
+        <record model="account.account.template" id="5001293">
+            <field name="name">Food-related benefits—direct labor</field>
+            <field name="code">5001293</field>
+            <field name="parent" ref="500129"/>
+        </record>
+        <record model="account.account.template" id="50012930">
+            <field name="name">De minimis food and beverages (meals) for employees (IRC § 132(e)(1) and IRC § 274(e)(1))—direct labor</field>
+            <field name="code">50012930</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5001293"/>
+        </record>
+        <record model="account.account.template" id="50012931">
+            <field name="name">Employee recreational activities (IRC § 274(e)(4))—direct labor</field>
+            <field name="code">50012931</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5001293"/>
+        </record>
+        <record model="account.account.template" id="50012932">
+            <field name="name">Employee business meetings (IRC § 274(e)(5))—direct labor</field>
+            <field name="code">50012932</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5001293"/>
+        </record>
+        <record model="account.account.template" id="5001294">
+            <field name="name">Employee achievement awards—direct labor</field>
+            <field name="code">5001294</field>
+            <field name="parent" ref="500129"/>
+        </record>
+        <record model="account.account.template" id="50012940">
+            <field name="name">Non-qualified employee achievement awards (IRC § 274(j)(2)(A) ≤ $400 per year per employee)—direct labor</field>
+            <field name="code">50012940</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5001294"/>
+        </record>
+        <record model="account.account.template" id="50012941">
+            <field name="name">Qualified employee achievement awards (IRC § 274(j)(2)(B) ≤ $1,600 per year per employee)—direct labor</field>
+            <field name="code">50012941</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
+            <field name="parent" ref="5001294"/>
         </record>
         <record model="account.account.template" id="50019">
             <field name="name">Other direct labor costs</field>
