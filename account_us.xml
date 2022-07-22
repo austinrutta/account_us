@@ -5226,16 +5226,19 @@
         <record model="account.account.template" id="5001200">
             <field name="name">Vacation pay-direct labor</field>
             <field name="code">5001200</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="500120"/>
         </record>
         <record model="account.account.template" id="5001201">
             <field name="name">Holiday pay-direct labor</field>
             <field name="code">5001201</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="500120"/>
         </record>
         <record model="account.account.template" id="5001202">
             <field name="name">Sick pay—direct labor</field>
             <field name="code">5001202</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="500120"/>
         </record>
         <record model="account.account.template" id="5001203">
@@ -5246,21 +5249,25 @@
         <record model="account.account.template" id="500121">
             <field name="name">Group health insurance—direct labor</field>
             <field name="code">500121</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="50012"/>
         </record>
         <record model="account.account.template" id="500122">
             <field name="name">Life insurance—direct labor</field>
             <field name="code">500122</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="50012"/>
         </record>
         <record model="account.account.template" id="500123">
             <field name="name">Employer 401k contributions—direct labor</field>
             <field name="code">500123</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="50012"/>
         </record>
         <record model="account.account.template" id="500124">
             <field name="name">Employer IRA contributions—direct labor</field>
             <field name="code">500124</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="50012"/>
         </record>
         <record model="account.account.template" id="500125">
@@ -5276,6 +5283,7 @@
         <record model="account.account.template" id="5001290">
             <field name="name">Education and professional development—direct labor</field>
             <field name="code">5001290</field>
+            <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="500129"/>
         </record>
         <record model="account.account.template" id="5001291">
