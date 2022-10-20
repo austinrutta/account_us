@@ -2176,13 +2176,13 @@
             <field name="parent" ref="13111"/>
         </record>
         <record model="account.account.template" id="131111">
-            <field name="name">Employer medicare-direct production</field>
+            <field name="name">Employer medicare—direct production</field>
             <field name="code">131111</field>
             <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13111"/>
         </record>
         <record model="account.account.template" id="131112">
-            <field name="name">Workers’ compensation insurance-direct production</field>
+            <field name="name">Workers’ compensation insurance—direct production</field>
             <field name="code">131112</field>
             <field name="type" ref="direct_labor_costs"/>
             <field name="parent" ref="13111"/>
@@ -2199,17 +2199,17 @@
             <field name="parent" ref="1311"/>
         </record>
         <record model="account.account.template" id="131120">
-            <field name="name">Paid leave-direct production</field>
+            <field name="name">Paid leave—direct production</field>
             <field name="code">131120</field>
             <field name="parent" ref="13112"/>
         </record>
         <record model="account.account.template" id="1311200">
-            <field name="name">Vacation pay-direct production</field>
+            <field name="name">Vacation pay—direct production</field>
             <field name="code">1311200</field>
             <field name="parent" ref="131120"/>
         </record>
         <record model="account.account.template" id="1311201">
-            <field name="name">Holiday pay-direct production</field>
+            <field name="name">Holiday pay—direct production</field>
             <field name="code">1311201</field>
             <field name="parent" ref="131120"/>
         </record>
@@ -3975,13 +3975,13 @@
             <field name="parent" ref="1743011"/>
         </record>
         <record model="account.account.template" id="17430111">
-            <field name="name">Employer medicare-internal-use computer software in development</field>
+            <field name="name">Employer medicare—internal-use computer software in development</field>
             <field name="code">17430111</field>
             <field name="type" ref="capitalized_software"/>
             <field name="parent" ref="1743011"/>
         </record>
         <record model="account.account.template" id="17430112">
-            <field name="name">Workers’ compensation insurance-internal-use computer software in development</field>
+            <field name="name">Workers’ compensation insurance—internal-use computer software in development</field>
             <field name="code">17430112</field>
             <field name="type" ref="capitalized_software"/>
             <field name="parent" ref="1743011"/>
@@ -3998,17 +3998,17 @@
             <field name="parent" ref="174301"/>
         </record>
         <record model="account.account.template" id="17430120">
-            <field name="name">Paid leave-internal-use computer software in development</field>
+            <field name="name">Paid leave—internal-use computer software in development</field>
             <field name="code">17430120</field>
             <field name="parent" ref="1743012"/>
         </record>
         <record model="account.account.template" id="174301200">
-            <field name="name">Vacation pay-internal-use computer software in development</field>
+            <field name="name">Vacation pay—internal-use computer software in development</field>
             <field name="code">174301200</field>
             <field name="parent" ref="17430120"/>
         </record>
         <record model="account.account.template" id="174301201">
-            <field name="name">Holiday pay-internal-use computer software in development</field>
+            <field name="name">Holiday pay—internal-use computer software in development</field>
             <field name="code">174301201</field>
             <field name="parent" ref="17430120"/>
         </record>
@@ -5194,13 +5194,13 @@
             <field name="parent" ref="50011"/>
         </record>
         <record model="account.account.template" id="500111">
-            <field name="name">Employer medicare-direct labor</field>
+            <field name="name">Employer medicare—direct labor</field>
             <field name="code">500111</field>
             <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="50011"/>
         </record>
         <record model="account.account.template" id="500112">
-            <field name="name">Workers’ compensation insurance-direct labor</field>
+            <field name="name">Workers’ compensation insurance—direct labor</field>
             <field name="code">500112</field>
             <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="50011"/>
@@ -5219,18 +5219,18 @@
             <field name="closed" eval="True"/>
         </record>
         <record model="account.account.template" id="500120">
-            <field name="name">Paid leave-direct labor</field>
+            <field name="name">Paid leave—direct labor</field>
             <field name="code">500120</field>
             <field name="parent" ref="50012"/>
         </record>
         <record model="account.account.template" id="5001200">
-            <field name="name">Vacation pay-direct labor</field>
+            <field name="name">Vacation pay—direct labor</field>
             <field name="code">5001200</field>
             <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="500120"/>
         </record>
         <record model="account.account.template" id="5001201">
-            <field name="name">Holiday pay-direct labor</field>
+            <field name="name">Holiday pay—direct labor</field>
             <field name="code">5001201</field>
             <field name="type" ref="cost_of_products_and_services_variable"/>
             <field name="parent" ref="500120"/>
