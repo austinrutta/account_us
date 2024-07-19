@@ -1832,15 +1832,22 @@
             <field name="parent" ref="1090"/>
         </record>
         <record model="account.account.template" id="10901">
-            <field name="name">Transfers in process</field>
+            <field name="name">Checks in transit</field>
             <field name="code">10901</field>
             <field name="type" ref="cash"/>
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="1090"/>
         </record>
         <record model="account.account.template" id="10902">
-            <field name="name">Conversions in process</field>
+            <field name="name">Transfers in process</field>
             <field name="code">10902</field>
+            <field name="type" ref="cash"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="1090"/>
+        </record>
+        <record model="account.account.template" id="10903">
+            <field name="name">Conversions in process</field>
+            <field name="code">10903</field>
             <field name="type" ref="cash"/>
             <field name="reconcile" eval="True"/>
             <field name="parent" ref="1090"/>
